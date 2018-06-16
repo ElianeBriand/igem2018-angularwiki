@@ -1,0 +1,16 @@
+.grid-container {
+  margin: 20px;
+}
+
+
+.dashboard-card-content {
+  text-align: left;
+}
+
+.dashboard-card {
+  overflow: auto;
+}
+
+mat-card-title{
+  font-weight: bold;
+}
