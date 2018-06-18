@@ -7,6 +7,10 @@
 
   <span class="fill-toolbar-space"></span>
   <span>MeThriX</span>
+  <span style="width:0.2em"></span>
+  <img style="max-height:100%; width:auto; padding:1em;" src="http://2018.igem.org/wiki/images/c/c0/T--GO_Paris-Saclay--go-ps-white.png"/>
+  <span style="width:0.2em"></span>
+  <span style="text-align: center;line-height: 85%; font-size: medium;">Team GO<br>ParisSaclay</span>
 </mat-toolbar>
 
 
@@ -21,6 +25,8 @@
     <mat-toolbar color="primary">Navigation  <span class="fill-toolbar-space"></span><button mat-icon-button (click)="openSideNav()"><mat-icon>keyboard_arrow_left</mat-icon></button></mat-toolbar>
     <mat-nav-list>
       <a mat-list-item  [routerLink]="['../dashboard']"><mat-icon>dashboard</mat-icon> Main page</a>
+      <a mat-list-item  [routerLink]="['../team']"><mat-icon>people</mat-icon> Our team</a>
+      <a mat-list-item  [routerLink]="['../wiki-lp']"><mat-icon>desktop_windows</mat-icon> Wiki Proxy <sup>(dev)</sup></a>
 
       <a mat-list-item [routerLink]="['../sitemap']" id="sitemapbut"><mat-icon>apps</mat-icon> Site map</a>
     </mat-nav-list>

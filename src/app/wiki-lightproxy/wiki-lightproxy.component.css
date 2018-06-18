@@ -1,0 +1,24 @@
+#lightproxycontainer{
+  padding: 2em;
+}
+
+.grid-container {
+  margin: 20px;
+}
+
+
+.dashboard-card-content {
+  text-align: left;
+}
+
+.wikilp-card {
+  overflow: auto;
+}
+
+.wikilp-access-card {
+  overflow: auto;
+}
+
+mat-card-title{
+  font-weight: bold;
+}

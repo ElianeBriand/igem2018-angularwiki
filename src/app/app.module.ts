@@ -20,14 +20,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SitemapComponent } from './sitemap/sitemap.component';
-
-
+import { WikiLightproxyComponent } from './wiki-lightproxy/wiki-lightproxy.component';
+import {SanitizeHtmlPipe} from './wiki-lightproxy/dummy-sanitizer';
+import { TeamRosterComponent } from './team-roster/team-roster.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    SitemapComponent
+    SitemapComponent,
+    WikiLightproxyComponent,
+    SanitizeHtmlPipe,
+    TeamRosterComponent
+
   ],
   imports: [
     BrowserModule,
