@@ -23,6 +23,11 @@ import { SitemapComponent } from './sitemap/sitemap.component';
 import { WikiLightproxyComponent } from './wiki-lightproxy/wiki-lightproxy.component';
 import {SanitizeHtmlPipe} from './wiki-lightproxy/dummy-sanitizer';
 import { TeamRosterComponent } from './team-roster/team-roster.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { BiologySectionComponent } from './biology-section/biology-section.component';
+import { ComputingSectionComponent } from './computing-section/computing-section.component';
+import { HumanPracticeSectionComponent } from './human-practice-section/human-practice-section.component';
+import { SupportSectionComponent } from './support-section/support-section.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +36,12 @@ import { TeamRosterComponent } from './team-roster/team-roster.component';
     SitemapComponent,
     WikiLightproxyComponent,
     SanitizeHtmlPipe,
-    TeamRosterComponent
-
+    TeamRosterComponent,
+    ProjectDetailsComponent,
+    BiologySectionComponent,
+    ComputingSectionComponent,
+    HumanPracticeSectionComponent,
+    SupportSectionComponent
   ],
   imports: [
     BrowserModule,

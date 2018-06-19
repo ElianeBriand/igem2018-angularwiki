@@ -1,6 +1,9 @@
 import {Component, AfterContentInit, HostListener} from '@angular/core';
 import * as d3 from 'd3';
 import {Observable, timer} from 'rxjs';
+import * as anim_mp from './d3_anim_mainpage';
+import gauge from './d3_anim_mainpage';
+
 
 @Component({
   selector: 'dashboard',
@@ -18,7 +21,8 @@ export class DashboardComponent implements AfterContentInit {
   ngAfterContentInit() {
     this.dyn_width = document.getElementById('d3container').clientWidth;
      this.drawFigure('#d3target', this.dyn_width);
-     //this.loadLiquidFillGauge('d3target2', 20);
+    const a = new gauge();
+    a.loadLiquidFillGauge('d3target', 55, a.liquidFillGaugeDefaultSettings());
   }
 
 
