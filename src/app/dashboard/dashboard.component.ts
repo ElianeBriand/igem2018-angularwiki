@@ -1,9 +1,14 @@
 import {Component, AfterContentInit, HostListener} from '@angular/core';
-import * as d3 from 'd3';
-import {Observable, timer} from 'rxjs';
-import * as anim_mp from './d3_anim_mainpage';
-import gauge from './d3_anim_mainpage';
-
+import { timer} from 'rxjs';
+import {
+  loadLiquidFillGauge,
+  liquidFillGaugeDefaultSettings,
+  liquidFillGaugeConfig,
+  GaugeUpdater,
+  gradientFlow,
+  makeBimodal
+} from './d3_anim_mainpage';
+import {start_inventory_animation} from './d3_anim_mainpage';
 
 @Component({
   selector: 'dashboard',
@@ -20,87 +25,69 @@ export class DashboardComponent implements AfterContentInit {
 
   ngAfterContentInit() {
     this.dyn_width = document.getElementById('d3container').clientWidth;
-     this.drawFigure('#d3target', this.dyn_width);
-    const a = new gauge();
-    a.loadLiquidFillGauge('d3target', 55, a.liquidFillGaugeDefaultSettings());
+
+
+    //start_inventory_animation();
+    //instantiateForceFlow('#d3inputforceflow');
+    gradientFlow('#d3target');
+
+    const defaultConfig: liquidFillGaugeConfig = liquidFillGaugeDefaultSettings();
+
+    defaultConfig.valueCountUp = true;
+    defaultConfig.circleThickness = 0.15;
+    defaultConfig.circleColor = '#808015';
+    defaultConfig.textColor = '#555500';
+    defaultConfig.waveTextColor = '#FFFFAA';
+    defaultConfig.waveColor = '#AAAA39';
+    defaultConfig.textVertPosition = 0.8;
+    defaultConfig.waveAnimateTime = 1000;
+    defaultConfig.waveHeight = 0.05;
+    defaultConfig.waveAnimate = true;
+    defaultConfig.waveRise = false;
+    defaultConfig.waveHeightScaling = false;
+    defaultConfig.waveOffset = 0.25;
+    defaultConfig.textSize = 0.50;
+    defaultConfig.waveCount = 3;
+    defaultConfig.displayPercent = true;
+    defaultConfig.minValue = 0;
+    defaultConfig.maxValue = 600;
+    defaultConfig.customPercent = ' nmol/L';
+
+    const gauge: GaugeUpdater = loadLiquidFillGauge('#d3inputgauge', 220, defaultConfig);
+    const source = timer(1500, 1500);
+    source.subscribe(val => gauge.update(Math.floor(Math.random() * 100) + 250 ));
+
+
+    const defaultConfig2: liquidFillGaugeConfig = liquidFillGaugeDefaultSettings();
+
+    defaultConfig2.valueCountUp = true;
+    defaultConfig2.circleThickness = 0.15;
+    defaultConfig2.circleColor = '#80357c';
+    defaultConfig2.textColor = '#555500';
+    defaultConfig2.waveTextColor = '#FFFFAA';
+    defaultConfig2.waveColor = '#AAAA39';
+    defaultConfig2.textVertPosition = 0.8;
+    defaultConfig2.waveAnimateTime = 1000;
+    defaultConfig2.waveHeight = 0.05;
+    defaultConfig2.waveAnimate = true;
+    defaultConfig2.waveRise = false;
+    defaultConfig2.waveHeightScaling = false;
+    defaultConfig2.waveOffset = 0.25;
+    defaultConfig2.textSize = 0.50;
+    defaultConfig2.waveCount = 3;
+    defaultConfig2.displayPercent = true;
+    defaultConfig2.minValue = 0;
+    defaultConfig2.maxValue = 600;
+    defaultConfig2.customPercent = ' nmol/L';
+
+    const gauge2: GaugeUpdater = loadLiquidFillGauge('#d3outgauge', 45, defaultConfig2);
+    const source2 = timer(1500, 1500);
+    source2.subscribe(val => gauge2.update(Math.floor(Math.random() * 40) + 50 ));
+
+    makeBimodal('#d3bimodal');
   }
 
 
-
-  drawFigure(elementStringSelector: string, dyn_width: number) {
-/*
-
-    let n: number = 20 ; // number of layers
-    let m: number = 200; // number of samples per layer
-    let k: number= 10; // number of bumps per layer
-
-    let stack = d3.stack().keys(d3.range(n)).offset(d3.stackOffsetWiggle);
-    let layers0 = stack(d3.transpose(d3.range(n).map(function() { return bumps(m, k); })));
-    let layers1 = stack(d3.transpose(d3.range(n).map(function() { return bumps(m, k); })));
-    let layers = layers0.concat(layers1);
-
-    let svg = d3.select(elementStringSelector);
-    let width = dyn_width;
-    let height = 500;
-
-    let x = d3.scaleLinear()
-      .domain([0, m - 1])
-      .range([0, width]);
-
-    let y = d3.scaleLinear()
-      .domain([d3.min(layers, stackMin), d3.max(layers, stackMax)])
-      .range([height, 0]);
-
-    let z = d3.interpolateCool;
-
-    let area = d3.area()
-      .x(function(d, i) { return x(i); })
-      .y0(function(d) { return y(d[0]); })
-      .y1(function(d) { return y(d[1]); });
-
-    svg.selectAll("path")
-      .data(layers0)
-      .enter().append("path")
-      .attr("d", area)
-      .attr("fill", function() { return z(Math.random()); });
-
-    function stackMax(layer) {
-      return d3.max(layer, function(d) { return d[1]; });
-    }
-
-    function stackMin(layer) {
-      return d3.min(layer, function(d) { return d[0]; });
-    }
-
-    function transition() {
-      var t;
-      d3.selectAll("path")
-        .data((t = layers1, layers1 = layers0, layers0 = t))
-        .transition()
-        .duration(2500)
-        .attr("d", area);
-    }
-
-    // Inspired by Lee Byron’s test data generator.
-    function bumps(n, m) {
-      var a = [], i;
-      for (i = 0; i < n; ++i) a[i] = 0;
-      for (i = 0; i < m; ++i) bump(a, n);
-      return a;
-    }
-
-    function bump(a, n) {
-      var x = 1 / (0.1 + Math.random()),
-        y = 2 * Math.random() - 0.5,
-        z = 10 / (0.1 + Math.random());
-      for (var i = 0; i < n; i++) {
-        var w = (i / n - y) * z;
-        a[i] += x * Math.exp(-w * w);
-      }
-    }
-*/
-
-  }
 
 
 

@@ -121,3 +121,10 @@ $gops-app-theme: mat-light-theme($gops-app-primary, $gops-app-accent, $gops-app-
   @extend .mat-body-1;
 }
 
+.axis--y .domain {
+  display: none;
+}
+
+.axis--x .domain {
+  display: none;
+}

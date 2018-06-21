@@ -1812,3 +1812,9 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
   background-color: unset;
   color: unset;
   background-size: 100% auto; }
+
+.axis--y .domain {
+  display: none; }
+
+.axis--x .domain {
+  display: none; }
