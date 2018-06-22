@@ -18,10 +18,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
+import {SanitizeHtmlPipe} from './wiki-lightproxy/dummy-sanitizer';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SitemapComponent } from './sitemap/sitemap.component';
 import { WikiLightproxyComponent } from './wiki-lightproxy/wiki-lightproxy.component';
-import {SanitizeHtmlPipe} from './wiki-lightproxy/dummy-sanitizer';
 import { TeamRosterComponent } from './team-roster/team-roster.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { BiologySectionComponent } from './biology-section/biology-section.component';

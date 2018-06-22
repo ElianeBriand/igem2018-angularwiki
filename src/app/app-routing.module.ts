@@ -9,6 +9,7 @@ import {BiologySectionComponent} from './biology-section/biology-section.compone
 import {ComputingSectionComponent} from './computing-section/computing-section.component';
 import {HumanPracticeSectionComponent} from './human-practice-section/human-practice-section.component';
 import {SupportSectionComponent} from './support-section/support-section.component';
+import {SecondLevelComponentsModule} from './second-level-components/second-level-components.module';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'computing', component: ComputingSectionComponent },
   { path: 'human-practices', component: HumanPracticeSectionComponent },
   { path: 'support', component: SupportSectionComponent },
+  { path: 'sl', loadChildren: './second-level-components/second-level-components.module#SecondLevelComponentsModule'},
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
