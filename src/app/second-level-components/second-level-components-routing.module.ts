@@ -4,7 +4,7 @@ import {LabNoteBookComponent} from './lab-note-book/lab-note-book.component';
 
 const routes: Routes = [
   { path: 'labnotebook', component: LabNoteBookComponent },
-
+  { path: '', redirectTo: 'labnotebook', pathMatch: 'full' }
 ];
 
 @NgModule({

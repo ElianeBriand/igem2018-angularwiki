@@ -13,6 +13,7 @@ import { map } from 'rxjs/operators';
 export class AppComponent implements OnInit {
 
 
+  showSubmenu: boolean = false;
 
   openedSideNav = true;
 

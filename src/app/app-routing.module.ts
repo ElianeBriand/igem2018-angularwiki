@@ -9,7 +9,6 @@ import {BiologySectionComponent} from './biology-section/biology-section.compone
 import {ComputingSectionComponent} from './computing-section/computing-section.component';
 import {HumanPracticeSectionComponent} from './human-practice-section/human-practice-section.component';
 import {SupportSectionComponent} from './support-section/support-section.component';
-import {SecondLevelComponentsModule} from './second-level-components/second-level-components.module';
 
 
 const routes: Routes = [

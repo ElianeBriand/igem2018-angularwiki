@@ -14,3 +14,19 @@
 .grid-container {
   margin: 20px;
 }
+
+.member-name {
+  font-weight: bold;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.member-bio {
+  font-size : 11pt;
+
+}
+
+.member-card {
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  max-width: 240px;
+}
