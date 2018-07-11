@@ -128,3 +128,57 @@ $gops-app-theme: mat-light-theme($gops-app-primary, $gops-app-accent, $gops-app-
 .axis--x .domain {
   display: none;
 }
+
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('http://2018.igem.org/wiki/images/2/26/T--GO_Paris-Saclay--roboto-v18-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto'), local('Roboto-Regular'),
+  url('http://2018.igem.org/wiki/images/2/26/T--GO_Paris-Saclay--roboto-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('http://2018.igem.org/wiki/images/0/0b/T--GO_Paris-Saclay--roboto-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('http://2018.igem.org/File:T--GO_Paris-Saclay--roboto-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('http://2018.igem.org/File:T--GO_Paris-Saclay--roboto-v18-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'MaterialIcons-Regular';
+  font-style: normal;
+  font-weight: 400;
+
+}
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('http://2018.igem.org/wiki/images/5/51/T--GO_Paris-Saclay--MaterialIcons-Regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto'), local('Roboto-Regular'),
+  url('http://2018.igem.org/wiki/images/5/51/T--GO_Paris-Saclay--MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('http://2018.igem.org/wiki/images/2/28/T--GO_Paris-Saclay--MaterialIcons-Regular.woff') format('woff'), /* Modern Browsers */
+  url('http://2018.igem.org/wiki/images/1/1e/T--GO_Paris-Saclay--MaterialIcons-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('http://2018.igem.org/wiki/images/3/3f/T--GO_Paris-Saclay--MaterialIcons-Regular.svg#MaterialIcons-Regular') format('svg'); /* Legacy iOS */}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+}
