@@ -1,7 +1,43 @@
 <div class="grid-container">
-  <h1 class="mat-h1">Sponsors & Attribution</h1>
+  <h1 class="mat-h1">Support, Sponsors & Attribution</h1>
 
-  <mat-card class="dashboard-card" >
+  <mat-card class="dashboard-card">
+
+    <h2>Our sponsors</h2>
+
+    <div id="sponsors-container">
+      <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center">
+        <mat-card *ngFor="let sponsor of sponsorsList" fxFlex="0 1 240px" class="member-card">
+          <div class="cardcontent" [@cardState]="sponsor.expanded">
+            <div fxLayout="column" fxLayoutAlign="center" *ngIf="!sponsor.expanded_bool">
+              <img fxFlex="1 1" src="{{sponsor.image_src}}" style="width: 200px;">
+              <div fxFlex="0 0" class="seemorebutton-container">
+                <button mat-button class="seemorebutton"
+                        (click)="sponsor.toggleState()">
+                  <mat-icon aria-label="More about this sponsor">expand_less</mat-icon>
+                </button>
+              </div>
+            </div>
+
+            <div fxLayout="column" fxLayoutAlign="center"  *ngIf="sponsor.expanded_bool">
+              <div fxFlex="0 0" class="sponsortitle" >
+                {{sponsor.name}}
+              </div>
+              <div fxFlex="0 0" class="sponsortext" >
+                {{sponsor.sponsor_text}}
+              </div>
+              <div fxFill></div>
+              <div fxFlex="0 0" class="seelessbutton-container">
+                <button mat-button class="seelessbutton"
+                        (click)="sponsor.toggleState()">
+                  <mat-icon aria-label="Less about this sponsor">expand_more</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
 
   </mat-card>
 </div>

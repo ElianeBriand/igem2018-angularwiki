@@ -37,8 +37,10 @@
       <a mat-list-item [routerLink]="['../sitemap']" id="sitemapbut"><mat-icon>apps</mat-icon> Site map</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content fxLayout="row" fxLayoutAlign="center">
+    <div fxFlex="1 0 500px" id="sidenavflexcontent">
     <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
 </div>

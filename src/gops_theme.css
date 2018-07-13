@@ -1863,3 +1863,6 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
   direction: ltr;
   -moz-font-feature-settings: 'liga';
   -moz-osx-font-smoothing: grayscale; }
+
+h1, h2, h3, h4, h5, h6 {
+  border-bottom: 0px; }

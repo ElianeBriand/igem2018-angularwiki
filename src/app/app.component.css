@@ -25,3 +25,7 @@ body {
 mat-icon{
   padding: 3px;
 }
+
+#sidenavflexcontent {
+  max-width: 1000px;
+}

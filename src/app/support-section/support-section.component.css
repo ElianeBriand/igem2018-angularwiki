@@ -14,3 +14,56 @@
 .grid-container {
   margin: 20px;
 }
+
+.sponsortitle {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.sponsortext {
+  font-size : 10pt;
+
+}
+
+.member-card {
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  /* max-width: 240px; */
+  width: 240px;
+  min-height: 275px;
+}
+
+.seemorebutton-container {
+
+}
+
+.seemorebutton {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  min-height: 20px;
+  vertical-align: top;
+  font-size: 10px;
+  padding: 0 0;
+  margin: 0;
+}
+
+.seelessbutton {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  min-height: 20px;
+  vertical-align: top;
+  font-size: 10px;
+  padding: 0 0;
+  margin: 0;
+}
+
+.additional-info {
+  margin-top : 1em;
+  font-size : 11pt;
+}
+
+.cardcontent {
+}

@@ -2,17 +2,43 @@
   <h1 class="mat-h1">Our team</h1>
 
   <mat-card class="dashboard-card">
-    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center stretch">
-          <mat-card *ngFor="let member of membersList"  fxFlex="1 1" class="member-card">
-
-            <img src="{{member.img_src}}" style="width: 200px;"><br>
-            <div class="member-name">
-            {{member.name}}
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center">
+      <mat-card *ngFor="let member of membersList" fxFlex="0 1 240px" class="member-card">
+        <div class="cardcontent" [@cardState]="member.expanded">
+          <div fxLayout="column" fxLayoutAlign="center" *ngIf="!member.expanded_bool">
+            <img fxFlex="1 1"  src="{{member.image_src}}" style="width: 200px;">
+            <div fxFlex="1 1" class="member-name">
+              {{member.name}}
             </div>
-            <div class="member-bio">
+            <div fxFlex="1 1" class="member-bio">
               {{member.bio}}
             </div>
-          </mat-card>
+              <div  fxFlex="0 0"  class="seemorebutton-container">
+                <button mat-button class="seemorebutton"
+                        (click)="member.toggleState()">
+                  <mat-icon aria-label="Less about this sponsor">expand_less</mat-icon>
+                </button>
+              </div>
+            </div>
+
+          <div fxLayout="column" fxLayoutAlign="center"  *ngIf="member.expanded_bool">
+            <div fxFlex="0 0" class="member-name">
+              {{member.name}}
+            </div>
+            <div fxFlex="0 0" class="additional-info">
+              {{member.expanded_bio}}
+            </div>
+            <div fxFlex="1 1 100%"> </div>
+            <div fxFlex="0 0" class="seelessbutton-container">
+              <button mat-button class="seelessbutton"
+                      (click)="member.toggleState()">
+                <mat-icon aria-label="Less about this sponsor">expand_more</mat-icon>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </mat-card>
     </div>
   </mat-card>
 </div>
