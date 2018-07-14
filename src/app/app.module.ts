@@ -27,7 +27,6 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { BiologySectionComponent } from './biology-section/biology-section.component';
 import { ComputingSectionComponent } from './computing-section/computing-section.component';
 import { HumanPracticeSectionComponent } from './human-practice-section/human-practice-section.component';
-import {RouteInterceptor} from './route-interceptor.service';
 
 @NgModule({
   declarations: [

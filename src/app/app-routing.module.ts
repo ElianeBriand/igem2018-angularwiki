@@ -8,11 +8,12 @@ import {ProjectDetailsComponent} from './project-details/project-details.compone
 import {BiologySectionComponent} from './biology-section/biology-section.component';
 import {ComputingSectionComponent} from './computing-section/computing-section.component';
 import {HumanPracticeSectionComponent} from './human-practice-section/human-practice-section.component';
+import {ChunkGuardService} from './chunk-guard.service';
 
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'sitemap', component: SitemapComponent },
+  { path: 'sitemap', component: SitemapComponent , canActivate: [ChunkGuardService]},
   { path: 'wiki-lp/:pagepath', component: WikiLightproxyComponent },
   { path: 'wiki-lp', component: WikiLightproxyComponent },
   { path: 'team', component: TeamRosterComponent },

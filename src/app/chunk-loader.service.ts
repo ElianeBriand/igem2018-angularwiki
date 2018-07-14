@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import {forEach} from '@angular/router/src/utils/collection';
-import {RouteInterceptor} from './route-interceptor.service';
 import {ActivatedRoute, ParamMap} from '@angular/router';
+import {Observable} from 'rxjs';
 
 
 export class PageChunkRecord {
@@ -28,21 +28,20 @@ export class ChunkLoaderService {
     new PageChunkRecord("/support","support_chunk.js")
   ]
 
-  constructor(private http: HttpClient, private routeInterceptor : RouteInterceptor) {
-    routeInterceptor.onNavigationStart((route: ActivatedRoute) => {
-      route.paramMap.subscribe((paramMap: ParamMap) => () => {
-        if(paramMap.has('pagepath'))
-          console.log("Intercepted navigation to : " + paramMap.get('pagepath'));
-        else
-          console.log("Intercepted navigation with no pagepath");
-      });
-    })
+  constructor(private http: HttpClient) {
     this.records.forEach((element: PageChunkRecord) => {
       setTimeout(() => {
         this.loadPageChunk(element.pageName, () => {});
       })
     })
   }
+
+  /*
+  public asynLoadPageChunk(pageName: string) : Observable<boolean> {
+
+    return ;
+  }
+  */
 
   public loadPageChunk(pageName: string, callback: () => void) {
     var record = this.records.find(function(element: PageChunkRecord) {
@@ -72,4 +71,5 @@ export class ChunkLoaderService {
     console.log("Loaded : " + record.pageName + " (" + record.chunkURL + ")");
     callback();
   }
+
 }
