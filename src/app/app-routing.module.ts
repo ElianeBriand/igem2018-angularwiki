@@ -8,7 +8,6 @@ import {ProjectDetailsComponent} from './project-details/project-details.compone
 import {BiologySectionComponent} from './biology-section/biology-section.component';
 import {ComputingSectionComponent} from './computing-section/computing-section.component';
 import {HumanPracticeSectionComponent} from './human-practice-section/human-practice-section.component';
-import {SupportSectionComponent} from './support-section/support-section.component';
 
 
 const routes: Routes = [
@@ -21,8 +20,7 @@ const routes: Routes = [
   { path: 'biology', component: BiologySectionComponent },
   { path: 'computing', component: ComputingSectionComponent },
   { path: 'human-practices', component: HumanPracticeSectionComponent },
-  { path: 'support', component: SupportSectionComponent },
-  { path: 'sl', loadChildren: './second-level-components/second-level-components.module#SecondLevelComponentsModule'},
+  { path: 'support', loadChildren: './support-section/support-section-layer.module#SupportSectionLayerModule' },
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 

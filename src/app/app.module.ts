@@ -6,8 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule,
-  MatIconModule, MatListModule, MatTableModule,
-  MatPaginatorModule, MatSortModule, MatGridListModule,
+  MatIconModule, MatListModule, MatTableModule, MatSortModule, MatGridListModule,
   MatCardModule, MatMenuModule } from '@angular/material';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FormsModule } from '@angular/forms';
@@ -28,7 +27,7 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { BiologySectionComponent } from './biology-section/biology-section.component';
 import { ComputingSectionComponent } from './computing-section/computing-section.component';
 import { HumanPracticeSectionComponent } from './human-practice-section/human-practice-section.component';
-import { SupportSectionComponent } from './support-section/support-section.component';
+import {RouteInterceptor} from './route-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +41,7 @@ import { SupportSectionComponent } from './support-section/support-section.compo
     BiologySectionComponent,
     ComputingSectionComponent,
     HumanPracticeSectionComponent,
-    SupportSectionComponent
+
   ],
   imports: [
     BrowserModule,
@@ -54,7 +53,6 @@ import { SupportSectionComponent } from './support-section/support-section.compo
     MatIconModule,
     MatListModule,
     MatTableModule,
-    MatPaginatorModule,
     MatSortModule,
     MatExpansionModule,
     FormsModule,
