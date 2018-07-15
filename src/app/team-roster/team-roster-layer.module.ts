@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import {TeamRosterComponent} from './team-roster.component';
 
-import {SupportSectionComponent} from './support-section.component';
-import {SupportSectionRoutingModule} from './support-section-routing.module';
-
+import {TeamRosterRoutingModule} from './team-roster-routing.module';
 
 import {FlexLayoutModule} from '@angular/flex-layout';
 
@@ -19,12 +18,12 @@ import {
 @NgModule({
   imports: [
     CommonModule,
-    SupportSectionRoutingModule,
+    TeamRosterRoutingModule,
     MatButtonModule,
     MatIconModule,
     FlexLayoutModule,
     MatCardModule
   ],
-  declarations: [SupportSectionComponent]
+  declarations: [TeamRosterComponent]
 })
-export class SupportSectionLayerModule { }
+export class TeamRosterLayerModule { }

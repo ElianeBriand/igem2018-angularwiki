@@ -5,6 +5,11 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import {AppRoutingModule} from '../app-routing.module';
 import { switchMap } from 'rxjs/operators';
 
+
+
+
+
+
 @Component({
   selector: 'app-wiki-lightproxy',
   templateUrl: './wiki-lightproxy.component.html',
@@ -31,10 +36,14 @@ export class WikiLightproxyComponent implements OnInit, AfterViewInit {
       this.fetchWikiPage(paramMap.get('pagepath'));
       this.fieldPagePath = paramMap.get('pagepath');
     } else {
-      this.fetchWikiPage('TeamMainPage');
-      this.fieldPagePath = 'TeamMainPage';
+      this.fetchWikiPage('labnotebook');
+      this.fieldPagePath = 'labnotebook';
     }
 
+  }
+
+  goBackHomeLabNotebook() :void {
+    this.router.navigateByUrl('/labnotebook');
   }
 
   fetchWikiPage(pagepath: string) {
@@ -60,15 +69,17 @@ export class WikiLightproxyComponent implements OnInit, AfterViewInit {
     const pos_text_end = content.indexOf('<div class="visualClear"></div>');
     var sliced_content = content.slice(pos_text_begin, pos_text_end);
 
-    sliced_content = sliced_content.replace(new RegExp('href="\\/Team:GO_Paris-Saclay\\/', 'g'), '<a href="#/wiki-lp/'); // Rewriting wiki links
+    sliced_content = sliced_content.replace(new RegExp('href="\\/Team:GO_Paris-Saclay\\/', 'g'), '<a href="#/labnotebook/'); // Rewriting wiki links
 
     this.remoteContent = sliced_content;
   }
 
+  /*
   goToFilledPage(): void {
     this.router.navigate(['/wiki-lp/' +  this.fieldPagePath]);
 
   }
+  */
 
   ngAfterViewInit() {
 

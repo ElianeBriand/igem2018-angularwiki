@@ -1,20 +1,25 @@
 import { Injectable } from '@angular/core';
-import { Router, CanActivate } from '@angular/router';
-import {Observable} from 'rxjs';
-import { from } from 'rxjs';
+import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
+import {from, Observable} from 'rxjs';
+import {ChunkLoaderService} from './chunk-loader.service';
+import {environment} from '../environments/environment';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class ChunkGuardService {
+export class ChunkGuardService implements CanActivate {
 
-  constructor(public router: Router) {}
-  canActivate(): Observable<boolean> {
-    let returnPromise = new Promise<boolean>((resolve, reject) => {
+  constructor(public router: Router, public chunkLoader: ChunkLoaderService) {}
 
-      setTimeout(resolve, 100, true);
-    });
-    return from(returnPromise);
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
+    if(environment.production == false)
+      return from(new Promise<boolean>((resolve, reject) => {resolve(true);})); // No custom chunk loading.
+    let url: string = state.url;
+    console.log("ChunkGuard : " + url);
+    let returnObs = this.chunkLoader.asyncLoadPageChunk(url);
+    return returnObs;
   }
 }
 

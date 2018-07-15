@@ -67,7 +67,16 @@ export class SupportSectionComponent implements OnInit {
       "IDT is ..."),
     new Sponsor("Embassade de France aux USA",
       "http://2018.igem.org/wiki/images/d/df/T--GO_Paris-Saclay--emba_fr_us.jpg",
-      "EmbaFrance is ...")
+      "EmbaFrance is ..."),
+    new Sponsor("I2BC",
+      "http://2018.igem.org/wiki/images/4/4f/T--GO_Paris-Saclay--I2BC.png",
+      "I2BC is ..."),
+    new Sponsor("Paris Saclay : Sciences de la Vie",
+      "http://2018.igem.org/wiki/images/9/9d/T--GO_Paris-Saclay--upsaclay_sdv.jpg",
+      "Département Sciences de la Vie is ..."),
+    new Sponsor("Université Paris Saclay",
+      "http://2018.igem.org/wiki/images/c/c4/T--GO_Paris-Saclay--upsaclay_s.png",
+      "Université Paris Saclay is ...")
   ]
 
   constructor() {

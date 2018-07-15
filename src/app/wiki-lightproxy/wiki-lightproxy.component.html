@@ -3,16 +3,14 @@
   <mat-card class="wikilp-access-card">
     <mat-card-content class="dashboard-card-content">
       <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="left">
-          <input matInput placeholder="Page path" [(ngModel)]="fieldPagePath"> <button mat-button (click)="goToFilledPage()">Go</button>
+        <button mat-button (click)="goBackHomeLabNotebook()"><mat-icon>home</mat-icon> Go back to notebook home</button>
+        <!-- <input matInput placeholder="Page path" [(ngModel)]="fieldPagePath"> <button mat-button (click)="goToFilledPage()">Go</button> -->
       </div>
     </mat-card-content>
   </mat-card>
 
   <mat-card class="wikilp-card">
     <mat-card-header>
-      <mat-card-title>
-        {{wikiPageTitle}}
-      </mat-card-title>
     </mat-card-header>
     <mat-card-content class="dashboard-card-content">
       <div fxLayout="column" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="left">
