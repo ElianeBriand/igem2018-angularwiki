@@ -11,8 +11,9 @@ export class PageChunkRecord {
 }
 
 export let PAGE_CHUNK_MASTER_RECORD = [
- /*
-  new PageChunkRecord("/support","support_chunk.base64.txt"),
-  new PageChunkRecord("/team","team_chunk.base64.txt")
+ //*
+  new PageChunkRecord("/support","http://2018.igem.org/wiki/images/9/91/T--GO_Paris-Saclay--support_chunk.base64.txt"),
+  new PageChunkRecord("/team","http://2018.igem.org/wiki/images/7/74/T--GO_Paris-Saclay--team_chunk.base64.txt"),
+  new PageChunkRecord("/labnotebook","http://2018.igem.org/wiki/images/0/02/T--GO_Paris-Saclay--labnotebook_chunk.base64.txt")
   //*/
 ]

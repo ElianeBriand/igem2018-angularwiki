@@ -24,7 +24,7 @@
                 {{sponsor.name}}
               </div>
               <div fxFlex="0 0" class="sponsortext" >
-                {{sponsor.sponsor_text}}
+                <div [innerHtml]="sponsor.sponsor_text"></div>
               </div>
               <div fxFill></div>
               <div fxFlex="0 0" class="seelessbutton-container">
@@ -39,5 +39,13 @@
       </div>
     </div>
 
+    <h2>Special thanks</h2>
+
+    We would like to thank Raphaël Labruère who gave us 110 mg of Methotrexate, It permitted us to do several degradation test for our project.
+<br><br>
+    We thank Marie Claude Serre from the I2BC lab. She alone, gave us tons of material we needed for our experimentation. Without her the Summer lab would have been different.
+<br><br>
+    A big thank to Herve Leh, Research Engineer at the I2BC who gave us plenty of tips at the beginning of the lab time.
+<br><br>
   </mat-card>
 </div>

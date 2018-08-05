@@ -46,3 +46,5 @@ export function start_inventory_animation(): void;
 export function gradientFlow(d3selector: string): void;
 
 export function makeBimodal(d3selector: string): void;
+
+export function animateBacteria(d3selector: string) : void;

@@ -1,5 +1,5 @@
 <div class="grid-container">
-  <h1 class="mat-h1">MeThrix : Cleaning hospital effluent since 2018</h1>
+  <h1 class="mat-h1"><span style="color: #62003c;">Methotr</span><span style="color:  red;">Exit</span> : Cleaning hospital effluent since 2018</h1>
 
       <mat-card class="dashboard-card" >
         <mat-card-header>
@@ -12,19 +12,19 @@
               <div id="d3container" style="margin: auto;">
                 <svg id="d3target"  height="500" width="674" style="display: block;margin: auto;">
                   <g transform="translate(20,100)">
-                    <text font-size="30" text-anchor="middle" transform="translate(70,-20)">MTX</text>
+                    <!-- <text font-size="30" text-anchor="middle" transform="translate(70,-20)">MTX</text> -->
                     <text font-size="15" text-anchor="middle" transform="translate(70,-5)">Hospital effluents</text>
                     <g id="d3inputgauge" style="height: 150px;width: 150px;" ></g>
                   </g>
-                  <rect x="0" y="270" width="675" height="50" style="fill: transparent; stroke: #5a0036FF; stroke-width: 5px"></rect>
-                  <rect x="250" y="200" width="150" height="150" style="fill: transparent; stroke: #5a0036FF; stroke-width: 5px;"></rect>
-                  <rect x="0" y="270" width="675" height="50" style="fill: url('#animate-gradient');"></rect>
-                  <rect x="250" y="200" width="150" height="150" style="fill: url('#animate-gradient');"></rect>
-                  <rect x="250" y="200" width="150" height="150" style="fill: url('#animate-gradient');"></rect>
-
+                  <polygon points="5,270 250,270 250,200 400,200 400,270 650,270 650,320 400,320 400,350 250,350 250,320 5,320" style="fill: url('#animate-gradient');stroke: #5a0036FF; stroke-width: 5px" />
+                  <g transform="translate(250,200)" id="bacteriacontainer">
+                    <g></g>
+                  </g>
+                  <line x1="250" y1="270" x2="250" y2="320" style="fill: transparent; stroke: #000000ff; stroke-dasharray: 2,2; stroke-width: 2px;"></line>
+                  <line x1="400" y1="270" x2="400" y2="320" style="fill: transparent; stroke: #000000ff; stroke-dasharray: 2,2; stroke-width: 2px;"></line>
 
                   <g transform="translate(470,100)">
-                    <text font-size="30" text-anchor="middle" transform="translate(70,-20)">MTX</text>
+                    <!-- <text font-size="30" text-anchor="middle" transform="translate(70,-20)">MTX</text> -->
                     <text font-size="15" text-anchor="middle" transform="translate(70,-5)">Wastewater output</text>
                     <g id="d3outgauge" style="height: 150px;width: 150px;" ></g>
                   </g>
@@ -58,7 +58,7 @@
 
               </div>
 
-              <div style="padding: 10px;">
+              <div style="padding: 10px;" class="project-pres">
                 Our project is a general-purpose bacterial platform for drug degradation. As a proof of concept, we have
                 chosen to focus on
                 the cytotoxic drugs used in the treatment of cancer, as their concentrations are alarmingly high in

@@ -6,7 +6,7 @@ import {
   liquidFillGaugeConfig,
   GaugeUpdater,
   gradientFlow,
-  makeBimodal
+  makeBimodal, animateBacteria
 } from './d3_anim_mainpage';
 import {start_inventory_animation} from './d3_anim_mainpage';
 
@@ -30,6 +30,7 @@ export class DashboardComponent implements AfterContentInit {
     //start_inventory_animation();
     //instantiateForceFlow('#d3inputforceflow');
     gradientFlow('#d3target');
+    animateBacteria("#bacteriacontainer")
 
     const defaultConfig: liquidFillGaugeConfig = liquidFillGaugeDefaultSettings();
 
