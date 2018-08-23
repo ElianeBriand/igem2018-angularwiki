@@ -23,16 +23,10 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="openedSideNav">
     <mat-toolbar style="margin-top: 15px;" color="primary">Navigation  <span class="fill-toolbar-space"></span><button mat-icon-button (click)="openSideNav()"><mat-icon>keyboard_arrow_left</mat-icon></button></mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item (click)="routerLinkChunkProcessing('/dashboard')" ><mat-icon>dashboard</mat-icon> Main page</a>
-      <a mat-list-item (click)="routerLinkChunkProcessing('/project')" ><mat-icon>assessment</mat-icon> Project details</a>
-      <a mat-list-item (click)="routerLinkChunkProcessing('/biology')" ><mat-icon>blur_circular</mat-icon> Biology</a>
-      <a mat-list-item  [routerLink]="['../computing']"><mat-icon>memory</mat-icon> Computing</a>
-      <a mat-list-item  [routerLink]="['../human-practices']"><mat-icon>accessibility_new</mat-icon> Human Practices</a>
-      <a mat-list-item  [routerLink]="['../team']"><mat-icon>people</mat-icon> Our team</a>
-      <a mat-list-item  [routerLink]="['../support']"><mat-icon>folder_special</mat-icon> Support</a>
-      <a mat-list-item  [routerLink]="['../labnotebook']"><mat-icon>book</mat-icon>Lab Notebook</a>
+    <ng-material-multilevel-menu [configuration]='sideMenuConfig' [items]='sideMenuList' (selectedItem)="selectedSideMenuItem($event)">
+    </ng-material-multilevel-menu>
 
+    <mat-nav-list>
       <a mat-list-item [routerLink]="['../sitemap']" id="sitemapbut"><mat-icon>apps</mat-icon> Site map</a>
     </mat-nav-list>
   </mat-sidenav>

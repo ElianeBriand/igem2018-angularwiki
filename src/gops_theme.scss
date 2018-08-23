@@ -155,7 +155,6 @@ $gops-app-theme: mat-light-theme($gops-app-primary, $gops-app-accent, $gops-app-
 
 }
 
-/* fallback */
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -185,4 +184,16 @@ $gops-app-theme: mat-light-theme($gops-app-primary, $gops-app-accent, $gops-app-
 
 h1, h2, h3, h4, h5, h6 {
   border-bottom: 0px;
+}
+
+.mat-list {
+  padding-top: 0px !important;
+}
+
+ng-list-item  .mat-list-item:hover {
+  background-color: rgba(0,0,0,.04) !important;
+}
+
+ng-list-item .mat-divider {
+  border: 0px;
 }

@@ -7,6 +7,10 @@ import {BiologySectionComponent} from './biology-section/biology-section.compone
 import {ComputingSectionComponent} from './computing-section/computing-section.component';
 import {HumanPracticeSectionComponent} from './human-practice-section/human-practice-section.component';
 import {ChunkGuardService} from './chunk-guard.service';
+import {ModelingComponent} from './modeling/modeling.component';
+import {PartsComponent} from './biology-section/parts/parts.component';
+import {CollaborationsComponent} from './collaborations/collaborations.component';
+import {StrainsComponent} from './biology-section/strains/strains.component';
 
 
 const routes: Routes = [
@@ -15,10 +19,13 @@ const routes: Routes = [
   { path: 'labnotebook/:pagepath', loadChildren: './wiki-lightproxy/wiki-lightproxy-layer.module#WikiLightproxyLayerModule', canActivate: [ChunkGuardService] },
   { path: 'labnotebook', loadChildren: './wiki-lightproxy/wiki-lightproxy-layer.module#WikiLightproxyLayerModule', canActivate: [ChunkGuardService] },
   { path: 'team', loadChildren: './team-roster/team-roster-layer.module#TeamRosterLayerModule', canActivate: [ChunkGuardService] },
+  { path: 'attribution', loadChildren: './attribution/attribution-layer.module#AttributionLayerModule', canActivate: [ChunkGuardService] },
   { path: 'project', component: ProjectDetailsComponent, canActivate: [ChunkGuardService] },
-  { path: 'biology', component: BiologySectionComponent, canActivate: [ChunkGuardService] },
-  { path: 'computing', component: ComputingSectionComponent, canActivate: [ChunkGuardService] },
+  { path: 'biology', loadChildren: './biology-section/biology-section-layer.module#BiologySectionLayerModule', canActivate: [ChunkGuardService] },
+  { path: 'software', component: ComputingSectionComponent, canActivate: [ChunkGuardService] },
+  { path: 'modeling', component: ModelingComponent, canActivate: [ChunkGuardService] },
   { path: 'human-practices', component: HumanPracticeSectionComponent, canActivate: [ChunkGuardService] },
+  { path: 'collaborations', component: CollaborationsComponent, canActivate: [ChunkGuardService] },
   { path: 'support', loadChildren: './support-section/support-section-layer.module#SupportSectionLayerModule', canActivate: [ChunkGuardService] },
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
 ];

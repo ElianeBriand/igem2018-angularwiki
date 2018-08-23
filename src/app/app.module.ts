@@ -14,15 +14,18 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
+import { NgMaterialMultilevelMenuModule } from 'ng-material-multilevel-menu';
+
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SitemapComponent } from './sitemap/sitemap.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
-import { BiologySectionComponent } from './biology-section/biology-section.component';
 import { ComputingSectionComponent } from './computing-section/computing-section.component';
 import { HumanPracticeSectionComponent } from './human-practice-section/human-practice-section.component';
 import {PreInitLoaderService} from './pre-init-loader.service';
 import {SharedPipeModule} from './shared-pipe.module';
+import {ModelingComponent} from './modeling/modeling.component';
+import {CollaborationsComponent} from './collaborations/collaborations.component';
 
 @NgModule({
   declarations: [
@@ -30,10 +33,10 @@ import {SharedPipeModule} from './shared-pipe.module';
     DashboardComponent,
     SitemapComponent,
     ProjectDetailsComponent,
-    BiologySectionComponent,
     ComputingSectionComponent,
     HumanPracticeSectionComponent,
-
+    ModelingComponent,
+    CollaborationsComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,8 +52,8 @@ import {SharedPipeModule} from './shared-pipe.module';
     MatCardModule,
     MatMenuModule,
     HttpClientModule,
-    SharedPipeModule
-
+    SharedPipeModule,
+    NgMaterialMultilevelMenuModule
   ],
   providers: [
     PreInitLoaderService,
