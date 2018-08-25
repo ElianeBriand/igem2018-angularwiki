@@ -26,6 +26,7 @@ import {PreInitLoaderService} from './pre-init-loader.service';
 import {SharedPipeModule} from './shared-pipe.module';
 import {ModelingComponent} from './modeling/modeling.component';
 import {CollaborationsComponent} from './collaborations/collaborations.component';
+import {ReferenceBoxComponent} from './reference-box/reference-box.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {CollaborationsComponent} from './collaborations/collaborations.component
     HumanPracticeSectionComponent,
     ModelingComponent,
     CollaborationsComponent,
+    ReferenceBoxComponent
   ],
   imports: [
     BrowserModule,
