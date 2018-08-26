@@ -1,0 +1,23 @@
+<!--
+export class Reference {
+  public shorthand: string;
+  public authors: string;
+  public title: string;
+  public doi: string;
+  public journal: string;
+  public url: string;
+  public pubDetails: string;
+  public tags: string[];
+}
+-->
+<p class="mat-subheading-2">{{this.ref.journal}}</p>
+<p class="mat-title"> {{this.ref.title}}</p>
+<p class="mat-subheading-1">{{this.ref.authors}}</p>
+<p class="mat-caption">{{this.ref.abstract}}</p>
+<p class="mat-caption">{{this.ref.pubDetails}} &mdash; doi:{{this.ref.doi}}</p>
+<mat-chip-list> Tags:
+  <mat-chip  *ngFor="let tag of this.ref.tags">{{tag}}</mat-chip>
+</mat-chip-list>
+<p>
+<a href="{{this.ref.url}}" mat-raised-button><mat-icon>open_in_new</mat-icon> Open article page</a>
+</p>

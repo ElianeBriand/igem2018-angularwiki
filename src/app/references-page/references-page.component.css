@@ -1,0 +1,25 @@
+#gcontainer{
+  margin: 20px;
+
+}
+
+.dashboard-card-content {
+  text-align: left;
+}
+
+.dashboard-card {
+  overflow: auto;
+}
+
+.grid-container {
+  margin: 20px;
+}
+
+.references-table {
+  width: 100%;
+}
+
+
+.search-field {
+  width: 100%;
+}

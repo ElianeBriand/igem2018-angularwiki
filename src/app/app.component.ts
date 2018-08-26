@@ -133,14 +133,19 @@ export class AppComponent implements OnInit {
           link: '/support'
         },
         {
+          label: 'Collaborations',
+          icon: 'public',
+          link: '/collaborations'
+        },
+        {
           label: 'Attribution',
           icon: 'person_pin',
           link: '/attribution'
         },
         {
-          label: 'Collaborations',
-          icon: 'public',
-          link: '/collaborations'
+          label: 'References',
+          icon: 'book',
+          link: '/references'
         },
       ]
     },

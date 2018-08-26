@@ -6,9 +6,12 @@ import { isPlatformBrowser } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule,
+import {
+  MatToolbarModule, MatButtonModule, MatSidenavModule,
   MatIconModule, MatListModule,
-  MatCardModule, MatMenuModule } from '@angular/material';
+  MatCardModule, MatMenuModule, MatBottomSheetModule, MatChipsModule, MatTableModule, MatFormFieldModule, MatInputModule
+} from '@angular/material';
+
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,7 +29,11 @@ import {PreInitLoaderService} from './pre-init-loader.service';
 import {SharedPipeModule} from './shared-pipe.module';
 import {ModelingComponent} from './modeling/modeling.component';
 import {CollaborationsComponent} from './collaborations/collaborations.component';
-import {ReferenceBoxComponent} from './reference-box/reference-box.component';
+import {ReferenceBoxComponent, ReferenceSheet} from './reference-box/reference-box.component';
+import {ReferencesPageComponent} from './references-page/references-page.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -38,7 +45,12 @@ import {ReferenceBoxComponent} from './reference-box/reference-box.component';
     HumanPracticeSectionComponent,
     ModelingComponent,
     CollaborationsComponent,
-    ReferenceBoxComponent
+    ReferenceBoxComponent,
+    ReferenceSheet,
+    ReferencesPageComponent
+  ],
+  entryComponents: [
+    ReferenceSheet
   ],
   imports: [
     BrowserModule,
@@ -55,7 +67,12 @@ import {ReferenceBoxComponent} from './reference-box/reference-box.component';
     MatMenuModule,
     HttpClientModule,
     SharedPipeModule,
-    NgMaterialMultilevelMenuModule
+    NgMaterialMultilevelMenuModule,
+    MatBottomSheetModule,
+    MatChipsModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [
     PreInitLoaderService,

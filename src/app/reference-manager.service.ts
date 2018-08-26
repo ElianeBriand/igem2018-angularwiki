@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {PageChunkRecord} from './page-chunk-record';
 
 
 export class Reference {
@@ -10,15 +11,18 @@ export class Reference {
   public url: string;
   public pubDetails: string;
   public tags: string[];
+  public abstract: string;
 
-  constructor(shorthand: string, authors: string, doi: string, journal: string, url: string, pubDetails: string, tags: string[])  {
+  constructor(shorthand: string, authors: string, title: string, doi: string, journal: string, url: string, pubDetails: string, tags: string[], abstract: string)  {
     this.shorthand = shorthand;
     this.authors = authors;
+    this.title = title;
     this.doi = doi;
     this.journal = journal;
     this.url = url;
     this.pubDetails = pubDetails;
     this.tags = tags;
+    this.abstract = abstract;
   }
 }
 
@@ -45,15 +49,51 @@ year = {1997}
 
  */
 
-export let PAGE_CHUNK_MASTER_RECORD = [
+export let REFERENCES_MASTER_RECORD = [
   //*
+  new Reference("Test2018","Anonymous","Testing : a reference manager" , "2939","J. Eur. Behavioral Example",
+    "http://journal.example.com", "Vol 2.3 p3", ["example", "article"],
+    "The inducibility of SOS responses by 5-fluorouracil (5-FU), which has been used as an antitumor drug, was studied in Escherichia coli"+
+    " cells which have different DNA repair capacities for UV lesions. Expression of the umuC gene was apparently induced by 5-FU in the wild-type and"+
+    " uvrA strains but not in lexA and recA strains. The inducibility of the umuC gene by 5-FU, the metabolite of which inhibits thymidylate synthetase,"+
+    " was abolished in cultures containing deoxythymidine monophosphate which is converted from deoxyuridine monophosphate by thymidylate synthetase."+
+    " These results suggest that 5-FU may exert its SOS inducibility by inhibiting thymidylate synthetase and then disturbing DNA metabolism but not by"+
+    " incorporating 5-FU residues into RNA. Further, 5-FU weakly induced mutations in E. coli. © 1987."),
+  new Reference("Example2018","Alfred Example","Example of paper : this one is a good example of paper" , "452","J. Eur. Chemical Example",
+    "http://journal.example.eu", "Vol 45 p12", ["exampleJournal", "article"],
+    "During protein synthesis, ribosomes encounter many roadblocks, the outcomes of which are largely determined by substrate availability ,"+
+    " amino acid features and reaction kinetics. Prolonged ribosome stalling is likely to be resolved by ribosome rescue or quality control pathways,"+
+    " whereas shorter stalling is likely to be resolved by ongoing productive translation. How ribosome function is affected by such hindrances can therefore"+
+    " have a profound impact on the translational output (yield) of a particular mRNA. In this Review , we focus on these roadblocks and the resumption of normal"+
+    " translation elongation rather than on alternative fates wherein the stalled ribosome triggers degradation of the mRNA and the incomplete protein product."+
+    " We discuss the fundamental stages of the translation process in eukaryotes, from elongation through ribosome recycling, with particular attention to recent"+
+    " discoveries of the complexity of the genetic code and regulatory elements that control gene expression, including ribosome stalling during elongation, the"+
+    " role of mRNA context in translation termination and mechanisms of ribosome rescue that resemble recycling.")
+
   // */
 ]
+
+export let error_reference = new Reference("Error2018","E. Rror", "This reference : not found" ,"404","Journal of Error Not Found", "http://error.404", "Publication not found",["publicationNotFound"], "Error abstract...");
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReferenceManagerService {
 
+  public reflist = REFERENCES_MASTER_RECORD;
+  public errref = error_reference;
+
   constructor() { }
+
+  public getRefFromShorthand(shorthand: string): [number,Reference] {
+    // console.log("GetRefFromShorthand : " + shorthand);
+    var refIndex = this.reflist.findIndex(function(element: Reference) {
+      return element.shorthand == shorthand;
+    });
+    if(refIndex == undefined)
+    {
+      return [-1,this.errref];
+    }
+    return [refIndex + 1, this.reflist[refIndex]];
+  }
 }
