@@ -10,7 +10,11 @@ export class Reference {
   public tags: string[];
 }
 -->
-<p class="mat-subheading-2">{{this.ref.journal}}</p>
+<p class="mat-subheading-2">{{this.ref.journal}} <span style="position: absolute;
+    right: 5px;">  <button mat-icon-button (click)="this.bottomSheetRef.dismiss()">
+    <mat-icon aria-label="Close reference sheet">close</mat-icon>
+  </button></span></p>
+
 <p class="mat-title"> {{this.ref.title}}</p>
 <p class="mat-subheading-1">{{this.ref.authors}}</p>
 <p class="mat-caption">{{this.ref.abstract}}</p>
@@ -19,5 +23,6 @@ export class Reference {
   <mat-chip  *ngFor="let tag of this.ref.tags">{{tag}}</mat-chip>
 </mat-chip-list>
 <p>
-<a href="{{this.ref.url}}" mat-raised-button><mat-icon>open_in_new</mat-icon> Open article page</a>
+<a href="{{this.ref.url}}" mat-raised-button><mat-icon>open_in_new</mat-icon> Open article page</a><span style="position: absolute;
+    right: 5px;"> <a routerLink="references" mat-raised-button><mat-icon>book</mat-icon> Go to references list</a> </span>
 </p>

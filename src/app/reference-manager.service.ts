@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {PageChunkRecord} from './page-chunk-record';
 
 
+let indx = 1;
+
 export class Reference {
   public shorthand: string;
   public authors: string;
@@ -12,6 +14,8 @@ export class Reference {
   public pubDetails: string;
   public tags: string[];
   public abstract: string;
+  public index: number;
+
 
   constructor(shorthand: string, authors: string, title: string, doi: string, journal: string, url: string, pubDetails: string, tags: string[], abstract: string)  {
     this.shorthand = shorthand;
@@ -23,6 +27,8 @@ export class Reference {
     this.pubDetails = pubDetails;
     this.tags = tags;
     this.abstract = abstract;
+    this.index = indx;
+    indx++;
   }
 }
 
