@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatToolbarModule, MatButtonModule, MatSidenavModule,
   MatIconModule, MatListModule,
-  MatCardModule, MatMenuModule, MatBottomSheetModule, MatChipsModule, MatTableModule, MatFormFieldModule, MatInputModule
+  MatCardModule, MatMenuModule, MatBottomSheetModule, MatChipsModule, MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule
 } from '@angular/material';
 
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -31,6 +31,7 @@ import {ModelingComponent} from './modeling/modeling.component';
 import {CollaborationsComponent} from './collaborations/collaborations.component';
 import {ReferenceBoxComponent, ReferenceSheet} from './reference-box/reference-box.component';
 import {ReferencesPageComponent} from './references-page/references-page.component';
+import {ReferenceManagerService} from './reference-manager.service';
 
 
 
@@ -81,7 +82,8 @@ import {ReferencesPageComponent} from './references-page/references-page.compone
       useFactory: (preInitService: PreInitLoaderService) => function() {return preInitService.loadPageAtInit()},
       deps: [PreInitLoaderService],
       multi: true
-    }
+    },
+    ReferenceManagerService
   ],
   bootstrap: [AppComponent]
 })

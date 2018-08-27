@@ -31,7 +31,12 @@ export class ChunkLoaderService {
   public asyncLoadPageChunk(pageName: string) : Observable<boolean> {
     let returnPromise = new Promise<boolean>((resolve, reject) => {
       var record = this.records.find(function(element: PageChunkRecord) {
-        return element.pageName == pageName;
+        if(pageName.indexOf(element.pageName) == -1)
+        {
+          return false;
+        }else {
+          return true;
+        }
       });
       if(record == undefined)
       {
@@ -55,7 +60,12 @@ export class ChunkLoaderService {
 
   public loadPageChunk(pageName: string, callback: () => void) {
     var record = this.records.find(function(element: PageChunkRecord) {
-      return element.pageName == pageName;
+      if(pageName.indexOf(element.pageName) == -1)
+      {
+        return false;
+      }else {
+        return true;
+      }
     });
     if(record == undefined)
     {

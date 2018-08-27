@@ -14,14 +14,14 @@ export class ReferenceBoxComponent implements OnInit {
 
   public testString = "A";
   public ref: Reference;
-  public index = 0;
 
   public refsheetref : MatBottomSheetRef;
 
   private refmanservice : ReferenceManagerService;
 
-  constructor(refman: ReferenceManagerService, private bottomSheet: MatBottomSheet) {
+  constructor(private refman: ReferenceManagerService, private bottomSheet: MatBottomSheet) {
     this.refmanservice = refman;
+    this.ref = error_reference;
   }
 
   openRefBottomSheet(): void {
@@ -31,8 +31,10 @@ export class ReferenceBoxComponent implements OnInit {
 
   ngOnInit() {
     let result = this.refmanservice.getRefFromShorthand(this.shorthand);
-    this.index = result[0];
-    this.ref = result[1];
+    result.subscribe((results: Reference) => {
+      this.ref = results;
+    }, error1 => console.log(error1));
+
   }
 
 }
@@ -47,7 +49,7 @@ export class ReferenceSheet {
 
   public ref: Reference;
 
-  constructor(private bottomSheetRef: MatBottomSheetRef<ReferenceSheet>) {
+  constructor(public bottomSheetRef: MatBottomSheetRef<ReferenceSheet>) {
     this.ref = error_reference;
   }
 

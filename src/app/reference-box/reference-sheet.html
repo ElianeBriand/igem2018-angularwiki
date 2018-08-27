@@ -11,7 +11,7 @@ export class Reference {
 }
 -->
 <p class="mat-subheading-2">{{this.ref.journal}} <span style="position: absolute;
-    right: 5px;">  <button mat-icon-button (click)="this.bottomSheetRef.dismiss()">
+    right: 5px;"> Ref. #  {{this.ref.index}} <button mat-icon-button (click)="this.bottomSheetRef.dismiss()">
     <mat-icon aria-label="Close reference sheet">close</mat-icon>
   </button></span></p>
 
@@ -24,5 +24,5 @@ export class Reference {
 </mat-chip-list>
 <p>
 <a href="{{this.ref.url}}" mat-raised-button><mat-icon>open_in_new</mat-icon> Open article page</a><span style="position: absolute;
-    right: 5px;"> <a routerLink="references" mat-raised-button><mat-icon>book</mat-icon> Go to references list</a> </span>
+    right: 15px;"> <a routerLink="references" mat-raised-button><mat-icon>book</mat-icon> Go to references list</a> </span>
 </p>
