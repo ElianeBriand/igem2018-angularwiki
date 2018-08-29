@@ -32,6 +32,7 @@ import {CollaborationsComponent} from './collaborations/collaborations.component
 import {ReferenceBoxComponent, ReferenceSheet} from './reference-box/reference-box.component';
 import {ReferencesPageComponent} from './references-page/references-page.component';
 import {ReferenceManagerService} from './reference-manager.service';
+import {CalendarModule} from 'angular-calendar';
 
 
 
@@ -74,6 +75,7 @@ import {ReferenceManagerService} from './reference-manager.service';
     MatTableModule,
     MatFormFieldModule,
     MatInputModule
+
   ],
   providers: [
     PreInitLoaderService,

@@ -9,12 +9,14 @@ import {WikiLightproxyRoutingModule} from './wiki-lightproxy-routing.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {
-  MatButtonModule, MatCardModule,
-  MatIconModule, MatListModule,
+  MatButtonModule, MatCardModule, MatDatepickerModule, MatExpansionModule,
+  MatIconModule, MatInputModule, MatListModule,
   MatMenuModule,
   MatToolbarModule
 } from '@angular/material';
 import {SharedPipeModule} from '../shared-pipe.module';
+import {CalendarModule} from 'angular-calendar';
+import {CalendarHeaderComponent} from './calendar-header.components';
 
 
 
@@ -31,8 +33,16 @@ import {SharedPipeModule} from '../shared-pipe.module';
     FlexLayoutModule,
     MatCardModule,
     MatMenuModule,
-    SharedPipeModule
+    SharedPipeModule,
+    CalendarModule.forRoot(),
+    MatExpansionModule,
+
+
   ],
-  declarations: [WikiLightproxyComponent]
+  declarations: [
+    WikiLightproxyComponent,
+    CalendarHeaderComponent
+  ]
+
 })
 export class WikiLightproxyLayerModule { }

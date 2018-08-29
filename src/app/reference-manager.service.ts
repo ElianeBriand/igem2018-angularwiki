@@ -97,7 +97,6 @@ export class ReferenceManagerService {
   public errref = error_reference;
 
   constructor() {
-    console.log("CTOR refman");
     if (ReferenceManagerService.singletonInstance) {
       return ReferenceManagerService.singletonInstance;
     }
@@ -130,7 +129,7 @@ export class ReferenceManagerService {
 
     /*
     let jsonstr = JSON.stringify(REFERENCES_MASTER_RECORD);
-    console.log(jsonstr); 
+    console.log(jsonstr);
     */
     /*
     let objjson: Reference = JSON.parse(jsonstr);

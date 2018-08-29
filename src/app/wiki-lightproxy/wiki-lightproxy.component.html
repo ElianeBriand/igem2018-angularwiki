@@ -1,12 +1,50 @@
 <div class="grid-container">
-
+  <h1 class="mat-h1">Lab notebook</h1>
   <mat-card class="wikilp-access-card">
     <mat-card-content class="dashboard-card-content">
+
+
+
       <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="left">
-        <button mat-button (click)="goBackHomeLabNotebook()"><mat-icon>home</mat-icon> Go back to notebook home</button>
+        <!-- <button mat-button (click)="goBackHomeLabNotebook()"><mat-icon>home</mat-icon> Go back to notebook home</button> -->
         <!-- <input matInput placeholder="Page path" [(ngModel)]="fieldPagePath"> <button mat-button (click)="goToFilledPage()">Go</button> -->
       </div>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Experiment Calendar
+          </mat-panel-title>
+          <mat-panel-description>
+            Browse notebook entry by date
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+      <calendar-header [(view)]="view"  [(viewDate)]="viewDate"></calendar-header>
+
+      <div [ngSwitch]="view">
+        <mwl-calendar-month-view
+          *ngSwitchCase="'month'"
+          [viewDate]="viewDate"
+          [events]="events"
+          [excludeDays]="excludeDays"
+          [activeDayIsOpen]="activeDayIsOpen"
+          (dayClicked)="dayClicked($event.day)"
+          (eventClicked)="eventClicked($event)">
+        </mwl-calendar-month-view>
+        <mwl-calendar-week-view
+          *ngSwitchCase="'week'"
+          [viewDate]="viewDate"
+          [events]="events"
+          [excludeDays]="excludeDays"
+          (eventClicked)="eventClicked($event)">
+        </mwl-calendar-week-view>
+      </div>
+
+      </mat-expansion-panel>
+
     </mat-card-content>
+
   </mat-card>
 
   <mat-card class="wikilp-card">

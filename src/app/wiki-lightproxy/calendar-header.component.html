@@ -1,0 +1,58 @@
+<div>
+    <div class="btn-group">
+
+      <table class="equalDivide" cellpadding="0" cellspacing="0" width="100%" border="0">
+        <tr>
+          <td>
+            <button mat-raised-button
+
+                            mwlCalendarToday
+                            [(viewDate)]="viewDate"
+                            (viewDateChange)="viewDateChange.next(viewDate)">
+            Today
+          </button>
+          </td>
+
+          <td class="centercolumn">
+            <button mat-icon-button
+                    mwlCalendarPreviousView
+                    [view]="view"
+                    [(viewDate)]="viewDate"
+                    (viewDateChange)="viewDateChange.next(viewDate)">
+              <mat-icon>keyboard_arrow_left</mat-icon>
+            </button>
+            <span class="monthdisplayer"> {{ viewDate | calendarDate:(view + 'ViewTitle'):locale }} </span>
+            <button mat-icon-button
+                    mwlCalendarNextView
+                    [view]="view"
+                    [(viewDate)]="viewDate"
+                    (viewDateChange)="viewDateChange.next(viewDate)">
+              <mat-icon>keyboard_arrow_right</mat-icon>
+            </button>
+
+          </td>
+
+
+          <td>
+
+            <button mat-raised-button
+                    (click)="viewChange.emit('month')"
+                    [class.active]="view === 'month'">
+              Month
+            </button>
+            <button mat-raised-button
+                    (click)="viewChange.emit('week')"
+                    [class.active]="view === 'week'">
+              Week
+            </button>
+          </td>
+        </tr>
+      </table>
+
+
+      <br>
+
+
+
+    </div>
+</div>

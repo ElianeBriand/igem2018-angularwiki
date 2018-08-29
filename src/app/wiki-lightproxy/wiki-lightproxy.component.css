@@ -22,3 +22,21 @@
 mat-card-title{
   font-weight: bold;
 }
+
+.monthdisplayer {
+  font-weight: bold;
+}
+
+.rightbutton {
+  float: right;
+  overflow: auto;
+}
+
+
+
+
+.equalDivide .centercolumn {
+  width: 99%;
+  text-align: center;
+}
+
