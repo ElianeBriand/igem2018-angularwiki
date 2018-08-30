@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule,  APP_INITIALIZER} from '@angular/core';
 import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import {CommonModule, isPlatformBrowser} from '@angular/common';
 
 
 import { AppComponent } from './app.component';
@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatToolbarModule, MatButtonModule, MatSidenavModule,
   MatIconModule, MatListModule,
-  MatCardModule, MatMenuModule, MatBottomSheetModule, MatChipsModule, MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule
+  MatCardModule, MatMenuModule, MatTableModule, MatFormFieldModule, MatInputModule, MatChipsModule
 } from '@angular/material';
 
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -29,10 +29,9 @@ import {PreInitLoaderService} from './pre-init-loader.service';
 import {SharedPipeModule} from './shared-pipe.module';
 import {ModelingComponent} from './modeling/modeling.component';
 import {CollaborationsComponent} from './collaborations/collaborations.component';
-import {ReferenceBoxComponent, ReferenceSheet} from './reference-box/reference-box.component';
-import {ReferencesPageComponent} from './references-page/references-page.component';
 import {ReferenceManagerService} from './reference-manager.service';
-import {CalendarModule} from 'angular-calendar';
+import {ReferenceBoxModule} from './reference-box/reference-box.module';
+import {ReferencesPageComponent} from './references-page/references-page.component';
 
 
 
@@ -47,12 +46,8 @@ import {CalendarModule} from 'angular-calendar';
     HumanPracticeSectionComponent,
     ModelingComponent,
     CollaborationsComponent,
-    ReferenceBoxComponent,
-    ReferenceSheet,
     ReferencesPageComponent
-  ],
-  entryComponents: [
-    ReferenceSheet
+
   ],
   imports: [
     BrowserModule,
@@ -70,11 +65,11 @@ import {CalendarModule} from 'angular-calendar';
     HttpClientModule,
     SharedPipeModule,
     NgMaterialMultilevelMenuModule,
-    MatBottomSheetModule,
-    MatChipsModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    ReferenceBoxModule,
+    MatChipsModule
 
   ],
   providers: [

@@ -100,6 +100,11 @@ export class AppComponent implements OnInit {
           label: 'Strains',
           icon: 'blur_on',
           link: '/biology/strains'
+        },
+        {
+          label: 'Interlab',
+          icon: 'swap_horizontal_circle',
+          link: '/biology/interlab'
         }
       ]
     },        {

@@ -38,7 +38,6 @@ import {LabnotebookCalEventService} from './event-service/labnotebook-cal-event.
     CalendarModule.forRoot(),
     MatExpansionModule,
 
-
   ],
   declarations: [
     WikiLightproxyComponent,

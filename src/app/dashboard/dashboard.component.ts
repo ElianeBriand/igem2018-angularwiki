@@ -30,7 +30,7 @@ export class DashboardComponent implements AfterContentInit {
     //start_inventory_animation();
     //instantiateForceFlow('#d3inputforceflow');
     gradientFlow('#d3target');
-    animateBacteria("#bacteriacontainer")
+    //animateBacteria("#bacteriacontainer")
 
     const defaultConfig: liquidFillGaugeConfig = liquidFillGaugeDefaultSettings();
 

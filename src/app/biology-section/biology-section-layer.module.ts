@@ -20,6 +20,8 @@ import {StrainsComponent} from './strains/strains.component';
 import {PartsComponent} from './parts/parts.component';
 
 import {MatTableModule} from '@angular/material/table';
+import {ReferenceBoxModule} from '../reference-box/reference-box.module';
+import {InterlabComponent} from './interlab/interlab.component';
 
 
 @NgModule({
@@ -32,10 +34,14 @@ import {MatTableModule} from '@angular/material/table';
     MatCardModule,
     MatToolbarModule,
     MatExpansionModule,
-    MatTableModule
+    MatTableModule,
+    ReferenceBoxModule
   ],
-  declarations: [BiologySectionComponent,
+  declarations: [
+    BiologySectionComponent,
     PartsComponent,
-    StrainsComponent]
+    StrainsComponent,
+    InterlabComponent
+  ]
 })
 export class BiologySectionLayerModule { }
