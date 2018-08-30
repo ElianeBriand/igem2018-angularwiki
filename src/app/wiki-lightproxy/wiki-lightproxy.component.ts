@@ -1,9 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {DomSanitizer} from '@angular/platform-browser';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import {AppRoutingModule} from '../app-routing.module';
-import { switchMap } from 'rxjs/operators';
 
 
 
@@ -23,34 +20,7 @@ import {
   CalendarEventTimesChangedEvent
 } from 'angular-calendar';
 
-export const colors: any = {
-  mtx: {
-    primary: '#ad2121',
-    secondary: '#FAE3E3'
-  },
-  ancillary: {
-    primary: '#1e90ff',
-    secondary: '#D1E8FF'
-  },
-  bistable: {
-    primary: '#e3bc08',
-    secondary: '#FDF1BA'
-  }
-};
-
-export class eventMetadata {
-  category: string;
-
-  wikiurl: string;
-
-  constructor(category: string, wikiurl: string) {
-    this.category = category;
-    this.wikiurl = wikiurl;
-  }
-
-}
-
-
+import {LabnotebookCalEventService} from './event-service/labnotebook-cal-event.service';
 
 
 @Component({
@@ -64,7 +34,13 @@ export class WikiLightproxyComponent implements OnInit, AfterViewInit {
 
   constructor(private http: HttpClient,
               private route: ActivatedRoute,
-              private router: Router) { };
+              private router: Router,
+              private eventService: LabnotebookCalEventService) {
+    this.eventService.CalendarEventsList.subscribe((value: CalendarEvent[]) => {
+      this.events = value;
+    }, (error: any) => console.log("EvService error : " + error));
+
+  };
 
   remoteContent: any = 'Loading...';
   wikiPageTitle = 'Loading...';
@@ -138,35 +114,7 @@ export class WikiLightproxyComponent implements OnInit, AfterViewInit {
 
   excludeDays: number[] = [0, 6];
 
-  events: CalendarEvent[] = [
-    {
-      start: new Date('2018-08-16'),
-      end: new Date('2018-08-17'),
-      title: 'LEE5 Transformation',
-      color: colors.bistable,
-      meta: new eventMetadata("bistable", "http://2018.igem.org/Team:GO_Paris-Saclay/Heat_Shock_Transformation")
-    },
-    {
-      start: startOfDay(new Date()),
-      title: 'Sequencing pSB1C3 abgT',
-      color: colors.mtx,
-      meta: new eventMetadata("mtx", "http://2018.igem.org/Team:GO_Paris-Saclay/Heat_Shock_Transformation")
-    },
-    {
-      start: subDays(endOfMonth(new Date()), 3),
-      end: addDays(endOfMonth(new Date()), 3),
-      title: 'Creating P1 phage stock',
-      color: colors.ancillary,
-      meta: new eventMetadata("ancillary", "http://2018.igem.org/Team:GO_Paris-Saclay/labnotebook/P1_stock_making")
-    },
-    {
-      start: addHours(startOfDay(new Date()), 2),
-      end: new Date(),
-      title: 'Digesting pCR blunt abgT (XbaI,SpeI)',
-      color: colors.mtx,
-      meta: new eventMetadata("mtx", "http://2018.igem.org/Team:GO_Paris-Saclay/Heat_Shock_Transformation")
-    }
-  ];
+  events: CalendarEvent[] = [];
 
   /*
   From : calendar-utils
@@ -190,7 +138,7 @@ export class WikiLightproxyComponent implements OnInit, AfterViewInit {
    */
 
   eventClicked({ event }: { event: CalendarEvent }): void {
-    console.log('Event clicked', event);
+    this.fetchWikiPage(event.meta.wikipath);
   }
 
   public backAMonth() {

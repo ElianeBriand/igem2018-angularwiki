@@ -17,6 +17,7 @@ import {
 import {SharedPipeModule} from '../shared-pipe.module';
 import {CalendarModule} from 'angular-calendar';
 import {CalendarHeaderComponent} from './calendar-header.components';
+import {LabnotebookCalEventService} from './event-service/labnotebook-cal-event.service';
 
 
 
@@ -42,6 +43,9 @@ import {CalendarHeaderComponent} from './calendar-header.components';
   declarations: [
     WikiLightproxyComponent,
     CalendarHeaderComponent
+  ],
+  providers: [
+    LabnotebookCalEventService
   ]
 
 })
