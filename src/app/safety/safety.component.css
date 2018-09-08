@@ -1,0 +1,16 @@
+#gcontainer{
+  margin: 20px;
+
+}
+
+.dashboard-card-content {
+  text-align: left;
+}
+
+.dashboard-card {
+  overflow: auto;
+}
+
+.grid-container {
+  margin: 20px;
+}

@@ -12,6 +12,9 @@ import {PartsComponent} from './biology-section/parts/parts.component';
 import {CollaborationsComponent} from './collaborations/collaborations.component';
 import {StrainsComponent} from './biology-section/strains/strains.component';
 import {ReferencesPageComponent} from './references-page/references-page.component';
+import {ImproveComponent} from './improve/improve.component';
+import {DemonstrateComponent} from './demonstrate/demonstrate.component';
+import {SafetyComponent} from './safety/safety.component';
 
 
 const routes: Routes = [
@@ -27,6 +30,9 @@ const routes: Routes = [
   { path: 'modeling', component: ModelingComponent, canActivate: [ChunkGuardService] },
   { path: 'human-practices', component: HumanPracticeSectionComponent, canActivate: [ChunkGuardService] },
   { path: 'collaborations', component: CollaborationsComponent, canActivate: [ChunkGuardService] },
+  { path: 'improve', component: ImproveComponent, canActivate: [ChunkGuardService] },
+  { path: 'demonstrate', component: DemonstrateComponent, canActivate: [ChunkGuardService] },
+  { path: 'safety', component: SafetyComponent, canActivate: [ChunkGuardService] },
   { path: 'references', component: ReferencesPageComponent, canActivate: [ChunkGuardService] },
   { path: 'support', loadChildren: './support-section/support-section-layer.module#SupportSectionLayerModule', canActivate: [ChunkGuardService] },
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' }

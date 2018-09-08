@@ -22,6 +22,11 @@ import {PartsComponent} from './parts/parts.component';
 import {MatTableModule} from '@angular/material/table';
 import {ReferenceBoxModule} from '../reference-box/reference-box.module';
 import {InterlabComponent} from './interlab/interlab.component';
+import { J23108Component } from './parts/j23108/j23108.component';
+import { Cpg2Component } from './parts/cpg2/cpg2.component';
+import { FolCComponent } from './parts/fol-c/fol-c.component';
+import { LerComponent } from './parts/ler/ler.component';
+import { Lee5Component } from './parts/lee5/lee5.component';
 
 
 @NgModule({
@@ -41,7 +46,12 @@ import {InterlabComponent} from './interlab/interlab.component';
     BiologySectionComponent,
     PartsComponent,
     StrainsComponent,
-    InterlabComponent
+    InterlabComponent,
+    J23108Component,
+    Cpg2Component,
+    FolCComponent,
+    LerComponent,
+    Lee5Component
   ]
 })
 export class BiologySectionLayerModule { }

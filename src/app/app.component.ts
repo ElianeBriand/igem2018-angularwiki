@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 
 import { Router } from '@angular/router';
 import {ChunkLoaderService} from './chunk-loader.service';
+import {SPECIAL_PAGE_CHUNK_MASTER_RECORD, SpeciaPageRecord} from './page-chunk-record';
 
 
 @Component({
@@ -36,7 +37,31 @@ export class AppComponent implements OnInit {
 
   constructor(private breakpointObserver: BreakpointObserver, private router: Router, private chunkLoader: ChunkLoaderService) {
     this.routerLinkChunkProcessing = (s: string) => {this.routerLinkChunkProcessingUnbound(s, this)};
-  }
+
+    /* Figure out if we're on a special page */
+    let currUrl = window.location.href;
+    let sp_regex = new RegExp('Team:GO_Paris-Saclay\\/.*');
+    let sp_matchArray = currUrl.match(sp_regex);
+    if(Array.isArray(sp_matchArray) && sp_matchArray.length) {
+      // We are on a page with URL of the form Team:GO_Paris-Saclay/*
+      let sp_currPath = sp_matchArray[0].slice(20);
+      console.log("Preparing to navigate to Special Page Path : " + sp_currPath);
+      var sp_record = SPECIAL_PAGE_CHUNK_MASTER_RECORD.find(function (element: SpeciaPageRecord) {
+        return element.specialPageName == sp_currPath;
+      });
+
+      if (sp_record == undefined) {
+        console.log("IPL : No redirection record found for special page.");
+        return;
+      }
+
+      console.log("IPL : Corresponding record found : " + sp_record.specialPageName + " (" + sp_record.chunkRecordPageName +", " + sp_record.navTo + ")");
+
+      router.navigate([sp_record.navTo]);
+
+    }
+
+    }
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -151,7 +176,11 @@ export class AppComponent implements OnInit {
           label: 'References',
           icon: 'book',
           link: '/references'
-        },
+        },        {
+          label: 'Safety',
+          icon: 'security',
+          link: '/safety'
+        }
       ]
     },
     {

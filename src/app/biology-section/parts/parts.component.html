@@ -14,7 +14,7 @@
         <mat-card-subtitle>LEE5 &mdash; BBa_K??????</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>A constitutive promoter regulated by H-NS (E coli endogeneous) and ler.</mat-card-content>
-      <mat-card-actions><button mat-raised-button color="accent">More about this part</button> <button mat-raised-button color="accent">Registry page</button></mat-card-actions>
+      <mat-card-actions><button mat-raised-button color="accent" routerLink="/biology/lee5">More about this part</button> <button mat-raised-button color="accent">Registry page</button></mat-card-actions>
     </mat-card>
 
     <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
@@ -24,7 +24,7 @@
         <mat-card-subtitle>ler &mdash; BBa_K??????</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>A translation regulator protein that binds to LEE5 promoter sites.</mat-card-content>
-      <mat-card-actions><button mat-raised-button color="accent">More about this part</button> <button mat-raised-button color="accent">Registry page</button></mat-card-actions>
+      <mat-card-actions><button mat-raised-button color="accent" routerLink="/biology/ler">More about this part</button> <button mat-raised-button color="accent">Registry page</button></mat-card-actions>
     </mat-card>
 
 
@@ -62,8 +62,12 @@
 
 
   </mat-card>
+
+
   <div style="padding-top: 40px; padding-bottom: 40px">
   </div>
+
+
   <mat-card class="dashboard-card" >
 
     <h2>Methotrexate elimination</h2>
@@ -75,17 +79,7 @@
       <mat-card-subtitle>cpg2 &mdash; BBa_K??????</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>An enzyme that cleaves folates, yielding a pterydoyl ring and glutamate(s).</mat-card-content>
-      <mat-card-actions><button mat-raised-button color="accent">More about this part</button> <button mat-raised-button color="accent">Registry page</button></mat-card-actions>
-    </mat-card>
-
-    <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
-      <mat-card-header>
-        <div mat-card-avatar class="cpg2-header-image"></div>
-        <mat-card-title>AbgT Transporter</mat-card-title>
-        <mat-card-subtitle>abgT &mdash; BBa_K??????</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>A transporter for PABA and some folate analogs.</mat-card-content>
-      <mat-card-actions><button mat-raised-button color="accent">More about this part</button> <button mat-raised-button color="accent">Registry page</button></mat-card-actions>
+      <mat-card-actions><button mat-raised-button color="accent" routerLink="/biology/cpg2">More about this part</button> <button mat-raised-button color="accent">Registry page</button></mat-card-actions>
     </mat-card>
 
     <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
@@ -95,7 +89,7 @@
         <mat-card-subtitle>folC &mdash; BBa_K??????</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>An enzyme that adds glutamate to folate analogs.</mat-card-content>
-      <mat-card-actions><button mat-raised-button color="accent">More about this part</button> <button mat-raised-button color="accent">Registry page</button></mat-card-actions>
+      <mat-card-actions><button mat-raised-button color="accent" routerLink="/biology/folc">More about this part</button> <button mat-raised-button color="accent">Registry page</button></mat-card-actions>
     </mat-card>
 
 
@@ -132,4 +126,29 @@
 
 
   </mat-card>
+
+  <div style="padding-top: 40px; padding-bottom: 40px">
+  </div>
+
+
+  <mat-card class="dashboard-card" >
+
+    <h2>Improvement on existing parts</h2>
+
+
+    <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
+      <mat-card-header>
+        <div mat-card-avatar class="cpg2-header-image"></div>
+        <mat-card-title>Promoter J23108 - Anderson collection</mat-card-title>
+        <mat-card-subtitle>BBa_J23108</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>A constitutive promoter.</mat-card-content>
+      <mat-card-actions><button mat-raised-button color="accent" routerLink="/biology/J23108">More about this part</button> <button mat-raised-button color="accent">Registry page</button></mat-card-actions>
+    </mat-card>
+
+
+
+  </mat-card>
+
+
 </div>
