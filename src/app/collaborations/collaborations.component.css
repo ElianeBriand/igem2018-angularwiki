@@ -9,8 +9,42 @@
 
 .dashboard-card {
   overflow: auto;
+  font: unset;
 }
 
 .grid-container {
   margin: 20px;
+}
+
+.emeetupimg {
+  width: 52%;
+  margin-bottom: 2em;
+
+}
+
+.emeetupimgtall {
+  width: 46%;
+  margin-left: 1em;
+  float:right;
+   overflow: hidden;
+}
+
+.teamtile {
+  font-size: 9pt;
+}
+
+.teamgrid {
+}
+
+.pmeetup {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.spacemaker {
+  margin-top: 4em;
 }
