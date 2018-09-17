@@ -6,7 +6,7 @@ import {
   liquidFillGaugeConfig,
   GaugeUpdater,
   gradientFlow,
-  makeBimodal, animateBacteria
+  makeBimodal, animateBacteria, GraphUpdater
 } from './d3_anim_mainpage';
 import {start_inventory_animation} from './d3_anim_mainpage';
 
@@ -85,7 +85,9 @@ export class DashboardComponent implements AfterContentInit {
     const source2 = timer(1500, 1500);
     source2.subscribe(val => gauge2.update(Math.floor(Math.random() * 40) + 50 ));
 
-    makeBimodal('#d3bimodal');
+    const bimod1: GraphUpdater = makeBimodal('#d3bimodal');
+    const source3 = timer(1500, 2000);
+    source3.subscribe(val => bimod1.update());
   }
 
 

@@ -40,11 +40,16 @@ export class GaugeUpdater {
   update(value: number): void;
 }
 
+export class GraphUpdater {
+  constructor();
+  update(): void;
+}
+
 
 export function start_inventory_animation(): void;
 
 export function gradientFlow(d3selector: string): void;
 
-export function makeBimodal(d3selector: string): void;
+export function makeBimodal(d3selector: string): GraphUpdater;
 
 export function animateBacteria(d3selector: string) : void;

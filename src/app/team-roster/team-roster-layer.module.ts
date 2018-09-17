@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import {TeamRosterComponent} from './team-roster.component';
+import {SanitizeHtml2Pipe, TeamRosterComponent} from './team-roster.component';
 
 import {TeamRosterRoutingModule} from './team-roster-routing.module';
 
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {
-  MatButtonModule, MatCardModule,
+  MatButtonModule, MatCardModule, MatChipsModule,
   MatIconModule
 } from '@angular/material';
+import {SharedPipeModule} from '../shared-pipe.module';
 
 
 
@@ -22,8 +23,13 @@ import {
     MatButtonModule,
     MatIconModule,
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    MatChipsModule
   ],
-  declarations: [TeamRosterComponent]
+  declarations: [TeamRosterComponent,
+    SanitizeHtml2Pipe],
+  exports: [
+    SanitizeHtml2Pipe
+  ]
 })
 export class TeamRosterLayerModule { }

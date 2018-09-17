@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatToolbarModule, MatButtonModule, MatSidenavModule,
   MatIconModule, MatListModule,
-  MatCardModule, MatMenuModule, MatTableModule, MatFormFieldModule, MatInputModule, MatChipsModule
+  MatCardModule, MatMenuModule, MatTableModule, MatFormFieldModule, MatInputModule, MatChipsModule, MatGridListModule
 } from '@angular/material';
 
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -74,7 +74,8 @@ import {SafetyComponent} from './safety/safety.component';
     MatFormFieldModule,
     MatInputModule,
     ReferenceBoxModule,
-    MatChipsModule
+    MatChipsModule,
+    MatGridListModule
 
   ],
   providers: [

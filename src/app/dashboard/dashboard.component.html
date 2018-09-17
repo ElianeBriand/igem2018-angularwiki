@@ -1,5 +1,5 @@
 <div class="grid-container">
-  <h1 class="mat-h1"><span style="color: #62003c;">Metho</span><span style="color:  red;">Breaker</span> : Cleaning hospital effluent since 2018</h1>
+  <h1 class="mat-h1"><span style="color: #62003c;">Methotr</span><span style="color:  red;">Exit</span> : a HeteroGenious Cleaning Factory</h1>
 
       <mat-card class="dashboard-card" >
         <mat-card-header>
@@ -10,9 +10,8 @@
         <mat-card-content class="dashboard-card-content" >
           <div>
               <div id="d3container" style="margin: auto;">
-                <svg id="d3target"  height="500" width="674" style="display: block;margin: auto;">
+                <svg id="d3target"  height="400" width="674" style="display: block;margin: auto;">
                   <g transform="translate(20,100)">
-                    <!-- <text font-size="30" text-anchor="middle" transform="translate(70,-20)">MTX</text> -->
                     <text font-size="15" text-anchor="middle" transform="translate(70,-5)">Hospital effluents</text>
                     <g id="d3inputgauge" style="height: 150px;width: 150px;" ></g>
                   </g>
@@ -24,15 +23,14 @@
                   <line x1="400" y1="270" x2="400" y2="320" style="fill: transparent; stroke: #000000ff; stroke-dasharray: 2,2; stroke-width: 2px;"></line>
 
                   <g transform="translate(470,100)">
-                    <!-- <text font-size="30" text-anchor="middle" transform="translate(70,-20)">MTX</text> -->
                     <text font-size="15" text-anchor="middle" transform="translate(70,-5)">Wastewater output</text>
                     <g id="d3outgauge" style="height: 150px;width: 150px;" ></g>
                   </g>
 
                   <g transform="translate(180,20)">
                     <text font-size="15" text-anchor="middle" transform="translate(145,163)">Bacterial population</text>
-                    <text font-size="10" text-anchor="middle" transform="translate(145,175)">Bimodal distribution</text>
-                    <g id="d3bimodal" ></g>
+                    <g id="d3bimodal" transform="translate(20,0)"></g>
+                    <g id="d3bimodallegend" transform="translate(0,0)"></g>
                   </g>
                   <!--
                   <g id="inventory-cycle">
@@ -59,33 +57,20 @@
               </div>
 
               <div style="padding: 10px;" class="project-pres">
-                Our project is a general-purpose bacterial platform for drug degradation. As a proof of concept, we have
-                chosen to focus on
-                the cytotoxic drugs used in the treatment of cancer, as their concentrations are alarmingly high in
-                hospital wastewater effluents. Through a toolkit of broad- and narrow-spectrum enzymes, we aim to
-                achieve clearance of the main chemotherapeutic agents, like methotrexate, 5-fluorouracil or
-                doxorubicin.
-                <br>
-                <br>
-                We are taking on three main challenges : efficient entry of these molecules in the bacterial cell, through channels
-                and transporters (uracil-like transporter uraA, cryptic folate-analogue transporter abgT ...), proper
-                degradation through metabolizing enzymes (carboxypeptidase G2, cytochrome P450 …), and long term operation
-                of the bioreactor though a bistable, "stem-cell like", population of bacteria, alleviating the need for
-                regular reseeding with fresh clones.
-                <br>
-                <h3>Project significance</h3>
-                Pharmaceutical drugs are a particularly concerning source of pollution : selected to be biologically active
-                at low concentration & designed to resist biodegradation, drugs constitute a class of high remanence pollutants
-                routinely found in the environment, even in our drinking water.
-                <br>
-                <br>
-                Though physical & chemical solutions exist, in the form of ozone and UV treatment, our solution can offer
-                the flexibility and efficiency of a bioreactor-based approach.
-                <br>
-                <br>
-                Our "stem-cell like" approach to bacterial population makes it an option with potentially lower ongoing costs,
-                and our degradation enzymes allow targeted degradation of particularly resilient molecules : both weaknesses
-                of conventional methods of wastewater treatment.
+                Cytotoxic anticancer drugs are among harmful chemicals found in hospital wastewater at high concentration.
+                Degradation through physical and chemical methods exist but are often inefficient, unsustainable or expensive.
+                We propose MethotrExit, a bioreactor-based approach to tackle this problem. We focused on the biotransformation
+                of methotrexate (MTX), a widely used anticancer drug.
+                <br><br>
+                We designed synthetic cassettes encoding a new biotransformation pathway using an heterologous carboxypeptidase
+                in Escherichia coli. In only 6 hours, MethotrExit drastically removes MTX from the media.
+
+                However, the degradation of anticancer drugs and the biotransformation pathway itself can be toxic.
+                To overcome these issues, biobricks bringing an heterogeneity in enzyme expression were built to ensure the
+                survival of a subpopulation. Modeling of this system highlights the interest of a division of labor between
+                “cleaning” and “stem” bacterial cells.
+
+
 
               </div>
 

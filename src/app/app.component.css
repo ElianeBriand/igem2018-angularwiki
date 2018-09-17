@@ -31,3 +31,20 @@ mat-icon{
 }
 
 
+.titlediv {
+  text-align: center;
+  line-height: 10pt;
+  font-size: 18pt;
+}
+
+.firstpartoftitle {
+  color: #dbbbf5;
+}
+
+.secondpartoftitle {
+  color:  red;
+}
+
+.subtitleoftitle {
+  font-size: 8pt
+}
