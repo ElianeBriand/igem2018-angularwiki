@@ -9,6 +9,7 @@
 
 .dashboard-card {
   overflow: auto;
+  font: unset;
 }
 
 .grid-container {
