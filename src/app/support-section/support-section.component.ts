@@ -98,6 +98,11 @@ export class SupportSectionComponent implements OnInit {
       'In a globalized economic context, a massive and targeted investment in research and innovation is the <i>sine qua non</i> of competitiveness,' +
       ' growth, employment in French territories.<br><br> We would like to thank the <a href=\'https://www.caissedesdepots.fr/investissements-davenir\'>Fond d’investissement d’avenir de Paris Saclay</a>' +
       ' for supporting us financially in our project.')
+    ,
+    new Sponsor('Fundamental microbiology health master of Paris Saclay University',
+      'http://2018.igem.org/wiki/images/0/0e/T--GO_Paris-Saclay--LogoM2MF.jpg',
+      'We would like to thank the Fundamental microbiology health master of Paris Saclay University.'+
+      '<br><br>Their help allowed us to use plenty of lab materials such as kits of mini DNA preparation')
   ];
 
   constructor() {

@@ -1,11 +1,163 @@
 <div class="grid-container">
-  <h1 class="mat-h1">Software</h1>
+  <h1 class="mat-h1">Software : Plasmid Sketcher</h1>
 
-  <mat-card class="dashboard-card" >
-    <a target="_blank" href="http://gops-igem.s3-website.eu-central-1.amazonaws.com/"mat-raised-button><mat-icon>open_in_new</mat-icon> Plasmid Sketcher website</a><br><br>
+  <mat-card class="dashboard-card">
+    <h1>Plasmid Sketcher at a glimpse</h1>
 
-    Best viewed on widescreen 1920*1080, else zoom out to have the page in one screen.<br><br>
-    <img src="http://2018.igem.org/wiki/images/7/74/T--GO_Paris-Saclay--plasmid_sketcher_screenshot1.png" class="screenshot">
+    <div class="textparagraph">
+      Plasmid Sketcher is a <b>web-based software to draw plasmid map</b>.
+      In contrast to existing tools, the view is not generated from sequence information, but entirely from user input:
+      this allows for non-proportional,
+      didactic plasmid map that showcase function over technical precision.
+    </div>
+
+    <div class="textparagraph">
+      <b>Recommended use</b>: to draw clear plasmid map for communication purpose (proposing a plasmid design,
+      illustrating a poster,
+      explaining a cloning process …). Use other software for technical operations.
+    </div>
+
+    <div class="textparagraph">
+      You can use the software at <a target="_blank" href="http://plasmidsketcher.page.link/start" mat-raised-button>
+      <mat-icon>open_in_new</mat-icon>
+      Plasmid Sketcher website</a>
+
+    </div>
+    <div class="textparagraph">
+
+      It is a Free and Open Source Software (FOSS) licenced under GPL v3 or later, with
+      <a target="_blank" href="http://2018.igem.org/wiki/images/b/bf/T--GO_Paris-Saclay--plasmid_sketcher.zip">source
+        code available here</a>.
+      It is based on Vixis’ angularplasmid and Google Angular Material.
+    </div>
+
+    <div class="textparagraph">
+
+      The interface looks as follow. Depending on the size of your screen you may have to zoom out.
+      <img  src="http://2018.igem.org/wiki/images/7/74/T--GO_Paris-Saclay--plasmid_sketcher_screenshot1.png"
+           class="screenshot">
+    </div>
+
+    <h1>Inspiration for Plasmid Sketcher</h1>
+    <div class="textparagraph">
+      Visual communication has long been recognised as an integral part of biology, especially in bacteriology, cell
+      biology
+      and related disciplines. From the earliest papers, the textual description of restriction site positions,
+      cloning protocols or operon structures have given way to the easier-to-grasp graphics we know and love.
+    </div>
+
+    <h2>The first plasmid maps</h2>
+
+    <div class="textparagraph">
+      <img src="http://2018.igem.org/wiki/images/8/85/T--GO_Paris-Saclay--pbr322_restr.png" class="smallillus">
+
+      The concept of plasmid as transferable genetic material with circular topology emerged slowly. Mapping of plasmid
+      took
+      off with the discovery of type II restriction enzyme, starting with “endonuclease R” (now known as a mix of HindII
+      and HindIII)
+      in 1970
+      <reference-box shorthand="Loenen2014"></reference-box>
+      . The predictable and sequence-dependent cutting allowed
+      characterization of fragment and later restriction cloning. Exploring the publication presenting the earliest
+      widely-used
+      plasmids like ColE1, pSC101 or pBR322, we see plasmids maps that look strikingly modern: except for dated
+      typesetting,
+      one could draw something similar for one’s publication.
+    </div>
+
+    <div class="textparagraph">
+      Modern consumer-oriented computers were just starting to appear: these are not the work of a cloning assistant
+      software
+      like we have today, but more likely custom-made illustration. This is something we wanted to emulate, to have the
+      possibility to deviate from one-size-fit-all representations to more streamline figures.
+
+    </div>
+
+    <h2>Visual Language Standardization</h2>
+
+    <div class="textparagraph">
+      Some attempts have been made to standardize the visual language of synthetic biology
+      <reference-box shorthand="Cox2018"></reference-box>
+      , or protein
+      domain description
+      <reference-box shorthand="Cox2017"></reference-box>
+      . Other proposals would use such language as a base for software modelling of
+      biological processes
+      <reference-box shorthand="Novere2009"></reference-box>
+      . With the notable exception of pathway
+      modelling, where the existence of exhaustive and widely-used database like KEGG and associated tools like
+      CellDesigner
+      <reference-box shorthand="Funahashi2003"></reference-box>
+      have lead to de facto standardisation, other fields have not widely
+      embraced such standardisation attempts.
+    </div>
+    <div class="textparagraph">
+
+      We hypothesise this is the case because such proposals are not derived from a discipline-wide consultation: the
+      normative
+      power of these visual languages fails to manifest simply though lack of adoption.
+    </div>
+    <div class="textparagraph">
+      Seen as simply descriptive reviews of visual elements in use, such publication are still worthwhile, and we used
+      <reference-box shorthand="Cox2018"></reference-box>
+      as inspiration for some elements of our software. We recognize the advantages of having only one
+      type of visual representation for each feature, but given the absence of consensus, our software provides a
+      variety
+      of visual style when possible.
+    </div>
+
+
+    <h2>Putting the map in perspective</h2>
+    <div class="textparagraph">
+
+      When analysing implicit goals rather than explicit visual choices, we find that there is a duality of purpose in
+      plasmid maps:
+      <ul>
+        <li> <b>Technical precision</b>: that features are marked exactly, that displayed size are proportional to their
+          length.
+        </li>
+
+        <li><b>Clear Communication</b>: that the overall purpose and functioning of the system is readily understood.</li>
+      </ul>
+      These purposes are sometime at odds. Smart compromise may be possible in some cases but not all. In synthetic
+      biology, a high-level view is often valuable. Thus we wanted to offer a usable solution fulfilling the second
+      identified goal.
+    </div>
+    <h1>About the software</h1>
+    <div class="textparagraph">
+
+      Following the recognized user persona method <reference-box shorthand="Cooper2007"></reference-box>, the interface was designed
+      assuming a target audience of scientists or students, having some familiarity with the underlying biological
+      concepts.
+    </div>
+    <h2>Technical considerations</h2>
+    <div class="textparagraph">
+
+      The technology used is AngularJS, though there is a will to port it to Angular (“Angular 2.0”). It is based on
+      <a href="http://angularplasmid.vixis.com/">Angular Plasmid by Vixis</a> for plasmid visual rendering; and <a href="https://material.angularjs.org/">Google Angular
+      Material</a> for UI elements.
+
+      It is an open source software licenced under the GNU GPL v3 or later. <a target="_blank" href="http://2018.igem.org/wiki/images/b/bf/T--GO_Paris-Saclay--plasmid_sketcher.zip">Source
+      code available here</a>.
+    </div>
+    <h2>Future features</h2>
+    <div class="textparagraph">
+
+      While useable as of now, we plan to add further features, which will be published at the same URL.
+
+      Future features :
+      <ul>
+        <li>More options for visual representation of features</li>
+
+        <li>Native export to vector format (PDF, SVG)</li>
+
+        <li>Custom CSS loading for in-depth theming</li>
+
+        <li>More shapes for the plasmid circle itself</li>
+      </ul>
+      And even more !
+    </div>
+
 
   </mat-card>
 </div>

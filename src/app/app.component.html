@@ -23,12 +23,17 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="openedSideNav">
     <mat-toolbar style="margin-top: 15px;" color="primary">Navigation  <span class="fill-toolbar-space"></span><button mat-icon-button (click)="openSideNav()"><mat-icon>keyboard_arrow_left</mat-icon></button></mat-toolbar>
+    <div>
     <ng-material-multilevel-menu [configuration]='sideMenuConfig' [items]='sideMenuList' (selectedItem)="selectedSideMenuItem($event)">
     </ng-material-multilevel-menu>
-
+    </div>
+    <!--
+    <div>
     <mat-nav-list>
       <a mat-list-item [routerLink]="['../sitemap']" id="sitemapbut"><mat-icon>apps</mat-icon> Site map</a>
     </mat-nav-list>
+    </div>
+    -->
   </mat-sidenav>
   <mat-sidenav-content fxLayout="row" fxLayoutAlign="center">
     <div fxFlex="1 0 500px" id="sidenavflexcontent">
