@@ -14,3 +14,53 @@
 .grid-container {
   margin: 20px;
 }
+
+.wideimg {
+  width: 100%;
+  margin-top : 1em;
+  margin-bottom : 1em;
+}
+
+.semiwideimg {
+  width: 60%;
+  margin: 1em auto;
+}
+
+.widetable {
+  width: 100%;
+}
+
+.semiwidetable {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.halfwidetable {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.importantcell {
+  background-color: #daa520f1;
+  font-weight: bold;
+}
+
+.importantlabel {
+  font-weight: bold;
+}
+
+p {
+  font-size: 14pt;
+}
+
+table {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

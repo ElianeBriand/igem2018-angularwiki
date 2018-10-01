@@ -9,6 +9,7 @@
 /* stylelint-disable material/no-prefixes */
 /* stylelint-enable */
 @import url(../node_modules/angular-calendar/css/angular-calendar.css);
+@import url(material.min.css);
 .mat-elevation-z0 {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12); }
 
@@ -95,19 +96,19 @@
 .mat-badge-large .mat-badge-content {
   font-size: 24px; }
 
-.mat-h1, .mat-headline, .mat-typography h1 {
+.mat-h1, .mat-headline, h1, .mat-typography h1 {
   font: 400 24px/32px Roboto, "Helvetica Neue", sans-serif;
   margin: 0 0 16px; }
 
-.mat-h2, .mat-title, #HQ_page h2, #HQ_page h3, .mat-typography h2 {
+.mat-h2, .mat-title, #HQ_page h2, #HQ_page h3, h2, .mat-typography h2 {
   font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
   margin: 0 0 16px; }
 
-.mat-h3, .mat-subheading-2, #HQ_page #toctitle h2, #HQ_page h4, .mat-typography h3 {
+.mat-h3, .mat-subheading-2, #HQ_page #toctitle h2, #HQ_page h4, h3, .mat-typography h3 {
   font: 400 16px/28px Roboto, "Helvetica Neue", sans-serif;
   margin: 0 0 16px; }
 
-.mat-h4, .mat-subheading-1, .mat-typography h4 {
+.mat-h4, .mat-subheading-1, h4, .mat-typography h4 {
   font: 400 15px/24px Roboto, "Helvetica Neue", sans-serif;
   margin: 0 0 16px; }
 
@@ -1847,3 +1848,6 @@ ng-list-item .mat-list-item:hover {
 
 ng-list-item .mat-divider {
   border: 0px; }
+
+h1, h2, h3 {
+  font-weight: bolder; }

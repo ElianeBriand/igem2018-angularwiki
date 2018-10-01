@@ -6,9 +6,8 @@ import {
   liquidFillGaugeConfig,
   GaugeUpdater,
   gradientFlow,
-  makeBimodal, animateBacteria, GraphUpdater
+  makeBimodal, GraphUpdater
 } from './d3_anim_mainpage';
-import {start_inventory_animation} from './d3_anim_mainpage';
 
 @Component({
   selector: 'dashboard',
