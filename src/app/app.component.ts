@@ -23,6 +23,8 @@ export class AppComponent implements OnInit {
 
   showSubmenu: boolean = false;
 
+  showBackHomeLogo: boolean = true;
+
   openedSideNav = true;
 
   public routerLinkChunkProcessing: (string) => void;
@@ -30,6 +32,11 @@ export class AppComponent implements OnInit {
   private routerLinkChunkProcessingUnbound(routerLinkString: string, this1: any)
   {
     this1.chunkLoader.loadPageChunk(routerLinkString, function() {
+      if(routerLinkString === '/dashboard' || routerLinkString === '/'){
+        this1.showBackHomeLogo = false;
+      }else{
+        this1.showBackHomeLogo = true;
+      }
       this1.router.navigateByUrl(routerLinkString);
     });
 
@@ -59,6 +66,13 @@ export class AppComponent implements OnInit {
 
       router.navigate([sp_record.navTo]);
 
+    }
+
+    console.log("Router gives url : " + this.router.url);
+    if(this.router.url === '/dashboard' || this.router.url === '/'){
+      this.showBackHomeLogo = false;
+    }else{
+      this.showBackHomeLogo = true;
     }
 
     }

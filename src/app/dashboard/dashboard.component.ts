@@ -6,9 +6,8 @@ import {
   liquidFillGaugeConfig,
   GaugeUpdater,
   gradientFlow,
-  makeBimodal, animateBacteria, GraphUpdater
+  makeBimodal, GraphUpdater
 } from './d3_anim_mainpage';
-import {start_inventory_animation} from './d3_anim_mainpage';
 
 @Component({
   selector: 'dashboard',
@@ -21,10 +20,10 @@ export class DashboardComponent implements AfterContentInit {
 
   private atimer;
 
-  dyn_width = 500;
+  dyn_width = 1200;
 
   ngAfterContentInit() {
-    this.dyn_width = document.getElementById('d3container').clientWidth;
+    return;
 
 
     //start_inventory_animation();

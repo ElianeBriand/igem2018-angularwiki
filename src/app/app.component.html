@@ -1,4 +1,131 @@
+<!--
+/********************************* LIEN VERS LA BARRE DE NAVIGATION **************************/
+-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Roboto:300,400,500">
+<!--Début du html-->
 
+
+
+<!----------------------Barre de navigation------------------------->
+
+<nav>
+  <div id='cssmenu'>
+    <ul>
+
+      <li><a href='#'><span>Project</span></a>
+        <ul>
+          <li><a (click)="this.routerLinkChunkProcessing('/project')" ><span>Project Design</span></a>
+          </li>
+          <li ><a href='http://2018.igem.org/Team:GO_Paris-Saclay/pagetemplate2'><span>MTX degradation</span></a>
+          </li>
+          <li ><a href='http://2018.igem.org/Team:GO_Paris-Saclay/heterogenious'><span>An heterogeneous system</span></a>
+          </li>
+          <li class='has-sub'><a href='http://2018.igem.org/Team:GO_Paris-Saclay/design'><span>Design</span></a>
+          </li>
+        </ul>
+      </li>
+
+      <li><a href='#'><span>Lab</span></a>
+        <ul>
+          <li><a href='http://2018.igem.org/Team:GO_Paris-Saclay/notebook'><span>Notebook</span></a>
+          </li>
+          <li><a href='http://2018.igem.org/Team:GO_Paris-Saclay/protocols'><span>Protocols</span></a>
+          </li>
+        </ul>
+      </li>
+
+      <li><a href='http://2018.igem.org/Team:GO_Paris-Saclay/parts'><span>Parts</span></a>
+      </li>
+      <li><a href='#'><span>Model</span></a>
+        <ul>
+          <li><a href='http://2018.igem.org/Team:GO_Paris-Saclay/model'><span>Overview</span></a>
+          </li>
+          <li class='has-sub'><a href='#'><span>X</span></a>
+          </li>
+          <li class='has-sub'><a href='#'><span>X</span></a>
+          </li>
+        </ul>
+      </li>
+
+      <li><a href='#'><span>Contribution</span></a>
+        <ul>
+          <li><a href='http://2018.igem.org/Team:GO_Paris-Saclay/interlab'><span>Interlab</span></a>
+          </li>
+          <li><a href='http://2018.igem.org/Team:GO_Paris-Saclay/software'><span>Software</span></a>
+          </li>
+        </ul>
+      </li>
+      <li><a href='http://2018.igem.org/Team:GO_Paris-Saclay/hp'><span>Human practice</span></a></li>
+
+      <li><a href='#'><span>People</span></a>
+        <ul>
+          <li><a href='http://2018.igem.org/Team:GO_Paris-Saclay/team'><span>Team</span></a>
+          </li>
+          <li ><a href='http://2018.igem.org/Team:GO_Paris-Saclay/collaboration'><span>Collaboration</span></a>
+          </li>
+        </ul>
+      </li>
+
+      <li><a href='#'><span>Acknowledgement</span></a>
+        <ul>
+          <li ><a href='http://2018.igem.org/Team:GO_Paris-Saclay/sponsors'><span>Sponsors</span></a>
+          </li>
+        </ul>
+      </li>
+
+
+
+
+
+
+
+
+    </ul>
+  </div>
+</nav>
+<!----------------------Project------------------------->
+
+
+
+  <!--
+  /************************************************************************
+  Script navigation NE PAS MODIFIE
+  ************************************************************************/
+
+  <script>
+    ( function( $ ) {
+      $( document ).ready(function() {
+        $('#cssmenu').prepend('<div id="menu-button">Menu</div>');
+        $('#cssmenu #menu-button').on('click', function(){
+          var menu = $(this).next('ul');
+          if (menu.hasClass('open')) {
+            menu.removeClass('open');
+          }
+          else {
+            menu.addClass('open');
+          }
+        });
+      });
+    } )( jQuery );
+
+  </script>
+
+-->
+
+
+
+<div class="container">
+
+  <div class="topleft" *ngIf="showBackHomeLogo"><a href="#" (click)="this.routerLinkChunkProcessing('/dashboard')"><img src="http://2018.igem.org/wiki/images/0/01/T--GO_Paris-Saclay--logogoparissaclay.png" alt="logoparissaclay"></a></div>
+
+  <router-outlet></router-outlet>
+
+</div> <!-------------fin container------------->
+
+
+
+
+<!--
 <div class="mat-app-background">
 
 <mat-toolbar color="accent">
@@ -27,6 +154,7 @@
     <ng-material-multilevel-menu [configuration]='sideMenuConfig' [items]='sideMenuList' (selectedItem)="selectedSideMenuItem($event)">
     </ng-material-multilevel-menu>
     </div>
+    -->
     <!--
     <div>
     <mat-nav-list>
@@ -34,6 +162,7 @@
     </mat-nav-list>
     </div>
     -->
+    <!--
   </mat-sidenav>
   <mat-sidenav-content fxLayout="row" fxLayoutAlign="center">
     <div fxFlex="1 0 500px" id="sidenavflexcontent">
@@ -42,3 +171,5 @@
   </mat-sidenav-content>
 </mat-sidenav-container>
 </div>
+
+-->

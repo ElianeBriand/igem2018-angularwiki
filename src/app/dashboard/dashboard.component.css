@@ -18,3 +18,262 @@ mat-card-title{
 .project-pres {
   font-size: 14pt;
 }
+
+
+
+/********************************* JOUDOU THEMING FOLLOW *********************************************/
+
+@font-face {
+  font-family:"Latoregular";
+  src: url("http://2018.igem.org/wiki/images/9/94/T--Sorbonne_U_Paris--lato-regular.ttf") format('truetype');
+}
+
+h1, h2, h3, h4,h5,h6,p, u, li, a{
+  font-family: "Latoregular";
+}
+
+/********************************* BLOC AVEC LE TEXT **************************/
+.innercontainer {
+  background-color: rgb(32,56,100) !important;
+  width: 100%;
+  height: 100%;
+}
+/********************************* CSS POSITION DES IMAGES ET TEXTES PAGE PRINCIPAL **************************/
+#carre_blanc
+{
+  width: 100px;
+  position: absolute;
+  top: 300px;
+}
+#carre
+{
+  width: 500px;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+}
+#titre_principal
+{
+  color: rgb(42,183,202);
+  font-size: 4em;
+  position: absolute;
+  right: 580px;
+  top: 230px;
+}
+#sous_titre
+{
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  right: 620px;
+  top: 310px;
+}
+.idea
+{
+  width: 30px;
+  padding-bottom: 10px;
+}
+
+.discover
+{
+  width: 11em;
+  font-size: 1.1em;
+  background-color: rgb(254,215,102);
+  border-radius: 10px;
+  border: 1px rgb(254,215,102);
+  text-align: center;
+  padding: 8px 8px 8px 8px ;
+  color: white;
+  text-decoration: none;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  top: 400px;
+  right: 600px;
+  z-index: 2;
+}
+
+a:hover /* Apparence au survol des liens */
+{
+  text-decoration: none;
+  color: white;
+}
+
+#bloc2
+{
+  width: 100%;
+  position: absolute;
+  top: 400px;
+  z-index: 1;
+}
+
+#textbloc2
+{
+  color: white;
+  font-size: 2em;
+  width: 400px;
+  position: absolute;
+  top:950px;
+  right: 300px;
+  line-height: 1.2em;
+  text-align: center;
+  font-family: "Latoregular";
+  z-index: 3;
+}
+
+#ancre
+{
+  color: rgb(32,56,100);
+  position: absolute;
+  top: 700px;
+}
+#double_fleche
+{
+  width: 60px;
+  position: absolute;
+  top: 620px;
+  left: 30px;
+  z-index: 7;
+}
+#bloc3
+{
+  width: 700px;
+  position: absolute;
+  top: 1400px;
+  right: 200px;
+}
+
+#leading
+{
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  top: 1560px;
+  left: 80px;
+  z-index: 6;
+  font-family: "Latoregular";
+}
+#antibio
+{
+  width: 200px;
+  color:rgb(254,74,73);
+  font-size: 2em;
+  line-height: 1em;
+  text-align: center;
+  position: absolute;
+  top: 1665px;
+  left: 120px;
+  font-family: "Latoregular";
+}
+
+#vitro
+{
+  color:rgb(254,215,102);
+  width: 300px;
+  font-size: 2em;
+  line-height: 1em;
+  text-align: center;
+  position: absolute;
+  top: 1890px;
+  left: 130px;
+  font-family: "Latoregular";
+}
+#alter
+{
+  color:rgb(42,183,202);
+  width: 200px;
+  font-size: 2em;
+  line-height: 1em;
+  text-align: center;
+  position: absolute;
+  top: 1780px;
+  right: 40px;
+  font-family: "Latoregular";
+}
+
+#ancre2
+{
+  color: rgb(32,56,100);
+  font-size: 0.2em;
+  position: absolute;
+  top: 1380px;
+  left: 80px;
+  z-index: 6;
+  font-family: "Latoregular";
+}
+#double_fleche2
+{
+  width: 60px;
+  position: absolute;
+  top: 925px;
+  right: 120px;
+  z-index: 7;
+}
+#bloc4
+{
+  width: 700px;
+  position: absolute;
+  top:2200px;
+  left: 40px;
+}
+
+#tuyaujaune
+{
+  width: 130px;
+  position: absolute;
+  right: 760px;
+}
+
+#methotrexit
+{
+  width: 600px;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+}
+#ancre3
+{
+  color: rgb(32,56,100);
+  position: absolute;
+  top: 2100px;
+}
+#texte_carte
+{
+  color: white;
+  font-size: 1.5em;
+  width: 400px;
+  position: absolute;
+  top:2250px;
+  text-align: center;
+  right: 30px;
+  line-height: 1.2em;
+  font-family: "Latoregular";
+  z-index: 6;
+}
+
+#text2carte
+{
+  color:rgb(254,74,73);
+  font-size: 2em;
+  width: 400px;
+  position: absolute;
+  top:2400px;
+  text-align: center;
+  right: 30px;
+  line-height: 1.2em;
+  font-family: "Latoregular";
+  z-index: 6;
+}
+#text3
+{
+  color:white;
+  font-size: 1.5em;
+  width: 400px;
+  position: absolute;
+  top:2500px;
+  text-align: center;
+  right: 30px;
+  line-height: 1.2em;
+  font-family: "Latoregular";
+  z-index: 6;
+}
