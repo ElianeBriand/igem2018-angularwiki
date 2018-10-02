@@ -22,6 +22,14 @@ export class SpeciaPageRecord {
   }
 }
 
+export class ImagePreloadRecord {
+  public url: string;
+
+  constructor(url: string) {
+    this.url = url;
+  }
+}
+
 export let PAGE_CHUNK_MASTER_RECORD = [
  //*
   new PageChunkRecord("/support","http://2018.igem.org/wiki/images/9/91/T--GO_Paris-Saclay--support_chunk.base64.txt"),
@@ -50,3 +58,7 @@ export let SPECIAL_PAGE_CHUNK_MASTER_RECORD = [
 
   //*/
 ]
+
+export let IMAGE_PRELOAD_MASTER_RECORD = [
+
+];
