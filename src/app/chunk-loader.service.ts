@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import {from, Observable} from 'rxjs';
 
 
-import {PageChunkRecord, PAGE_CHUNK_MASTER_RECORD} from './page-chunk-record'
+import {PageChunkRecord, PAGE_CHUNK_MASTER_RECORD, IMAGE_PRELOAD_MASTER_RECORD, ImagePreloadRecord} from './page-chunk-record';
 import {environment} from '../environments/environment';
 
 @Injectable({
@@ -12,12 +12,25 @@ import {environment} from '../environments/environment';
 })
 export class ChunkLoaderService {
 
+  static singletonInstance: ChunkLoaderService;
+
 
   public records = PAGE_CHUNK_MASTER_RECORD;
+  public preload_records = IMAGE_PRELOAD_MASTER_RECORD;
 
   constructor(private http: HttpClient) {
+
+
+    if (ChunkLoaderService.singletonInstance) {
+      return ChunkLoaderService.singletonInstance;
+    }
+    ChunkLoaderService.singletonInstance = this;
+
+    this.preloadImages(); // We always preload static images
+
     if(environment.production == false)
-      return; // No custom chunk loading.
+      return ChunkLoaderService.singletonInstance; // No custom chunk loading.
+
     this.records.forEach((element: PageChunkRecord) => {
       setTimeout(() => {
         this.loadPageChunk(element.pageName, () => {});
@@ -26,6 +39,16 @@ export class ChunkLoaderService {
   }
 
 
+  public preloadImages() {
+    this.preload_records.forEach((record: ImagePreloadRecord) => {
+      setTimeout(() => {
+        let preloadLink = document.createElement("link");
+        preloadLink.href = record.url;
+        preloadLink.rel = "preload";
+        document.head.appendChild(preloadLink);
+      })
+    })
+  }
 
 
   public asyncLoadPageChunk(pageName: string) : Observable<boolean> {
