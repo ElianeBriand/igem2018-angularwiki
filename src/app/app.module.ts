@@ -7,9 +7,9 @@ import {CommonModule, isPlatformBrowser} from '@angular/common';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
-  MatToolbarModule, MatButtonModule, MatSidenavModule,
+   MatButtonModule,
   MatIconModule, MatListModule,
-  MatCardModule, MatMenuModule, MatTableModule, MatFormFieldModule, MatInputModule, MatChipsModule, MatGridListModule
+  MatCardModule, MatTableModule, MatFormFieldModule, MatInputModule, MatChipsModule, MatGridListModule
 } from '@angular/material';
 
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -17,7 +17,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
-import { NgMaterialMultilevelMenuModule } from 'ng-material-multilevel-menu';
 
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -57,19 +56,15 @@ import {SafetyComponent} from './safety/safety.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
     MatButtonModule,
-    MatSidenavModule,
     MatIconModule,
     MatListModule,
     MatExpansionModule,
     FlexLayoutModule,
     AppRoutingModule,
     MatCardModule,
-    MatMenuModule,
     HttpClientModule,
     SharedPipeModule,
-    NgMaterialMultilevelMenuModule,
     MatTableModule,
     MatFormFieldModule,
     MatInputModule,

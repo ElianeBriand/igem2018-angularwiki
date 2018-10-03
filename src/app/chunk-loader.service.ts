@@ -42,10 +42,19 @@ export class ChunkLoaderService {
   public preloadImages() {
     this.preload_records.forEach((record: ImagePreloadRecord) => {
       setTimeout(() => {
-        let preloadLink = document.createElement("link");
-        preloadLink.href = record.url;
+        /*
+        console.log("Prefetching : " + record.url)
+        this.http.get(record.url, {responseType: 'text'}).subscribe((html: any) => {}, error1 => console.log(error1));
+        */
+        //*
+        let preloadLink :any = document.createElement("link");
         preloadLink.rel = "preload";
+        preloadLink.href = record.url;
+        preloadLink.as = "image";
+        preloadLink.crossorigin = "anonymous";
+        preloadLink.type = record.mime;
         document.head.appendChild(preloadLink);
+        //*/
       })
     })
   }

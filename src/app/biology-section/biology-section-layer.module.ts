@@ -11,7 +11,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {
   MatButtonModule, MatCardModule,
-  MatIconModule, MatToolbarModule
+  MatIconModule
 } from '@angular/material';
 
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -37,7 +37,6 @@ import { Lee5Component } from './parts/lee5/lee5.component';
     MatIconModule,
     FlexLayoutModule,
     MatCardModule,
-    MatToolbarModule,
     MatExpansionModule,
     MatTableModule,
     ReferenceBoxModule

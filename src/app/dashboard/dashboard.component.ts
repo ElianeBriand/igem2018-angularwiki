@@ -1,4 +1,5 @@
-import {Component, AfterContentInit, HostListener} from '@angular/core';
+import {Component, AfterContentInit} from '@angular/core';
+/*
 import { timer} from 'rxjs';
 import {
   loadLiquidFillGauge,
@@ -8,6 +9,7 @@ import {
   gradientFlow,
   makeBimodal, GraphUpdater
 } from './d3_anim_mainpage';
+*/
 
 @Component({
   selector: 'dashboard',
@@ -23,9 +25,8 @@ export class DashboardComponent implements AfterContentInit {
   dyn_width = 1200;
 
   ngAfterContentInit() {
-    return;
 
-
+/*
     //start_inventory_animation();
     //instantiateForceFlow('#d3inputforceflow');
     gradientFlow('#d3target');
@@ -87,8 +88,10 @@ export class DashboardComponent implements AfterContentInit {
     const bimod1: GraphUpdater = makeBimodal('#d3bimodal');
     const source3 = timer(1500, 2000);
     source3.subscribe(val => bimod1.update());
-  }
 
+*/
+
+  }
 
 
 

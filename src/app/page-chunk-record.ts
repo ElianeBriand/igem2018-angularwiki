@@ -24,9 +24,11 @@ export class SpeciaPageRecord {
 
 export class ImagePreloadRecord {
   public url: string;
+  public mime: string
 
-  constructor(url: string) {
+  constructor(url: string, mime:string) {
     this.url = url;
+    this.mime = mime;
   }
 }
 
@@ -60,5 +62,15 @@ export let SPECIAL_PAGE_CHUNK_MASTER_RECORD = [
 ]
 
 export let IMAGE_PRELOAD_MASTER_RECORD = [
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/0/03/T--GO_Paris-Saclay--fond_groupe.png", "image/png"),
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png", "image/png"),
+
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--abstractpage.png", "image/png"),
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/7/7d/T--GO_Paris-Saclay--partspage.png", "image/png"),
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/2/21/T--GO_Paris-Saclay--softwarepage.png", "image/png"),
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/0/0b/T--GO_Paris-Saclay--notebookpage.png", "image/png"),
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/b/ba/T--GO_Paris-Saclay--equipepage.png", "image/png"),
+
+
 
 ];

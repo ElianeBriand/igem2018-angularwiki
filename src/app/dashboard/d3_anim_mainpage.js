@@ -1,15 +1,10 @@
 "use strict";
 
+/*
 import * as d3 from 'd3';
 
 
-/*!
- * @license Open source under BSD 2-clause (http://choosealicense.com/licenses/bsd-2-clause/)
- * Copyright (c) 2015, Curtis Bratton
- * All rights reserved.
- *
- * Liquid Fill Gauge v1.1
- */
+
 export function liquidFillGaugeDefaultSettings() {
   return {
     minValue: 0, // The gauge minimum value.
@@ -515,3 +510,5 @@ export function makeBimodal(d3selector) {
   return GraphUpdater;
 
 }
+
+*/

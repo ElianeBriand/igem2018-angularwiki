@@ -1798,6 +1798,36 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-expansion-panel-header-description {
   flex-basis: 0; }
 
+/* lato-regular - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url("http://2018.igem.org/wiki/images/1/16/T--GO_Paris-Saclay--lato-v14-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Lato Regular"), local("Lato-Regular"), url("http://2018.igem.org/wiki/images/1/16/T--GO_Paris-Saclay--lato-v14-latin-regular.eot?#iefix") format("embedded-opentype"), url("http://2018.igem.org/wiki/images/6/62/T--GO_Paris-Saclay--lato-v14-latin-regular.woff") format("woff"), url("http://2018.igem.org/wiki/images/4/4b/T--GO_Paris-Saclay--lato-v14-latin-regular.ttf") format("truetype"), url("http://2018.igem.org/wiki/images/8/8a/T--GO_Paris-Saclay--lato-v14-latin-regular.svg#Lato") format("svg");
+  /* Legacy iOS */ }
+
+/* josefin-sans-regular - latin */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url("http://2018.igem.org/wiki/images/9/9f/T--GO_Paris-Saclay--josefin-sans-v12-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Josefin Sans Regular"), local("JosefinSans-Regular"), url("http://2018.igem.org/wiki/images/9/9f/T--GO_Paris-Saclay--josefin-sans-v12-latin-regular.eot?#iefix") format("embedded-opentype"), url("http://2018.igem.org/wiki/images/6/64/T--GO_Paris-Saclay--josefin-sans-v12-latin-regular.woff") format("woff"), url("http://2018.igem.org/wiki/images/7/7c/T--GO_Paris-Saclay--josefin-sans-v12-latin-regular.ttf") format("truetype"), url("http://2018.igem.org/wiki/images/3/33/T--GO_Paris-Saclay--josefin-sans-v12-latin-regular.svg#JosefinSans") format("svg");
+  /* Legacy iOS */ }
+
+/* didact-gothic-regular - latin */
+@font-face {
+  font-family: 'Didact Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url("http://2018.igem.org/wiki/images/6/62/T--GO_Paris-Saclay--didact-gothic-v11-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Didact Gothic Regular"), local("DidactGothic-Regular"), url("http://2018.igem.org/wiki/images/6/62/T--GO_Paris-Saclay--didact-gothic-v11-latin-regular.eot?#iefix") format("embedded-opentype"), url("http://2018.igem.org/wiki/images/a/a7/T--GO_Paris-Saclay--didact-gothic-v11-latin-regular.woff") format("woff"), url("http://2018.igem.org/wiki/images/8/87/T--GO_Paris-Saclay--didact-gothic-v11-latin-regular.ttf") format("truetype"), url("http://2018.igem.org/wiki/images/8/87/T--GO_Paris-Saclay--didact-gothic-v11-latin-regular.ttf#DidactGothic") format("svg");
+  /* Legacy iOS */ }
+
 /* roboto-regular - latin */
 @font-face {
   font-family: 'Roboto';
@@ -1852,3 +1882,35 @@ ng-list-item .mat-divider {
 
 h1, h2, h3 {
   font-weight: bolder; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+.bannerimg {
+  width: 100%; }
+
+/* Centered text */
+.headlinetext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Didact Gothic', Helvetica, SansSerif;
+  font-weight: bolder;
+  font-size: 50pt;
+  text-shadow: 2px 2px black; }
+
+.bannercontainer {
+  position: relative;
+  text-align: center;
+  background-color: blue; }
+
+.superposedbanner1 {
+  width: 100%; }
+
+.superposedbanner2 {
+  position: absolute;
+  top: 0px;
+  left: 0px; }

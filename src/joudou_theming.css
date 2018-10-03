@@ -79,6 +79,7 @@ Page Backbone
 html {
   font-size:16px;
 }
+
 body {
   width: 100%;
   margin: 0 0 0 0;
@@ -89,6 +90,7 @@ body {
   font-size:16px;
   word-wrap: break-word;
 }
+
 @media (min-width: 1024px) {
   body {
     margin: 16px 0 0 0;
@@ -391,7 +393,14 @@ Navigation
   width: 170px;
   display: block;
 }
-@media all and (max-width: 800px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+/*
+@media all and (max-width: 800px),
+only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px),
+only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px),
+only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px),
+only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px),
+only screen and (min-resolution: 192dpi) and (max-width: 1024px),
+only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
   #cssmenu > ul {
     max-height: 0;
     overflow: hidden;
@@ -519,6 +528,7 @@ Navigation
 
   }
 }
+*/
 /************************************************************************
 Page type
 ************************************************************************/
@@ -542,22 +552,22 @@ article
 
 
 
-@font-face {
-  font-family:"Latoregular";
-  src: url("http://2018.igem.org/wiki/images/9/94/T--Sorbonne_U_Paris--lato-regular.ttf") format('truetype');}
 
 h1, h2, h3, h4,h5,h6,p, u, li, a{
-  font-family: "Latoregular";
+  font-family: 'Lato', Helvetica, SansSerif;
 }
 /********************************* ARRIERE PLAN **************************/
 
 body
 {
-  width: 1200px;
-  height: 5000px;
+  width: 62.5vw;
+  max-width: 1200px;
+  /* min-width: 670px;*/
+  min-height: 100vh;
+  height: auto;
   background-color: rgb(217,217,217);
   margin: auto;
-  font-family:'webfontregular', Serif;
+  font-family: 'Roboto', Helvetica, SansSerif;
 
 }
 /********************************* BLOC AVEC LE TEXTE PAS MODIFIER**************************/
@@ -576,11 +586,11 @@ body
   top: 25px;
   left:245px;
   font-size: 18px;
+  z-index: 1000;
 }
 
 img {
   width: 100%;
-  margin-top: 1em;
   height: auto;
 }
 
@@ -596,7 +606,7 @@ img {
   position:absolute;
   top: 690px;
   left: 230px;
-  font-family:'latoregular';
+  font-family: 'Lato', Helvetica, SansSerif;
 }
 #titreh2
 {
@@ -621,23 +631,15 @@ img {
 {
   body
   {
-    width: 1000px;
+    width: auto;
   }
 
   .topleft
   {
-    width: 120px;
-    position: absolute;
-    top: 8px;
-    left:200px;
-    font-size: 18px;
   }
 
   #titreh1
   {
-    position: absolute;
-    right: 230px;
-    top: 600px;
   }
 
 }

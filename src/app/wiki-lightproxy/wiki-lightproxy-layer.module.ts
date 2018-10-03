@@ -9,10 +9,9 @@ import {WikiLightproxyRoutingModule} from './wiki-lightproxy-routing.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {
-  MatButtonModule, MatCardModule, MatDatepickerModule, MatExpansionModule,
-  MatIconModule, MatInputModule, MatListModule,
-  MatMenuModule,
-  MatToolbarModule
+  MatButtonModule, MatCardModule, MatExpansionModule,
+  MatIconModule, MatListModule,
+  MatMenuModule
 } from '@angular/material';
 import {SharedPipeModule} from '../shared-pipe.module';
 import {CalendarModule} from 'angular-calendar';
@@ -27,7 +26,6 @@ import {LabnotebookCalEventService} from './event-service/labnotebook-cal-event.
   imports: [
     CommonModule,
     WikiLightproxyRoutingModule,
-    MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     MatListModule,
