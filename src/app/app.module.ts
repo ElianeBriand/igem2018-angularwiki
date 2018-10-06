@@ -20,7 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SitemapComponent } from './sitemap/sitemap.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { ComputingSectionComponent } from './computing-section/computing-section.component';
 import { HumanPracticeSectionComponent } from './human-practice-section/human-practice-section.component';
@@ -42,7 +41,6 @@ import {SafetyComponent} from './safety/safety.component';
   declarations: [
     AppComponent,
     DashboardComponent,
-    SitemapComponent,
     ProjectDetailsComponent,
     ComputingSectionComponent,
     HumanPracticeSectionComponent,

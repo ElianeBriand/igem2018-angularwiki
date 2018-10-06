@@ -150,7 +150,7 @@ Navigation
 
 #cssmenu {
   background: white;
-  margin-top: 0.5em;
+  margin-top: 25px;
   width: 100%;
   padding: 0;
   line-height: 1;
@@ -166,6 +166,7 @@ Navigation
   margin: 0;
   padding: 0;
   display: block;
+  z-index: 1000;
 }
 #cssmenu ul:after,
 #cssmenu:after {
@@ -182,6 +183,8 @@ Navigation
   padding: 0;
   display: block;
   position: relative;
+  z-index: 1000;
+
 }
 #cssmenu ul li a {
   text-decoration: none;
@@ -195,6 +198,8 @@ Navigation
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  z-index: 1000;
+
 }
 #cssmenu ul li ul {
   position: absolute;
@@ -586,7 +591,7 @@ body
   top: 25px;
   left:245px;
   font-size: 18px;
-  z-index: 1000;
+  z-index: 2;
 }
 
 img {

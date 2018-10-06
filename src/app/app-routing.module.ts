@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {SitemapComponent} from './sitemap/sitemap.component';
 import {ProjectDetailsComponent} from './project-details/project-details.component';
-import {BiologySectionComponent} from './biology-section/biology-section.component';
 import {ComputingSectionComponent} from './computing-section/computing-section.component';
 import {HumanPracticeSectionComponent} from './human-practice-section/human-practice-section.component';
 import {ChunkGuardService} from './chunk-guard.service';
 import {ModelingComponent} from './modeling/modeling.component';
-import {PartsComponent} from './biology-section/parts/parts.component';
 import {CollaborationsComponent} from './collaborations/collaborations.component';
-import {StrainsComponent} from './biology-section/strains/strains.component';
 import {ReferencesPageComponent} from './references-page/references-page.component';
 import {ImproveComponent} from './improve/improve.component';
 import {DemonstrateComponent} from './demonstrate/demonstrate.component';
@@ -19,7 +15,6 @@ import {SafetyComponent} from './safety/safety.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [ChunkGuardService]},
-  { path: 'sitemap', component: SitemapComponent, canActivate: [ChunkGuardService]},
   { path: 'labnotebook/:pagepath', loadChildren: './wiki-lightproxy/wiki-lightproxy-layer.module#WikiLightproxyLayerModule', canActivate: [ChunkGuardService] },
   { path: 'labnotebook', loadChildren: './wiki-lightproxy/wiki-lightproxy-layer.module#WikiLightproxyLayerModule', canActivate: [ChunkGuardService] },
   { path: 'team', loadChildren: './team-roster/team-roster-layer.module#TeamRosterLayerModule', canActivate: [ChunkGuardService] },
