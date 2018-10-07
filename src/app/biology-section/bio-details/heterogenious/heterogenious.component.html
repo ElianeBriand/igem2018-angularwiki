@@ -1,0 +1,50 @@
+<div class="bannercontainer" id="top">
+  <img src="http://2018.igem.org/wiki/images/1/1b/T--GO_Paris-Saclay--tableau_banner.png" class="bannerimg superposedbanner1">
+  <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png" class="bannerimg superposedbanner2">
+  <div class="headlinetext">HeteroGenious</div>
+</div>
+
+<mat-card class="dashboard-card largemargin">
+
+  <h1>Toward a ‘HeteroGenious’ expression of BioBricks</h1>
+
+  <p>
+    While analysing the growth of our chassis strain (WT and &Delta;tolC strain) in absence or presence of MTX, we noticied that the strains harboring pSB1C3-folC-cpg2 present a growth delay/defect.
+    More generally, BioBrick expression and/or drug degradation may be toxic for the chassis strains, and can be detrimental
+    for the long term maintenance of a cleaning bioreactor ;
+    anti-cancer drugs degradation pathways may be especially affected, given these drugs target very basic mecanism of life,
+    likely to be conserved from bacteria to man.
+  </p><p>
+  Therefore we wanted our bioreactor to harbor a heterogeneous bacterial population so that all of them will not express
+  the degradation pathway at the same time. This system is so called ‘HeteroGenious’ since it generates ‘ingenious’ heterogeneity within the ‘cleaning factory’ population.
+</p>
+
+  <p>
+    We took advantage of a recently described regulation system that can generate bimodal
+    expression patterns in E. coli<reference-box shorthand="Leh2017"></reference-box>. Only two components are required to
+    implement this ‘heterogenious’ system in E. coli: LEE5 promoter region and the gene encoding
+    Ler (‘LEE encoded regulator’). Ler is a nucleoid associated protein encoded by LEE (locus of enterocyte effacement)
+    genomic island encoding a secretion system in enteropathogenic E. coli. For the project, we used ler and its target DNA,
+    a small part of LEE island containing the promoter region of the 5th operon, named LEE5. This region has been shown to
+    be recognized by two nucleoid-associated proteins, H-NS and Ler.  H-NS and Ler belong to the same family of protein of
+    proteins qualified as ‘silencers’ of foreign DNA expression, the H-NS family. However, it has been reported that Ler can
+    counteract the H-NS silencing on the LEE island. Therefore, the competition between H-NS and Ler for LEE5 binding can
+    generate some heterogeneity of transgene expression within E. coli populations<reference-box shorthand="Leh2017"></reference-box> (Figure 8).
+  </p>
+  <p>
+    Since H-NS is naturally present in E. coli, our synthetic system requires only the expression of Ler and a transgene
+    under the control of LEE5. We analyzed the expression of gfp under the control of LEE5 promoter as proof of concept.
+    The resulting population was heterogeneous regarding GFP expression since one sub-population expressed GFP and the other didn’t (Figure 9).
+
+  </p>
+
+  <mat-card class="eatintotextmargin">
+    <div class="mat-caption captionafterapicture">Figure  :
+      <br>
+      <div class="captionmaterialmethod">
+
+        </div>
+    </div>
+  </mat-card>
+
+</mat-card>

@@ -1,0 +1,27 @@
+#gcontainer{
+  margin: 20px;
+
+}
+
+.dashboard-card-content {
+  text-align: left;
+}
+
+.dashboard-card {
+  overflow: auto;
+}
+
+.grid-container {
+  margin: 20px;
+}
+
+
+.lee5explainer {
+  float: right;
+}
+
+p {
+  font-size: 14pt;
+  font-family: 'Lato', Helvetica, SansSerif;
+}
+

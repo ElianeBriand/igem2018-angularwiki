@@ -28,6 +28,7 @@ import { FolCComponent } from './parts/fol-c/fol-c.component';
 import { LerComponent } from './parts/ler/ler.component';
 import { Lee5Component } from './parts/lee5/lee5.component';
 import { MtxDegradationComponent } from './bio-details/mtx-degradation/mtx-degradation.component';
+import { HeterogeniousComponent } from './bio-details/heterogenious/heterogenious.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { MtxDegradationComponent } from './bio-details/mtx-degradation/mtx-degra
     FolCComponent,
     LerComponent,
     Lee5Component,
-    MtxDegradationComponent
+    MtxDegradationComponent,
+    HeterogeniousComponent
   ]
 })
 export class BiologySectionLayerModule { }
