@@ -34,7 +34,7 @@ h1, h2, h3, h4,h5,h6,p, u, li, a{
   background-color: rgb(32,56,100) !important;
   width: 100%;
   height: 100%;
-  min-height: 300vh;
+  min-height: 320vh;
 }
 
 /********************************* CSS POSITION DES IMAGES ET TEXTES PAGE PRINCIPAL **************************/

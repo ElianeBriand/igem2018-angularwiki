@@ -9,6 +9,7 @@ import {FolCComponent} from './parts/fol-c/fol-c.component';
 import {J23108Component} from './parts/j23108/j23108.component';
 import {Lee5Component} from './parts/lee5/lee5.component';
 import {LerComponent} from './parts/ler/ler.component';
+import {MtxDegradationComponent} from './bio-details/mtx-degradation/mtx-degradation.component';
 
 const routes: Routes = [
   { path: 'overview', component: BiologySectionComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'J23108', component: J23108Component },
   { path: 'lee5', component: Lee5Component },
   { path: 'ler', component: LerComponent },
+  { path: 'mtx', component: MtxDegradationComponent },
   { path: '', redirectTo: 'overview' }
 ];
 

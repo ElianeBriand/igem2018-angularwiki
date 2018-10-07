@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
 
   public routerLinkChunkProcessing: (string) => void;
 
-  private routerLinkChunkProcessingUnbound(routerLinkString: string, this1: any) {
+  public routerLinkChunkProcessingUnbound(routerLinkString: string, this1: any) {
     this1.chunkLoader.loadPageChunk(routerLinkString, function () {
       if(routerLinkString.search("dashboard") == -1)
       {
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
         this1.showBackHomeLogo = false;
       }
 
-      this1.router.navigateByUrl(routerLinkString);
+      this1.router.navigate([routerLinkString]);
     });
 
   }
@@ -75,6 +75,10 @@ export class AppComponent implements OnInit {
       this.showBackHomeLogo = false;
     }
 
+    if(currUrl === "http://2018.igem.org/Team:GO_Paris-Saclay")
+    {
+      this.showBackHomeLogo = false;
+    }
 
 
 

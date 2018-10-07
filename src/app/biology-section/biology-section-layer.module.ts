@@ -11,7 +11,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {
   MatButtonModule, MatCardModule,
-  MatIconModule
+  MatIconModule, MatListModule
 } from '@angular/material';
 
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -27,6 +27,7 @@ import { Cpg2Component } from './parts/cpg2/cpg2.component';
 import { FolCComponent } from './parts/fol-c/fol-c.component';
 import { LerComponent } from './parts/ler/ler.component';
 import { Lee5Component } from './parts/lee5/lee5.component';
+import { MtxDegradationComponent } from './bio-details/mtx-degradation/mtx-degradation.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { Lee5Component } from './parts/lee5/lee5.component';
     MatCardModule,
     MatExpansionModule,
     MatTableModule,
-    ReferenceBoxModule
+    ReferenceBoxModule,
+    MatListModule
   ],
   declarations: [
     BiologySectionComponent,
@@ -50,7 +52,8 @@ import { Lee5Component } from './parts/lee5/lee5.component';
     Cpg2Component,
     FolCComponent,
     LerComponent,
-    Lee5Component
+    Lee5Component,
+    MtxDegradationComponent
   ]
 })
 export class BiologySectionLayerModule { }

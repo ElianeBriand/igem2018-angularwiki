@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
+import {Router} from '@angular/router';
+import {ChunkLoaderService} from '../chunk-loader.service';
 
 
 @Component({
@@ -9,7 +11,12 @@ import * as d3 from 'd3';
 })
 export class ProjectDetailsComponent implements OnInit {
 
-  constructor() { }
+
+
+
+
+  constructor(public router: Router) { }
+
 
   HNS_label;
   HNS;

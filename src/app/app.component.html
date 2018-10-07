@@ -7,15 +7,20 @@
         <ul>
           <li><a (click)="this.routerLinkChunkProcessing('/project')" ><span>Project Design</span></a>
           </li>
-          <li ><a href='http://2018.igem.org/Team:GO_Paris-Saclay/pagetemplate2'><span>MTX degradation</span></a>
+          <li ><a (click)="this.routerLinkChunkProcessing('/biology/mtx')" ><span>Degrading MTX</span></a>
           </li>
-          <li ><a href='http://2018.igem.org/Team:GO_Paris-Saclay/heterogenious'><span>An heterogeneous system</span></a>
+          <li ><a href='http://2018.igem.org/Team:GO_Paris-Saclay/heterogenious'><span>An HeteroGeneous System</span></a>
           </li>
         </ul>
       </li>
 
-      <li><a ><span>Lab</span></a>
+      <li><a ><span>Biology</span></a>
         <ul>
+          <li class="has-sub"><a (click)="this.routerLinkChunkProcessing('/biology/parts')"><span>Parts</span></a>
+            <ul>
+              <li><a>Part 1</a></li>
+            </ul>
+          </li>
           <li><a (click)="this.routerLinkChunkProcessing('/labnotebook')"><span>Notebook</span></a>
           </li>
           <li><a href='http://2018.igem.org/Team:GO_Paris-Saclay/protocols'><span>Protocols</span></a>
@@ -23,8 +28,7 @@
         </ul>
       </li>
 
-      <li><a (click)="this.routerLinkChunkProcessing('/biology/parts')"><span>Parts</span></a>
-      </li>
+
       <li><a ><span>Model</span></a>
         <ul>
           <li><a href='http://2018.igem.org/Team:GO_Paris-Saclay/model'><span>Overview</span></a>
@@ -45,11 +49,11 @@
         </ul>
       </li>
       <li><a (click)="this.routerLinkChunkProcessing('/human-practices')"><span>Human practice</span></a></li>
-      <li><a ><span>Acknowledgement</span></a>
+      <li><a ><span>Support</span></a>
         <ul>
+          <li><a (click)="this.routerLinkChunkProcessing('/team')"><span>Team</span></a></li>
           <li ><a (click)="this.routerLinkChunkProcessing('/support')"><span>Sponsors</span></a>
           </li>
-          <li><a (click)="this.routerLinkChunkProcessing('/team')"><span>Team</span></a></li>
           <li ><a href='http://2018.igem.org/Team:GO_Paris-Saclay/collaboration'><span>Collaboration</span></a>
           </li>
         </ul>
@@ -74,37 +78,28 @@
   Script navigation NE PAS MODIFIE
   ************************************************************************/
 
-  <script>
-    ( function( $ ) {
-      $( document ).ready(function() {
-        $('#cssmenu').prepend('<div id="menu-button">Menu</div>');
-        $('#cssmenu #menu-button').on('click', function(){
-          var menu = $(this).next('ul');
-          if (menu.hasClass('open')) {
-            menu.removeClass('open');
-          }
-          else {
-            menu.addClass('open');
-          }
-        });
-      });
-    } )( jQuery );
 
-  </script>
 
 -->
 
 
 
-<div class="container">
+<div class="container" *ngIf="showBackHomeLogo">
 
-  <div class="topleft" *ngIf="showBackHomeLogo"><a href="#" (click)="this.routerLinkChunkProcessing('/dashboard')"><img src="http://2018.igem.org/wiki/images/0/01/T--GO_Paris-Saclay--logogoparissaclay.png" alt="logoparissaclay"></a></div>
+  <div class="topleft"><a href="#" (click)="this.routerLinkChunkProcessing('/dashboard')"><img src="http://2018.igem.org/wiki/images/0/01/T--GO_Paris-Saclay--logogoparissaclay.png" alt="logoparissaclay"></a></div>
 
   <router-outlet></router-outlet>
 
-  <br style="height: 2em;">
+  <img src="http://2018.igem.org/wiki/images/5/5b/T--GO_Paris-Saclay--footerespace.png" class="superposedbanner1">
+
 </div> <!-------------fin container------------->
 
+<div class="containerfrontpage" *ngIf="!showBackHomeLogo">
+
+  <dashboard></dashboard>
+  <br style="height: 2em;">
+
+</div> <!-------------fin container------------->
 
 
 

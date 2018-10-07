@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {from, Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 
 let indx = 0;
@@ -62,24 +63,6 @@ export let error_reference = new Reference('Error2018', 'E. Rror', 'This referen
 
 
 export let REFERENCES_MASTER_RECORD = [
-  new Reference('Test2018', 'Anonymous', 'Testing : a reference manager', '2939', 'J. Eur. Behavioral Example',
-    'http://journal.example.com', 'Vol 2.3 p3', ['example', 'article'],
-    'The inducibility of SOS responses by 5-fluorouracil (5-FU), which has been used as an antitumor drug, was studied in Escherichia coli' +
-    ' cells which have different DNA repair capacities for UV lesions. Expression of the umuC gene was apparently induced by 5-FU in the wild-type and' +
-    ' uvrA strains but not in lexA and recA strains. The inducibility of the umuC gene by 5-FU, the metabolite of which inhibits thymidylate synthetase,' +
-    ' was abolished in cultures containing deoxythymidine monophosphate which is converted from deoxyuridine monophosphate by thymidylate synthetase.' +
-    ' These results suggest that 5-FU may exert its SOS inducibility by inhibiting thymidylate synthetase and then disturbing DNA metabolism but not by' +
-    ' incorporating 5-FU residues into RNA. Further, 5-FU weakly induced mutations in E. coli. © 1987.'),
-  new Reference('Example2018', 'Alfred Example', 'Example of paper : this one is a good example of paper', '452', 'J. Eur. Chemical Example',
-    'http://journal.example.eu', 'Vol 45 p12', ['exampleJournal', 'article'],
-    'During protein synthesis, ribosomes encounter many roadblocks, the outcomes of which are largely determined by substrate availability ,' +
-    ' amino acid features and reaction kinetics. Prolonged ribosome stalling is likely to be resolved by ribosome rescue or quality control pathways,' +
-    ' whereas shorter stalling is likely to be resolved by ongoing productive translation. How ribosome function is affected by such hindrances can therefore' +
-    ' have a profound impact on the translational output (yield) of a particular mRNA. In this Review , we focus on these roadblocks and the resumption of normal' +
-    ' translation elongation rather than on alternative fates wherein the stalled ribosome triggers degradation of the mRNA and the incomplete protein product.' +
-    ' We discuss the fundamental stages of the translation process in eukaryotes, from elongation through ribosome recycling, with particular attention to recent' +
-    ' discoveries of the complexity of the genetic code and regulatory elements that control gene expression, including ribosome stalling during elongation, the' +
-    ' role of mRNA context in translation termination and mechanisms of ribosome rescue that resemble recycling.'),
   new Reference('Loenen2014', 'Loenen, W. A. M., Dryden, D. T. F., Raleigh, E. A., Wilson, G. G., & Murrayy, N. E',
     'Highlights of the DNA cutters: A short history of the restriction enzymes',
     '10.1093/nar/gkt990',
@@ -128,12 +111,20 @@ export let REFERENCES_MASTER_RECORD = [
     '', '', ['Visualization', 'UX', 'Design'],
     ''
   ),
+  new Reference('Toolaram2014', 'Toolaram, A. P., Kümmerer, K., & Schneider, M.',
+    'Environmental risk assessment of anti-cancer drugs and their transformation products: A focus on their genotoxicity characterization-state of knowledge and short comings.',
+    '10.1016/j.mrrev.2014.02.001',
+    'Mutation Research - Reviews in Mutation Research',
+    'https://linkinghub.elsevier.com/retrieve/pii/S1383574214000039', '', ['Risk', 'Drug', 'RiskAssessment', 'Environment'],
+    'Anti-cancer drugs are chemotherapeutic agents that are designed to kill or reduce proliferating cells. Often times, they interfere directly or indirectly with the cell\'s deoxyribonucleic acid (DNA). Some of these drugs can be detected in the ng/L concentration range in the aquatic environment and have the potential to be very persistent. Environmental risk assessment is available for only a few anti-cancer drugs, derived mainly from predicted data and excluding information on their metabolites and transformation products (TPs). Notably, there is no defined strategy for genotoxicity risk assessment of anti-cancer drugs, their metabolites and TPs in the environment. In fact, the presence of anti-cancer drugs in hospital and municipal wastewaters has not been clearly related to the genotoxic nature of these wastewaters. The few available studies that have sought to investigate the genotoxicity of mixtures derived from treating anti-cancer drugs prior to disposal seem to share the commonality of coupling analytical methods to measure concentration and genotoxic bioassays, namely the Ames test to monitor inactivation. Such limited studies on the environmental fate and effects of these drugs presents an area for further research work. Most importantly, there is a need to characterize the genotoxic effects of anti-cancer drugs towards aquatic organisms. Given current environmental risk assessment strategies, genotoxicity risk assessment of these drugs and their TPs would have to include a combination of appropriate analytical methods, genotoxicity bioassays, (bio) degradability and computer based prediction methods such as QSAR studies. © 2014 Elsevier B.V.'
+  ),
 
 ];
 
 /*
 
-(2007). . Information Visualization (Vol. 3). https://doi.org/10.1057/palgrave.ivs.9500066
+ (2014, April 17).  . https://doi.org/10.1016/j.mrrev.2014.02.001
+
 
  */
 
@@ -153,7 +144,7 @@ export class ReferenceManagerService {
   private internal_reflist: Reference[];
   public errref = error_reference;
 
-  constructor() {
+  constructor(private http: HttpClient) {
     if (ReferenceManagerService.singletonInstance) {
       return ReferenceManagerService.singletonInstance;
     }
@@ -162,23 +153,14 @@ export class ReferenceManagerService {
 
     this.reflist = new Observable((observer) => {
       if(!this.internal_reflist) {
-        /*
-        this.http.get(referenceJSONurl, {responseType: 'text'})
+
+        this.http.get("http://2018.igem.org/wiki/images/d/df/T--GO_Paris-Saclay--references_list.txt", {responseType: 'text'})
         .subscribe((data: any) => {
-        let decodedData = atob(data);
-        let objjson: Reference[] = JSON.parse(decodedData);
+        let objjson: Reference[] = JSON.parse(data);
         this.internal_reflist = objjson;
           observer.next(this.internal_reflist);
         }, error1 => console.log(error1));
-         */
 
-        setTimeout(() => {
-          let jsonstr = JSON.stringify(REFERENCES_MASTER_RECORD);
-          let objjson: Reference[] = JSON.parse(jsonstr);
-
-          this.internal_reflist = objjson;
-          observer.next(this.internal_reflist);
-        }, 0);
       }else{
         observer.next(this.internal_reflist);
       }

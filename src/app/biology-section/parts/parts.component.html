@@ -1,55 +1,59 @@
-<img src="http://2018.igem.org/wiki/images/7/7d/T--GO_Paris-Saclay--partspage.png" alt="parts banner" class="bannerimg">
+<div class="bannercontainer">
+  <img src="http://2018.igem.org/wiki/images/d/dd/T--GO_Paris-Saclay--parts_underbanner.png" class="bannerimg superposedbanner1">
+  <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png" class="bannerimg superposedbanner2">
+  <div class="headlinetext">Parts</div>
+</div>
+
+<mat-card class="dashboard-card">
+
+  <h2>Methotrexate elimination</h2>
+
+  <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
+    <mat-card-header>
+      <mat-card-title>Carboxypeptidase G2</mat-card-title>
+      <mat-card-subtitle>cpg2 &mdash; BBa_K2688003</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>An enzyme that cleaves folates, yielding a pterydoyl ring and glutamate(s).</mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" routerLink="/biology/cpg2">More about this part</button>
+      <a href="http://parts.igem.org/Part:BBa_K2688003" mat-raised-button color="accent">Registry page</a>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
+    <mat-card-header>
+      <mat-card-title>FolylPolyGlutamate Synthetase</mat-card-title>
+      <mat-card-subtitle>folC &mdash; BBa_K2688008</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>An enzyme that adds glutamates to folate analogs.</mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" routerLink="/biology/folc">More about this part</button>
+      <a href="http://parts.igem.org/Part:BBa_K2688008" mat-raised-button color="accent">Registry page</a>
+    </mat-card-actions>
+  </mat-card>
 
 
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Other parts
+      </mat-panel-title>
+      <mat-panel-description>
+        Biobrick from the registry
+      </mat-panel-description>
+    </mat-expansion-panel-header>
 
-  <mat-card class="dashboard-card" >
-
-    <h2>Bistable system</h2>
-
-    <img src="http://2018.igem.org/wiki/images/a/ab/T--GO_Paris-Saclay--LEE5-ler.png" class="card-illus">
-
-    <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
-      <mat-card-header>
-        <mat-card-title>LEE5 promoter series</mat-card-title>
-        <mat-card-subtitle>LEE5 &mdash; BBa_K2688010 to BBa_K2688018</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>A constitutive promoter regulated by H-NS (E coli endogeneous) and ler, which allows for heterogeneous expression
-         of downstream gene. Several variants are available, with design implications.</mat-card-content>
-      <mat-card-actions><button mat-raised-button color="accent" routerLink="/biology/lee5">More about these parts</button></mat-card-actions>
-    </mat-card>
-
-    <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
-      <mat-card-header>
-        <mat-card-title>Ler regulator series</mat-card-title>
-        <mat-card-subtitle>ler &mdash; BBa_K2688019 to BBa_K2688021</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>A transcription regulator protein that binds to LEE5 promoter sites, counteracting H-NS silecing and allowing transcription.
-        Several variants are available, with design implications.</mat-card-content>
-      <mat-card-actions><button mat-raised-button color="accent" routerLink="/biology/ler">More about these parts</button> </mat-card-actions>
-    </mat-card>
-
-
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Other parts
-        </mat-panel-title>
-        <mat-panel-description>
-          Biobrick from the registry
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-
-    <table mat-table [dataSource]="datasource_bistable" class="mat-elevation-z8" class="other-biobrick-table">
+    <table mat-table [dataSource]="datasource_MTX" class="mat-elevation-z8" class="other-biobrick-table">
 
       <ng-container matColumnDef="bbnumber">
-        <th mat-header-cell *matHeaderCellDef> Reg. reference </th>
-        <td mat-cell *matCellDef="let element">  <a [href]="element.registrylink">{{element.bbnumber}}</a> </td>
+        <th mat-header-cell *matHeaderCellDef> Reg. reference</th>
+        <td mat-cell *matCellDef="let element"><a [href]="element.registrylink">{{element.bbnumber}}</a></td>
       </ng-container>
 
       <!-- Name Column -->
       <ng-container matColumnDef="symbol">
-        <th mat-header-cell *matHeaderCellDef> Shorthand </th>
-        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+        <th mat-header-cell *matHeaderCellDef> Shorthand</th>
+        <td mat-cell *matCellDef="let element"> {{element.symbol}}</td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -58,98 +62,110 @@
     </table>
 
 
-    </mat-expansion-panel>
+  </mat-expansion-panel>
 
 
+</mat-card>
 
+
+<div style="padding-top: 40px; padding-bottom: 40px">
+</div>
+
+<mat-card class="dashboard-card">
+
+  <h2>Bistable system</h2>
+
+  <img src="http://2018.igem.org/wiki/images/a/ab/T--GO_Paris-Saclay--LEE5-ler.png" class="card-illus">
+
+  <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
+    <mat-card-header>
+      <mat-card-title>LEE5 promoter series</mat-card-title>
+      <mat-card-subtitle>LEE5 &mdash; BBa_K2688010 to BBa_K2688018</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>A constitutive promoter regulated by H-NS (E coli endogeneous) and ler, which allows for
+      heterogeneous expression
+      of downstream gene. Several variants are available, with design implications.
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" routerLink="/biology/lee5">More about these parts</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
+    <mat-card-header>
+      <mat-card-title>Ler regulator series</mat-card-title>
+      <mat-card-subtitle>ler &mdash; BBa_K2688019 to BBa_K2688021</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>A transcription regulator protein that binds to LEE5 promoter sites, counteracting H-NS silecing
+      and allowing transcription.
+      Several variants are available, with design implications.
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" routerLink="/biology/ler">More about these parts</button>
+    </mat-card-actions>
   </mat-card>
 
 
-  <div style="padding-top: 40px; padding-bottom: 40px">
-  </div>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Other parts
+      </mat-panel-title>
+      <mat-panel-description>
+        Biobrick from the registry
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <table mat-table [dataSource]="datasource_bistable" class="mat-elevation-z8" class="other-biobrick-table">
+
+      <ng-container matColumnDef="bbnumber">
+        <th mat-header-cell *matHeaderCellDef> Reg. reference</th>
+        <td mat-cell *matCellDef="let element"><a [href]="element.registrylink">{{element.bbnumber}}</a></td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="symbol">
+        <th mat-header-cell *matHeaderCellDef> Shorthand</th>
+        <td mat-cell *matCellDef="let element"> {{element.symbol}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
 
 
-  <mat-card class="dashboard-card" >
-
-    <h2>Methotrexate elimination</h2>
-
-    <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
-      <mat-card-header>
-      <mat-card-title>Carboxypeptidase G2</mat-card-title>
-      <mat-card-subtitle>cpg2 &mdash; BBa_K2688003</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>An enzyme that cleaves folates, yielding a pterydoyl ring and glutamate(s).</mat-card-content>
-      <mat-card-actions><button mat-raised-button color="accent" routerLink="/biology/cpg2">More about this part</button>
-        <a href="http://parts.igem.org/Part:BBa_K2688003" mat-raised-button color="accent" >Registry page</a></mat-card-actions>
-    </mat-card>
-
-    <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
-      <mat-card-header>
-        <mat-card-title>FolylPolyGlutamate Synthetase</mat-card-title>
-        <mat-card-subtitle>folC &mdash; BBa_K2688008</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>An enzyme that adds glutamates to folate analogs.</mat-card-content>
-      <mat-card-actions><button mat-raised-button color="accent" routerLink="/biology/folc">More about this part</button>
-        <a href="http://parts.igem.org/Part:BBa_K2688008" mat-raised-button color="accent" >Registry page</a></mat-card-actions>
-    </mat-card>
+  </mat-expansion-panel>
 
 
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Other parts
-        </mat-panel-title>
-        <mat-panel-description>
-          Biobrick from the registry
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <table mat-table [dataSource]="datasource_MTX" class="mat-elevation-z8" class="other-biobrick-table">
-
-        <ng-container matColumnDef="bbnumber">
-          <th mat-header-cell *matHeaderCellDef> Reg. reference </th>
-          <td mat-cell *matCellDef="let element">  <a [href]="element.registrylink">{{element.bbnumber}}</a> </td>
-        </ng-container>
-
-        <!-- Name Column -->
-        <ng-container matColumnDef="symbol">
-          <th mat-header-cell *matHeaderCellDef> Shorthand </th>
-          <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-        </ng-container>
-
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-      </table>
+</mat-card>
 
 
-    </mat-expansion-panel>
+<div style="padding-top: 40px; padding-bottom: 40px">
+</div>
 
 
+<mat-card class="dashboard-card">
+
+  <h2>Improvement on existing parts</h2>
+
+
+  <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
+    <mat-card-header>
+      <mat-card-title>Promoter J23108 - Anderson collection</mat-card-title>
+      <mat-card-subtitle>BBa_J23108 &mdash; Corrected as BBa_K2688027</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>A constitutive promoter. The shipped version contained unexpect illegal restriction site which we
+      corrected.
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" routerLink="/biology/J23108">More about this part</button>
+      <a href="http://parts.igem.org/Part:BBa_K2688025" mat-raised-button color="accent">Registry page</a>
+    </mat-card-actions>
   </mat-card>
 
-  <div style="padding-top: 40px; padding-bottom: 40px">
-  </div>
 
-
-  <mat-card class="dashboard-card" >
-
-    <h2>Improvement on existing parts</h2>
-
-
-    <mat-card (mouseenter)='mouseenter($event)' (mouseleave)="mouseleave($event)" class="z-depth" class="part-card">
-      <mat-card-header>
-        <mat-card-title>Promoter J23108 - Anderson collection </mat-card-title>
-        <mat-card-subtitle>BBa_J23108 &mdash; Corrected as BBa_K2688027</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>A constitutive promoter. The shipped version contained unexpect illegal restriction site which we corrected.</mat-card-content>
-      <mat-card-actions><button mat-raised-button color="accent" routerLink="/biology/J23108">More about this part</button>
-        <a href="http://parts.igem.org/Part:BBa_K2688027" mat-raised-button color="accent" >Registry page</a></mat-card-actions>
-    </mat-card>
-
-
-
-  </mat-card>
+</mat-card>
 
 
 

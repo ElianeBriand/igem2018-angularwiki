@@ -3,26 +3,15 @@
 
 }
 
-.dashboard-card-content {
-  text-align: left;
-}
 
 .dashboard-card {
   overflow: auto;
+  text-align: left;
 }
 
 
 
-.wideimg {
-  width: 100%;
-  margin-top : 1em;
-  margin-bottom : 1em;
-}
 
-.semiwideimg {
-  width: 60%;
-  margin: 1em auto;
-}
 
 .widetable {
   width: 100%;

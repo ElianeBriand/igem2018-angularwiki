@@ -63,6 +63,8 @@ export let SPECIAL_PAGE_CHUNK_MASTER_RECORD = [
 
 export let IMAGE_PRELOAD_MASTER_RECORD = [
   new ImagePreloadRecord("http://2018.igem.org/wiki/images/0/03/T--GO_Paris-Saclay--fond_groupe.png", "image/png"),
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/1/1b/T--GO_Paris-Saclay--tableau_banner.png", "image/png"),
+
   new ImagePreloadRecord("http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png", "image/png"),
 
   new ImagePreloadRecord("http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--abstractpage.png", "image/png"),
