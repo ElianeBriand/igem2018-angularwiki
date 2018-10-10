@@ -4,7 +4,7 @@ import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import {CommonModule, isPlatformBrowser} from '@angular/common';
 
 
-import { AppComponent } from './app.component';
+import {AppComponent, WikiSourceSheet} from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
    MatButtonModule,
@@ -32,6 +32,7 @@ import {ReferenceBoxModule} from './reference-box/reference-box.module';
 import {ReferencesPageComponent} from './references-page/references-page.component';
 import {DemonstrateComponent} from './demonstrate/demonstrate.component';
 import {SafetyComponent} from './safety/safety.component';
+import {ReferenceSheet} from './reference-box/reference-box.component';
 
 
 
@@ -47,7 +48,8 @@ import {SafetyComponent} from './safety/safety.component';
     CollaborationsComponent,
     ReferencesPageComponent,
     DemonstrateComponent,
-    SafetyComponent
+    SafetyComponent,
+    WikiSourceSheet
   ],
   imports: [
     BrowserModule,
@@ -68,6 +70,9 @@ import {SafetyComponent} from './safety/safety.component';
     MatChipsModule,
     MatGridListModule
 
+  ],
+  entryComponents: [
+    WikiSourceSheet
   ],
   providers: [
     PreInitLoaderService,

@@ -7,6 +7,9 @@ import {ActivatedRoute, Router, UrlSegment} from '@angular/router';
 import {ChunkLoaderService} from './chunk-loader.service';
 import {SPECIAL_PAGE_CHUNK_MASTER_RECORD, SpeciaPageRecord} from './page-chunk-record';
 import {environment} from '../environments/environment';
+import {error_reference, Reference} from './reference-manager.service';
+import {MatBottomSheet, MatBottomSheetRef} from '@angular/material';
+import {ReferenceSheet} from './reference-box/reference-box.component';
 
 
 @Component({
@@ -20,6 +23,8 @@ export class AppComponent implements OnInit {
 
 
   showSubmenu: boolean = false;
+
+  public sourcesheetref : MatBottomSheetRef;
 
   showBackHomeLogo: boolean = true;
 
@@ -46,7 +51,12 @@ export class AppComponent implements OnInit {
 
   }
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router, private chunkLoader: ChunkLoaderService) {
+  openWikiSourceBottomSheet(): void {
+    this.sourcesheetref = this.bottomSheet.open(WikiSourceSheet);
+  }
+
+
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router, private chunkLoader: ChunkLoaderService, private bottomSheet: MatBottomSheet) {
     this.routerLinkChunkProcessing = (s: string) => {
       this.routerLinkChunkProcessingUnbound(s, this);
     };
@@ -90,139 +100,28 @@ export class AppComponent implements OnInit {
 
   }
 
-/*  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
-
-
-  openSideNav(): void {
-    if (this.openedSideNav === true) {
-      this.openedSideNav = false;
-    } else {
-      this.openedSideNav = true;
-    }
-  }
-*/
 
   ngOnInit() {
 
-    /*
-    this.activetedRt.url.subscribe((value: UrlSegment[]) => {
-      console.log(value);
-    },error1 => {console.log("ActivatedRoute obs err : " + error1)})
-    */
   }
 
 
+}
 
-/*
-  selectedSideMenuItem($event) {
-    this.routerLinkChunkProcessing($event.link);
+
+
+@Component({
+  selector: 'wikisource-sheet',
+  templateUrl: 'computing-section/wikisourcesheet.html',
+})
+export class WikiSourceSheet {
+
+
+  constructor(public bottomSheetRef: MatBottomSheetRef<ReferenceSheet>) {
   }
 
-  sideMenuConfig = {
-    paddingAtStart: true,
-    // classname: 'my-custom-class',
-    //listBackgroundColor: 'rgb(208, 241, 239)',
-    //fontColor: 'rgb(8, 54, 71)',
-    //backgroundColor: 'rgb(208, 241, 239)',
-    selectedListFontColor: 'rgb(111,172,93)',
-  };
-
-  sideMenuList = [
-    {
-      label: 'Main page',
-      icon: 'dashboard',
-      link: '/dashboard'
-    },
-    {
-      label: 'Project Design',
-      icon: 'assessment',
-      link: '/project'
-    },
-    {
-      label: 'Biology',
-      icon: 'blur_circular',
-      items: [
-        {
-          label: 'Overview',
-          icon: 'explore',
-          link: '/biology/overview'
-        },
-        {
-          label: 'Parts',
-          icon: 'view_comfy',
-          link: '/biology/parts'
-        },
-        {
-          label: 'Strains',
-          icon: 'blur_on',
-          link: '/biology/strains'
-        },
-        {
-          label: 'Interlab',
-          icon: 'swap_horizontal_circle',
-          link: '/biology/interlab'
-        }
-      ]
-    }, {
-      label: 'Modeling',
-      icon: 'timeline',
-      link: '/modeling'
-    },
-    {
-      label: 'Software',
-      icon: 'memory',
-      link: '/software'
-    },
-    {
-      label: 'Human Practices',
-      icon: 'accessibility_new',
-      link: '/human-practices'
-    },
-
-    {
-      label: 'Our team',
-      icon: 'people',
-      link: '/team'
-    },
-    {
-      label: 'Support',
-      icon: 'folder_special',
-      items: [
-        {
-          label: 'Sponsors',
-          icon: 'attach_money',
-          link: '/support'
-        },
-        {
-          label: 'Collaborations',
-          icon: 'public',
-          link: '/collaborations'
-        },
-        {
-          label: 'Attribution',
-          icon: 'person_pin',
-          link: '/attribution'
-        },
-        {
-          label: 'References',
-          icon: 'book',
-          link: '/references'
-        }, {
-          label: 'Safety',
-          icon: 'security',
-          link: '/safety'
-        }
-      ]
-    },
-    {
-      label: 'Lab Notebook',
-      icon: 'blur_circular',
-      link: '/labnotebook'
-    }
-  ];
-
-*/
+  openLink(event: MouseEvent): void {
+    this.bottomSheetRef.dismiss();
+    event.preventDefault();
+  }
 }
