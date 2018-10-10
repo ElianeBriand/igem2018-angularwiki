@@ -147,18 +147,181 @@
     bacteria to remove a toxic compound from the medium. </p>
 
 
-  <mat-card class="eatintotextmargin">
-    <img src="http://2018.igem.org/wiki/images/0/0f/T--GO_Paris-Saclay--typ_hplc_res.png" class="wideimg">
-    <div class="mat-caption captionafterapicture">Figure 5.2 : HPLC analysis of MTX medium incubated with a control strain or a ‘MTX-Cleaning Factory’
-      <br>
-      <div class="captionmaterialmethod">
-        The results correspond to the HPLC analysis of supernatants obtained after 5 h of incubation with WT strains harboring pSB1C3-tet
-        (CLTR) or pSB1C3-<i>folC</i>-<i>cpg2</i> (‘MTX Cleaning factory’) bacteria as described in Figure 4. The HPLC assay was run with a reverse phase,
-        C18 column. Detection was made using UV spectrophotometry at 303 nm (peak absorption 302-303 nm<reference-box shorthand="Merck2007"></reference-box>) with peak-triggered
-        UV-vis spectrum (diode array). The eluting solvent was a gradient of acetonitrile and water (with 0.1% v/v HCOOH). This mode of operation
-        is very similar to the assay and impurities protocols of reference pharmacopeia for MTX.<reference-box shorthand="PhEur2017"></reference-box><reference-box shorthand="USP2007"></reference-box></div>
+  <h1>HPLC analysis</h1>
+
+  <p>
+    While our bioassay results prove that there is no bacteriostatic activity left in the filtrate, this does not
+    conclusively prove that the MTX has been bio-transformed. We endeavoured to show this by HPLC analysis, directly
+    measuring MTX and metabolite concentration.
+  </p>
+  <h2>Controls</h2>
+  <p>At the selected detection wavelength, there was no interference from either LB medium or DMSO (Figure 5).</p>
+
+
+  <mat-card class="normalmargin">
+    <div class="chromatographContainer">
+      <img src="http://2018.igem.org/wiki/images/f/f5/T--GO_Paris-Saclay--HPLC_DMSO-NoBact_05h.png"
+           class="superposedcm1">
+      <img src="http://2018.igem.org/wiki/images/5/54/T--GO_Paris-Saclay--HPLC_Chromatograph_frame.png"
+           class="hplcframe">
+    </div>
+    <div class="mat-caption captionafterapicture">Figure 5: LB + DMSO 2% v/v (no MTX, no bacteria in original medium)
+      after 5 h wait
     </div>
   </mat-card>
+
+  In LB + DMSO, the MTX peak was well defined. The spectrum and retention time were similar to the MTX standard. In both
+  cases, the retention time is 14.6 min (Figure 6).
+
+  <mat-card class="normalmargin">
+    <div class="chromatographContainer">
+      <img src="http://2018.igem.org/wiki/images/1/1c/T--GO_Paris-Saclay--HPLC_MTX-NoBact_20h.png"
+           class="superposedcm1">
+      <img src="http://2018.igem.org/wiki/images/5/54/T--GO_Paris-Saclay--HPLC_Chromatograph_frame.png"
+           class="hplcframe">
+    </div>
+    <div class="mat-caption captionafterapicture">Figure 6: MTX in LB + DMSO 2% v/v after 20 h wait</div>
+  </mat-card>
+
+
+  <mat-card class="normalmargin">
+    <img src="http://2018.igem.org/wiki/images/1/1f/T--GO_Paris-Saclay--HPLC_spectrum_LBMTX.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 7: UV-Vis spectra of peaks in figure 6. Below: spectrum of the
+      main peak
+    </div>
+  </mat-card>
+
+  <p>
+    The chassis had no intrinsic effect without the degradation pathway, and metabolic by-products of the culture did
+    not
+    cause interferences. Indeed, MTX-filtrate from control culture (<i>E. coli</i> WT strain harbouring
+    pSB1C3-<i>tet</i>) exhibited
+    a peak with the same retention time (14.6 min) as the MTX standard, and no other compound were detected (Figure 10).
+  </p>
+
+  <mat-card class="normalmargin">
+    <div class="chromatographContainer">
+      <img src="http://2018.igem.org/wiki/images/c/ce/T--GO_Paris-Saclay--HPLC_MTX-WT-tet_05h.png"
+           class="superposedcm1">
+      <img src="http://2018.igem.org/wiki/images/5/54/T--GO_Paris-Saclay--HPLC_Chromatograph_frame.png"
+           class="hplcframe">
+    </div>
+    <div class="mat-caption captionafterapicture">Figure 10: Filtrate from the control culture (WT pSB1C3-tet) after 5 h
+      incubation
+    </div>
+  </mat-card>
+
+  <mat-card class="normalmargin">
+    <img src="http://2018.igem.org/wiki/images/c/c4/T--GO_Paris-Saclay--HPLC_spectrum_MTX-WT-tet-05h.png"
+         class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 11: UV-Vis spectra of peaks in figure 10. Below: spectrum of
+      the main peak
+    </div>
+  </mat-card>
+
+  <h2>'MTX-Cleaning Factories'</h2>
+  When considering filtrates from WT chassis strain harbouring <i>folC</i>-<i>cpg2</i> encoding plasmid culture
+  incubated 5 h with MTX,
+  the MTX peak (14.6 min) disappears almost completely and a new peak appears at 15.8 min (Figure 12).
+
+  <mat-card class="normalmargin">
+    <img src="http://2018.igem.org/wiki/images/0/0f/T--GO_Paris-Saclay--typ_hplc_res.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 12: Comparison of MTX standard, filtrate from control culture
+      (WT pSB1C3-tet)
+      and ‘MTX-Cleaning factory’ culture (WT pSB1C3-folC-cpg2) after 5 h incubation
+    </div>
+  </mat-card>
+
+
+  <mat-card class="normalmargin">
+    <img src="http://2018.igem.org/wiki/images/f/ff/T--GO_Paris-Saclay--spectrum_after_degrad.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 13: UV-Vis spectra of peaks after degradation. Below: spectrum
+      of the new peak (not MTX)
+    </div>
+  </mat-card>
+
+  <p>No further change is apparent after 20 h of incubation: the MTX-biotransformation is complete in at most 5 h
+    (Figure 14).</p>
+
+  <mat-card class="normalmargin">
+    <div class="chromatographContainer">
+      <img src="http://2018.igem.org/wiki/images/b/b2/T--GO_Paris-Saclay--HPLC_MTX-WT-fc_20h.png" class="superposedcm1">
+      <img src="http://2018.igem.org/wiki/images/5/54/T--GO_Paris-Saclay--HPLC_Chromatograph_frame.png"
+           class="hplcframe">
+    </div>
+    <div class="mat-caption captionafterapicture">Figure 14: Filtrate from ‘MTX-Cleaning factory’ culture (WT
+      pSB1C3-folC-cpg2) after 20 h incubation
+    </div>
+  </mat-card>
+
+  <p>
+    Quantitatively speaking, using the standard we haveabout 52 uM MTX per unit surface area, for this particular HPLC
+    system. This allows
+    us to calculate residual MTX concentration for the various conditions :
+  </p>
+
+  <mat-card class="eatintotextmargin">
+    <img src="http://2018.igem.org/wiki/images/8/8b/T--GO_Paris-Saclay--hplc_quant_area.png" class="wideimg">
+  </mat-card>
+
+
+  <mat-card class="eatintotextmargin">
+    <img src="http://2018.igem.org/wiki/images/0/06/T--GO_Paris-Saclay--hplc_quant_residual.png" class="wideimg">
+  </mat-card>
+
+  <p>We have also performed this HPLC analysis with a modified ‘MTX-Cleaning factory’ chassis ΔtolC (deletion of the
+    outer
+    membrane efflux channel TolC). The results obtained are similar to the WT chassis. </p>
+
+
+  <mat-card class="normalmargin">
+    <div class="chromatographContainer">
+      <img src="http://2018.igem.org/wiki/images/7/7e/T--GO_Paris-Saclay--HPLC_MTX-DtolC-fc_05h.png"
+           class="superposedcm1">
+      <img src="http://2018.igem.org/wiki/images/5/54/T--GO_Paris-Saclay--HPLC_Chromatograph_frame.png"
+           class="hplcframe">
+    </div>
+    <div class="mat-caption captionafterapicture">Figure 10: Filtrate from ‘MTX-Cleaning factory’ culture (ΔtolC
+      pSB1C3-folC-cpg2) after 5 h incubation
+    </div>
+  </mat-card>
+
+  <p class="spacemaker"></p>
+
+  <p>You can explore our full HPLC results using the widget below :</p>
+  <app-chromato-explorer></app-chromato-explorer>
+  <p class="spacemaker"></p>
+
+  <h1>Discussion</h1>
+  <p>
+    Our HPLC assay protocol proved well suited to our purpose, considering the remarkable lack of interference from
+    either LB components, metabolic by-products or DMSO at the chosen wavelength. This validates the method as an easy
+    to use assay for MTX in bacterial cell culture.
+  </p>
+  <p>
+    Bacteria without cpg2 transgene do not biotransform MTX, excluding an intrinsic MTX-degradation ability of E. coli.
+  </p>
+  <p>
+    In contrast, the expression of CPG2 has a profound effect: the MTX peak almost completely disappears, giving way to
+    a new peak, likely corresponding to a reaction product that might be DAMPA. This process is finished by 5 h, and no
+    further change is seen at 20 h.
+  </p>
+  <p>While the identity of this new peak has not been formally ascertained, it is plausible that it is DAMPA for a few
+    reasons:</p>
+  <p>
+    • As a more hydrophobic molecule, DAMPA is expected to have a longer retention time in reverse phase HPLC, which is
+    displayed by the unknown compound;<br>
+    • Given the pteridine cycle is the main chromophore of folate-like molecules, we expect both MTX and DAMPA to have
+    similar UV-Vis spectra. The unknown compound has a very similar spectrum, with slightly sharper peaks;<br>
+    • For the same reason, we also expect the compounds to have a similar response factor, which is verified (relative
+    response factor 0.8 to 1.0).<br>
+  </p>
+  <p>The MTX biotransformation by tolC deletion mutants is quite similar to that of the WTchassis strain. This
+    modification may still have an effect on the transformation kinetic. However, because degradation is complete at the
+    time of our first sample (5 h), our HPLC data can neither confirm nor rule out such effect.
+  </p>
+  <p class="spacemaker"></p>
+
   <p class="spacemaker"></p>
 
   <p class="intermediateconclusion">

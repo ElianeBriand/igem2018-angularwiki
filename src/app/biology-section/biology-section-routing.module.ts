@@ -11,6 +11,7 @@ import {Lee5Component} from './parts/lee5/lee5.component';
 import {LerComponent} from './parts/ler/ler.component';
 import {MtxDegradationComponent} from './bio-details/mtx-degradation/mtx-degradation.component';
 import {HeterogeniousComponent} from './bio-details/heterogenious/heterogenious.component';
+import {HplcExplorerPageComponent} from './hplc-explorer-page/hplc-explorer-page.component';
 
 const routes: Routes = [
   { path: 'overview', component: BiologySectionComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'lee5', component: Lee5Component },
   { path: 'ler', component: LerComponent },
   { path: 'mtx', component: MtxDegradationComponent },
+  { path: 'hplc', component: HplcExplorerPageComponent },
   { path: 'heterogenious', component: HeterogeniousComponent },
   { path: '', redirectTo: 'overview' }
 ];

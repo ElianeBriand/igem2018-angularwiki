@@ -10,8 +10,8 @@ import {BiologySectionRoutingModule} from './biology-section-routing.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {
-  MatButtonModule, MatCardModule,
-  MatIconModule, MatListModule
+  MatButtonModule, MatCardModule, MatFormFieldModule,
+  MatIconModule, MatListModule, MatSelectModule, MatTabsModule
 } from '@angular/material';
 
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -29,6 +29,8 @@ import { LerComponent } from './parts/ler/ler.component';
 import { Lee5Component } from './parts/lee5/lee5.component';
 import { MtxDegradationComponent } from './bio-details/mtx-degradation/mtx-degradation.component';
 import { HeterogeniousComponent } from './bio-details/heterogenious/heterogenious.component';
+import { ChromatoExplorerComponent } from './chromato-explorer/chromato-explorer.component';
+import { HplcExplorerPageComponent } from './hplc-explorer-page/hplc-explorer-page.component';
 
 
 @NgModule({
@@ -42,7 +44,10 @@ import { HeterogeniousComponent } from './bio-details/heterogenious/heterogeniou
     MatExpansionModule,
     MatTableModule,
     ReferenceBoxModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatTabsModule
   ],
   declarations: [
     BiologySectionComponent,
@@ -55,7 +60,9 @@ import { HeterogeniousComponent } from './bio-details/heterogenious/heterogeniou
     LerComponent,
     Lee5Component,
     MtxDegradationComponent,
-    HeterogeniousComponent
+    HeterogeniousComponent,
+    ChromatoExplorerComponent,
+    HplcExplorerPageComponent
   ]
 })
 export class BiologySectionLayerModule { }

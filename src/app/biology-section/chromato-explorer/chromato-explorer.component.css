@@ -1,25 +1,6 @@
-#gcontainer{
-  margin: 20px;
-
-}
-
-.dashboard-card-content {
-  text-align: left;
-}
-
-.dashboard-card {
-  overflow: auto;
-}
-
-.grid-container {
-  margin: 20px;
-}
-
-
-
 .chromatographContainer {
   width: auto;
-  height: 220px;
+  height: 320px;
   position: relative;
   background-color: white;
 }
@@ -56,4 +37,6 @@
   z-index: 10;
 }
 
-
+mat-form-field {
+  width: 100%;
+}

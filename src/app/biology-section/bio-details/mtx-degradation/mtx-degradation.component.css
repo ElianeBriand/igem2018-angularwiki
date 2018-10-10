@@ -25,3 +25,44 @@ p {
   font-family: 'Lato', Helvetica, SansSerif;
 }
 
+
+.chromatographContainer {
+  width: auto;
+  height: 220px;
+  position: relative;
+  background-color: white;
+}
+
+.superposedcm1 {
+  width: 100%;
+  z-index: 1;
+  filter: url('#blueFilter');
+}
+
+.superposedcm2  {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  filter: url('#greenFilter');
+}
+
+.superposedcm3  {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  filter: url('#redFilter');
+}
+
+.hplcframe  {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+
+
