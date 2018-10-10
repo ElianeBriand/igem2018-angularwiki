@@ -14,3 +14,14 @@
 .grid-container {
   margin: 20px;
 }
+
+.sideportrait {
+  float:left;
+  width: 20%;
+  margin-right: 1em;
+}
+
+.personcontainer {
+  overflow: auto;
+  margin-left: 0%;
+}

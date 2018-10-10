@@ -16,8 +16,11 @@ export class PreInitLoaderService {
   public loadPageAtInit()
   {
     if(environment.production == false)
-      return; // No custom chunk loading.
-    console.log("IPL : Initial page loader [APP_INITIALIZER]");
+    {
+      console.log("PreInitLoaderService::loadPageAtInit prod = false, preload disabled");
+      return;
+    }
+    console.log("PreInitLoaderService : Initial page loader [APP_INITIALIZER]");
     let currUrl = window.location.href;
     console.log("URL : " + currUrl);
 
@@ -33,15 +36,15 @@ export class PreInitLoaderService {
       });
 
       if (sp_record == undefined) {
-        console.log("IPL : No redirection record found for special page, page can't be loaded initially.\nIPL : This may be an error if the path is not part of the main chunk that is embedded in the html page");
+        console.log("PreInitLoaderService : No redirection record found for special page, page can't be loaded initially.\nIPL : This may be an error if the path is not part of the main chunk that is embedded in the html page");
         return;
       }
 
-      console.log("IPL : Corresponding record found : " + sp_record.specialPageName + " (" + sp_record.chunkRecordPageName + ")");
+      console.log("PreInitLoaderService : Corresponding record found : " + sp_record.specialPageName + " (" + sp_record.chunkRecordPageName + ")");
 
       if(sp_record.chunkRecordPageName == "#MAIN#") {
         /* No separate chunk so nothing to do*/
-        console.log("IPL : Record indicates this page is bundled with main, nothing to do.");
+        console.log("PreInitLoaderService : Record indicates this page is bundled with main, nothing to do.");
         return;
       }
 
@@ -49,7 +52,7 @@ export class PreInitLoaderService {
         return element.pageName == sp_record.chunkRecordPageName;
       });
       if (ch_record == undefined) {
-        console.log("IPL : No record found for given special page, after performing redirection lookup successfully.");
+        console.log("PreInitLoaderService : No record found for given special page, after performing redirection lookup successfully.");
         return;
       }
 
@@ -63,9 +66,9 @@ export class PreInitLoaderService {
           let decodedData = atob(req.responseText);
           eval(decodedData);
           ch_record.chunkLoaded = true;
-          console.log("IPL : Loaded : " + ch_record.pageName + " (" + ch_record.chunkURL + ")");
+          console.log("PreInitLoaderService : Loaded : " + ch_record.pageName + " (" + ch_record.chunkURL + ")");
         } else {
-          console.log("IPL : Error while getting data: %d (%s)", req.status, req.statusText);
+          console.log("PreInitLoaderService : Error while getting data: %d (%s)", req.status, req.statusText);
         }
       }
       return;
@@ -77,17 +80,22 @@ export class PreInitLoaderService {
     if(Array.isArray(matchArray) && matchArray.length) {
 
       let currPath = matchArray[0].slice(1);
-      console.log("Path : " + currPath);
+      console.log("PreInitLoaderService : Path = " + currPath);
 
       var record = PAGE_CHUNK_MASTER_RECORD.find(function (element: PageChunkRecord) {
-        return element.pageName == currPath;
+        if(currPath.indexOf(element.pageName) == -1)
+        {
+          return false;
+        }else {
+          return true;
+        }
       });
       if (record == undefined) {
-        console.log("IPL : No record found, page can't be loaded initially.\nIPL : This may be an error if the path is not part of the main chunk that is embedded in the html page");
+        console.log("PreInitLoaderService : No record found, page can't be loaded initially.\nIPL : This may be an error if the path is not part of the main chunk that is embedded in the html page");
         return;
       }
 
-      console.log("IPL : Corresponding record found : " + record.pageName + " (" + record.chunkURL + ")");
+      console.log("PreInitLoaderService : Corresponding record found : " + record.pageName + " (" + record.chunkURL + ")");
 
 
       if (record.chunkLoaded == false) {
@@ -99,14 +107,14 @@ export class PreInitLoaderService {
           let decodedData = atob(req.responseText);
           eval(decodedData);
           record.chunkLoaded = true;
-          console.log("IPL : Loaded : " + record.pageName + " (" + record.chunkURL + ")");
+          console.log("PreInitLoaderService : Loaded : " + record.pageName + " (" + record.chunkURL + ")");
         } else {
-          console.log("IPL : Error while getting data: %d (%s)", req.status, req.statusText);
+          console.log("PreInitLoaderService : Error while getting data: %d (%s)", req.status, req.statusText);
         }
       }
       return;
     }else{
-      console.log("IPL : Main page, or uncaught error.");
+      console.log("PreInitLoaderService : Main page, or uncaught error.");
     return;
   }
   }

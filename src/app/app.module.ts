@@ -30,7 +30,6 @@ import {CollaborationsComponent} from './collaborations/collaborations.component
 import {ReferenceManagerService} from './reference-manager.service';
 import {ReferenceBoxModule} from './reference-box/reference-box.module';
 import {ReferencesPageComponent} from './references-page/references-page.component';
-import {ImproveComponent} from './improve/improve.component';
 import {DemonstrateComponent} from './demonstrate/demonstrate.component';
 import {SafetyComponent} from './safety/safety.component';
 
@@ -47,7 +46,6 @@ import {SafetyComponent} from './safety/safety.component';
     ModelingComponent,
     CollaborationsComponent,
     ReferencesPageComponent,
-    ImproveComponent,
     DemonstrateComponent,
     SafetyComponent
   ],

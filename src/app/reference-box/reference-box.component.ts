@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {error_reference, Reference, ReferenceManagerService} from '../reference-manager.service';
 import {MatBottomSheet, MatBottomSheetRef, MatChipList} from '@angular/material';
+import 'rxjs-compat/add/operator/debounceTime';
 
 
 @Component({

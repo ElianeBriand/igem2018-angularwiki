@@ -51,7 +51,6 @@ export class ChunkLoaderService {
         preloadLink.rel = "preload";
         preloadLink.href = record.url;
         preloadLink.as = "image";
-        preloadLink.crossorigin = "anonymous";
         preloadLink.type = record.mime;
         document.head.appendChild(preloadLink);
         //*/
@@ -91,6 +90,12 @@ export class ChunkLoaderService {
 
 
   public loadPageChunk(pageName: string, callback: () => void) {
+    if(environment.production == false)
+      return; // No custom chunk loading.
+
+    if(pageName == "/")
+      return;
+
     var record = this.records.find(function(element: PageChunkRecord) {
       if(pageName.indexOf(element.pageName) == -1)
       {

@@ -15,3 +15,64 @@
   margin: 20px;
 }
 
+p {
+  font-size: 14pt;
+  font-family: 'Lato', Helvetica, SansSerif;
+}
+
+table {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.widetable {
+  width: 100%;
+}
+
+.semiwidetable {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.halfwidetable {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sequencealign {
+  font-family: monospace;
+}
+
+.alignfeature {
+  background-color: yellow;
+}
+
+.alignfeature2 {
+  color: whitesmoke;
+  background-color: purple;
+}
+
+.alignfeature3 {
+  color: dodgerblue;
+  background-color: green;
+}
+
+.alignfeature4 {
+  color: #00c853;
+  background-color: red;
+}
+
+.alignoverlined {
+  border-top: 2px solid red;
+  padding-top: 4px;
+}
+
+.alignshow {
+  border: 1px solid black;
+}
+
+.alignlabelrow {
+  border-right : 1px solid black;
+}

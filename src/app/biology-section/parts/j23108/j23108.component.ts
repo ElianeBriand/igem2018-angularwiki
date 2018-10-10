@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-j23108',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class J23108Component implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }

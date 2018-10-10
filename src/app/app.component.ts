@@ -6,6 +6,7 @@ import {map} from 'rxjs/operators';
 import {ActivatedRoute, Router, UrlSegment} from '@angular/router';
 import {ChunkLoaderService} from './chunk-loader.service';
 import {SPECIAL_PAGE_CHUNK_MASTER_RECORD, SpeciaPageRecord} from './page-chunk-record';
+import {environment} from '../environments/environment';
 
 
 @Component({
@@ -27,14 +28,19 @@ export class AppComponent implements OnInit {
   public routerLinkChunkProcessing: (string) => void;
 
   public routerLinkChunkProcessingUnbound(routerLinkString: string, this1: any) {
-    this1.chunkLoader.loadPageChunk(routerLinkString, function () {
-      if(routerLinkString.search("dashboard") == -1)
+    if(environment.production == false)
       {
-        this1.showBackHomeLogo = true;
-      }else{
-        this1.showBackHomeLogo = false;
+        console.log("AppComponent::routerLinkChunkProcessingUnbound Prod = false; navigating directly to " + routerLinkString);
+        this1.router.navigate([routerLinkString]);
       }
 
+    if(routerLinkString === "/")
+    {
+      this1.showBackHomeLogo = false;
+    }else{
+      this1.showBackHomeLogo = true;
+    }
+    this1.chunkLoader.loadPageChunk(routerLinkString, function () {
       this1.router.navigate([routerLinkString]);
     });
 
@@ -45,8 +51,11 @@ export class AppComponent implements OnInit {
       this.routerLinkChunkProcessingUnbound(s, this);
     };
 
+
     /* Figure out if we're on a special page */
     let currUrl = window.location.href;
+    console.log("App component : " + currUrl)
+
     let sp_regex = new RegExp('Team:GO_Paris-Saclay\\/.*');
     let sp_matchArray = currUrl.match(sp_regex);
     if (Array.isArray(sp_matchArray) && sp_matchArray.length) {
@@ -68,14 +77,11 @@ export class AppComponent implements OnInit {
 
     }
 
-    if(currUrl.search("dashboard") == -1)
-    {
-      this.showBackHomeLogo = true;
-    }else{
-      this.showBackHomeLogo = false;
-    }
 
-    if(currUrl === "http://2018.igem.org/Team:GO_Paris-Saclay")
+    this.showBackHomeLogo = true;
+    if(currUrl === "http://2018.igem.org/Team:GO_Paris-Saclay" ||
+      currUrl === "http://2018.igem.org/Team:GO_Paris-Saclay#/" ||
+      currUrl === "http://2018.igem.org/Team:GO_Paris-Saclay#")
     {
       this.showBackHomeLogo = false;
     }

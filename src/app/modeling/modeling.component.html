@@ -1,8 +1,285 @@
 <div class="bannercontainer" id="top">
-  <img src="http://2018.igem.org/wiki/images/1/1b/T--GO_Paris-Saclay--tableau_banner.png" class="bannerimg superposedbanner1">
-  <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png" class="bannerimg superposedbanner2">
+  <img src="http://2018.igem.org/wiki/images/1/1b/T--GO_Paris-Saclay--tableau_banner.png"
+       class="bannerimg superposedbanner1">
+  <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png"
+       class="bannerimg superposedbanner2">
   <div class="headlinetext">Model</div>
 </div>
 
 <mat-card class="dashboard-card largemargin">
+
+  <h2 id="Introduction">Introduction</h2>
+
+  <p class="withlettrine">In order to degrade drugs in hospital wastewater in a sustainable way, our biological system
+    split
+    into two distinct populations with
+    different biological properties. Specifically the growth of the "stem" cell population may be faster that the
+    degrader population.
+    Here, degrader cells produce two enzymes, folC and CPG2, which can be lethal in high concentration. <br>
+
+  </p>
+
+  <p>We analyse the population dynamics for several scenarios. It could happen in hospital effluents, where drugs
+    release
+    depend of many parameters like human errors, schedule of health services, etc. Finally, we prove the effectiveness
+    of our system by proving it can degrade drugs in many scenarios.</p>
+
+
+  <h2 id="ModelConstruction">Model construction.</h2>
+
+
+  <h3 id="AFirstApproach">A first approach : the exponential phase</h3>
+  <p>
+    Let's denote $n_1(t)$ the population of degradation cells, $n_2(t)$ the population of "stem" cells and $m(t)$ the
+    quantity of methotrexate in solution.
+  </p>
+  <p>
+    According to our experiments, and general theoretical consideration, we can write the following reactions :
+    \begin{{ '{' }}array}{{ '{' }}clll}
+    n_1 &amp; \xrightarrow{{ '{' }}r_1} &amp; n_1 &amp; \text{{ '{' }}(degrader cells growth)} \\
+    n_2 &amp; \xrightarrow{{ '{' }}r_2} &amp; n_2 &amp; \text{{ '{' }}("stem" cells growth.)} \\
+    n_1 + m &amp; \xrightarrow{{ '{' }}-A} &amp; n_1 &amp; \text{{ '{' }}(degradation of methotrexate)} \\
+    \star &amp; \xrightarrow{{ '{' }}p} &amp; m &amp; \text{{ '{' }}(methotrexate input)} \\
+    \end{{ '{' }}array} <br>
+    The letter above the arrow is the rate at which the transformation happens. Here, all theses rates are assumed to be
+    positive.
+  </p>
+  <p>
+    Now, in order to transform those reactions into mathematical solutions we use the law of mass action . This law
+    states that transformations are proportional to the input reactants. <br>
+    Therefore :
+    \begin{{ '{' }}eqnarray}
+    \frac{{ '{' }}dn_1}{{ '{' }}dt} &amp; = &amp; r_1 n_1 &amp; (1.1)\\
+    \frac{{ '{' }}dn_2}{{ '{' }}dt} &amp; = &amp; r_2 n_2 &amp; (1.2)\\
+    \frac{{ '{' }}dm}{{ '{' }}dt} &amp; = &amp; - A m n_1 + p &amp; (1.3).
+    \end{{ '{' }}eqnarray}
+  </p>
+  <h3 id="EnvironmentCarryingCapacity">The environment carrying capacity</h3>
+
+  <p>Over time and without methotrexate, both cell populations reach a stationary phase due to the finite carrying
+    capacity $K$ of the environment. This new interaction explains that infinite population growth is unsustainable
+    because the amount of renewable ressources in the environment is finite.
+    <br>
+  </p>
+
+  <p>
+    To this end, we multiply growth terms in equation (1.1) and (1.2) by $[1 - (n_1 + n_2)/K]$. This operation is known
+    as "The Verhulst equation"
+    <reference-box shorthand="Murray2002"></reference-box>
+    .
+  </p>
+  <p>
+    However at the steady state, this new term prevent cells from switching from $n_1$ to $n_2$ or from $n_2$ to $n_1$.
+    Therefore, we add switching terms in our equations.
+    <br></p>
+  <p>So, we have new biological reactions :
+    \begin{{ '{' }}array}{{ '{' }}clll}
+    \star &amp; \xrightarrow{{ '{' }}\text{{ '{' }}environment}} &amp; n_1 &amp; \text{{ '{' }}(carrying capacity of the
+    environment)} \\
+    \star &amp; \xrightarrow{{ '{' }}\text{{ '{' }}environment}} &amp; n_2 &amp; \text{{ '{' }}(carrying capacity of the
+    environment)} \\
+    n_1 &amp; \xrightarrow{{ '{' }}a} &amp; n_2 &amp; \text{{ '{' }}(switching from $n_1$ to $n_2$ at the steady state)}
+    \\
+    n_2 &amp; \xrightarrow{{ '{' }}b} &amp; n_1 &amp; \text{{ '{' }}(switching from $n_2$ to $n_1$ at the steady
+    state)}. \\
+    \end{{ '{' }}array} <br>
+    The letter above the arrow is the rate at which the transformation happens. Here, all theses rates are
+    assumed to be positive.<br>
+  </p>
+  <p>Through the law of mass action, we transform these reactions into mathematical equations :
+    \begin{{ '{' }}eqnarray}
+    \frac{{ '{' }}dn_1}{{ '{' }}dt} &amp; = &amp; r_1 n_1 ( 1 - \frac{{ '{' }}n_1 + n_2}{{ '{' }}K}) + b n_2 - a n_1
+    &amp; (eqn.A)\\
+    \frac{{ '{' }}dn_2}{{ '{' }}dt} &amp; = &amp; r_2 n_2 ( 1 - \frac{{ '{' }}n_1 + n_2}{{ '{' }}K}) + a n_1 - b n_2
+    &amp; (eqn.B)\\
+    \frac{{ '{' }}dm}{{ '{' }}dt} &amp; = &amp; - A m n_1 + p. &amp; (eqn.C)
+    \end{{ '{' }}eqnarray}</p>
+  <h3 id="ModelAssumptions">Model assumptions and limitations</h3>
+  <p>Our model relies on a few approximations and assumptions, which we found both necessary to keep the problem
+    tractable, and realistic enough to attain our goal of giving us actionnable insight. We assume that all relevant
+    reactions can be accounted for accurately with a small number of linear ordinary differential equations (ODE). The
+    full pathway is of course more complex but we took the decision to abstract and simplify anytime we could afford to
+    without compromising predictive power.</p>
+  <p>Furthermore, the linearity hypothesis only holds locally in the state space : as long as all parameters are
+    "reasonnable" then the approximation error is largely negligible. However considering more extreme regimes would be
+    both impractical (hard to gather reliable experimental data) and irrelevant in pratice for our applied and
+    industrial setting.</p>
+  <p>While we have worked throughout our projet on a variety of models, we have found the ones presented here to be the
+    most balanced in regards to the complexity / accuracy tradeoff, and most useful for effective decision making. In
+    particular we expanded great effort in keeping our models analytically tractable where possible, as it is our
+    opinion that analytical (ie. explicit) solutions are often much more enlightening to practitionners for further
+    biological system design than numerical solutions.</p>
+
+
+  <h2 id="MathematicalAnalysis">Mathematical Analysis</h2>
+
+
+  <h3 id="TheSteadyState.">The steady state</h3>
+  <mat-card class="sidefigure" style="width: 50%;">
+    <img src="http://2018.igem.org/wiki/images/0/01/T--GO_Paris-Saclay--model_fig1.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 1 : Steady State without Methotrexate, a = 0.7, b = 0.3</div>
+  </mat-card>
+  <p>Asymptotically, the population reaches steady state value $n_1 + n_2 = K$.
+    Then the ratio between the "stem" cells and the degradation cells only depends on the switching parameters $a$ and
+    $b$ (strain and pathway specific).
+    $$ f = \frac{{ '{' }}n_1}{{ '{' }}n_2} = \frac{{ '{' }}b}{{ '{' }}a}. $$
+    Figure 1 illustrates how $n_1$ and $n_2$ eventually reach a steady state when long times are considered. <br>
+    In the end,
+    $$ n_1 = \frac{{ '{' }}fK}{{ '{' }}f + 1} $$
+    Moreover, this steady state is stable. It means that small pertubations around the equilibrium will not change the
+    state of our system.</p>
+
+  <p>When the system reaches steady state, (eqn.C) becomes :
+    $$ 0 = \frac{{ '{' }}dm}{{ '{' }}dt} = - A m n_1 + p = -A m \frac{{ '{' }}fK}{{ '{' }}f + 1} + p$$
+    and $$ m = \frac{{ '{' }}f + 1}{{ '{' }}fK} p A $$
+    Then, Methotrexate concentration converges to $$\frac{{ '{' }}f + 1}{{ '{' }}fK} p A$$
+  </p>
+  <p></p>
+  <h4 id="Proof">Proof</h4>
+  <p>1) At the steady state $n_1 + n_2$ = K. So we can simplify (eqn.A) and (eqn.B) :
+    \begin{{ '{' }}eqnarray}
+    0 &amp; = &amp; b n_2 - a n_1 \\
+    0 &amp; = &amp; a n_1 - b n_2\\
+    \end{{ '{' }}eqnarray}</p>
+
+  <p>Therefore
+    $$ b n_2 = a n_1 $$
+    and $$ \frac{{ '{' }}n_1}{{ '{' }}n_2} = \frac{{ '{' }}b}{{ '{' }}a} $$<br>
+    2) At the steady state we have
+    $$n_1 + n_2 = K \text{{ '{' }} and } f = \frac{{ '{' }}n_1}{{ '{' }}n_2} = \frac{{ '{' }}b}{{ '{' }}a}$$
+    Therefore
+    $$\frac{{ '{' }}n_1}{{ '{' }}n_1}+ \frac{{ '{' }}n_2}{{ '{' }}n_1} = \frac{{ '{' }}K}{{ '{' }}n_1} $$
+    So
+    $$1 + \frac{{ '{' }}1}{{ '{' }}f} = \frac{{ '{' }}K}{{ '{' }}n_1} $$
+    So
+    $$ n_1 = \frac{{ '{' }}fK}{{ '{' }}f + 1}. $$
+    3) Moreover this steady state is stable. In order to show that, let's take $\varepsilon &gt; 0$ where $\varepsilon$
+    is a little perturbation. Then :
+    \begin{{ '{' }}eqnarray}
+    \frac{{ '{' }}dn_1}{{ '{' }}dt} &amp; = &amp; r_1n_1 (1 - \frac{{ '{' }}n_1 + n_2 + \varepsilon}{{ '{' }}K}) - an_1
+    + bn_2 \\
+    &amp; = &amp; -r_1n_1 \varepsilon + r_1n_1 (1 - \frac{{ '{' }}n_1 + n_2}{{ '{' }}K}) - an_1 + bn_2.
+    \end{{ '{' }}eqnarray}
+    Near the equilibrium :
+    $$ n_1 + n_2 \approx K \text{{ '{' }} and } f = \frac{{ '{' }}n_1}{{ '{' }}n_2} \approx \frac{{ '{' }}b}{{ '{'
+    }}a}.$$
+    Therefore :
+    $$ \frac{{ '{' }}dn_1}{{ '{' }}dt} \approx -r_1n_1 \varepsilon &lt; 0 $$
+    We see that the value is negative, so we conclude that the steady state is stable. <br></p>
+
+
+  <h2 id="TowardsASystem">Towards a system to degrade more drugs</h2>
+
+
+  <h3 id="From-a-proof-of-concept-to-the-general-problem.">From a proof of concept to the general problem</h3>
+
+  <p>Until now, our system was designed to only degradate methotrexate. But for us, methotrexate is just a proof of
+    concept, a way to show we can degrade any drug with our system. <br>
+    This is where our model becomes important because it can be adapted for any situation. This is the main motivation :
+    be able to iterate with a predictive model driven approach faster than would be possible with only wetlab
+    experiments.</p>
+  <p>Here again let's denote $n_1(t)$ the population of degradation cells, $n_2(t)$ the population of "stem" cells and
+    $d(t)$ the quantity of targeted drug. <br>
+    The main difference with our precedent model is that hazardous drugs may kill some of our cells. To represente that
+    we indroduce two growth term. The first one $\mu^g$ when there are no drugs, and the second one $\mu^s$ when there
+    are drugs in the environnement. <br>
+    Specifically $\mu^s &lt; \mu^g$. <br></p>
+  <p>The transformation can be represented by biological reactions :
+    \begin{{ '{' }}array}{{ '{' }}clll}
+    n_1 &amp; \xrightarrow{{ '{' }}\mu^g_1} &amp; n_1 &amp; \text{{ '{' }}(degradation cells growth without drugs)} \\
+    n_2 &amp; \xrightarrow{{ '{' }}\mu^g_2} &amp; n_2 &amp; \text{{ '{' }}("stem" cells growth without drugs.)} \\
+    n_1 &amp; \xrightarrow{{ '{' }}\mu^s_1} &amp; n_1 &amp; \text{{ '{' }}(degradation cells growth with drugs)} \\
+    n_2 &amp; \xrightarrow{{ '{' }}\mu^s_2} &amp; n_2 &amp; \text{{ '{' }}("stem" cells growth with drugs.)} \\
+    n_1 + m &amp; \xrightarrow{{ '{' }}-A} &amp; n_1 &amp; \text{{ '{' }}(degradation of drugs)} \\
+    \star &amp; \xrightarrow{{ '{' }}p} &amp; m &amp; \text{{ '{' }}(methotrexate input)} \\
+    \star &amp; \xrightarrow{{ '{' }}\text{{ '{' }}environment}} &amp; n_1 &amp; \text{{ '{' }}(carrying capacity of the
+    environment)} \\
+    \star &amp; \xrightarrow{{ '{' }}\text{{ '{' }}environment}} &amp; n_2 &amp; \text{{ '{' }}(carrying capacity of the
+    environment)} \\
+    n_1 &amp; \xrightarrow{{ '{' }}a} &amp; n_2 &amp; \text{{ '{' }}(switching from $n_1$ to $n_2$ at the steady state)}
+    \\
+    n_2 &amp; \xrightarrow{{ '{' }}b} &amp; n_1 &amp; \text{{ '{' }}(switching from $n_2$ to $n_1$ at the steady
+    state)}. \\
+    \end{{ '{' }}array} <br></p>
+  <p>We use the Law of Mass Action to translate theses reactions into mathematical equations :
+    \begin{{ '{' }}eqnarray}
+    \frac{{ '{' }}dn_1}{{ '{' }}dt} &amp; = &amp; \mu_1 n_1 ( 1 - \frac{{ '{' }}n_1 + n_2}{{ '{' }}K}) + b n_2 - a n_1
+    &amp; (eqn.D)\\
+    \frac{{ '{' }}dn_2}{{ '{' }}dt} &amp; = &amp; \mu_2 n_2 ( 1 - \frac{{ '{' }}n_1 + n_2}{{ '{' }}K}) + a n_1 - b n_2
+    &amp; (eqn.E)\\
+    \frac{{ '{' }}dm}{{ '{' }}dt} &amp; = &amp; - A m n_1 + p. &amp; (eqn.F)
+    \end{{ '{' }}eqnarray}</p>
+
+  <h3 id="ResponseEnvironmentalShift.">Response to an environmental shift</h3>
+  <mat-card class="sidefigure" style="width: 50%;">
+    <img src="http://2018.igem.org/wiki/images/2/24/T--GO_Paris-Saclay--model_fig2.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 2 : The degradation of Methotrexate</div>
+  </mat-card>
+  <p>Patra and Klumpp
+    <reference-box shorthand="Patra2013"></reference-box>
+    studied the dynamics of similar system when a population that has been growing without
+    drugs is exposed to drugs. Before removing all kind of drugs (Fig.2). <br>
+    There is a biphasis dynamic which translate into different phenotypes in the cell population. Authors said that :
+    <br><br>
+    <font color="grey">
+      "At time t~15 hours, the parameters were changed to those for stress condition. After the shift to stress
+      conditions (by the addition of an antibiotic), the total population displays the biphasic decay behavior. In the
+      fast-decaying phase, the decay of the total population is dominated by the death of normal cells, while in the
+      second, slower-decaying phase, the total population consists predominantly of persister cells and the decay rate
+      is governed by the death rate of the persisters. <br>
+      The transition between the two different phases occurs when both subpopulation becomes equal in size"
+    </font> (
+    <reference-box shorthand="Patra2013"></reference-box>
+    , p.5). <br><br>
+
+    <mat-card class="wideimg">
+      <img src="http://2018.igem.org/wiki/images/8/8a/T--GO_Paris-Saclay--model_fig3.png" class="wideimg">
+      <div class="mat-caption captionafterapicture">Figure from
+        <reference-box shorthand="Patra2013"></reference-box>
+        : Numerical integration of Eqs. (D,E) over a growth period of 15 hours (with μgn 2hr−1,μgn 0.2hr−1) followed by
+        a stress period (with μgn −2hr−1,μgn −0.2hr−1) of another 15 hours. The switching rates were chosen to be a
+        0,001hr−1 and b 0,0001hr−1 . The killing curve of total population show two distinct phases, a fast-decaying
+        phase and a slow-decaying phase. (b) Numerical integration of Eqs. (1) over a stress period of 15 hours followed
+        by a regrowth period of another 15 hours. The regrowth curve of the total population shows two distinct phases,
+        a slow-growing phase followed by a fast-growing phase. The parameters are the same as in (a). Here the "stem"
+        cells are the normal cells, and the degradation cells are the persistence cells.
+      </div>
+    </mat-card>
+    They even compute $T_s$, the time where transition occurs :
+    $$T_s \approx \frac{{ '{' }}1}{{ '{' }}\Delta_s} \cdot ln(\frac{{ '{' }}n_2(0)}{{ '{' }}n_1(0)}) $$
+    where $\Delta_s = (\mu_1^s - a) - (\mu_2^s - b)$.
+    We also note $\Delta_g = (\mu_2^g - b) - (\mu_1^g - a)$
+  </p>
+
+
+  <h3 id="Dynamics-in-periodically-switching-environment.">Dynamics in periodically switching environment</h3>
+  <p>In condition, drugs quantity depends of many factor : human errors, schedule of health services, etc.
+    But even if that quantity isn't a constant, a looser but more realistic assumption would be that drug input is
+    periodic. <br>
+    Here, we will calculate the optimal parameters $a_{{ '{' }}opt}$ and $b_{{ '{' }}opt}$ in order to degrade
+    methotrexate.</p>
+  <p>During one period, let's denote $t_s$ the duration of drugs presence in the environment and $t_g$ the duration
+    without drugs. The average growth rates of our cells populations are :
+    \begin{{ '{' }}eqnarray}
+    &lt;\mu_1&gt; &amp; = &amp; \frac{{ '{' }}&lt;\mu_1^g&gt; t_g + &lt;\mu_1^s&gt; t_s}{{ '{' }}t_g + t_s} \\
+    &lt;\mu_2&gt; &amp; = &amp; \frac{{ '{' }}&lt;\mu_2^g&gt; t_g + &lt;\mu_2^s&gt; t_s}{{ '{' }}t_g + t_s} \\
+    \end{{ '{' }}eqnarray}
+    where $&lt;x&gt;$ is the average growth rate of x.</p>
+  <p>Let's denote $\mu = \mu_1 + \mu_2$ the global growth rate. Then
+    $$ &lt;\mu&gt; = \frac{{ '{' }}&lt;\mu_1^g&gt; t_g + &lt;\mu_1^s&gt; t_s}{{ '{' }}t_g + t_s} + \frac{{ '{' }}&lt;\mu_2^g&gt;
+    t_g + &lt;\mu_2^s&gt; t_s}{{ '{' }}t_g + t_s} $$
+    Then, we use results in Patra and Klumpp [3] to compute that :
+    $$ &lt;\mu&gt; = \frac{{ '{' }}(\mu_2^g - b) t_g + (\mu_1^s - a) t_s}{{ '{' }}t_g + t_s} + \frac{{ '{' }}ln(\frac{{
+    '{' }}ab}{{ '{' }}\Delta_s \Delta_g})}{{ '{' }}t_g + t_s} $$
+    We consider that $a$ and $b$ are optimal when they maximize $&lt;\mu&gt;$. That means that :
+    $$ \frac{{ '{' }}1}{{ '{' }}a_{{ '{' }}opt}} = t_s - \frac{{ '{' }}1}{{ '{' }}\Delta_s} + \frac{{ '{' }}1}{{ '{'
+    }}\Delta_g}$$
+    $$ \frac{{ '{' }}1}{{ '{' }}b_{{ '{' }}opt}} = t_g - \frac{{ '{' }}1}{{ '{' }}\Delta_g} + \frac{{ '{' }}1}{{ '{'
+    }}\Delta_s} $$
+    Thus, we have found $a_{{ '{' }}opt}$ and $b_{{ '{' }}opt}$ in order to degrade drugs. If we had to build such a
+    biological system, we would aim for these values when assessing possible promoters.</p>
+
+
+  <p class="spacemaker"></p>
+
 </mat-card>

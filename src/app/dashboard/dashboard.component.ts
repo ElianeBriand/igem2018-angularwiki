@@ -20,10 +20,6 @@ export class DashboardComponent implements AfterContentInit {
 
 
 
-  private atimer;
-
-  dyn_width = 1200;
-
   ngAfterContentInit() {
 
 /*

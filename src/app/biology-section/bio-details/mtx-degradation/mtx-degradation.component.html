@@ -5,17 +5,19 @@
 </div>
 
 <mat-card class="dashboard-card largemargin">
+  <p class="spacemaker"></p>
   <div class="formoredetailssee">On this page we present the methotrexate degradation pathway in more details.</div>
+  <p class="spacemaker"></p>
 
-  <h1 >Design of the methotrexate transformation pathway</h1>
+  <h1>Design of the methotrexate transformation pathway</h1>
 
   <mat-card class="eatintotextmargin">
     <img src="http://2018.igem.org/wiki/images/f/f3/T--GO_Paris-Saclay--degrad_complete_chemical.png" class="wideimg">
     <div class="mat-caption captionafterapicture">Figure 1 : Overview of the chemical transformation produced by our pathway</div>
   </mat-card>
-  <p class="withlettrine">
+  <p>
     For MTX biotransformation inside the cell, we focused our attention on two enzymes that have been described as involved
-    in MTX biotransformation (Figure 1). The most important one is the Pseudomonas carboxypeptidase G2 (CPG2, commercialy marketed
+    in MTX biotransformation (Figure 1). The most important one is the Pseudomonas carboxypeptidase G2 (Cpg2, commercialy marketed
     as <a href="https://en.wikipedia.org/wiki/Glucarpidase">Voraxase</a><sup>tm</sup>)
     which rapidly converts MTX into less toxic metabolites glutamate and <abbr title="2,4-diamino-N10-methylpteroic acid">DAMPA</abbr>
     <reference-box shorthand="Widemann2000"></reference-box><reference-box shorthand="Larimer2014"></reference-box>. We also tested the
@@ -23,71 +25,51 @@
     dihydrofolate synthase and folylpoly-γ-glutamate synthetase (FolC) that could potentially enhance MTX catabolism by coupling
     MTX to polyglutamate<reference-box shorthand="Chabner1985"></reference-box>. By increasing its accumulation within the cell,
     FolC could allow higher effective MTX concentration and reaction rate. We hypothesized that in presence of FolC, the MTX is rapidly
-    linked to polyglutamates, a reaction that could increase its metabolism by limiting its export and so that increasing the activity of CPG2.
+    linked to polyglutamates, a reaction that could increase its metabolism by limiting its export and so that increasing the activity of Cpg2.
   </p>
 
   <p>
-    For the MethotrExit project, we introduced in our chassis an expression cassette encoding cpg2 gene under the control
-    of lac promoter coupled or not to folC gene under the control of ara promoter.
+    For the MethotrExit project, we introduced in our chassis an expression cassette encoding <i>cpg2</i> gene under the control
+    of lac promoter coupled or not to <i>folC</i> gene under the control of ara promoter.
   </p>
 
   <h2>Choice of chassis and indicative strains</h2>
 
   <p>
-    Many laboratory strains of E. coli are resistant to MTX. This resistance is mainly due to the export of MTX through
+    Many laboratory strains of <i>E. coli</i> are resistant to MTX. This resistance is mainly due to the export of MTX through
     efflux pumps composed several proteins such as AcrA and TolC <reference-box shorthand="Kopytek2000"></reference-box>. One of the challenges of our
     project therefore relays on limiting MTX efflux to favor MTX biotransformation and sequestration within the ‘cleaning
     factory’. Moreover we needed an indicative strain to easily monitor MTX biotransformation.
   </p><p>
   We decided to take advantage of the availability in our lab of the Keio collection <reference-box shorthand="Baba2006"></reference-box> to test the
-  growth of several E. coli K12 mutants (&Delta;acrA1, &Delta;acrB, &Delta;abgT, &Delta;tolC) in presence of MTX (Figure 2).
+  growth of several <i>E. coli</i> K12 mutants (&Delta;<i>acrA1</i>, &Delta;<i>acrB</i>, &Delta;<i>abgT</i>, &Delta;<i>tolC</i>) in presence of MTX (Figure 2).
 </p>
 
-  <mat-card class="eatintotextmargin">
-    <img src="http://2018.igem.org/wiki/images/b/b6/T--GO_Paris-Saclay--fig2_viability.png" class="wideimg">
-    <div class="mat-caption captionafterapicture">Figure 2 : Impact of MTX on the growth of E. coli WT and &Delta;acrA1, &Delta;acrB, &Delta;abgT, &Delta;tolC strains<br>
-      <br>
-      <div class="captionmaterialmethod">
-        Bacteria were precultured overnight in 4 ml of LB under agitation at 37°C. Thereafter, the samples were diluted in LB medium to obtain an initial OD<sub>600nm</sub> of 0.02
-        (in a final volume of 100 µl) in presence of 2% DMSO (co-solvent) or 64 to 1024 µM MTX (kindly provided by Raphaël Labruère).
-        Bacteria suspensions were inoculated in a 96-well plate, covered with an adhesive transparent top to avoid evaporation. Bacteria
-        were grown at 37°C in a Clariostar® plate reader (BMG LABtech GmbH), with orbital shaking, measuring OD<sub>600</sub> every 20 min. The experiments
-        were carried out during at least 6 h (sufficient to reach stationary phase)</div>
-    </div>
-  </mat-card>
-
-  <p>
-    We observed that the BW25113 WT strain is MTX-resistant as previously described for many E. coli laboratory strains.
-    Interestingly, ΔacrA1 and ΔtolC strains are sensitive to MTX (at least 128 µM), suggesting that MTX may be accumulated
-    within these strains. Surprisingly, the ∆acrB strain growth does not present any MTX ‘dose-response’ pattern, indicating
-    that AcrB is not required to resist to MTX. Of note, ΔtolC mutant present a slight growth defect compared to the WT strain
-    even in absence of LB, suggesting that TolC is required for efflux of compounds even in standard growth conditions.
-  </p>
   <p class="intermediateconclusion">
-    Main conclusions: The WT strain may constitute a suitable ‘MTX-resistant chassis’, whereas ΔacrA1 and ΔtolC strains could constitute MTX-sensitive indicative
+    <b>Main conclusions</b>: The WT strain may constitute a suitable ‘MTX-resistant chassis’, whereas &Delta;<i>acrA1</i> and &Delta;<i>tolC</i> strains could constitute MTX-sensitive indicative
     strains as well as chassis accumulating MTX. Since TolC is a general efflux pump component involved in a large panel of compound efflux
     (even in standard LB growth conditions), we thought it could be interesting to also evaluate its general interest as a chassis sequestrating MTX
-    (and possibly other toxic molecules). Finally, the ΔacrA1 mutant was used as an indicative strain for further bioassays since it presents no growth
+    (and possibly other toxic molecules). Finally, the &Delta;<i>acrA1</i> mutant was used as an indicative strain for further bioassays since it presents no growth
     defect in absence of MTX.
   </p>
 
   <h1>Expression vector design</h1>
   <mat-card class="sidefigure">
     <img src="http://2018.igem.org/wiki/images/3/38/T--GO_Paris-Saclay--folC_cpg2_pSB1C3.png" class="wideimg">
-    <div class="mat-caption captionafterapicture">Figure 3 : The folC-cpg2 encoding plasmid present within the MTX ‘Cleaning Factory’</div>
+    <div class="mat-caption captionafterapicture">Figure 3 : The <i>folC</i>-<i>cpg2</i> encoding plasmid present within the MTX ‘Cleaning Factory’</div>
   </mat-card>
 
   <p>
     <b>FolC/folylpolyglutamate: adding a polyglutamate to MTX</b><br>
-    FolC is one of the enzymes (ATP-dependent) which can drive the glutamylation reaction. FolC is naturally encoded by E. coli.
-    However to control and overexpress it, we cloned folC under the control of the ara inducible promoter in pSB1C3.
+    FolC is one of the enzymes (ATP-dependent) which can drive the glutamylation reaction. FolC is naturally encoded by <i>E. coli</i>.
+    However to control and overexpress it, we cloned <i>folC</i> under the control of the ara inducible promoter in pSB1C3.
   </p>
   <p>
     <b>Carboxypeptidase G2: breaking MTX into DAMPA and glutamate</b><br>
-    Originating from Pseudomonas strain RS-16, carboxypeptidase is not naturally present in E. coli genome.
-    The cpg2 gene was cloned within pSB1C3 under the control of lac
-    inducible promoter. We constructed two plasmids: one containing only cpg2 expression cassette and the other harboring both cpg2
-    and folC expression cassettes separated by a transcription terminator (Figure 3).
+    Originating from Pseudomonas strain RS-16, carboxypeptidase is not naturally present in <i>E. coli</i> genome.
+    The <i>cpg2</i> gene was cloned within pSB1C3 under the control of lac
+    inducible promoter. We constructed two plasmids: one containing only <i>cpg2</i> expression cassette and the other harboring both <i>cpg2</i>
+    and <i>folC</i> expression cassettes separated by a transcription terminator (Figure 3).
 
   </p>
   <p>
@@ -95,15 +77,16 @@
   </p>
 
   <h1 id="assays">MTX Biotransformation Assays</h1>
+
   <p>
-    To determine whether our ‘Cleaning Factories’ (WT and &Delta;tolC strains harboring cpg2 with or without folC expression cassette)
+    To determine whether our ‘Cleaning Factories’ (WT and &Delta;<i>tolC</i> strains harboring <i>cpg2</i> with or without <i>folC</i> expression cassette)
     were able to biotransform MTX, we performed the following experiments:
   </p>
   <mat-list>
     <mat-list-item>
       <mat-icon mat-list-icon>keyboard_arrow_right</mat-icon>
       <h4 mat-line>Residual toxicity bioassays</h4>
-      <p mat-line> Analyzing the growth of the &Delta;acrA1 indicative strain in presence of a set of supernatants containing MTX and incubated or not with the ‘Cleaning Factories’ </p>
+      <p mat-line> Analyzing the growth of the &Delta;<i>acrA1</i> indicative strain in presence of a set of supernatants containing MTX and incubated or not with the ‘Cleaning Factories’ </p>
     </mat-list-item>
     <mat-list-item>
       <mat-icon mat-list-icon>keyboard_arrow_right</mat-icon>
@@ -120,22 +103,74 @@
     <div class="mat-caption captionafterapicture">Figure 4 : MTX-biotransformation assays
       <br><br>
       <div class="captionmaterialmethod">
-        The WT and &Delta;tolC chassis strains harbouring pSB1C3-cpg2, pSB1C3-folC-cpg2 or control plasmids (pSB1C3-tet or pSB1C3-folC)
+        The WT and &Delta;<i>tolC</i> chassis strains harbouring pSB1C3-<i>cpg2</i>, pSB1C3-<i>folC</i>-<i>cpg2</i> or control plasmids (pSB1C3-tet or pSB1C3-<i>folC</i>)
         and were precultured overnight under agitation at 37°C in 4 ml of LB supplemented with 30 µg/ml chloramphenicol.
         Thereafter, the chassis strains were inoculated at an opacimetry of 0.2 (DO600nm) in LB medium containing and 0.5 mM
         IPTG and 0.2 % arabinose and either 2% DMSO (‘control condition’) or 514 µM MTX (‘MTX condition’). Five or 24 h after
-        shaking at 37°C, the samples were harvested, centrifuged and the supernatants filtered before being tested on the  &Delta;acrA1
+        shaking at 37°C, the samples were harvested, centrifuged and the supernatants filtered before being tested on the  &Delta;<i>acrA1</i>
         indicative strain or submitted to HPLC analysis. </div>
     </div>
   </mat-card>
 
+  <p class="spacemaker"></p>
+  <mat-card class="eatintotextmargin">
+    <img src="http://2018.igem.org/wiki/images/4/41/T--GO_Paris-Saclay--viability_assay.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 5.1: MTX-bioassay using <i>E. coli</i> &Delta;<i>acrA1</i> mutant as an indicative strain
+      <br>
+      <div class="captionmaterialmethod">
+        The &Delta;<i>acrA1</i> indicative strain was precultured overnight under agitation at 37°C in 4 ml of LB medium. The culture was
+        diluted in LB medium to obtain a ‘2X-culture’ at an initial OD<sub>600nm</sub> of 0.04. Fifty µl of this ‘2X-culture’ were inoculated
+        in a in a 96-well plate. Fifty µl per well of supernatants filtrated after ‘MTX biotransformation assays’ performed
+        during 20 h (Figure 4) were added to this ‘2X-culture’ (so that the initial OD was 0.02 and the MTX concentration
+        was of 256 µM at maximum i.e. in absence of MTX-biotransformation). The 96-well plate was covered with an adhesive
+        transparent top to avoid evaporation. Bacteria were grown at 37°C in a Clariostar® plate reader (BMG LABtech GmbH),
+        with orbital shaking, measuring OD600 all 20 min. The growth over 500 min of the indicative strain incubated with
+        different supernatants is presented in <span style="font-weight: bold;">panel A</span>. The final opacimetry
+        (at 500 min) is presented in  <span style="font-weight: bold;">panel B</span>. The results
+        are the mean (± sem) of duplicates.</div>
+    </div>  </mat-card>
 
+
+  <p class="spacemaker"></p>
+  <p class="intermediateconclusion">
+    <b>Main conclusions for the bioassay</b>: The MTX supernatants incubated during 20 h with the chassis strains (WT or ∆<i>tolC</i>) harboring a plasmid encoding <i>cpg2</i> under
+    the control of lac promoter (pSB1C3-<i>cpg2</i> or pSB1C3-<i>folC</i>-<i>cpg2</i>) are not toxic anymore against the &Delta;<i>acrA1</i> indicative strain
+    (Figure 5.1). The best growth yields of the indicative strains are observed when the « Cleaning Factory » is the ∆<i>tolC</i> mutant
+    harboring pSB1C3-<i>folC</i>-<i>cpg2</i>.
+  </p>
+  <p class="spacemaker"></p>
+
+  <p>To eliminate possible confounding factors affecting bacterial growth, we performed HPLC analysis of our samples (Figure 5.2).
+    This revealed that MTX is removed from the culture medium in presence of bacteria harboring <i>cpg2</i> encoding plasmids as early as
+    5 h post-incubation. Of note, the supernatants incubated only 5h with the chassis were tested but still present some
+    toxicity against the &Delta;<i>acrA1</i> indicative strain (data not shown). We hypothesize that waiting longer (20 h) allow the
+    bacteria to remove a toxic compound from the medium. </p>
+
+
+  <mat-card class="eatintotextmargin">
+    <img src="http://2018.igem.org/wiki/images/0/0f/T--GO_Paris-Saclay--typ_hplc_res.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 5.2 : HPLC analysis of MTX medium incubated with a control strain or a ‘MTX-Cleaning Factory’
+      <br>
+      <div class="captionmaterialmethod">
+        The results correspond to the HPLC analysis of supernatants obtained after 5 h of incubation with WT strains harboring pSB1C3-tet
+        (CLTR) or pSB1C3-<i>folC</i>-<i>cpg2</i> (‘MTX Cleaning factory’) bacteria as described in Figure 4. The HPLC assay was run with a reverse phase,
+        C18 column. Detection was made using UV spectrophotometry at 303 nm (peak absorption 302-303 nm<reference-box shorthand="Merck2007"></reference-box>) with peak-triggered
+        UV-vis spectrum (diode array). The eluting solvent was a gradient of acetonitrile and water (with 0.1% v/v HCOOH). This mode of operation
+        is very similar to the assay and impurities protocols of reference pharmacopeia for MTX.<reference-box shorthand="PhEur2017"></reference-box><reference-box shorthand="USP2007"></reference-box></div>
+    </div>
+  </mat-card>
+  <p class="spacemaker"></p>
 
   <p class="intermediateconclusion">
-    <b>Main conclusions</b>: The MTX supernatants incubated during 20 h with the chassis strains (WT or ∆tolC) harboring a plasmid encoding cpg2 under
-    the control of lac promoter (pSB1C3-cpg2 or pSB1C3-folC-cpg2) are not toxic anymore against the ∆acrA1 indicative strain
-    (Figure 5). The best growth yields of the indicative strains are observed when the « Cleaning Factory » is the ∆tolC mutant
-    harboring pSB1C3-folC-cpg2.
+    <b>Main conclusions for the HPLC analysis</b>: MTX is removed from the culture medium in presence of bacteria harboring <i>cpg2</i>
+    encoding plasmids as early as 5 h post-incubation. Of note, the supernatants incubated only 5h with the chassis were
+    tested but still present some toxicity against the ∆<i>acrA1</i> indicative strain (data not shown). We hypothesize that waiting
+    longer (20 h) allow the bacteria to remove a toxic compound from the medium.
   </p>
+
+  <p>
+    <b>In conclusion: The bacteria harboring a plasmid encoding <i>cpg2</i> are ‘MTX-Cleaning Factories’ that efficiently remove MTX from the medium.</b>
+  </p>
+  <p class="spacemaker"></p>
 
 </mat-card>

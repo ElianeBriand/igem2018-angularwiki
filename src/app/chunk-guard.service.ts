@@ -15,13 +15,17 @@ export class ChunkGuardService implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
     if(environment.production == false) {
-      console.log("can activate: " + state.url + " | prod : " + environment.production);
-      return from(new Promise<boolean>((resolve, reject) => {
-        resolve(true);
-      })); // No custom chunk loading.
+      console.log("ChunkGuard::CanActivate: " + state.url + " | prod : " + environment.production);
+      return new Observable<boolean>((observer) => {
+        observer.next(true);
+        console.log("ChunkGuard::CanActivate::Observable<bool> : next(true) called.")
+        observer.complete();
+        console.log("ChunkGuard::CanActivate::Observable<bool> : complete called.")
+
+      });
     }
     let url: string = state.url;
-    console.log("ChunkGuard : " + url);
+    console.log("ChunkGuard::CanActivate " + url);
     let returnObs = this.chunkLoader.asyncLoadPageChunk(url);
     return returnObs;
   }

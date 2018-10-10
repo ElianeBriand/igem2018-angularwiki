@@ -39,7 +39,6 @@ export let PAGE_CHUNK_MASTER_RECORD = [
   new PageChunkRecord("/labnotebook","http://2018.igem.org/wiki/images/0/02/T--GO_Paris-Saclay--labnotebook_chunk.base64.txt"),
   new PageChunkRecord("/attribution","http://2018.igem.org/wiki/images/5/5a/T--GO_Paris-Saclay--attribution_chunk.base64.txt"),
   new PageChunkRecord("/biology","http://2018.igem.org/wiki/images/1/15/T--GO_Paris-Saclay--biology_chunk.base64.txt")
-  
   //*/
 ]
 
@@ -51,7 +50,7 @@ export let SPECIAL_PAGE_CHUNK_MASTER_RECORD = [
   new SpeciaPageRecord("/Software", "#MAIN#", "/software"),
   new SpeciaPageRecord("/Human_Practices", "#MAIN#", "/human-practices"),
   new SpeciaPageRecord("/Model", "#MAIN#", "/modeling"),
-  new SpeciaPageRecord("/Improve", "#MAIN#", "/improve"),
+  new SpeciaPageRecord("/Improve", "/biology", "/biology/J23108"),
   new SpeciaPageRecord("/Demonstrate", "#MAIN#", "/demonstrate"),
   new SpeciaPageRecord("/Team", "/team", "/team"),
   new SpeciaPageRecord("/Design", "#MAIN#", "/project"),
@@ -62,17 +61,16 @@ export let SPECIAL_PAGE_CHUNK_MASTER_RECORD = [
 ]
 
 export let IMAGE_PRELOAD_MASTER_RECORD = [
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png", "image/png"),
   new ImagePreloadRecord("http://2018.igem.org/wiki/images/0/03/T--GO_Paris-Saclay--fond_groupe.png", "image/png"),
   new ImagePreloadRecord("http://2018.igem.org/wiki/images/1/1b/T--GO_Paris-Saclay--tableau_banner.png", "image/png"),
-
-  new ImagePreloadRecord("http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png", "image/png"),
-
-  new ImagePreloadRecord("http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--abstractpage.png", "image/png"),
-  new ImagePreloadRecord("http://2018.igem.org/wiki/images/7/7d/T--GO_Paris-Saclay--partspage.png", "image/png"),
-  new ImagePreloadRecord("http://2018.igem.org/wiki/images/2/21/T--GO_Paris-Saclay--softwarepage.png", "image/png"),
-  new ImagePreloadRecord("http://2018.igem.org/wiki/images/0/0b/T--GO_Paris-Saclay--notebookpage.png", "image/png"),
-  new ImagePreloadRecord("http://2018.igem.org/wiki/images/b/ba/T--GO_Paris-Saclay--equipepage.png", "image/png"),
-
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/d/dd/T--GO_Paris-Saclay--parts_underbanner.png", "image/png"),
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/c/c8/T--GO_Paris-Saclay--stagedlab_underbanner.png", "image/png"),
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/8/82/T--GO_Paris-Saclay--interlab_underbanner.png", "image/png"),
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/0/08/T--GO_Paris-Saclay--software_underbanner.png", "image/png"),
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/c/c6/T--GO_Paris-Saclay--team_underbanner.png", "image/png"),
 
 
 ];
+
+

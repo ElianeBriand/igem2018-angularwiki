@@ -2,14 +2,16 @@
 <nav>
   <div id='cssmenu'>
     <ul>
-      <li><a (click)="this.routerLinkChunkProcessing('/dashboard')"><mat-icon>home</mat-icon></a></li>
+      <li><a (click)="this.routerLinkChunkProcessing('/')"><mat-icon>home</mat-icon></a></li>
       <li><a ><span>Project</span></a>
         <ul>
-          <li><a (click)="this.routerLinkChunkProcessing('/project')" ><span>Project Design</span></a>
+          <li><a (click)="this.routerLinkChunkProcessing('/project')" ><span>Project Synthesis</span></a>
           </li>
           <li ><a (click)="this.routerLinkChunkProcessing('/biology/mtx')" ><span>Degrading MTX</span></a>
           </li>
           <li ><a (click)="this.routerLinkChunkProcessing('/biology/heterogenious')" ><span>An HeteroGenious System</span></a>
+          </li>
+          <li><a (click)="this.routerLinkChunkProcessing('/demonstrate')"><span>Demonstrating our project</span></a>
           </li>
         </ul>
       </li>
@@ -18,26 +20,22 @@
         <ul>
           <li class="has-sub"><a (click)="this.routerLinkChunkProcessing('/biology/parts')"><span>Parts</span></a>
             <ul>
-              <li><a>Part 1</a></li>
+              <li><a (click)="this.routerLinkChunkProcessing('/biology/cpg2')"><i>cpg2</i></a></li>
+              <li><a (click)="this.routerLinkChunkProcessing('/biology/folc')"><i>folC</i></a></li>
+              <li><a (click)="this.routerLinkChunkProcessing('/biology/lee5')"><i>LEE5</i></a></li>
+              <li><a (click)="this.routerLinkChunkProcessing('/biology/ler')"><i>Ler</i></a></li>
+              <li><a (click)="this.routerLinkChunkProcessing('/biology/J23108')"><span>Improved part</span></a></li>
             </ul>
           </li>
           <li><a (click)="this.routerLinkChunkProcessing('/labnotebook')"><span>Notebook</span></a>
           </li>
-          <li><a href='http://2018.igem.org/Team:GO_Paris-Saclay/protocols'><span>Protocols</span></a>
-          </li>
+          <!-- <li><a href='http://2018.igem.org/Team:GO_Paris-Saclay/protocols'><span>Protocols</span></a>
+          </li> -->
         </ul>
       </li>
 
 
-      <li><a ><span>Model</span></a>
-        <ul>
-          <li><a href='http://2018.igem.org/Team:GO_Paris-Saclay/model'><span>Overview</span></a>
-          </li>
-          <li class='has-sub'><a ><span>X</span></a>
-          </li>
-          <li class='has-sub'><a ><span>X</span></a>
-          </li>
-        </ul>
+      <li><a (click)="this.routerLinkChunkProcessing('/modeling')"><span>Model</span></a>
       </li>
 
       <li><a ><span>Contribution</span></a>
@@ -54,7 +52,11 @@
           <li><a (click)="this.routerLinkChunkProcessing('/team')"><span>Team</span></a></li>
           <li ><a (click)="this.routerLinkChunkProcessing('/support')"><span>Sponsors</span></a>
           </li>
-          <li ><a href='http://2018.igem.org/Team:GO_Paris-Saclay/collaboration'><span>Collaboration</span></a>
+          <li ><a (click)="this.routerLinkChunkProcessing('/collaborations')"><span>Collaborations</span></a>
+          </li>
+          <li><a (click)="this.routerLinkChunkProcessing('/attribution')"><span>Attribution</span></a>
+          </li>
+          <li><a (click)="this.routerLinkChunkProcessing('/references')"><span>Bibliography</span></a>
           </li>
         </ul>
       </li>
@@ -86,7 +88,7 @@
 
 <div class="container" *ngIf="showBackHomeLogo">
 
-  <div class="topleft"><a href="#" (click)="this.routerLinkChunkProcessing('/dashboard')"><img src="http://2018.igem.org/wiki/images/0/01/T--GO_Paris-Saclay--logogoparissaclay.png" alt="logoparissaclay"></a></div>
+  <div class="topleft"><a href="#" (click)="this.routerLinkChunkProcessing('/')"><img src="http://2018.igem.org/wiki/images/0/01/T--GO_Paris-Saclay--logogoparissaclay.png" alt="logoparissaclay"></a></div>
 
   <router-outlet></router-outlet>
 

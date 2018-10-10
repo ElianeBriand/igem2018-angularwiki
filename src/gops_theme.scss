@@ -309,6 +309,11 @@ a {
   margin: 1.2em -8%;
 }
 
+.ultralargefig {
+  width: 125%;
+  margin: 1.2em -12.5%;
+}
+
 .captionafterapicture {
   font-size : 11pt;
   color: grey;
@@ -329,11 +334,19 @@ a {
   margin-top: 4em;
 }
 
+p {
+  font-size: 14pt;
+  font-family: 'Lato', Helvetica, SansSerif;
+}
+
 
 .withlettrine::first-letter  {
-  float:left;
-  font-size: 6em;
-  padding: 0.05em 0.05em 0 0;
+  float: left;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 5px;
+  padding-left: 3px;
 }
 
 .formoredetailssee {

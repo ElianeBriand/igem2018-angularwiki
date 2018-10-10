@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Reference, ReferenceManagerService, REFERENCES_MASTER_RECORD} from '../reference-manager.service';
+import {Reference, ReferenceManagerService} from '../reference-manager.service';
 import {MatTableDataSource} from '@angular/material';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 

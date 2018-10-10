@@ -1,8 +1,176 @@
-<div class="grid-container">
-  <h1 class="mat-h1">Part J23108</h1>
-
-  <mat-card class="dashboard-card" >
-
-
-  </mat-card>
+<div class="bannercontainer">
+  <img src="http://2018.igem.org/wiki/images/d/dd/T--GO_Paris-Saclay--parts_underbanner.png" class="bannerimg superposedbanner1">
+  <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png" class="bannerimg superposedbanner2">
+  <div class="headlinetext">Improved part</div>
 </div>
+
+
+<mat-card class="dashboard-card largemargin" >
+  <p class="spacemaker"></p>
+  <h1>Improving a BioBrick from the Anderson promoter collection</h1>
+
+  <mat-card class="sidefigure">
+    <img src="http://2018.igem.org/wiki/images/9/91/T--GO_Paris-Saclay--recap_bistable.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Our HeteroGenious system in a nutshell</div>
+  </mat-card>
+
+  <div class="formoredetailssee">See also:  <a (click)="this.router.navigate(['/biology','heterogenious'], { fragment: 'top'})">HeteroGenious expression</a></div>
+
+
+  <p class="withlettrine">One of our goal for the “HeteroGenious Cleaning Factory’ project was to generate a heterogeneous
+    transgene expression within the bacterial population using Ler-LEE5 (protein-DNA) two part system. We aimed to find
+    a promoter that generates a level of Ler expression that is suitable to do so i.e. not too low (leading to no LEE5
+    activation) and not too high (leading to full LEE5 activation). This way, the competition between H-NS (LEE5 silencer)
+    and Ler (LEE5 activator) for LEE5 DNA binding could allow the generation of a bimodal pattern of expression of the transgene
+    under the control of LEE5 <reference-box shorthand="Leh2017"></reference-box>. We were
+    therefore interested by the Anderson promoter collection. </p>
+
+  <h2>Description of the Anderson promoter collection</h2>
+
+  <p>
+    The <a href="http://parts.igem.org/Promoters/Catalog/Anderson">Anderson promoter collection</a> corresponds to a set of
+    promoters derived from <a href="http://parts.igem.org/wiki/index.php/Part:BBa_J23119">BBa_J23119</a>, the "consensus" promoter sequence and the strongest member of the family.
+    This promoter collection is well characterized and suitable to allow transgene expression in a large range of levels,
+    enabling the finding of a particular level of expression suitable for a given application.
+    The promoters are included in the Registry distribution. All parts except BBa_J23119 are present in plasmid <a href="http://parts.igem.org/wiki/index.php/Part:BBa_J61002">BBa_J61002</a>.
+    This places the rfp transgene downstream of the promoter. Part BBa_J23119 is present in pSB1A2. <b>Four Anderson promoters
+    are cloned within pSB1C3 and available in the Distribution Kit 2018.</b>
+  </p>
+
+  <h2>Characterization of the Anderson promoters cloned within pSB1C3</h2>
+  <p>
+  In our case, we wanted to clone ler gene under the control of different Anderson promoters within pSB1C3 plasmid backbone
+    (as required for the iGEM competition). The four Anderson promoters are cloned within pSB1C3 and available in the Distribution
+    Kit 2018 are the following:
+  </p>
+
+
+  <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp halfwidetable">
+    <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Promoter reference</th>
+      <th>Relative expression compared to BBa_J23112 (as 1)</th>
+      <th>Position </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">BBa_J23119</td>
+      <td>N/A - Strongest promoter</td>
+      <td>2018 – Plate 3 – 17O</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">BBa_J23108</td>
+      <td>0,51</td>
+      <td>2018 – Plate 4 – 4C</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">BBa_J23109</td>
+      <td>0,04</td>
+      <td>2018 – Plate 4 – 4E</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">BBa_J23111</td>
+      <td>0,58</td>
+      <td>2018 – Plate 4 – 4A</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <p>
+    The sequences of these four promoters are compared in Figure 1.
+  </p>
+
+  <mat-card class="eatintotextmargin">
+    <div class="sequencealign">
+      J23119&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTGACAGCTAGCTCAGTCCTAGGTATAATGCTAGC<br>
+      J23111&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTGAC<span class="alignfeature">G</span>GCTAGCTCAGTCCTAGGTATA<span class="alignfeature">G</span>TGCTAGC<br>
+      J23109&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TT<span class="alignfeature">T</span>ACAGCTAGCTCAGTCCTAGG<span class="alignfeature">G</span>A<span class="alignfeature">CTG</span>TGCTAGC<br>
+      J23108&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="alignfeature">C</span>TGACAGCTAGCTCAGTCCTAGGTATAATGCTAGC<br>
+    </div>
+    <div class="mat-caption captionafterapicture">Figure 1: Multiple sequence alignment of four Anderson promoters of interest </div>
+  </mat-card>
+
+
+  <p>
+    We took the four pSB1C3 plasmids harbouring an Anderson promoter, introduced them in DH5α bacteria by chemotransformation,
+    miniprepared their DNA and sequenced them. Indeed we observed that the plasmid harboring BBa_J23119 promoter was the only
+    one to present the expected sequence (prefix –BBa_J23119- suffix). The 3 other plasmids contain extra sequences between the
+    promoter sequence and the prefix and suffix sequences that flank the BioBrick (Figure 2).
+
+  </p>
+
+  <mat-card class="ultralargefig">
+    <div class="sequencealign">
+      <table>
+        <tr>
+          <td class="alignlabelrow">BioBrick Prefix</td>
+          <td class="alignlabelrow">Extra sequence</td>
+          <td class="alignlabelrow"></td>
+          <td class="alignlabelrow">Extra sequence</td>
+          <td class="alignlabelrow">BioBrick suffix</td>
+        </tr>
+        <tr >
+          <td><span class="alignfeature2">GAATTCGCGGCCGCTT<span class="alignoverlined">CTAGAG</span></span></td>
+          <td><span class="alignshow"><span class="alignoverlined">ac</span>tagt</span><span class="alignshow">actagt</span>gggtctcagctt</td>
+          <td><span class="alignfeature">BBa_Anderson_promoter</span></td>
+          <td>ta<span class="alignoverlined">ctagagac</span>c</td>
+          <td><span class="alignfeature4">TACTAGTAGCGGCCGCTGCAG</span></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <abbr name="E" class="alignfeature2"></abbr>
+    </div>
+    <div class="mat-caption captionafterapicture">Figure 2: Prefix to suffix sequence cloned within pSB1C3 harboring BBa_J23108, BBa_J23109 or BBa_J23111
+    <br>
+      <div class="captionmaterialmethod">
+        The extra sequences are undocumented in the BioBrick registry. Additional SpeI recognition sites (A^CTAGT) are framed.
+        The position of the BBa sequence is in yellow. A repetition within this sequence is overlined in red.
+
+      </div>
+    </div>
+  </mat-card>
+
+  <p>
+    We can notice that two extra SpeI sites are present within the extra sequences surrounding the BBa of interest.
+    This is detrimental for further BioBrick cloning strategy (using SpeI) performed within pSB1C3_BBa_Anderson_promoter
+    (BBa_J23108, BBa_J23109 or BBa_J23111) vectors since SpeI sites are present before and after the promoter sequence
+    within this vector (Figure 2).
+  </p>
+
+  <h2>Improvement of pSB1C3-BBa_J23108</h2>
+
+  <p>
+    We notice that only one bp was different between BBa_J23108 and BBa_J23119 (Figure 1). Therefore we took advantage of
+    the fact that pSB1C3- BBa_J23119 was correct (without extra sequences between the promoter and the prefix and suffix
+    flanking regions) to obtain by directed mutagenesis a pSB1C3- BBa_ J23108 without extra sequences. The pSB1C3- BBa_J23119
+    was amplified by PCR using GO2018-17 (CTGACAGCTAGCTCAGTCCTAG) and GO2018-18 (<span class="alignfeature">C</span>TCTAGAAGCGGCCGCGAATTC) primers.
+    The PCR product was digested by DpnI (to eliminate the parental pSB1C3- BBa_J23119 plasmid), phosphorylated and auto-ligated.
+    After chemotransformation of DH5α bacteria and minipreparation of plasmidic DNA of selected clones,
+    we checked the genetic organization of the resulting plasmid by digestion and sequencing (Figure 3).
+  </p>
+
+
+  <mat-card class="eatintotextmargin">
+    <img src="http://2018.igem.org/wiki/images/3/3b/T--GO_Paris-Saclay--adv_J23108.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 3: pSB1C3-J23108_corrected (<a href="http://parts.igem.org/wiki/index.php/Part:BBa_K2688025">BBa_K2688025</a>) sequence and interest for further cloning</div>
+  </mat-card>
+  <p class="spacemaker"></p>
+
+
+  <p class="intermediateconclusion">
+    <b>Conclusion</b>: We obtained the pSB1C3-J23108_corrected (<a href="http://parts.igem.org/wiki/index.php/Part:BBa_K2688025">BBa_K2688025</a>) Biobrick without extra sequences that is
+    suitable to directly perform cloning under the control of BBa_ J23108 using a BioBrick assembly (with SpeI-PstI).
+    This will be helpful to enlarge the use the Anderson promoter collection for direct cloning within pSB1C3.
+  </p>
+  <p class="spacemaker"></p>
+  <p class="spacemaker"></p>
+
+</mat-card>
+

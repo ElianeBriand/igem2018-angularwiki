@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import * as d3 from 'd3';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {ChunkLoaderService} from '../chunk-loader.service';
 
 
@@ -9,13 +9,14 @@ import {ChunkLoaderService} from '../chunk-loader.service';
   templateUrl: './project-details.component.html',
   styleUrls: ['./project-details.component.css']
 })
-export class ProjectDetailsComponent implements OnInit {
+export class ProjectDetailsComponent implements OnInit, AfterViewInit {
+
+
+  private fragment: string;
 
 
 
-
-
-  constructor(public router: Router) { }
+  constructor(public router: Router, private route: ActivatedRoute) { }
 
 
   HNS_label;
@@ -117,6 +118,7 @@ export class ProjectDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
 
     this.HNS_label = d3.select("#HNSLabel");
     this.HNS = d3.select("#HNS");
@@ -147,6 +149,12 @@ export class ProjectDetailsComponent implements OnInit {
       .attr("transform", "translate(-0,-0)");
       */
 
+  }
+
+  ngAfterViewInit(): void {
+    try {
+      document.querySelector('#' + this.fragment).scrollIntoView();
+    } catch (e) { }
   }
 
 
