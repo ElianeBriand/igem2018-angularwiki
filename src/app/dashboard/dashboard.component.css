@@ -286,17 +286,25 @@ a:hover /* Apparence au survol des liens */
 
 .smallpresproj {
   width:1200px;
-  height:2000px;
+  height:1100px;
   position: absolute;
   top: 2299px;
-  left:0px;
   background-color: white;
+  color: #2b4b85;
+  font-size: 2em;
+  left: 0px;
+  line-height: 1.2em;
+text-align: justify;
+  font-family: 'Lato', Helvetica, SansSerif;
+  padding: 20px 100px;
 }
 
 .schemashort {
   position: absolute;
-  top: 2310px;
+  top: 2700px;
   left: 0px;
+  text-align: center;
+  z-index: 4;
 }
 
 /* Centered text */
@@ -310,4 +318,27 @@ a:hover /* Apparence au survol des liens */
   font-weight: bolder;
   font-size: 50pt;
   text-shadow: 2px 2px black;
+}
+
+
+.comeseemore {
+  width:1200px;
+  height:200px;
+  position: absolute;
+  text-align: center;
+  top: 3380px;
+  left:0px;
+  background-color: #2b4b85;
+}
+
+.seemoretext {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Lato', Helvetica, SansSerif;
+  font-weight: bolder;
+  font-size: 50pt;
+  cursor: pointer;
 }

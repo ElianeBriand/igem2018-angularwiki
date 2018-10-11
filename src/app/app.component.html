@@ -2,7 +2,7 @@
 <nav id="top">
   <div id='cssmenu'>
     <ul>
-      <li><a (click)="this.routerLinkChunkProcessing('/')"><mat-icon>home</mat-icon></a></li>
+      <li><a  href="#" (click)="this.routerLinkChunkProcessing('/')"><mat-icon>home</mat-icon></a></li>
       <li><a ><span>Project</span></a>
         <ul>
           <li><a (click)="this.routerLinkChunkProcessing('/project')" ><span>Project Summary</span></a>
@@ -80,20 +80,13 @@
 
 
 
-<div class="container" *ngIf="showBackHomeLogo">
+<div  [ngClass]="{'container': showBackHomeLogo, 'containerfrontpage': !showBackHomeLogo}">
 
-  <div class="topleft"><a href="#" (click)="this.routerLinkChunkProcessing('/')"><img src="http://2018.igem.org/wiki/images/0/01/T--GO_Paris-Saclay--logogoparissaclay.png" alt="logoparissaclay"></a></div>
+  <div *ngIf="showBackHomeLogo" class="topleft"><a href="#" (click)="this.routerLinkChunkProcessing('/')"><img src="http://2018.igem.org/wiki/images/0/01/T--GO_Paris-Saclay--logogoparissaclay.png" alt="logoparissaclay"></a></div>
 
   <router-outlet></router-outlet>
 
   <img *ngIf="showBackHomeLogo" src="http://2018.igem.org/wiki/images/5/5b/T--GO_Paris-Saclay--footerespace.png" class="superposedbanner1">
-
-</div> <!-------------fin container------------->
-
-<div class="containerfrontpage" *ngIf="!showBackHomeLogo">
-
-  <dashboard></dashboard>
-  <br style="height: 2em;">
 
 </div> <!-------------fin container------------->
 

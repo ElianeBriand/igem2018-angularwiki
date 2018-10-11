@@ -1,4 +1,5 @@
 import {Component, AfterContentInit} from '@angular/core';
+import {Router} from '@angular/router';
 /*
 import { timer} from 'rxjs';
 import {
@@ -20,6 +21,7 @@ export class DashboardComponent implements AfterContentInit {
 
 
 
+  constructor(public router: Router) {}
   ngAfterContentInit() {
 
 /*

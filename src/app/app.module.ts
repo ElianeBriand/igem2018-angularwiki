@@ -32,10 +32,9 @@ import {ReferenceBoxModule} from './reference-box/reference-box.module';
 import {ReferencesPageComponent} from './references-page/references-page.component';
 import {DemonstrateComponent} from './demonstrate/demonstrate.component';
 import {SafetyComponent} from './safety/safety.component';
-import {ReferenceSheet} from './reference-box/reference-box.component';
 import {AchievementsComponent} from './achievements/achievements.component';
 
-
+import {NgxPageScrollModule} from 'ngx-page-scroll';
 
 
 @NgModule({
@@ -70,8 +69,8 @@ import {AchievementsComponent} from './achievements/achievements.component';
     MatInputModule,
     ReferenceBoxModule,
     MatChipsModule,
-    MatGridListModule
-
+    MatGridListModule,
+    NgxPageScrollModule
   ],
   entryComponents: [
     WikiSourceSheet
