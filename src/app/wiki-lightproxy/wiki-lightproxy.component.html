@@ -3,7 +3,7 @@
        class="bannerimg superposedbanner1">
   <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png"
        class="bannerimg superposedbanner2">
-  <div class="headlinetext">Lab Notebook</div>
+  <div class="headlinetext">Lab&nbsp;Notebook</div>
 </div>
 
   <mat-card class="wikilp-access-card">
@@ -11,11 +11,8 @@
 
 
 
-      <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="left">
-         <button mat-button (click)="goBackHomeLabNotebook()"><mat-icon>home</mat-icon> Go back to notebook home</button>
-        <!-- <input matInput placeholder="Page path" [(ngModel)]="fieldPagePath"> <button mat-button (click)="goToFilledPage()">Go</button> -->
-      </div>
 
+<!--
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-title>
@@ -52,9 +49,14 @@
     </mat-card-content>
 
   </mat-card>
+  -->
 
   <mat-card class="wikilp-card">
     <mat-card-header>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="left">
+        <button mat-button (click)="goBackHomeLabNotebook()"><mat-icon>home</mat-icon> Go back to notebook home</button>
+        <!-- <input matInput placeholder="Page path" [(ngModel)]="fieldPagePath"> <button mat-button (click)="goToFilledPage()">Go</button> -->
+      </div>
     </mat-card-header>
     <mat-card-content class="dashboard-card-content">
       <div fxLayout="column" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="left">

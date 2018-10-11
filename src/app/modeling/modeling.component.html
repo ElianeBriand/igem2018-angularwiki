@@ -1,4 +1,4 @@
-<div class="bannercontainer" id="top">
+<div class="bannercontainer" >
   <img src="http://2018.igem.org/wiki/images/1/1b/T--GO_Paris-Saclay--tableau_banner.png"
        class="bannerimg superposedbanner1">
   <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png"
@@ -8,7 +8,7 @@
 
 <mat-card class="dashboard-card largemargin">
 
-  <h2 id="Introduction">Introduction</h2>
+  <h1 id="Introduction">Introduction</h1>
 
   <p class="withlettrine">In order to degrade drugs in hospital wastewater in a sustainable way, our biological system
     split
@@ -25,10 +25,10 @@
     of our system by proving it can degrade drugs in many scenarios.</p>
 
 
-  <h2 id="ModelConstruction">Model construction.</h2>
+  <h1 id="ModelConstruction">Model construction.</h1>
 
 
-  <h3 id="AFirstApproach">A first approach : the exponential phase</h3>
+  <h2 id="AFirstApproach">A first approach : the exponential phase</h2>
   <p>
     Let's denote $n_1(t)$ the population of degradation cells, $n_2(t)$ the population of "stem" cells and $m(t)$ the
     quantity of methotrexate in solution.
@@ -111,10 +111,10 @@
     biological system design than numerical solutions.</p>
 
 
-  <h2 id="MathematicalAnalysis">Mathematical Analysis</h2>
+  <h1 id="MathematicalAnalysis">Mathematical Analysis</h1>
 
 
-  <h3 id="TheSteadyState.">The steady state</h3>
+  <h2 id="TheSteadyState.">The steady state</h2>
   <mat-card class="sidefigure" style="width: 50%;">
     <img src="http://2018.igem.org/wiki/images/0/01/T--GO_Paris-Saclay--model_fig1.png" class="wideimg">
     <div class="mat-caption captionafterapicture">Figure 1 : Steady State without Methotrexate, a = 0.7, b = 0.3</div>
@@ -168,10 +168,10 @@
     We see that the value is negative, so we conclude that the steady state is stable. <br></p>
 
 
-  <h2 id="TowardsASystem">Towards a system to degrade more drugs</h2>
+  <h1 id="TowardsASystem">Towards a system to degrade more drugs</h1>
 
 
-  <h3 id="From-a-proof-of-concept-to-the-general-problem.">From a proof of concept to the general problem</h3>
+  <h2 id="From-a-proof-of-concept-to-the-general-problem.">From a proof of concept to the general problem</h2>
 
   <p>Until now, our system was designed to only degradate methotrexate. But for us, methotrexate is just a proof of
     concept, a way to show we can degrade any drug with our system. <br>
@@ -210,7 +210,7 @@
     \frac{{ '{' }}dm}{{ '{' }}dt} &amp; = &amp; - A m n_1 + p. &amp; (eqn.F)
     \end{{ '{' }}eqnarray}</p>
 
-  <h3 id="ResponseEnvironmentalShift.">Response to an environmental shift</h3>
+  <h2 id="ResponseEnvironmentalShift.">Response to an environmental shift</h2>
   <mat-card class="sidefigure" style="width: 50%;">
     <img src="http://2018.igem.org/wiki/images/2/24/T--GO_Paris-Saclay--model_fig2.png" class="wideimg">
     <div class="mat-caption captionafterapicture">Figure 2 : The degradation of Methotrexate</div>
@@ -252,7 +252,7 @@
   </p>
 
 
-  <h3 id="Dynamics-in-periodically-switching-environment.">Dynamics in periodically switching environment</h3>
+  <h2 id="Dynamics-in-periodically-switching-environment.">Dynamics in periodically switching environment</h2>
   <p>In condition, drugs quantity depends of many factor : human errors, schedule of health services, etc.
     But even if that quantity isn't a constant, a looser but more realistic assumption would be that drug input is
     periodic. <br>

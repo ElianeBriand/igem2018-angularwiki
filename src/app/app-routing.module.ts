@@ -10,6 +10,7 @@ import {CollaborationsComponent} from './collaborations/collaborations.component
 import {ReferencesPageComponent} from './references-page/references-page.component';
 import {DemonstrateComponent} from './demonstrate/demonstrate.component';
 import {SafetyComponent} from './safety/safety.component';
+import {AchievementsComponent} from './achievements/achievements.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'demonstrate', component: DemonstrateComponent, canActivate: [ChunkGuardService] },
   { path: 'safety', component: SafetyComponent, canActivate: [ChunkGuardService] },
   { path: 'references', component: ReferencesPageComponent, canActivate: [ChunkGuardService] },
+  { path: 'achievements', component: AchievementsComponent, canActivate: [ChunkGuardService] },
   { path: 'support', loadChildren: './support-section/support-section-layer.module#SupportSectionLayerModule', canActivate: [ChunkGuardService] },
   { path: '', component: DashboardComponent, canActivate: [ChunkGuardService], pathMatch: 'full' }
 ];

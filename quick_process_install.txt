@@ -1,0 +1,11 @@
+
+cat runtime.js polyfills.js scripts.js common.js main.js |base64 > base64_js_noloader.txt
+tr -d '\n' < base64_js_noloader.txt> base64_js_noloader_1.txt
+cat styles.css | base64 > base64_css_noloader.txt
+tr -d '\n' < base64_css_noloader.txt > base64_css_noloader_1.txt
+cat 1.js | base64 > support_chunk.txt
+cat 2.js | base64 > bio_chunk.txt
+cat 3.js | base64 > attrib_chunk.txt
+cat 4.js | base64 > team_chunk.txt
+cat 5.js | base64 > labnotebook_chunk.txt
+

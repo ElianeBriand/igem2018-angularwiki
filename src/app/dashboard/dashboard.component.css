@@ -30,12 +30,7 @@ h1, h2, h3, h4,h5,h6,p, u, li, a{
 }
 
 /********************************* BLOC AVEC LE TEXT **************************/
-.innercontainer {
-  background-color: rgb(32,56,100) !important;
-  width: 100%;
-  height: 100%;
-  min-height: 320vh;
-}
+
 
 /********************************* CSS POSITION DES IMAGES ET TEXTES PAGE PRINCIPAL **************************/
 #carre_blanc
@@ -276,4 +271,43 @@ a:hover /* Apparence au survol des liens */
   line-height: 1.2em;
   font-family: 'Lato', Helvetica, SansSerif;
   z-index: 6;
+}
+
+
+.oursolution {
+  width:1200px;
+  height:200px;
+  position: absolute;
+  text-align: center;
+  top: 2100px;
+  left:0px;
+  background-color: #2b4b85;
+}
+
+.smallpresproj {
+  width:1200px;
+  height:2000px;
+  position: absolute;
+  top: 2299px;
+  left:0px;
+  background-color: white;
+}
+
+.schemashort {
+  position: absolute;
+  top: 2310px;
+  left: 0px;
+}
+
+/* Centered text */
+.oursoltext {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Didact Gothic', Helvetica, SansSerif;
+  font-weight: bolder;
+  font-size: 50pt;
+  text-shadow: 2px 2px black;
 }

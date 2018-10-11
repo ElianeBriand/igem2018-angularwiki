@@ -80,22 +80,7 @@ html {
   font-size:16px;
 }
 
-body {
-  width: 100%;
-  margin: 0 0 0 0;
-  padding: 0;
-  color: black;
-  background-color:rgb(217,217,217);
-  font: inherit;
-  font-size:16px;
-  word-wrap: break-word;
-}
 
-@media (min-width: 1024px) {
-  body {
-    margin: 16px 0 0 0;
-  }
-}
 
 
 #globalWrapper {
@@ -107,7 +92,7 @@ body {
 }
 #content {
   width: 100%;
-  min-height: 500vh;
+  height: 0;
   margin: 0;
   padding: 0;
   border: none;
@@ -605,15 +590,14 @@ h1, h2, h3, h4,h5,h6,p, u, li, a{
 
 body
 {
-  width: 62.5vw;
-  max-width: 1200px;
-  min-width: 1000px;
-  min-height: 100vh;
-  height: auto;
+  width: 1200px;
   background-color: rgb(217,217,217);
   margin: auto;
   font-family: 'Roboto', Helvetica, SansSerif;
-
+  padding: 0;
+  color: black;
+  background-color:rgb(217,217,217);
+  word-wrap: break-word;
 }
 /********************************* BLOC AVEC LE TEXTE PAS MODIFIER**************************/
 
@@ -621,17 +605,31 @@ body
   position: relative;
   margin: auto;
   background-color: white;
-  height: 100%;
+  /*height: 100%;*/
 }
 
 .containerfrontpage {
   position: relative;
   margin: auto;
-  min-height: 100vh;
+  min-height: 4067px;
   background-color: white;
   height: 100%;
 }
+
+.innercontainer {
+  background-color: rgb(32,56,100) !important;
+  width: 100%;
+  height: 100%;
+  min-height: 3500px;
+}
 /********************************* CSS DE LA PAGE **************************/
+
+.footerposition {
+  position: absolute;
+  top: 4000px;
+  left:0px;
+  width: 100%
+}
 
 .topleft {
   width: 130px;
@@ -678,22 +676,4 @@ img {
   margin:auto;
 }
 
-
-
-@media screen and (max-width: 1000px)
-{
-  body
-  {
-    width: auto;
-  }
-
-  .topleft
-  {
-  }
-
-  #titreh1
-  {
-  }
-
-}
 

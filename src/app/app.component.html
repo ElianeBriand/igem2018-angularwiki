@@ -1,11 +1,11 @@
 
-<nav>
+<nav id="top">
   <div id='cssmenu'>
     <ul>
       <li><a (click)="this.routerLinkChunkProcessing('/')"><mat-icon>home</mat-icon></a></li>
       <li><a ><span>Project</span></a>
         <ul>
-          <li><a (click)="this.routerLinkChunkProcessing('/project')" ><span>Project Synthesis</span></a>
+          <li><a (click)="this.routerLinkChunkProcessing('/project')" ><span>Project Summary</span></a>
           </li>
           <li ><a (click)="this.routerLinkChunkProcessing('/biology/mtx')" ><span>Degrading MTX</span></a>
           </li>
@@ -27,7 +27,7 @@
               <li><a (click)="this.routerLinkChunkProcessing('/biology/J23108')"><span>Improved part</span></a></li>
             </ul>
           </li>
-          <li><a (click)="this.routerLinkChunkProcessing('/labnotebook')"><span>Notebook</span></a>
+          <li><a (click)="this.routerLinkChunkProcessing('/labnotebook')"><span>Lab Notebook</span></a>
           </li>
           <li><a (click)="this.routerLinkChunkProcessing('/biology/hplc')"><span>HPLC Explorer</span></a>
           </li>
@@ -50,7 +50,8 @@
           </li>
         </ul>
       </li>
-      <li><a (click)="this.routerLinkChunkProcessing('/human-practices')"><span>Human practice</span></a></li>
+      <li><a (click)="this.routerLinkChunkProcessing('/human-practices')"><span>Human practices</span></a></li>
+      <li><a (click)="this.routerLinkChunkProcessing('/achievements')"><span>Achievements</span></a></li>
       <li><a ><span>Support</span></a>
         <ul>
           <li><a (click)="this.routerLinkChunkProcessing('/team')"><span>Team</span></a></li>
@@ -75,18 +76,7 @@
     </ul>
   </div>
 </nav>
-<!----------------------Project------------------------->
 
-
-
-  <!--
-  /************************************************************************
-  Script navigation NE PAS MODIFIE
-  ************************************************************************/
-
-
-
--->
 
 
 
@@ -96,7 +86,7 @@
 
   <router-outlet></router-outlet>
 
-  <img src="http://2018.igem.org/wiki/images/5/5b/T--GO_Paris-Saclay--footerespace.png" class="superposedbanner1">
+  <img *ngIf="showBackHomeLogo" src="http://2018.igem.org/wiki/images/5/5b/T--GO_Paris-Saclay--footerespace.png" class="superposedbanner1">
 
 </div> <!-------------fin container------------->
 

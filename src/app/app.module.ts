@@ -33,6 +33,7 @@ import {ReferencesPageComponent} from './references-page/references-page.compone
 import {DemonstrateComponent} from './demonstrate/demonstrate.component';
 import {SafetyComponent} from './safety/safety.component';
 import {ReferenceSheet} from './reference-box/reference-box.component';
+import {AchievementsComponent} from './achievements/achievements.component';
 
 
 
@@ -49,7 +50,8 @@ import {ReferenceSheet} from './reference-box/reference-box.component';
     ReferencesPageComponent,
     DemonstrateComponent,
     SafetyComponent,
-    WikiSourceSheet
+    WikiSourceSheet,
+    AchievementsComponent
   ],
   imports: [
     BrowserModule,

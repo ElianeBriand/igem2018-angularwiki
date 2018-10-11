@@ -1,13 +1,12 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 
-
 @Component({
-  selector: 'app-attribution',
-  templateUrl: './attribution.component.html',
-  styleUrls: ['./attribution.component.css']
+  selector: 'app-achievements',
+  templateUrl: './achievements.component.html',
+  styleUrls: ['./achievements.component.css']
 })
-export class AttributionComponent implements OnInit, AfterViewInit {
+export class AchievementsComponent implements OnInit, AfterViewInit {
 
   private fragment: string;
 

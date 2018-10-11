@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 
 
@@ -9,12 +10,27 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './collaborations.component.html',
   styleUrls: ['./collaborations.component.css']
 })
-export class CollaborationsComponent implements OnInit {
+export class CollaborationsComponent implements OnInit, AfterViewInit {
+
+
+  private fragment: string;
 
 
 
-  constructor() { }
+  constructor(public router: Router, private route: ActivatedRoute) { }
 
+
+  ngAfterViewInit(): void {
+    try {
+      document.querySelector('#' + this.fragment).scrollIntoView();
+    } catch (e) { }
+  }
+
+  ngOnInit() {
+    this.route.fragment.subscribe(fragment => {
+      this.fragment = fragment;
+    });
+  }
 
   team_list: string[] = [
     "Sorbonne U (France)",
@@ -50,7 +66,6 @@ export class CollaborationsComponent implements OnInit {
     "Munich(Germany)"
   ];
 
-  ngOnInit() {
-  }
+
 
 }

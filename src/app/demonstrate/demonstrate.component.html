@@ -7,12 +7,88 @@
 </div>
 
 <mat-card class="dashboard-card largemargin">
-  <p class="withlettrine">We designed synthetic cassettes encoding a new biotransformation pathway using an heterologous
-    carboxypeptidase in Escherichia coli. In only 5 h, our ‘cleaning factory’ drastically removes MTX from the media.
-    During our project we demonstrated that the level of MTX after getting through our E. coli population, dropped from
-    512 µM to close to 0, proving that our degrading system is efficient.</p>
+  <h1>MethotrExit: a HeteroGenious Cleaning Factory</h1>
 
-  <div class="formoredetailssee">For more details, see the <a (click)="this.router.navigate(['/project'], { fragment: 'top'})">synthesis of our project</a></div>
+  <p class="withlettrine">
+    Cytotoxic anticancer drugs are among harmful chemicals found in hospital wastewater at high concentration. Physical
+    and chemical degradation methods exist but are often inefficient, unsustainable or expensive. We propose
+    <b>MethotrExit</b>, a bioreactor-based approach to tackle this problem. We focused on the biotransformation of methotrexate
+    (MTX), a widely used anticancer drug.
+  </p>
+  <p>
+    After choosing appropriate chassis strains, we designed synthetic cassettes encoding a new biotransformation pathway
+    using a heterologous carboxypeptidase in <i>Escherichia coli</i>. In only 5 hours, <b>MethotrExit</b> drastically removes MTX from
+    the media. However, the degradation of anticancer drugs and the biotransformation pathway itself can be toxic. To
+    overcome these issues, Biobricks bringing heterogeneity in enzyme expression were built to ensure the survival of a
+    subpopulation. Modeling of this system highlights the interest of a division of labor between ‘cleaning’ and ‘stem’
+    bacterial cells.
+  </p>
+  <h1>The choice of a ‘Cleaning Factory’ chassis</h1>
 
+  <p>
+    After analysing the MTX-sensitivity of several <i>Escherichia coli</i> K12 WT and efflux pump mutants, we
+    decided to choose both the WT and Δ<i>tolC</i> strains as chassis. Indeed the former present a strong MTX-resistance (up to
+    1024 µM MTX) while the latter is MTX-sensitive but devoid of MTX efflux pump. This may limit MTX efflux and so favor
+    MTX biotransformation within the cell.
+  </p>
+
+  <mat-card class="eatintotextmargin" style="overflow: auto;">
+    <img src="http://2018.igem.org/wiki/images/0/0c/T--GO_Paris-Saclay--demonstrate_schema.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 1: <br>
+      <b style="color:black;">A The MethotrExit project : MTX-biotransformation pathway and division of labor
+        strategy</b><br>
+      <b style="color:black;">B HPLC analysis of MTX medium incubated with a ‘MTX-Cleaning Factory’</b><br>
+      <div class="captionmaterialmethod"> LB medium containing MTX (512 µM) was incubated during 5 h at 37°C with
+        control
+        bacteria [E. coli K12 pSB1C3-tet (BBa_R0040)] or with one of our ‘MTX Cleaning Factory’ [E. coli WT
+        pSB1C3-folC-cpg2
+        (BBa_K2688009)]. The supernatants were filtrated and analysed by HPLC with a reverse phase C18 column. Detection
+        was made using UV spectrophotometry at 303 nm.
+      </div>
+      <b style="color:black;"> C The ‘HeteroGenious’ device.</b><br>
+      <div class="captionmaterialmethod">Interplay between Ler and H-NS for the modulation of LEE5 promoter
+        activity; Fluorescent microscopy of E. coli K12 harboring pSB1C3-LEE5_GFP_native (BBa_K2688012)
+        cultured in LB at 37°C during 24 h.
+      </div>
+    </div>
+  </mat-card>
+
+
+  <h1>Design of the MTX biotransformation pathway</h1>
+
+  <p>
+    We focused our attention on two enzymes, <i>Pseudomonas</i> carboxypeptidase G2 (CPG2 or ‘glucarpidase’) and a
+  folylpoly-γ-glutamate synthetase (FolC) (Figure 1.A). CPG2 is the key enzyme that rapidly converts MTX into less toxic
+  metabolites glutamate and DAMPA (2,4-diamino-N10-methylpteroic acid)<reference-box shorthand="Widemann2000"></reference-box><reference-box shorthand="Larimer2014"></reference-box>.
+    We also tested the interest of co-expressing FolC that may enhance MTX catabolism by coupling
+  MTX to polyglutamate<reference-box shorthand="Chabner1985"></reference-box><reference-box shorthand="Kwon2008"></reference-box>.
+    The biotransformation of MTX was monitored by HPLC analysis and bioassays using <i>E. coli</i> K12 Δ<i>acrA1</i> mutant as an
+  indicative strain. In only 5 h of incubation with our ‘Cleaning Factories’, MTX was nearly completely removed from LB
+  medium (Figure 1.B).
+  </p>
+
+  <h1>Toward the ‘HeteroGenious Cleaning Factory’</h1>
+
+  <p>We observed that the chassis strains harboring both <i>cpg2</i> and <i>folC</i> expression cassettes present a slight growth delay.
+  Indeed, drug degradation pathways may be associated with a fitness cost. Therefore we wanted our bioreactor to harbor
+  a heterogeneous synthetic transgene expression. Only two parts are required to implement this ‘HeteroGenious’ system
+  in <i>E. coli</i>: Ler (‘LEE encoded regulator’) and its target LEE5 promoter (Figure 1.C)<reference-box shorthand="Leh2017"></reference-box>. The
+  competition between Ler and H-NS (naturally present in E. coli) for LEE5 binding can generate a heterogeneous
+  transgene expression. Modeling a heterogeneous expression of the synthetic pathway within the ‘cleaning factory’
+  population highlights the interest of a division of labor between ‘cleaning’ and ‘stem-like’ bacterial cells.
+  </p>
+
+  <h1>Conclusion</h1>
+  <p>
+    We obtained <i>E. coli</i> strains that efficiently remove MTX from culture medium, and a two-part device that can generate
+  heterogeneity of transgene expression within a bacterial population. This study opens new insight concerning the
+  design of ‘Cleaning Factories’. Moreover, <i>E. coli</i> strains able to degrade MTX could be of potential interest as
+  probiotics to treat MTX intoxication.
+  </p>
+
+  <div class="formoredetailssee">For more details, see the <a
+    (click)="this.router.navigate(['/project'], { fragment: 'top'})">summary of our project</a></div>
+
+  <p class="spacemaker"></p>
 
 </mat-card>

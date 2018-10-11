@@ -2,8 +2,21 @@
 <html lang="en">
 <head>
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" ></script>
     <script type="text/x-mathjax-config">
+        $( 'document' ).ready(function() {
+    $('#cssmenu').prepend('<div id="menu-button">Menu</div>');
+    $('#cssmenu #menu-button').on('click', function(){
+      var menu = $(this).next('ul');
+      if (menu.hasClass('open')) {
+        menu.removeClass('open');
+      }
+      else {
+        menu.addClass('open');
+      }
+    });
+  });
       MathJax.Hub.Config({
         tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"] ],

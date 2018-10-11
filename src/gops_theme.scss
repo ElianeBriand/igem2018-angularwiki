@@ -254,7 +254,11 @@ ng-list-item .mat-divider {
 
 h1 {
   @extend .mat-headline;
-  font-size: 20pt;
+  font-size: 28pt;
+  width: 105%;
+  margin-bottom: 0.5em;
+  margin-top: 1.3em;
+  font-weight: bolder;
 }
 
 h2 {

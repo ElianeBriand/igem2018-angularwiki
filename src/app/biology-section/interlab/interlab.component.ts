@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 
 export interface DeviceUsed {
@@ -27,14 +28,28 @@ const PARTS_DATA: DeviceUsed[] = [
   templateUrl: './interlab.component.html',
   styleUrls: ['./interlab.component.css']
 })
-export class InterlabComponent implements OnInit {
+export class InterlabComponent implements OnInit, AfterViewInit  {
 
   displayedColumns_partsused: string[] = ['device', 'partnumber',  'location'];
   dataSource_partsused = PARTS_DATA;
 
-  constructor() { }
+
+  private fragment: string;
+
+  constructor(public router: Router, private route: ActivatedRoute) { }
+
+
+  ngAfterViewInit(): void {
+    try {
+      document.querySelector('#' + this.fragment).scrollIntoView();
+    } catch (e) { }
+  }
 
   ngOnInit() {
+    this.route.fragment.subscribe(fragment => {
+      this.fragment = fragment;
+    });
   }
+
 
 }
