@@ -1,19 +1,26 @@
 <div class="bannercontainer">
-  <img src="http://2018.igem.org/wiki/images/1/1b/T--GO_Paris-Saclay--tableau_banner.png"
+  <img src="http://2018.igem.org/wiki/images/d/dd/T--GO_Paris-Saclay--parts_underbanner.png"
        class="bannerimg superposedbanner1">
   <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png"
        class="bannerimg superposedbanner2">
-  <div class="headlinetext">HeteroGenious</div>
+  <div class="headlinetext">Parts&nbsp;Collection</div>
 </div>
 
 <mat-card class="dashboard-card largemargin">
-<p class="spacemaker"></p>
-  <h1>Context</h1>
+  <p class="spacemaker"></p>
+
+  <h1>The HeteroGenious device: LEE5 & Ler collection</h1>
+
+  <p class="spacemaker"></p>
+  <h2>Context</h2>
 
   <p>Non-genetic phenotypic heterogeneity is present in large-scope in bacterial population. In
-  enteropathogenic Escherichia coli (EPEC), the expression of the locus of enterocyte effacement (LEE) pathogenicity
-  island is controlled by the interplay of Ler (LEE encoded regulator) and H-NS (naturally expressed by all E. coli
-  strains). This interplay results in the coexistence of nonvirulent and hypervirulent subpopulations<reference-box shorthand="Leh2017"></reference-box>.</p>
+    enteropathogenic Escherichia coli (EPEC), the expression of the locus of enterocyte effacement (LEE) pathogenicity
+    island is controlled by the interplay of Ler (LEE encoded regulator) and H-NS (naturally expressed by all E. coli
+    strains). This interplay results in the coexistence of nonvirulent and hypervirulent subpopulations
+    <reference-box shorthand="Leh2017"></reference-box>
+    .
+  </p>
   <mat-card class="normalmargin">
     <svg class="lee5explainer" viewBox="0 0 250 100" width="800px">
       <g
@@ -140,68 +147,72 @@
     </div>
   </mat-card>
 
-  <p>We get inspiration from this natural system for creating our HeteroGenious device for the methotrexate (MTX) project.
-  The idea was to propose a new genetic system, very simple (only two parts in E. coli) that can easily generate
-  phenotypic heterogeneity within a clonal population with some bacteria that will significantly express the
+  <p>We get inspiration from this natural system for creating our HeteroGenious device for the methotrexate (MTX)
+    project.
+    The idea was to propose a new genetic system, very simple (only two parts in E. coli) that can easily generate
+    phenotypic heterogeneity within a clonal population with some bacteria that will significantly express the
     biotranformation pathway and other that will not and will ensure bacterial renewal within a bioreactor.</p>
 
 
-  <h1>Toward a ‘HeteroGenious’ expression of BioBricks</h1>
+  <h2>What about LEE5 and Ler parts?</h2>
 
-  <p>
-    While analysing the growth of our chassis strain (WT and &Delta;tolC strain) in absence or presence of MTX, we
-    noticied that the strains harboring pSB1C3-folC-cpg2 present a growth delay/defect.
-    More generally, BioBrick expression and/or drug degradation may be toxic for the chassis strains, and can be
-    detrimental
-    for the long term maintenance of a cleaning bioreactor ;
-    anti-cancer drugs degradation pathways may be especially affected, given these drugs target very basic mecanism of
-    life,
-    likely to be conserved from bacteria to man.
-  </p>
+  <p>The LEE pathogenicity island (35.6 kb) is present in some pathogenic A/E (attachment/effacement) <i>E. coli</i>, <i>Citrobacter
+    rodentium</i> and <i>Escherichia albertii</i><reference-box shorthand="Franzin2015"></reference-box>. LEE encodes a type III secretion system. For the
+    project we chose to use the promoter region of the 5th operon of the LEE island, named P<sub>LEE5</sub>. This region has been
+  shown to be recognized by two nucleoid-associated proteins antagonists, H-NS and Ler which are both
+  nucleoid-associated proteins. P<sub>LEE5</sub> is silenced by H-NS, but Ler can alleviate the H-NS silencing. The regulation by
+  these proteins can generate some heterogeneity of transgene expression within E. coli populations as recently shown by
+  Leh and collaborators<reference-box shorthand="Leh2017"></reference-box>. Since LEE or Ler are not present in non-pathogenic E.coli, we need to
+    introduce LEE5 region and Ler in our E. coli chassis to build the ‘HeteroGenious’ system.</p>
 
-  <p>
-    Therefore we wanted our bioreactor to harbor a heterogeneous bacterial population so that all of them will not
-    express
-    the degradation pathway at the same time. This system is so called ‘HeteroGenious’ since it generates ‘ingenious’
-    heterogeneity within the ‘cleaning factory’ population.
-  </p>
+  <p>In one hand, several versions of Ler encoding gene have been cloned in pSB1C3 under the control of tet promoter
+    (<a href="http://parts.igem.org/Part:BBa_K2688022">BBa_K2688022</a>, <a href="http://parts.igem.org/Part:BBa_K2688023">BBa_K2688023</a>, <a href="http://parts.igem.org/Part:BBa_K2688024">BBa_K2688024</a>). On the other hand, we analyzed the expression of gfp under the control of
+  LEE5 promoter as proof of concept. Since all these LEE5 and Ler biobricks are cloned within the same vector (pSB1C3
+    backbone vector), we had to use specific genetic backgrounds to characterized LEE5 (<i>E. coli</i> K12 ∆<i>hns</i> and EPEC Δ<i>ler</i>) or
+    Ler (MG1655Z1 containing an integrated copy of LEE5-<i>gfp</i> reporter without antibiotic resistance) Biobricks.</p>
 
-  <p>
-    We took advantage of a recently described regulation system that can generate bimodal
-    expression patterns in E. coli
-    <reference-box shorthand="Leh2017"></reference-box>
-    . Only two components are required to
-    implement this ‘heterogenious’ system in E. coli: LEE5 promoter region and the gene encoding
-    Ler (‘LEE encoded regulator’). Ler is a nucleoid associated protein encoded by LEE (locus of enterocyte effacement)
-    genomic island encoding a secretion system in enteropathogenic E. coli. For the project, we used ler and its target
-    DNA,
-    a small part of LEE island containing the promoter region of the 5th operon, named LEE5. This region has been shown
-    to
-    be recognized by two nucleoid-associated proteins, H-NS and Ler.  H-NS and Ler belong to the same family of protein
-    of
-    proteins qualified as ‘silencers’ of foreign DNA expression, the H-NS family. However, it has been reported that Ler
-    can
-    counteract the H-NS silencing on the LEE island. Therefore, the competition between H-NS and Ler for LEE5 binding
-    can
-    generate some heterogeneity of transgene expression within E. coli populations
-    <reference-box shorthand="Leh2017"></reference-box>
-    (Figure 8).
-  </p>
-  <p>
-    Since H-NS is naturally present in E. coli, our synthetic system requires only the expression of Ler and a transgene
-    under the control of LEE5. We analyzed the expression of gfp under the control of LEE5 promoter as proof of concept.
-    The resulting population was heterogeneous regarding GFP expression since one sub-population expressed GFP and the
-    other didn’t (Figure 9).
+  <p class="spacemaker"></p>
+  <div class="formoredetailssee">See also our detailled characterizations on the <a
+    (click)="this.router.navigate(['/biology/lee5'], { fragment: 'top'})">LEE5 part page</a> & <a
+    (click)="this.router.navigate(['/biology/ler'], { fragment: 'top'})">Ler part page</a></div>
 
-  </p>
+  <mat-card  class="z-depth" class="part-card">
+    <mat-card-header>
+      <mat-card-title>LEE5 promoter series</mat-card-title>
+      <mat-card-subtitle>LEE5 &mdash; BBa_K2688010 to BBa_K2688018</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>A constitutive promoter regulated by H-NS (E coli endogeneous) and ler, which allows for
+      heterogeneous expression
+      of downstream gene. Several variants are available, with design implications.
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" (click)="this.router.navigate(['/biology/lee5'], { fragment: 'top'})">More about these parts</button>
+      <br><br>Registry pages: <a href="http://parts.igem.org/Part:BBa_K2688012" mat-raised-button>LEE5_GFP_native</a>
+      <a href="http://parts.igem.org/Part:BBa_K2688014" mat-raised-button>LEE5_GFP_variant-1</a>
+      <a href="http://parts.igem.org/Part:BBa_K2688016" mat-raised-button>LEE5_GFP_variant-1_inframe</a>
+      <a href="http://parts.igem.org/Part:BBa_K2688018" mat-raised-button>LEE5_GFP_variant-1_ΔTir</a>
+      <a href="http://parts.igem.org/Part:BBa_K2688027" mat-raised-button>LEE5_GFP_native_ΔTir</a>
 
-  <mat-card class="eatintotextmargin">
-    <div class="mat-caption captionafterapicture">Figure :
-      <br>
-      <div class="captionmaterialmethod">
-
-      </div>
-    </div>
+    </mat-card-actions>
   </mat-card>
+
+  <mat-card class="z-depth" class="part-card">
+    <mat-card-header>
+      <mat-card-title>Ler regulator series</mat-card-title>
+      <mat-card-subtitle>ler &mdash; BBa_K2688019 to BBa_K2688021</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>A transcription regulator protein that binds to LEE5 promoter sites, counteracting H-NS silecing
+      and allowing transcription.
+      Several variants are available, with design implications.
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" (click)="this.router.navigate(['/biology/ler'], { fragment: 'top'})">More about these parts</button>
+      <br><br>Registry pages: <a href="http://parts.igem.org/Part:BBa_K2688022" mat-raised-button>Ler1</a>
+      <a href="http://parts.igem.org/Part:BBa_K2688019" mat-raised-button>Ler2</a>
+      <a href="http://parts.igem.org/Part:BBa_K2688024" mat-raised-button>Ler3</a>
+    </mat-card-actions>
+  </mat-card>
+
+  <p class="spacemaker"></p>
 
 </mat-card>

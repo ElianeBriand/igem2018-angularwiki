@@ -1,13 +1,58 @@
 <div class="bannercontainer">
-  <img src="http://2018.igem.org/wiki/images/d/dd/T--GO_Paris-Saclay--parts_underbanner.png" class="bannerimg superposedbanner1">
-  <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png" class="bannerimg superposedbanner2">
+  <img src="http://2018.igem.org/wiki/images/d/dd/T--GO_Paris-Saclay--parts_underbanner.png"
+       class="bannerimg superposedbanner1">
+  <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png"
+       class="bannerimg superposedbanner2">
   <div class="headlinetext">folC</div>
 </div>
 
 
-<mat-card class="dashboard-card largemargin" >
+<mat-card class="dashboard-card largemargin">
+  <p class="spacemaker"></p>
 
-  <p class="withlettrine">Placeholder text.</p>
+  <mat-card class="z-depth" class="part-card">
+    <mat-card-header>
+      <mat-card-title>FolylPolyGlutamate Synthetase</mat-card-title>
+      <mat-card-subtitle>folC &mdash; BBa_K2688008</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>An enzyme that adds glutamates to folate analogs.</mat-card-content>
+    <mat-card-actions>
+      <a href="http://parts.igem.org/Part:BBa_K2688008" mat-raised-button color="accent">Registry page</a>
+    </mat-card-actions>
+  </mat-card>
+
+  <p class="spacemaker"></p>
+
+
+  <p class="intermediateconclusion">
+    <b>Executive summary</b>: This BioBrick is a full translation unit for folC, an enzyme that adds glutamates to
+    folates. In our methotrexate degradation pathway, it indirectly drives diffusive transport of methotrexate across
+    the cell membrane, allowing higher intracellular concentration and thus speed of degradation. While the theoretical
+    benefit is clear, we find this effect relevant only in some chassis like our E. coli Δ<i>tolC</i>.
+  </p>
+
+  <h1>Expression vector design</h1>
+
+  <mat-card class="sidefigure">
+    <img src="http://2018.igem.org/wiki/images/3/38/T--GO_Paris-Saclay--folC_cpg2_pSB1C3.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 1: Genetic organization of the folC-cpg2 encoding vector
+      (BBa_K2688009)
+    </div>
+  </mat-card>
+
+  <p>
+    We engineered a two-component pathway for efficient MTX degradation with folC and cpg2 under inducible ara (AraO2
+    BBa_R0081 + AraC BBa_R0080) promoter and a phage lambda pL promoter with lacO sites (BBa_R0011) lac promoter,
+    respectively. The expression of their corresponding repressors (AraC and LacI) by E. coli K12 strains allows the
+    inducible expression in presence of arabinose (0.2 %) and IPTG (0,5 mM).
+  </p>
+  <p>
+    The <i>folC</i> sequence from <i>E. coli</i> MG1655 did not need specific modification, as it was already RFC10 compliant,
+    and obviously codon optimized for our chassis. It was cloned within pSB1C3, alone or associated the folC expression cassette (Figure 1).
+  </p>
+
+
+
 
 </mat-card>
 

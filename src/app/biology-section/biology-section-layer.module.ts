@@ -31,6 +31,7 @@ import { MtxDegradationComponent } from './bio-details/mtx-degradation/mtx-degra
 import { HeterogeniousComponent } from './bio-details/heterogenious/heterogenious.component';
 import { ChromatoExplorerComponent } from './chromato-explorer/chromato-explorer.component';
 import { HplcExplorerPageComponent } from './hplc-explorer-page/hplc-explorer-page.component';
+import { PartsCollectionComponent } from './parts-collection/parts-collection.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { HplcExplorerPageComponent } from './hplc-explorer-page/hplc-explorer-pa
     MtxDegradationComponent,
     HeterogeniousComponent,
     ChromatoExplorerComponent,
-    HplcExplorerPageComponent
+    HplcExplorerPageComponent,
+    PartsCollectionComponent
   ]
 })
 export class BiologySectionLayerModule { }

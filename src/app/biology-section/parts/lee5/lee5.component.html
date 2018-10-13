@@ -1,13 +1,352 @@
 <div class="bannercontainer">
-  <img src="http://2018.igem.org/wiki/images/d/dd/T--GO_Paris-Saclay--parts_underbanner.png" class="bannerimg superposedbanner1">
-  <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png" class="bannerimg superposedbanner2">
-  <div class="headlinetext">LEE5</div>
+  <img src="http://2018.igem.org/wiki/images/d/dd/T--GO_Paris-Saclay--parts_underbanner.png"
+       class="bannerimg superposedbanner1">
+  <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png"
+       class="bannerimg superposedbanner2">
+  <div class="headlinetext"><i>LEE5</i></div>
 </div>
 
 
-<mat-card class="dashboard-card largemargin" >
+<mat-card class="dashboard-card largemargin">
 
-  <p class="withlettrine">Placeholder text.</p>
+  <mat-card  class="z-depth" class="part-card">
+    <mat-card-header>
+      <mat-card-title>LEE5 promoter series</mat-card-title>
+      <mat-card-subtitle>LEE5 &mdash; BBa_K2688010 to BBa_K2688018</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>A constitutive promoter regulated by H-NS (E coli endogeneous) and ler, which allows for
+      heterogeneous expression
+      of downstream gene. Several variants are available, with design implications.
+    </mat-card-content>
+    <mat-card-actions>Registry pages: <a href="http://parts.igem.org/Part:BBa_K2688012" mat-raised-button>LEE5_GFP_native</a>
+      <a href="http://parts.igem.org/Part:BBa_K2688014" mat-raised-button>LEE5_GFP_variant-1</a>
+      <a href="http://parts.igem.org/Part:BBa_K2688016" mat-raised-button>LEE5_GFP_variant-1_inframe</a>
+      <a href="http://parts.igem.org/Part:BBa_K2688018" mat-raised-button>LEE5_GFP_variant-1_ΔTir</a>
+      <a href="http://parts.igem.org/Part:BBa_K2688027" mat-raised-button>LEE5_GFP_native_ΔTir</a>
+
+    </mat-card-actions>
+  </mat-card>
+  <p class="spacemaker"></p>
+
+  <h1>Introduction</h1>
+
+  <p class="withlettrine">
+    For our project, we used only a small part of the island containing the promoter region of the 5th operon, named
+    P<i>LEE5</i>. The native <i>LEE5</i> region used in Leh et al.
+    <reference-box shorthand="Leh2017"></reference-box>
+    corresponds to the (-249 to +273) region
+    of <i>LEE5</i> operon, +1 being the transcription start site. H-NS and Ler specifically bind of this region.
+  </p>
+  <p>
+    This native P<i>LEE5</i> region contains a short coding sequence corresponding to the first 186 pb of the <i>tir</i>
+    gene. <i>tir</i>
+    (translocated intimin receptor) is the bacterial receptor translocated within target cells by a type III secretion
+    system
+    <reference-box shorthand="Franzin2015"></reference-box>
+    . Its complete gene size is ≈ 1500 pb. Therefore only a nonfunctional truncated
+    fragment of <i>tir</i> is encoded within the <i>LEE5</i> region that has been previously characterized.
+    Some of the Biobricks we constructed correspond to this <i>LEE5</i> region, others are deleted of the <i>tir</i>
+    fragment.
+  </p>
+
+  <h1>Cloning of P<sub><i>LEE5</i></sub> region based-Biobricks</h1>
+
+  <p>The <i>LEE5</i>-<i>gfp</i> reporter cassette used in Leh et al.
+    <reference-box shorthand="Leh2017"></reference-box>
+    contains forbidden sites (<i>XbaI</i>, <i>SpeI</i>) which
+    have been mutagenized to generate the <b>pSB1C3-<i>LEE5</i>_<i>gfp</i>_native (<a
+      href="http://parts.igem.org/Part:BBa_K2688012">BBa_K2688012</a>)</b> biobrick without forbidden sites.
+    Briefly,
+    the <i>LEE5</i>-<i>gfp</i> expression cassette from pKK-<i>LEE5</i>-<i>gfp</i> was amplified and mutagenized by PCR
+    using the following primers:
+    GO2018-29 (<span class="sequencemn">TGGCTGATTCTGTCGATtccagaaataattttgtttaactttaagaagg</span>) and GO2018-30
+    (<span class="sequencemn">catagcacagagtagtgaccagtgttggccatggaacag</span>).
+    The pSB1C3 vector was amplified by PCR using GO2018-25 (<span class="sequencemn">ggaATCGACAGAATCAGCC</span>) and
+    GO2018-28
+    (ggtcactactctgtgctatg).The
+    PCR products were cloned into pSB1C3 vector following a Gibson assembly.
+  </p>
+
+  <p>In parallel, we also cloned <i>LEE5</i> region upstream <i>gfp</i> within pSB1C3-RBS-<i>gfp</i> (BBa_E0240)
+    plasmid. We amplified <i>LEE5</i>
+    region by PCR using GO2018-5 (<span class="sequencemn">cgcTCTAGACTGTAGGGGGAAACTTAC</span>) and GO2018-6 (<span
+      class="sequencemn">cgcTACTAGTATCGACAGAATCAGCCAT</span>) primers. The
+    resulting plasmid contained two point mutation and was therefore named <b>‘<i>LEE5</i>_<i>gfp</i>_variant-1’ (<a
+      href="http://parts.igem.org/Part:BBa_K2688014">BBa_K2688014</a>)</b>.
+  </p>
+  <p>
+    In this plasmid, <i>tir</i>’ and <i>gfp</i> coding sequences are not in the same frame. The plasmid pSB1C3-
+    <i>LEE5</i>_<i>gfp</i>_variant-1_inframe (BBa_K2688016) was derivate from this latter by PCR mutagenesis using
+    GO2018-19
+    (<span class="sequencemn">ATCGACAGAATCAGCCATAG</span>) and GO2018-20 (<span class="sequencemn">TAGaGtcacacaggaaagtactag</span>)
+    primers. This put the <i>tir</i> fragment and <i>gfp</i> sequences
+    in the same reading frame within <b>pSB1C3- <i>LEE5</i>_<i>gfp</i>_variant-1_inframe (<a
+    href="http://parts.igem.org/Part:BBa_K2688016">BBa_K2688016</a>)</b>.
+  </p>
+
+  <p>The <i>tir</i> fragment In the ‘<i>LEE5</i>_<i>gfp</i>_variant-1’ (BBa_K2688014) plasmid was deleted by PCR
+    mutagenesis using GO2018-21
+    (<span class="sequencemn">cagtgccGAATTCGCGGCCGCTTCTAGAGggCTGTAGGGGGAAACTTAC</span>) and GO2018-22 (<span
+      class="sequencemn">cgcagtaCTGCAGCGGCCGCTACTAGTAccggatcctcagttgtacag</span>)
+    primers so that <i>gfp</i> start codon is at the position of the former <i>tir</i> start codon within <b>pSB1C3
+      <i>LEE5</i>_<i>gfp</i>_variant-1_Δ<i>tir</i>
+      (<a href="http://parts.igem.org/Part:BBa_K2688018">BBa_K2688018</a>)</b> plasmid.
+  </p>
+  <p>Finally the point mutation remaining in pSB1C3 <i>LEE5</i>_<i>gfp</i>_variant-1_Δ<i>tir</i> (BBa_K2688018) plasmid
+    was removed by PCR
+    mutagenesis using SBM-<i>LEE5</i>-cl13-mut1F (<span class="sequencemn">ATAAAATATTATTTTTCAATACAC</span>) and SBM-<i>LEE5</i>-cl13-mut1R
+    (<span class="sequencemn">TTTAAACGTCTATAGAGACCTTTTTGCA</span>) primers, generating <b>pSB1C3 <i>LEE5</i>_<i>gfp</i>_native_Δ<i>tir</i>
+      (<a href="http://parts.igem.org/Part:BBa_K2688027">BBa_K2688027</a>
+      )</b> plasmid.
+  </p>
+  <p>All plasmid were checked by enzymatic digestion and sequencing.</p>
+
+
+  <h1>Procedure of analysis of <i>gfp</i> expression under the control of <i>LEE5</i></h1>
+
+  <p>To analyse the regulation by H-NS and Ler of <i>LEE5</i>-based Biobricks, we used <i>E. coli</i> K12 MG1655 Z1 <i>hns</i>
+    proficient or
+    deficient strains and EPEC <i>ler</i> proficient and deficient strains as previously described (Leh, Khodr et al.
+    2017).
+    Chemically competent K12 strains were transformed by either BBa_K2688012, BBa_K2688014, BBa_K2688016, BBa_K2688018
+    or
+    BBa_K2688027. EPEC strains were transformed only with BBa_K2688012. The transformed cloned were selected on
+    chloramphenicol (30 µg/ml).</p>
+
+  <p>Strains were cultured in LB medium containing chloramphenicol at 37°C under agitation. In exponential or stationary
+    (24 h) phases, <i>gfp</i> expression was determined by flow cytometric analysis using a Cytoflex S apparatus
+    (Beckman
+    Coulter). Fluorescent microscopy was also performed.
+    pZA31-MCS (Lutz and Bujard 1997) and pSB1C3-<i>tet</i> (BBa_R0040) were used as negative control of fluorescence.
+    pKK-<i>LEE5</i>-<i>gfp</i> is a low copy number plasmid (Leh, Khodr et al. 2017) used as reference.
+    pSB1C3-<i>tet</i>-<i>gfp</i> (Bba_K1493504)
+    was also used as a reference plasmid. The expression of <i>gfp</i> from pSB1C3-<i>tet</i>-<i>gfp</i> (Bba_K1493504)
+    is induced by adding
+    anhydro<i>tet</i>racyclin (aTc, 100 ng/ml).</p>
+
+
+  <h1>Results</h1>
+  <mat-card class="sidefigure">
+    <img src="http://2018.igem.org/wiki/images/3/34/T--GO_Paris-Saclay--1_microfluo.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 1: Fluorescent microscopy of <i>E. coli</i> K12 MG1655Z1
+      containing pSB1C3-LEE5_GFP_native
+      (BBa_K2688012). <br>
+      <div class="captionmaterialmethod">The bacteria were cultured in LB at 37°C during 24h.</div>
+    </div>
+  </mat-card>
+
+  <p>We first assessed the expression of pSB1C3-<i>LEE5</i>_<i>gfp</i>_native (BBa_K2688012) <i>E. coli</i> K12
+    <i>hns</i> proficient or deficient
+    strains and EPEC <i>ler</i> proficient and deficient strains. As illustrated in <b>Figure 1</b>, the expression of
+    <i>gfp</i> from
+    pSB1C3-<i>LEE5</i>_<i>gfp</i>_native construct is heterogeneous in MG1655 Z1 WT strain. Difference of intensity of
+    fluorescence
+    from
+    those bacteria genetically identical suggest a <b>non-genetic phenotypic heterogeneity</b>. Furthermore, we observed
+    a
+    significant expression of the transgene even in presence of H-NS (WT background), suggesting that the basal level of
+    H-NS expression is not sufficient to completely silent <i>LEE5</i> region harbored by a multi-copy plasmid.
+  </p>
+
+
+  <p>We thus assessed transgene expression at the single cell level by flow cytometry analysis in <i>E. coli</i> K12
+    MG1655 Z1 WT
+    and Δ<i>hns</i> strains (<b>Figure 2</b>). We confirmed that there is a significant <i>gfp</i> expression from
+    pSB1C3-<i>LEE5</i>_<i>gfp</i>_native
+    (BBa_K2688012) even in presence of H-NS. This level is 10-fold higher than with pKK-<i>LEE5</i>-<i>gfp</i> low copy
+    plasmid (≈ 20
+    copies per cell) (Leh, Khodr et al. 2017), suggesting that increasing the <i>LEE5</i> copy-number (≈ 100 copies per
+    cell in
+    pSB1C3) limits the efficiency of H-NS silencing on each copy. Our new biobrick pSB1C3-<i>LEE5</i>_<i>gfp</i>_native
+    (BBa_K2688012)
+    behaves the same than the reference plasmid in regard to H-NS regulation since the deletion of H-NS is associated to
+    a
+    ≈ 50-fold of <i>LEE5</i> activity. This indicate that <b><i>LEE5</i> cloned in pSB1C3 is partially silenced by H-NS</b>.
+  </p>
+  <p>
+    Finally we compared the relative activity of <i>LEE5</i> and <i>tet</i> promoters. Under inducing conditions (in
+    absence for <i>LEE5</i>,
+    in presence of aTc for <i>tet</i>), <i>gfp</i> expression from pSB1C3-<i>LEE5</i>_<i>gfp</i>_native (BBa_K2688012)
+    and pSB1C3-<i>tet</i>-<i>gfp</i>
+    (Bba_K1493504) is similar, indicating that <b><i>LEE5</i> promoter can be almost as active as <i>tet</i> promoter
+    under suitable
+    conditions</b>.
+  </p>
+  <p>x
+    Of note, we observe that <i>tet</i> promoter is slightly silenced by H-NS (only 2-fold repression) and insensitive
+    to H-NS
+    level under activating (aTc) condition. <b>Moreover, there is a basal <i>gfp</i> expression from
+      pSB1C3-<i>tet</i>-<i>gfp</i>
+      (Bba_K1493504),
+      suggesting again that a high copy number of pSB1C3 could limit the efficiency of promoter repression (here by
+      TetR)</b>.
+  </p>
+
+
+  <mat-card class="normalmargin" id="fig2">
+    <img src="http://2018.igem.org/wiki/images/d/da/T--GO_Paris-Saclay--2_exprlevels.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 2: Mean fluorescence intensity of different strains of <i>E.
+      coli</i> harboring pSB1C3-<i>LEE5</i>_<i>GFP</i>_native (BBa_K2688012) or control plasmids
+      <br><br>
+      <div class="captionmaterialmethod">
+        WT (“W”) and Δ<i>hns</i> (“H”) strains harboring the indicated plasmid were cultured at 37°C in LB supplemented
+        with
+        chloramphenicol. In stationary phase (24 h), GFP expression was determined by flow cytometric analysis. The
+        results correspond to the means (± standard errors) of fluorescence from two experiments performed with three
+        independent clones of WT EPEC and Δ<i>hns</i> strains. Strains containing plasmids without <i>gfp</i> transgene
+        [WT strain
+        with pZA31-MCS
+        <reference-box shorthand="Lutz1997"></reference-box>
+        and Δhns strain with pSB1C3-<i>tet</i> (BBa_R0040)] were used as a negative
+        control of fluorescence. A.U.: arbitrary units.
+      </div>
+    </div>
+  </mat-card>
+  <p>
+    We also analyze <i>LEE5</i> activity depending on the growth phase in MG1655 Z1 WT strain (<b>Figure 3</b>). The
+    fluorescence of
+    bacteria was higher in stationary phase than in exponential phase, perhaps because of the accumulation of <i>gfp</i>
+    (which
+    is a stable protein). Interestingly <i>LEE5</i> activity was heterogeneous in exponential as well as in stationary
+    phase.
+    This heterogeneity is higher than that associated to <i>tet</i> promoter. This suggests that <i>LEE5</i>_<i>gfp</i>_native
+    is suitable
+    for
+    moderate level and high heterogeneity of transgene expression.
+  </p>
+
+
+  <mat-card class="normalmargin">
+    <img src="http://2018.igem.org/wiki/images/6/62/T--GO_Paris-Saclay--3_cytometry_fluo.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 3: Dot plot of the green cell fluorescence cell depending on
+      cell size
+      (FSC, forward side-scatter) and growth phase of bacteria harboring pSB1C3-<i>LEE5</i>_GFP_native (BBa_K2688012)
+      <br><br>
+      <div class="captionmaterialmethod">
+        The results correspond to the flow cytometric analysis of one clone of MG1655Z1 WT strain harboring pSB1C3-<i>LEE5</i>_GFP_native
+        (BBa_K2688012), pSB1C3-<i>tet</i>-<i>gfp</i> (Bba_K1493504) or pZA31-MCS (CTRL). Exponential and stationary
+        phases correspond to 6
+        h and 24 h at 37°C of growth respectively. WT strain harboring pSB1C3-<i>tet</i>-<i>gfp</i> (Bba_K1493504) with
+        aTc was used as
+        positive control.
+      </div>
+    </div>
+  </mat-card>
+
+  <p>We wanted to analyze the competition between Ler and H-NS for the regulation of <i>LEE5</i> region. We chose EPEC
+    as a
+    chassis strain to perform this experiment since it is <b>naturally <i>hns</i><sup>+</sup> and <i>ler</i><sup>+</sup></b>.
+    We analyzed the
+    <i>gfp</i> expression of
+    EPEC WT and Δ<i>ler</i> strains harboring pSB1C3-<i>LEE5</i>_<i>gfp</i>_native (BBa_K2688012) (<b>Figure 4</b>). We
+    observed that Ler is
+    required to activate <i>LEE5</i> promoter in EPEC. The deletion of Ler results in a complete silencing of
+    <i>LEE5</i> in the EPEC
+    genetic background. <b>These results indicate that <i>LEE5</i> region cloned into pSB1C3-<i>LEE5</i>_<i>gfp</i>_native
+      (BBa_K2688012) is
+      recognized and activated by Ler in presence of H-NS</b>. </p>
+
+
+  <mat-card class="normalmargin">
+    <img src="http://2018.igem.org/wiki/images/c/c9/T--GO_Paris-Saclay--4_GFP_EPEC.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 4: GFP expression in EPEC WT and Δ<i>ler</i> strains harboring
+      pSB1C3-LEE5_GFP_native (BBa_K2688012)
+      <br><br>
+      <div class="captionmaterialmethod">
+        WT EPEC and Δ<i>ler</i> strains containing the pSB1C3-LEE5_GFP_native (BBa_K2688012) plasmid were cultured at
+        37°C in
+        LB. The Δler EPEC strain containing the pKK-gfp plasmid (without promoter upstream the <i>gfp</i> gene, «CTL» –
+        ref:
+        Leh et al. 2017) was used as a negative control of fluorescence. In stationary phase (24 h), GFP expression was
+        determined by flow cytometric analysis. On the left, the pattern of <i>gfp</i> expression is presented for one
+        representative clone in each condition. On the right, the results correspond to the means (± standard errors) of
+        fluorescence from one experiment performed with three independent clones of WT EPEC and Δ<i>ler</i> strains
+        containing
+        the pSB1C3-LEE5_GFP_native (BBa_K2688012) plasmid. A.U.: arbitrary units
+      </div>
+    </div>
+  </mat-card>
+
+
+  <h1>Characterization of <i>LEE5</i> variants</h1>
+
+  <p>To obtain a <b>collection of vectors</b> derived from <i>LEE5</i>, we generated pSB1C3-RBS-<i>gfp</i> (BBa_E0240)
+    based
+    vectors
+    containing
+    different version of <i>LEE5</i>: pSB1C3-<i>LEE5</i>_<i>gfp</i>_variant-1’ (BBa_K2688014) (containing two point
+    mutations); pSB1C3-
+    <i>LEE5</i>_<i>gfp</i>_variant-1_inframe (BBa_K2688016) (in which <i>tir</i> fragment and <i>gfp</i> sequences in
+    the same reading frame);
+    pSB1C3
+    <i>LEE5</i>_<i>gfp</i>_variant-1_Δ<i>tir</i> (BBa_K2688018) and pSB1C3 <i>LEE5</i>_<i>gfp</i>_native_Δ<i>tir</i>
+    (BBa_K2688027) plasmids in which the <i>gfp</i>
+    start
+    codon is at the position of the former <i>tir</i> start codon.</p>
+
+  <p>A comparative analysis of <i>gfp</i> expression from these vectors was performed in MG1655 Z1 WT and Δ<i>hns</i>
+    strains (<b>Figure
+      5</b>).
+    The results indicate that all constructs are under the negative control of H-NS. Of note, the basal level of
+    fluorescence is lower than with pSB1C3-<i>LEE5</i>_<i>gfp</i>_native (BBa_K2688012) which may be due in difference
+    of <i>gfp</i>
+    sequences
+    between this plasmid and pSB1C3-RBS-<i>gfp</i> (BBa_E0240) based vectors. Interestingly, the coding sequence cloned
+    downstream P<i>LEE5</i> region have to be in the same reading frame than <i>tir</i> fragment (even if it has its own
+    RBS sequence)
+    to improve gene expression. The <i>tir</i> region can be deleted so and its start codon used as the start codon of
+    the
+    transgene without decreasing transgene expression or relieving H-NS repression.</p>
+
+
+  <mat-card class="eatintotextmargin">
+    <img src="http://2018.igem.org/wiki/images/3/38/T--GO_Paris-Saclay--5_MeanFluoCollect.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 5: Mean fluorescence of different strains of MG1655Z1 harboring
+      pSB1C3-LEE5_GFP_variant-1’ (BBa_K2688014), pSB1C3- LEE5_GFP_variant-1_inframe (BBa_K2688016), pSB1C3
+      LEE5_GFP_variant-1_ΔTir
+      (BBa_K2688018) or pSB1C3 LEE5_GFP_native_ ΔTir (BBa_K2688027)
+      <br><br>
+      <div class="captionmaterialmethod">
+        <i>E. coli</i> K12 MG1655Z1 WT (“W”) and Δ<i>hns</i> (“H”) strains containing these various plasmids were
+        cultured at
+        37°C in LB. In stationary phase (24 h), GFP expression was determined by flow cytometric analysis. The results
+        correspond to the means (± standard errors) of fluorescence from three independent experiments (except for
+        BBa_K2688027 for which only one experiment was performed). Strains containing plasmids without <i>gfp</i>
+        transgene [WT
+        strain with pZA31-MCS
+        <reference-box shorthand="Lutz1997"></reference-box>
+        and Δ<i>hns</i> strain with pSB1C3-<i>tet</i> (BBa_R0040)] were used as a negative
+        control of fluorescence (« CTRL »). The asterisks represent point mutations.
+      </div>
+    </div>
+  </mat-card>
+
+  <p>Finally, we propose a collection of P<i>LEE5</i> region based-promoter which cover a range of activities that suits
+    difference level of expression (Table 1).</p>
+
+  <mat-card class="eatintotextmargin">
+    <img src="http://2018.igem.org/wiki/images/8/8f/T--GO_Paris-Saclay--LEE5_table1.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Table 1: Promoter activity of LEE5 based-promoter collection
+      <br><br>
+      <div class="captionmaterialmethod">
+        The promoter activity was assessed by analyzing GFP expression of <i>E. coli</i> K12 MG1655Z1 ∆<i>hns</i>
+        strains by flow cytometric analysis. pSB1C3 LEE5_GFP_variant-1_ΔTir (BBa_K2688018) is the strongest promoter,
+        used as a reference for the normalization of others promoters.
+      </div>
+    </div>
+  </mat-card>
+
+
+  <p class="intermediateconclusion">
+    <b>In conclusion</b>, we have successfully obtained a <i>LEE5</i>-based collection of biobricks that are regulated
+    by HNS
+    (silencing) and Ler (activation). These biobricks are source of ‘noise’ i.e. can be used to generate heterogeneous
+    transgene expression.
+
+  </p>
+
+<p class="spacemaker"></p>
+
 
 </mat-card>
 

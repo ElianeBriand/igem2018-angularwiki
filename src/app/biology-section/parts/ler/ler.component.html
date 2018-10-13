@@ -1,13 +1,313 @@
 <div class="bannercontainer">
-  <img src="http://2018.igem.org/wiki/images/d/dd/T--GO_Paris-Saclay--parts_underbanner.png" class="bannerimg superposedbanner1">
-  <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png" class="bannerimg superposedbanner2">
+  <img src="http://2018.igem.org/wiki/images/d/dd/T--GO_Paris-Saclay--parts_underbanner.png"
+       class="bannerimg superposedbanner1">
+  <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png"
+       class="bannerimg superposedbanner2">
   <div class="headlinetext">Ler</div>
 </div>
 
 
-<mat-card class="dashboard-card largemargin" >
+<mat-card class="dashboard-card largemargin">
 
-  <p class="withlettrine">Placeholder text.</p>
+  <mat-card class="z-depth" class="part-card">
+    <mat-card-header>
+      <mat-card-title>Ler regulator series</mat-card-title>
+      <mat-card-subtitle>ler &mdash; BBa_K2688019 to BBa_K2688021</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>A transcription regulator protein that binds to LEE5 promoter sites, counteracting H-NS silecing
+      and allowing transcription.
+      Several variants are available, with design implications.
+    </mat-card-content>
+    <mat-card-actions>Registry pages: <a href="http://parts.igem.org/Part:BBa_K2688022" mat-raised-button>Ler1</a>
+      <a href="http://parts.igem.org/Part:BBa_K2688019" mat-raised-button>Ler2</a>
+      <a href="http://parts.igem.org/Part:BBa_K2688024" mat-raised-button>Ler3</a>
+    </mat-card-actions>
+  </mat-card>
+
+  <p class="spacemaker"></p>
+
+  <p class="intermediateconclusion">
+    <b>Executive summary</b>: Ler (LEE-encoded regulator) belongs to the H-NS family of silencers. However, contrary to
+    H-NS,
+    it allows expression of the downstream genes. We have demonstrated that Ler Biobricks can activate <i>LEE5</i> and
+    that the
+    ‘HeteroGenious’
+    <i>LEE5</i>-Ler device can generate a heterogeneity of transgene expression within a clonal population. This study
+    opens
+    new insights on the design of ‘noise’ in synthetic biology.
+
+  </p>
+  <p class="spacemaker"></p>
+
+  <h1>Introduction</h1>
+
+  <p class="withlettrine">
+    Ler (LEE-encoded regulator) belongs to the H-NS family of xenogeneic silencers. This protein is encoded by the LEE
+    pathogenicity island present in some pathogenic A/E (attachment/effacement) <i>Escherichia coli</i>, <i>Citrobacter
+    rodentium</i>
+    and <i>Escherichia albertii</i>
+    <reference-box shorthand="Franzin2015"></reference-box>
+    . Its main action is to activate the expression of the
+    pathogenicity island by counteracting H-NS silencing. Of note, Ler is neither toxic nor pathogenic.
+  </p>
+
+  <p>During this project we cloned three versions of Ler (<b>Figure 1</b>):</p>
+  <mat-list>
+    <mat-list-item>
+      <h4 mat-line><b>Ler<sub>1</sub></b></h4>
+      <p mat-line> Ler protein of E. coli 3030-1 (GenBank: EGW78798.1). Leh and collaborators have shown that Ler1
+        can
+        activate <i>LEE5</i> promoter in K12 E. coli heterologous context
+        <reference-box shorthand="Leh2017"></reference-box>
+      </p>
+    </mat-list-item>
+    <mat-list-item></mat-list-item>
+    <mat-list-item>
+      <h4 mat-line><b>Ler<sub>2</sub></b></h4>
+      <p mat-line> Ler protein of enteropathogenic (EPEC) E. coli E2348/69 (NCBI Reference Sequence:
+        WP_001253284.1).<br>
+        In its native context (EPEC), Ler2 is required to activate <i>LEE5</i> expression under appropriate
+        conditions.<br>
+        Moreover, the Ler2 binding sites on <i>LEE5</i> region have been characterized by DNA footprinting.</p>
+    </mat-list-item>
+    <mat-list-item></mat-list-item>
+    <mat-list-item>
+      <h4 mat-line><b>Ler<sub>3</sub></b></h4>
+      <p mat-line> Ler2 K34M is a spontaneous mutant of Ler2 that was obtained during cloning. <br> We wanted to
+        characterize
+        further the impact of the K34M mutation on Ler2 activity.</p>
+    </mat-list-item>
+  </mat-list>
+
+  <mat-card class="eatintotextmargin">
+    <img src="http://2018.igem.org/wiki/images/b/be/T--GO_Paris-Saclay--1_proteinfeatures.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 1: Ler proteins characterized for this project
+      <br><br>
+      <div class="captionmaterialmethod">
+        A. Schematic representation of Ler1 structure. Secondary predictions performed with APSSP (Advanced Protein
+        Secondary Structure Prediction Server). The arrow indicates the relative position of the K residue which is
+        mutated in Ler3. <br>
+        B. Tridimensional prediction of a fragment of Ler1 (11-57). The analysis was performed by SWISS-MODEL (with a
+        research of templates protein structures).<br>
+        C. Multiple alignment of Ler sequences (Clustal W)<br>
+      </div>
+    </div>
+  </mat-card>
+
+
+  <h1>Cloning of Ler biobricks</h1>
+
+  <p>The native <i>ler1</i> gene contains forbidden sites. Therefore, we designed an optimized version of this gene
+    (devoid of
+    forbidden restriction sites). This ler1 version was synthetized downstream a synthetic RBS and cloned within
+    pSB1C3-<i>tetO</i> (<a href="http://parts.igem.org/Part:BBa_R0040">BBa_R0040</a>), generating pSB1C3_<i>tetO</i>_RBS_<i>ler1</i>
+    (<a href="http://parts.igem.org/Part:BBa_K2688022">BBa_K2688022</a>).</p>
+  <p>To construct pSB1C3_ RBS_<i>ler</i>_2 (<a href="http://parts.igem.org/Part:BBa_K2688019">BBa_K2688019</a>), the
+    native <i>ler2</i> gene with its RBS was amplified by PCR using GO2018-7
+    (<span class="sequencemn">CCGCTTCTAGAGAATAATTTTGTTTAACTTTAAG</span>) and GO2018-8 (<span class="sequencemn">CGCAGTACTGCAGCGGCCGCTACTAGTATCATTAAATATTTTTCAGCGGTATTATTTC</span>)
+    primers
+    from a lab collection plasmid of Leh and collaborators
+    <reference-box shorthand="Leh2017"></reference-box>
+    . The PCR product was digested and
+    cloned within pSB1C3, generating pSB1C3_ tetO_RBS_<i>ler2</i> (<a href="http://parts.igem.org/Part:BBa_K2688023">BBa_K2688023</a>).
+    After sequencing, we obtained a clone harboring
+    plasmids with the expected sequence and another clone that contained a plasmid encoding a mutated version of
+    <i>ler2</i>
+    gene. Since this was a false-sense mutation affecting a positively charged residue (K34M) we further characterized
+    the
+    impact of this mutation on Ler2 activity. The plasmid encoding this mutant version of <i>ler</i> is pSB1C3_
+    tetO_RBS_<i>ler3</i>
+    (<a href="http://parts.igem.org/Part:BBa_K2688024">BBa_K2688024</a>).
+  </p>
+
+  <h1>Procedure of analysis of Ler activity on <i>LEE5</i>-gfp expression cassette</h1>
+
+  <p>To analyse the regulation of <i>LEE5</i> by ler based-biobricks, we used <b></b><i>E. coli</i> K12 MG1655 Z1
+    <i>att</i>Phi80Ω<i>LEE5</i>-<i>gfp</i> reporter strain harboring single integrated copy of the <i>LEE5</i>-gfp
+    reporter cassette
+    (Bury-Moné’s lab collection, <b>Figure
+      2</b>). This
+    strain contains a Z1 cassette ensuring the expression of TetR (repressor of tet promoter)
+    <reference-box shorthand="Lutz1997"></reference-box>
+    .
+    Moreover a <i>LEE5</i> reporter cassette was inserted at attPhi80 site within this strain using J118 vector as
+    previously
+    described
+    <reference-box shorthand="Zucca2013"></reference-box>
+    <reference-box shorthand="Leh2017"></reference-box>
+    . Chemically competent MG1655 Z1 <i>att</i>Phi80Ω<i>LEE5</i>-<i>gfp</i>
+    bacteria were transformed with pSB1C3-<i>tet</i>-RBS-<i>ler1</i> (<a href="http://parts.igem.org/Part:BBa_K2688022">BBa_K2688022</a>),
+    pSB1C3-tet-RBS-ler2
+    (<a href="http://parts.igem.org/Part:BBa_R0040">BBa_K2688023</a>),
+    pSB1C3-<i>tet</i>-RBS-<i>ler3</i> (<a href="http://parts.igem.org/Part:BBa_K2688024">BBa_K2688024</a>) or the
+    control
+    plasmid pSB1C3-tet (<a href="http://parts.igem.org/Part:BBa_R0040">BBa_R0040</a>) and selected on chloramphenicol
+    (30
+    µg/ml). The expression of ler genes was induced by adding anhydrotetracyclin (aTc, 1 to 100 ng/ml) to the medium.
+    After 24 h growth at 37°C, bacteria fluorescence was assessed by flow cytometry using a Cytoflex S apparatus (<i>Beckman
+      Coulter</i>). Mg1655 Z1 harboring pZA31-MCS plasmid
+    <reference-box shorthand="Lutz1997"></reference-box>
+    was used as a negative control of fluorescence.
+  </p>
+
+
+  <mat-card class="normalmargin">
+    <img src="http://2018.igem.org/wiki/images/3/3f/T--GO_Paris-Saclay--2_IntegrativePlasmid.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 2: MG1655 Z1 <i>att</i>Phi80Ω<i>LEE5</i>-<i>gfp</i> reporter
+      strain
+      <br><br>
+      <div class="captionmaterialmethod">
+        A. <b>Genetic organization of J118-<i>LEE5</i>-gfp plasmid</b> used to obtain the strain. This plasmid must be
+        produced
+        in
+        PIR1 bacteria (which can replicate R6K origin). While the expression cassette is surrounded by the Biobrick
+        prefix and suffix sequences, <i>SpeI</i> and <i>XbaI</i> sites are not unique in J118 but <i>EcoRI</i> and <i>PstI</i>
+        sites. Cm<sup>R</sup>:
+        chloramphenicol resistance.<br>
+        B. <b>Genetic organization of MG1655 Z1 <i>att</i>Phi80Ω<i>LEE5</i>-<i>gfp</i> reporter strain</b>. The Z1
+        cassette is
+        integrated at
+        attB-lambda phage site and encodes LacI and TetR repressor under the control of constitutive promoters. It
+        confers resistance to spectinomycin (Sp<sup>R</sup>). To obtain MG1655 Z1 <i>att</i>Phi80Ω<i>LEE5</i>-<i>gfp</i>
+        strain, J118-<i>LEE5</i>-<i>gfp</i> was
+        introduced within MG1655 Z1 strain harboring a helper thermosensitive plasmid that encodes Phi80 phage
+        integrase.
+        Of note MG1655 Z1 strain cannot replicate R6K origin so that the CmR-clones necessarily harbor an integrated
+        plasmid. pCP20 plasmid encoding a flippase was thereafter introduced within the Cm<sup>R</sup>-clones to remove
+        Cm<sup>R</sup>
+        cassette. The MG165 5Z1 <i>att</i>Phi80Ω<i>LEE5</i>-<i>gfp</i> reporter strain is therefore
+        chloramphenicol-resistance,
+        which enables
+        the introduction of pSB1C3 derived plasmids within this strain (For further protocol details see
+        <reference-box shorthand="Zucca2013"></reference-box>
+        ).
+      </div>
+    </div>
+  </mat-card>
+
+  <h1>Results</h1>
+
+  <p>As illustrated on <b>Figure 3</b>, we observed that MG1655 Z1 <i>att</i>Phi80Ω<i>LEE5</i>-<i>gfp</i> presents a
+    very low basal fluorescence [as
+    compared to the negative control without any reporter gene, ‘CTRL1’], suggesting that <i>LEE5</i>-<i>gfp</i>
+    reporter cassette
+    integrated at <i>att</i>Phi80 site is very well silenced in absence of Ler.
+  </p>
+
+  <p>In absence of <i>tet</i> inducer (no aTc), MG1655 Z1 <i>att</i>Phi80Ω<i>LEE5</i>-<i>gfp</i> harboring <i>ler1</i>
+    or <i>ler3</i> gene on the multicopy vector
+    pSB1C3 are 18-fold or 1.6-fold more fluorescent than the control strain (with pSB1C3-tet, ‘CTRL2’), respectively.
+  </p>
+
+  <p>These observations indicates that:</p>
+
+
+  <mat-list>
+    <mat-list-item>
+      <mat-icon mat-list-icon>keyboard_arrow_right</mat-icon>
+      <p mat-line>There is a basal expression of ler transgene under the control of tet (as directly measured with
+        pSB1C3-tet-gfp
+        (BBa_K1493504) (see also <a
+          (click)="this.router.navigate(['/biology/lee5'], { fragment: 'fig2'})">this figure</a>)
+      </p>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon mat-list-icon>keyboard_arrow_right</mat-icon>
+      <p mat-line>We can hypothetize that TetR repression of tet promoter is not complete because pSB1C3 vector is a
+        high copy number
+        vector (≈100 copies/cell)</p></mat-list-item>
+    <mat-list-item>
+      <mat-icon mat-list-icon>keyboard_arrow_right</mat-icon>
+      <p mat-line>A very low level of expression of Ler1 is sufficient to strongly activate attPhi80Ω<i>LEE5</i>-gfp
+        single copy</p>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon mat-list-icon>keyboard_arrow_right</mat-icon>
+      <p mat-line>The K34M mutation increases Ler2 activity (slightly higher for Ler3 than Ler2).</p>
+    </mat-list-item>
+  </mat-list>
+
+
+  <p>When increasing Ler1 expression by addition of a range of aTc, we did not observe a huge change on <i>LEE5</i>
+    activity,
+    suggesting that <i>LEE5</i>-gfp expression is already almost maximal with a basal expression of ler1 from pSB1C3.
+    Interestingly, the increase of Ler2 and Ler3 expressions resulted in an increase of <i>LEE5</i>-<i>gfp</i>
+    expression for the lowest
+    tested concentrations of aTc (1 and 5 ng/ml). This indicates that Ler2 is active, but much less effective than Ler1
+    in
+    regard to <i>LEE5</i>-gfp activation in <i>E. coli</i> K12. We also confirmed that Ler3 is slightly more active than
+    Ler2 in these
+    conditions.</p>
+
+  <p>Finally higher expression of Ler2 and Ler3 (10 to 100 ng/ml of aTc) reduces <i>LEE5</i> activity, suggesting that
+    the
+    ‘silencer’ properties of Ler2 and its derivate may be revealed in presence of a high amount of proteins. Perhaps
+    that
+    the oligomerization of these proteins on <i>LEE5</i> could silence the gene. Alternatively high concentrations of
+    Ler2 and
+    its derivate might be toxic for the cell (and so detrimental for <i>LEE5</i> activity).
+  </p>
+
+  <mat-card class="normalmargin">
+    <img src="http://2018.igem.org/wiki/images/d/d5/T--GO_Paris-Saclay--3_Ler123_LEE5-GFP.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 3: Effect of Ler1, Ler2 and Ler3 on LEE5-gfp expression level
+      <br>
+      <div class="captionmaterialmethod">
+        The mean intensity of fluorescence (in arbitrary units, A.U.) of <i>E. coli</i> MG1655Z1 <i>att</i>Phi80Ω<i>LEE5</i>-<i>gfp</i>  reporter
+        strains harboring pSB1C3-<i>tet</i>-RBS-<i>ler1</i> (BBa_K2688022), pSB1C3-<i>tet</i>-RBS-<i>ler2</i> (BBa_K2688023) and pSB1C3-<i>tet</i>-RBS-<i>ler3</i>
+        (BBa_K2688024) or a control plasmid [‘CTLR2’, pSB1C3-tet (BBa_R0040)] was assessed 24 h after growth at 37°C in
+        LB medium supplemented or not with anhydroteracyclin (aTc). We used MG1655 Z1 harboring pZA31-MCS (‘CTRL1’) as a
+        negative control of fluorescence.
+      </div>
+    </div>
+  </mat-card>
+
+  <p>The analysis of the distribution of the bacterial population depending on <i>LEE5</i> activity revealed a great <b>heterogeneity</b>
+    (<b>Figure 4</b>). The percentage of GFP+ cells can vary from 1 to ≈ 90 % depending on the Ler variant used and on
+    its level
+    of expression. Moreover the mean intensity of fluorescent bacteria can vary from on a dynamic range of 1 to 3-log in
+    the same culture experimental condition! Finally we observed for some experimental conditions (e.g. strain harboring
+    pSB1C3-<i>tet</i>-RBS-<i>ler1</i> cultured with 50 or 100 ng/ml aTc) a <b>bimodal pattern</b> of expression which
+    represents a paroxysm of
+    non-genetic phenotypic heterogeneity. This bimodal pattern of expression is obtained for the highest concentrations
+    of
+    inducer of Ler1, suggesting that Ler1 can also have a dual impact (activation vs. silencing) at high concentration.
+  </p>
+
+
+  <mat-card class="normalmargin">
+    <img src="http://2018.igem.org/wiki/images/d/d0/T--GO_Paris-Saclay--4_HeteroGenious.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 4: Heterogeneity of LEE5 activity depending on Ler variant and
+      level of expression
+      <br>
+      <div class="captionmaterialmethod">
+        See the legend of Figure 3 for experimental conditions.
+        Abbreviations: aTc: anhydrotetracyclin; A.U.: arbitrary units; MFI: mean fluorescence intensity.
+      </div>
+    </div>
+  </mat-card>
+
+
+  <p class="intermediateconclusion"><b>Conclusion</b>: Whereas Ler1, Ler2 and Ler3 sequences are very similar (Figure
+    1), these proteins behave quite differently
+    regarding their effect on attPhi80Ω<i>LEE5</i>-<i>gfp</i> cassette. We have demonstrated that Ler Biobricks can
+    activate <i>LEE5</i> and
+    that the ‘HeteroGenious’ <i>LEE5</i>-Ler device can generate a heterogeneity of transgene expression within a clonal
+    population. This study opens new insights on the design of ‘noise’ in synthetic biology.
+  </p>
+
+  <p class="spacemaker"></p>
+  <p>
+    <b>Note</b>: We further aimed to find a constitutive promoter that generates a level of Ler expression suitable to
+    obtain de
+    bimodal pattern of LEE5 activity. We were therefore interested by the Anderson promoter collection. After sequencing
+    the pSB1C3 plasmid harbouring four promoters of this collection we decided to develop
+    <a (click)="this.router.navigate(['/improve'], { fragment: 'top'})">an approach to improve one of these
+      Biobricks</a>.
+  </p>
+
+  <p class="spacemaker"></p>
+
 
 </mat-card>
 

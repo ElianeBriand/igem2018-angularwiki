@@ -1,4 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
+import {Router} from '@angular/router';
 
 export interface BiobrickRecord {
   symbol: string;
@@ -34,7 +35,7 @@ export class PartsComponent implements OnInit {
   datasource_MTX = MTX_OLDER_BIOBRICK;
 
 
-  constructor(private renderer2: Renderer2) { }
+  constructor(private renderer2: Renderer2, public router: Router) { }
 
   ngOnInit() {
   }

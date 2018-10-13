@@ -1,17 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
 import * as d3 from 'd3';
+import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-heterogenious',
-  templateUrl: './heterogenious.component.html',
-  styleUrls: ['./heterogenious.component.css']
+  selector: 'app-parts-collection',
+  templateUrl: './parts-collection.component.html',
+  styleUrls: ['./parts-collection.component.css']
 })
-export class HeterogeniousComponent implements OnInit {
-
-  private fragment: string;
-
-  constructor(private route: ActivatedRoute) { }
+export class PartsCollectionComponent implements OnInit {
 
   HNS_label;
   HNS;
@@ -111,8 +107,9 @@ export class HeterogeniousComponent implements OnInit {
 
   }
 
+  constructor(public router: Router) { }
+
   ngOnInit() {
-    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
 
     this.HNS_label = d3.select("#HNSLabel");
     this.HNS = d3.select("#HNS");
@@ -130,13 +127,6 @@ export class HeterogeniousComponent implements OnInit {
 
     this.runLerAnim();
     //this.runHNSAnim();
-
-  }
-
-  ngAfterViewInit(): void {
-    try {
-      document.querySelector('#' + this.fragment).scrollIntoView();
-    } catch (e) { }
   }
 
 }
