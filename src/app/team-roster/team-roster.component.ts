@@ -65,7 +65,7 @@ export class SanitizeHtml2Pipe implements PipeTransform {
 export class TeamRosterComponent implements OnInit, AfterViewInit {
 
   static singletonInstance: TeamRosterComponent;
-
+/*
 
   membersList: TeamMember[] = [
     new TeamMember('Loading members...',
@@ -125,7 +125,8 @@ export class TeamRosterComponent implements OnInit, AfterViewInit {
 
     return array;
   };
-
+*/
+constructor() {}
   ngOnInit() {
 
   }

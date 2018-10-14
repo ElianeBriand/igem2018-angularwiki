@@ -1,14 +1,27 @@
 <div class="bannercontainer">
-  <img src="http://2018.igem.org/wiki/images/1/1b/T--GO_Paris-Saclay--tableau_banner.png"
-       class="bannerimg superposedbanner1">
-  <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png"
-       class="bannerimg superposedbanner2">
-  <div class="headlinetext">Project&nbsp;Summary</div>
+  <img src="http://2018.igem.org/wiki/images/1/1b/T--GO_Paris-Saclay--tableau_banner.png" class="bannerimg superposedbanner1">
+  <img src="http://2018.igem.org/wiki/images/9/90/T--GO_Paris-Saclay--empty-banner.png" class="bannerimg superposedbanner2">
+  <div class="headlinetext">Methotrexate&nbsp;Degradation</div>
 </div>
+<!--
+<div class="bannercontainer">
+  <video width="1200" height="600" class="bannerimg superposedbanner1" loop="true" autoplay="true" muted="true">
+    <source src="http://2018.igem.org/wiki/images/2/22/T--GO_Paris-Saclay--export_cell.mov" type="video/quicktime" >
+    Your browser does not support the video tag.
+  </video>
+
+ img src="http://2018.igem.org/wiki/images/8/89/T--GO_Paris-Saclay--topbanner_nocartouche.png"
+       class="bannerimg superposedbanner2">
+  <div class="headlinetextbottom">Project&nbsp;Summary</div>
+</div>
+
+-->
 
 <mat-card class="dashboard-card largemargin">
 
-  <h1>Abstract</h1>
+
+    <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Abstract</h1>   </div>
+
   <p>Cytotoxic anticancer drugs are among harmful chemicals found in hospital wastewater at high concentration. Physical
     and chemical degradation methods exist but are often inefficient, unsustainable or expensive. We propose
     MethotrExit, a bioreactor-based approach to tackle this problem. We focused on the biotransformation of methotrexate
@@ -21,7 +34,8 @@
     Modeling of this system highlights the interest of a division of labor between ‘cleaning’ and ‘stem’ bacterial
     cells.
   </p>
-  <h1>Project genesis</h1>
+
+    <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Project genesis</h1>   </div>
 
   <p class="withlettrine">
     Our team GO Paris Saclay started its journey focusing on two main projects : one named ‘Cytodestiny’ aimed to
@@ -66,7 +80,7 @@
     Since MTX is highly toxic, its presence in the hospital wastewater is worrying.
   </p>
 
-  <h1>Design of the methotrexate transformation pathway</h1>
+<div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Design of the methotrexate transformation pathway</h1>   </div>
   <div class="formoredetailssee">For a more detailled view, see <a
     (click)="this.router.navigate(['/biology','mtx'], { fragment: 'top'})">Methotrexate Degradation</a></div>
 
@@ -121,23 +135,23 @@
     We decided to take advantage of the availability in our lab of the Keio collection
     <reference-box shorthand="Baba2006"></reference-box>
     to test the
-    growth of several <i>E. coli</i> K12 mutants (&Delta;<i>acrA1</i>, &Delta;<i>acrB</i>, &Delta;<i>abgT</i>,
+    growth of several <i>E. coli</i> K12 mutants (&Delta;<i>acrA</i>, &Delta;<i>acrB</i>, &Delta;<i>abgT</i>,
     &Delta;<i>tolC</i>) in presence of MTX (Figure 2).
   </p>
 
   <p class="intermediateconclusion">
     <b>Main conclusions</b>: The WT strain may constitute a suitable ‘MTX-resistant chassis’, whereas
-    &Delta;<i>acrA1</i> and &Delta;<i>tolC</i> strains could constitute MTX-sensitive indicative
+    &Delta;<i>acrA</i> and &Delta;<i>tolC</i> strains could constitute MTX-sensitive indicative
     strains as well as chassis accumulating MTX. Since TolC is a general efflux pump component involved in a large panel
     of compound efflux
     (even in standard LB growth conditions), we thought it could be interesting to also evaluate its general interest as
     a chassis sequestrating MTX
-    (and possibly other toxic molecules). Finally, the &Delta;<i>acrA1</i> mutant was used as an indicative strain for
+    (and possibly other toxic molecules). Finally, the &Delta;<i>acrA</i> mutant was used as an indicative strain for
     further bioassays since it presents no growth
     defect in absence of MTX.
   </p>
 
-  <h1>Expression vector design</h1>
+  <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Expression vector design</h1>   </div>
   <mat-card class="sidefigure">
     <img src="http://2018.igem.org/wiki/images/3/38/T--GO_Paris-Saclay--folC_cpg2_pSB1C3.png" class="wideimg">
     <div class="mat-caption captionafterapicture">Figure 3 : The <i>folC</i>-<i>cpg2</i> encoding plasmid present within
@@ -165,8 +179,10 @@
     The translation units in this expression vector were synthetized separately, courtesy of IDT, then assembled using
     standard biobrick assembly.
   </p>
+  <p class="spacemaker"></p>
+  <p class="spacemaker"></p>
 
-  <h1>MTX Biotransformation Assays</h1>
+  <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>MTX Biotransformation Assays</h1>   </div>
   <div class="formoredetailssee">For a more detailled view, see <a
     (click)="this.router.navigate(['/biology','mtx'], { fragment: 'assays'})">Methotrexate Degradation : Assays</a>
   </div>
@@ -180,7 +196,7 @@
     <mat-list-item>
       <mat-icon mat-list-icon>keyboard_arrow_right</mat-icon>
       <h4 mat-line>Residual toxicity bioassays</h4>
-      <p mat-line> Analyzing the growth of the &Delta;<i>acrA1</i> indicative strain in presence of a set of
+      <p mat-line> Analyzing the growth of the &Delta;<i>acrA</i> indicative strain in presence of a set of
         supernatants containing MTX and incubated or not with the ‘Cleaning Factories’ </p>
     </mat-list-item>
     <mat-list-item>
@@ -207,7 +223,7 @@
         IPTG and 0.2 % arabinose and either 2% DMSO (‘control condition’) or 514 µM MTX (‘MTX condition’). Five or 24 h
         after
         shaking at 37°C, the samples were harvested, centrifuged and the supernatants filtered before being tested on
-        the &Delta;<i>acrA1</i>
+        the &Delta;<i>acrA</i>
         indicative strain or submitted to HPLC analysis.
       </div>
     </div>
@@ -216,11 +232,11 @@
   <p class="spacemaker"></p>
   <mat-card class="eatintotextmargin">
     <img src="http://2018.igem.org/wiki/images/4/41/T--GO_Paris-Saclay--viability_assay.png" class="wideimg">
-    <div class="mat-caption captionafterapicture">Figure 5.1: MTX-bioassay using <i>E. coli</i> &Delta;<i>acrA1</i>
+    <div class="mat-caption captionafterapicture">Figure 5.1: MTX-bioassay using <i>E. coli</i> &Delta;<i>acrA</i>
       mutant as an indicative strain
       <br>
       <div class="captionmaterialmethod">
-        The &Delta;<i>acrA1</i> indicative strain was precultured overnight under agitation at 37°C in 4 ml of LB
+        The &Delta;<i>acrA</i> indicative strain was precultured overnight under agitation at 37°C in 4 ml of LB
         medium. The culture was
         diluted in LB medium to obtain a ‘2X-culture’ at an initial OD<sub>600nm</sub> of 0.04. Fifty µl of this
         ‘2X-culture’ were inoculated
@@ -247,7 +263,7 @@
     <b>Main conclusions for the bioassay</b>: The MTX supernatants incubated during 20 h with the chassis strains (WT or
     ∆<i>tolC</i>) harboring a plasmid encoding <i>cpg2</i> under
     the control of lac promoter (pSB1C3-<i>cpg2</i> or pSB1C3-<i>folC</i>-<i>cpg2</i>) are not toxic anymore against the
-    &Delta;<i>acrA1</i> indicative strain
+    &Delta;<i>acrA</i> indicative strain
     (Figure 5). The best growth yields of the indicative strains are observed when the « Cleaning Factory » is the ∆<i>tolC</i>
     mutant
     harboring pSB1C3-<i>folC</i>-<i>cpg2</i>.
@@ -281,7 +297,7 @@
     <b>Main conclusions for the HPLC analysis</b>: MTX is removed from the culture medium in presence of bacteria
     harboring <i>cpg2</i>
     encoding plasmids as early as 5 h post-incubation. Of note, the supernatants incubated only 5h with the chassis were
-    tested but still present some toxicity against the ∆<i>acrA1</i> indicative strain (data not shown). We hypothesize
+    tested but still present some toxicity against the ∆<i>acrA</i> indicative strain (data not shown). We hypothesize
     that waiting
     longer (20 h) allow the bacteria to remove a toxic compound from the medium.
   </p>
@@ -291,7 +307,7 @@
       efficiently remove MTX from the medium.</b>
   </p>
   <p class="spacemaker"></p>
-  <h1>Toward a ‘HeteroGenious’ expression of BioBricks</h1>
+  <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Toward a ‘HeteroGenious’ expression of BioBricks</h1>   </div>
   <div class="formoredetailssee">For a more detailled view, see <a
     (click)="this.router.navigate(['/biology','heterogenious'], { fragment: 'top'})">HeteroGenious expression</a></div>
 
@@ -454,7 +470,7 @@
   <p>
     Since H-NS is naturally present in <i>E. coli</i>, our synthetic system requires only the expression of Ler and a
     transgene
-    under the control of <i>LEE5</i>. We analyzed the expression of gfp under the control of <i>LEE5</i> promoter as
+    under the control of <i>LEE5</i>. We analyzed the expression of <i>gfp</i> under the control of <i>LEE5</i> promoter as
     proof of concept.
     The resulting population was heterogeneous regarding GFP expression since one sub-population expressed GFP and the
     other didn’t (Figure 9).
@@ -480,7 +496,7 @@
           <mat-list-item>
             <mat-icon mat-list-icon>filter_2</mat-icon>
             <h4 mat-line>Cytometry analysis of <i>E. coli</i> K12 MG1655Z1 harboring pSB1C3-tet-Ler1 and an integrated
-              LEE5-gfp expression cassette</h4>
+              <i>LEE5</i>-<i>gfp</i> expression cassette</h4>
             <p mat-line>Bacteria were cultured in LB containing 50 ng/ml anhydrotetracyclin at 37°C during 24h.</p>
           </mat-list-item>
         </mat-list>
@@ -491,7 +507,7 @@
   <p>
     Depending on which protein (H-NS or LER) cooperatively binds to the <i>LEE5</i> promoter, <i>gfp</i> expression is
     silenced or activated.
-    Using this interesting property, several possibilities are opened for application to our project. Instead of gfp
+    Using this interesting property, several possibilities are opened for application to our project. Instead of <i>gfp</i>
     transgene,
     <i>cpg2</i> and <i>folC</i> encoding genes could be clones in operon under the control of <i>LEE5</i>. This way,
     part of the population will not
@@ -521,12 +537,12 @@
     <hr>
 
 
-    <h1>Methotrexate biotransformation pathway</h1>
+    <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Methotrexate biotransformation pathway</h1>   </div>
 
 
     <h2>Chassis selection</h2>
 
-    <h1>Heterogeneous expression system</h1>
+    <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Heterogeneous expression system</h1>   </div>
 
 
     <svg class="lee5explainer" viewBox="0 0 300 300">

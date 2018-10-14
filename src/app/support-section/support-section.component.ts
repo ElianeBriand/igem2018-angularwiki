@@ -102,8 +102,20 @@ export class SupportSectionComponent implements OnInit {
     new Sponsor('Fundamental microbiology health master of Paris Saclay University',
       'http://2018.igem.org/wiki/images/0/0e/T--GO_Paris-Saclay--LogoM2MF.jpg',
       'We would like to thank the Fundamental microbiology health master of Paris Saclay University.'+
-      '<br><br>Their help allowed us to use plenty of lab materials such as kits of mini DNA preparation')
+      '<br><br>Their help allowed us to use plenty of lab materials such as kits of mini DNA preparation'),
+    new Sponsor('General Electrics Healthcare',
+      'http://2018.igem.org/wiki/images/7/70/T--GO_Paris-Saclay--GE.png',
+      'We would like to thank General Electrics Healthcare, for their financial support during the competition.<br><br>General Electrics Healthcare is the leading provider of medical imaging, monitoring, biomanufacturing, and cell and gene therapy technologies. General Electrics Healthcare enables precision health in diagnostics, therapeutics and monitoring through intelligent devices, data analytics, applications and services. With over 100 years of experience in the healthcare industry and more than 50,000 employees globally, the company helps improve outcomes more efficiently for patients, healthcare providers, researchers and life sciences companies around the world.')
+    ,
+    new Sponsor('Medicine Science',
+      'http://2018.igem.org/wiki/images/1/1f/T--GO_Paris-Saclay--MS.png',
+      'Medicine Science (Med-Science) is an open-access journal. We are thrilled that they accept to publish our article without charging us.'),
+
   ];
+
+
+
+
 
   constructor() {
 

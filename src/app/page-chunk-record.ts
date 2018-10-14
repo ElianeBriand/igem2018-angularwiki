@@ -56,6 +56,7 @@ export let SPECIAL_PAGE_CHUNK_MASTER_RECORD = [
   new SpeciaPageRecord("/Design", "#MAIN#", "/project"),
   new SpeciaPageRecord("/Description", "#MAIN#", "/project"),
   new SpeciaPageRecord("/Applied_Design", "#MAIN#", "/project"),
+  new SpeciaPageRecord("/Part_Collection", "/biology", "/biology/parts-collection")
 
   //*/
 ]

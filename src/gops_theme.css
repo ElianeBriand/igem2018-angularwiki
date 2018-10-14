@@ -1882,10 +1882,21 @@ ng-list-item .mat-divider {
 
 h1 {
   font-size: 28pt;
-  width: 105%;
   margin-bottom: 0.5em;
-  margin-top: 1.3em;
-  font-weight: bolder; }
+  font-weight: bolder;
+  text-transform: capitalize;
+  color: #2ab7ca;
+  margin-top: 50px;
+  margin-left: 180px;
+  font-family: 'Lato', Helvetica, SansSerif; }
+
+.carretitrepincipal {
+  width: 150px;
+  float: left; }
+
+.titrebloc {
+  margin-left: -120px;
+  overflow: auto; }
 
 h1, h2, h3 {
   font-weight: bolder; }
@@ -1929,7 +1940,8 @@ a {
 
 .captionafterapicture {
   font-size: 11pt;
-  color: grey; }
+  color: grey;
+  font-family: 'Lato', Helvetica, SansSerif; }
 
 .captionmaterialmethod {
   font-size: 10pt;
@@ -1944,7 +1956,9 @@ a {
 
 p {
   font-size: 14pt;
-  font-family: 'Lato', Helvetica, SansSerif; }
+  font-family: 'Lato', Helvetica, SansSerif;
+  text-align: justify;
+  text-justify: inter-word; }
 
 .withlettrine::first-letter {
   float: left;
@@ -1971,7 +1985,8 @@ p {
 
 .dashboard-card {
   overflow: auto;
-  text-align: left; }
+  text-align: left;
+  box-shadow: 0px 0px !important; }
 
 .largemargin {
   padding-left: 15% !important;
@@ -1981,6 +1996,17 @@ p {
 .headlinetext {
   position: absolute;
   top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Didact Gothic', Helvetica, SansSerif;
+  font-weight: bolder;
+  font-size: 50pt;
+  text-shadow: 2px 2px black; }
+
+.headlinetextbottom {
+  position: absolute;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -2005,8 +2031,5 @@ p {
 .sequencemn {
   font-family: 'Source Code Pro', monospace; }
 
-.mat-list-item.mat-list-item-word-wrap {
-  height: initial !important; }
-  .mat-list-item.mat-list-item-word-wrap .mat-line {
-    word-wrap: break-word !important;
-    white-space: pre-wrap !important; }
+.smalllogofb {
+  width: 40px; }

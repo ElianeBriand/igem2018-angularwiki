@@ -13,7 +13,7 @@
   <mat-card class="z-depth" class="part-card">
     <mat-card-header>
       <mat-card-title>FolylPolyGlutamate Synthetase</mat-card-title>
-      <mat-card-subtitle>folC &mdash; BBa_K2688008</mat-card-subtitle>
+      <mat-card-subtitle><i>folC</i> &mdash; BBa_K2688008</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>An enzyme that adds glutamates to folate analogs.</mat-card-content>
     <mat-card-actions>
@@ -25,32 +25,77 @@
 
 
   <p class="intermediateconclusion">
-    <b>Executive summary</b>: This BioBrick is a full translation unit for folC, an enzyme that adds glutamates to
+    <b>Executive summary</b>: This BioBrick is a full translation unit for <i>folC</i>, an enzyme that adds glutamates to
     folates. In our methotrexate degradation pathway, it indirectly drives diffusive transport of methotrexate across
     the cell membrane, allowing higher intracellular concentration and thus speed of degradation. While the theoretical
     benefit is clear, we find this effect relevant only in some chassis like our E. coli Δ<i>tolC</i>.
   </p>
 
-  <h1>Expression vector design</h1>
+  <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Expression vector design</h1>   </div>
 
   <mat-card class="sidefigure">
     <img src="http://2018.igem.org/wiki/images/3/38/T--GO_Paris-Saclay--folC_cpg2_pSB1C3.png" class="wideimg">
-    <div class="mat-caption captionafterapicture">Figure 1: Genetic organization of the folC-cpg2 encoding vector
+    <div class="mat-caption captionafterapicture">Figure 1: Genetic organization of the <i>folC</i>-<i>cpg2</i> encoding vector
       (BBa_K2688009)
     </div>
   </mat-card>
 
   <p>
-    We engineered a two-component pathway for efficient MTX degradation with folC and cpg2 under inducible ara (AraO2
+    We engineered a two-component pathway for efficient MTX degradation with <i>folC</i> and <i>cpg2</i> under inducible ara (AraO2
     BBa_R0081 + AraC BBa_R0080) promoter and a phage lambda pL promoter with lacO sites (BBa_R0011) lac promoter,
     respectively. The expression of their corresponding repressors (AraC and LacI) by E. coli K12 strains allows the
     inducible expression in presence of arabinose (0.2 %) and IPTG (0,5 mM).
   </p>
   <p>
     The <i>folC</i> sequence from <i>E. coli</i> MG1655 did not need specific modification, as it was already RFC10 compliant,
-    and obviously codon optimized for our chassis. It was cloned within pSB1C3, alone or associated the folC expression cassette (Figure 1).
+    and obviously codon optimized for our chassis. It was cloned within pSB1C3, alone or associated the <i>folC</i> expression cassette (Figure 1).
   </p>
+  <p class="spacemaker"></p>
 
+  <p class="spacemaker"></p>
+  <p class="spacemaker"></p>
+  <p class="spacemaker"></p>
+
+  <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Purpose of folC</h1>   </div>
+
+  <p>We also tested the
+    interest of co-expressing a bifunctional
+    dihydrofolate synthase and folylpoly-γ-glutamate synthetase (FolC) that could potentially enhance MTX catabolism by
+    coupling
+    MTX to polyglutamate
+    <reference-box shorthand="Chabner1985"></reference-box>
+    . By increasing its accumulation within the cell,
+    FolC could allow higher effective MTX concentration and reaction rate. We hypothesized that in presence of FolC, the
+    MTX is rapidly
+    linked to polyglutamates, a reaction that could increase its metabolism by limiting its export and so that
+    increasing the activity of Cpg2.
+  </p>
+  <mat-card class="eatintotextmargin">
+    <img src="http://2018.igem.org/wiki/images/8/82/T--GO_Paris-Saclay--bioassay_res.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 1 : Final opacimetry (OD<sub>600nm</sub>) reached by culture of
+      the &Delta;<i>acrA</i>
+      indicative strain
+      <br>
+      <div class="captionmaterialmethod">
+        The strain were incubated with various supernatants from cultures initially containing or not MTX and strains
+        harbouring plasmid encoding <i>cpg2</i>. The chassis strains (WT or &Delta;tolC) are indicated in abscissa. The
+        MTX was
+        initially at 514 µM and incubated during 20 h with the chassis strains. The
+        supernatants were 2-fold diluted during their inoculation in the 96-plate containing the indicative strain so
+        that the maximal MTX concentration is 256 µM during the bioassay. The WT strain containing pSB1C3-<i>tet</i> was
+        used
+        as a negative control.
+      </div>
+    </div>
+  </mat-card>
+  <p>
+    In terms of effectiveness of the various degrader strains, it seems that the co-expression of <i>cpg2</i> and <i>folC</i> is
+    associated to an better MTX removing from the medium only in the ΔtolC strain. Possibly, disabling the efflux pump
+    mechanism allows a better intracellular accumulation of MTX following glutamylation by FolC.
+    Nonetheless all degrader strains produce similar results in our bioassay. It may be that some are faster than other,
+    but we could not assessed this property since our earliest sampling (at 5 h) has been shown by HPLC to be “too late”
+    (almost all the MTX is already gone from the medium at this time point).
+  </p>
 
 
 

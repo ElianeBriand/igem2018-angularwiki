@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import * as d3 from 'd3';
 
 @Component({
@@ -11,7 +11,7 @@ export class HeterogeniousComponent implements OnInit {
 
   private fragment: string;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, public router: Router) { }
 
   HNS_label;
   HNS;

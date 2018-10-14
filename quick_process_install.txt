@@ -1,5 +1,5 @@
 
-cat runtime.js polyfills.js scripts.js common.js main.js |base64 > base64_js_noloader.txt
+cat runtime.js polyfills.js scripts.js main.js |base64 > base64_js_noloader.txt
 tr -d '\n' < base64_js_noloader.txt> base64_js_noloader_1.txt
 cat styles.css | base64 > base64_css_noloader.txt
 tr -d '\n' < base64_css_noloader.txt > base64_css_noloader_1.txt

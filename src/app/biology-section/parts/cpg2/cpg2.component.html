@@ -15,7 +15,7 @@
   <mat-card>
     <mat-card-header>
       <mat-card-title>Carboxypeptidase G2</mat-card-title>
-      <mat-card-subtitle>cpg2 &mdash; BBa_K2688003</mat-card-subtitle>
+      <mat-card-subtitle><i>cpg2</i> &mdash; BBa_K2688003</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>An enzyme that cleaves folates, yielding a pterydoyl ring and glutamate(s).</mat-card-content>
     <mat-card-actions>
@@ -59,10 +59,15 @@
     <div class="mat-caption captionafterapicture">Figure 1: The MTX biotransformation by Pseudomonas CPG2</div>
   </mat-card>
 
-  <h1>Expression vector design</h1>
-
+  <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Expression vector design</h1>   </div>
+  <mat-card class="sidefigure">
+    <img src="http://2018.igem.org/wiki/images/3/38/T--GO_Paris-Saclay--folC_cpg2_pSB1C3.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 2: Genetic organization of the <i>folC</i>-cpg2 encoding vector
+      (BBa_K2688009)
+    </div>
+  </mat-card>
   <p>
-    We engineered a two-component pathway for efficient MTX degradation with folC and cpg2 under inducible ara (AraO2
+    We engineered a two-component pathway for efficient MTX degradation with <i>folC</i> and <i>cpg2</i> under inducible ara (AraO2
     BBa_R0081 + AraC BBa_R0080) promoter and a phage lambda pL promoter with lacO sites (BBa_R0011) lac promoter,
     respectively. The expression of their corresponding repressors (AraC and LacI) by E. coli K12 strains allows the
     inducible expression in presence of arabinose (0.2 %) and IPTG (0,5 mM).
@@ -88,33 +93,28 @@
   </mat-list>
 
   <p>
-    The synthetic cpg2 gene was cloned within pSB1C3, alone or associated the folC expression cassette (Figure 2).
+    The synthetic <i>cpg2</i> gene was cloned within pSB1C3, alone or associated the <i>folC</i> expression cassette (Figure 2).
   </p>
 
-  <mat-card class="sidefigure">
-    <img src="http://2018.igem.org/wiki/images/3/38/T--GO_Paris-Saclay--folC_cpg2_pSB1C3.png" class="wideimg">
-    <div class="mat-caption captionafterapicture">Figure 2: Genetic organization of the folC-cpg2 encoding vector
-      (BBa_K2688009)
-    </div>
-  </mat-card>
 
-  <h1>Characterization</h1>
+<p class="spacemaker"></p>
+  <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Characterization</h1>   </div>
   <p class="intermediateconclusion">
     <b>Summary of methods</b>: We aimed to evaluate the activity of our degradation pathway, by incubating a degrader
-    strain containing cpg2 encoding plasmid in LB medium containing presence of 512 µM MTX. The culture supernatant was
+    strain containing <i>cpg2</i> encoding plasmid in LB medium containing presence of 512 µM MTX. The culture supernatant was
     harvested and filtered before assessing the residual MTX either by a bioassay (bacteria particularly sensitive to
     MTX) or HPLC.
   </p>
   <p class="intermediateconclusion">
     <b>Results summary</b>: This characterization was successful, with both the bioassay and HPLC reporting almost
-    complete MTX degradation. After only 5 h of incubation with bacteria harbouring a cpg2 encoding plasmid, the MTX was
+    complete MTX degradation. After only 5 h of incubation with bacteria harbouring a <i>cpg2</i> encoding plasmid, the MTX was
     almost completely removed from the medium (HPLC analysis).
   </p>
 
-  <h1>Materials and methods</h1>
+  <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Materials and methods</h1>   </div>
   <h2>Strains and plasmids</h2>
 
-  <p>Two categories of strains were used: degrader strains (‘chassis’ harbouring cpg2 encoding plasmid), and indicative
+  <p>Two categories of strains were used: degrader strains (‘chassis’ harbouring <i>cpg2</i> encoding plasmid), and indicative
     strains with high MTX sensitivity, as biosensor for the biological effects of MTX. All strains were derived from <i>E.
       coli</i> K12 BW25113 (<i>Δ(araD-araB)567, ΔlacZ4787(::rrnB-3), λ-, rph-1, Δ(rhaD-rhaB)568, hsdR514</i>) parental
     strain and
@@ -126,11 +126,11 @@
     For characterization purpose, two degrader strains were selected: WT and ΔtolC (Keio mutant JW5503). The latter has
     an intrinsic growth defect, but its lower MIC (minimum inhibitory concentration) for MTX
     <reference-box shorthand="Kopytek2000"></reference-box>
-    made it a possibly better degrader chassis. We used ΔacrA mutant (Keio JW0452) as an indicative strain
+    made it a possibly better degrader chassis. We used Δ<i>acrA</i> mutant (Keio JW0452) as an indicative strain
     since it is clearly MTX-sensitive.
   </p>
-  <p>We analysed MXT biotransformation by WT and ΔtolC strains harbouring pSB1C3-cpg2 (BBa_K2688003) or pSB1C3-folC-cpg2
-    (BBa_K2688009). Strains containing pSB1C3-tet (BBa_R0040) or pSB1C3-folC (BBa_K2688008) were used as controls.
+  <p>We analysed MXT biotransformation by WT and ΔtolC strains harbouring pSB1C3-<i>cpg2</i> (BBa_K2688003) or pSB1C3-<i>folC</i>-<i>cpg2</i>
+    (BBa_K2688009). Strains containing pSB1C3-tet (BBa_R0040) or pSB1C3-<i>folC</i> (BBa_K2688008) were used as controls.
   </p>
   <h2>MTX biotransformation</h2>
   <p>
@@ -152,9 +152,9 @@
   <h2>MTX-detection bioassays</h2>
 
   <p>
-    The MTX bioassay was a viability experiment using the ΔacrA indicative strain cultured in 96-wells plate with 50 µL
+    The MTX bioassay was a viability experiment using the Δ<i>acrA</i> indicative strain cultured in 96-wells plate with 50 µL
     of
-    filtrate and 50 µL ΔacrA (OD 0.04 obtained from an overnight culture in LB).
+    filtrate and 50 µL Δ<i>acrA</i> (OD 0.04 obtained from an overnight culture in LB).
     This viability experiment was conducted in a 96-wells plate over 700 min in a Clariostar® plate reader (BMG LABtech
     GmbH), with orbital shaking, temperature control at 37°C and ambient air atmosphere, measuring OD600 every 20 min.
     The
@@ -178,7 +178,7 @@
     .
   </p>
 
-  <h1>Results</h1>
+  <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Results</h1>   </div>
   <p>
     We focused on two aspects to evaluate the success of our project: firstly, whether the degradation process removed
     from the medium the toxicity of MTX; and secondly whether MTX was actually biotransformed as predicted. While
@@ -187,16 +187,16 @@
     of MTX biotransformation, allowing a distinction between these two scenarii.
   </p>
 
-  <h1>MTX Bioassay</h1>
+  <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>MTX Bioassay</h1>   </div>
   <p>
-    We compared the growth of the ΔacrA indicative strain in presence of supernatants from cultures of various chassis
+    We compared the growth of the Δ<i>acrA</i> indicative strain in presence of supernatants from cultures of various chassis
     incubated with MTX.
   </p>
 
   <mat-card class="eatintotextmargin">
     <img src="http://2018.igem.org/wiki/images/8/82/T--GO_Paris-Saclay--bioassay_res.png" class="wideimg">
     <div class="mat-caption captionafterapicture">Figure 3 : Final opacimetry (OD<sub>600nm</sub>) reached by culture of
-      the &Delta;<i>acrA1</i>
+      the &Delta;<i>acrA</i>
       indicative strain
       <br>
       <div class="captionmaterialmethod">
@@ -212,14 +212,14 @@
     </div>
   </mat-card>
   <p>
-    When pre-treatment of the medium is done using a control strain which does not contain cpg2 transgene (“WT
+    When pre-treatment of the medium is done using a control strain which does not contain <i>cpg2</i> transgene (“WT
     pSB1C3-tet”), the growth of the indicative strain is greatly diminished in presence of MTX. This indicates that the
     medium contained a high concentration of residual MTX: it is expected for this control condition.
   </p>
   <p>
     However, when considering the other pre-treatment conditions, we observed that the indicative strain culture reached
     the same growth yield regardless of the initial presence of MTX in the chassis culture medium. This means the
-    strains harbouring cpg2 encoding plasmid have successfully removed MTX from the medium.
+    strains harbouring <i>cpg2</i> encoding plasmid have successfully removed MTX from the medium.
   </p>
 
   <h2>Discussion</h2>
@@ -227,7 +227,7 @@
     These results demonstrate the action of the degradation pathway on the MTX toxicity.
   </p>
   <p>
-    In terms of effectiveness of the various degrader strains, it seems that the co-expression of cpg2 and folC is
+    In terms of effectiveness of the various degrader strains, it seems that the co-expression of <i>cpg2</i> and <i>folC</i> is
     associated to an better MTX removing from the medium only in the ΔtolC strain. Possibly, disabling the efflux pump
     mechanism allows a better intracellular accumulation of MTX following glutamylation by FolC.
     Nonetheless all degrader strains produce similar results in our bioassay. It may be that some are faster than other,
@@ -240,19 +240,19 @@
     In the course of running our bioassay, we noticed that the filtrates from 5 h of incubation with the chassis strains
     were more toxic than either the initial MTX containing solution or the filtrates obtained after 20 h of incubation.
     This observation is puzzling since the HPLC assay reports the MTX to have been quasi-completely eliminated at the 5
-    h. Indeed the ΔacrA indicative strain is DAMPA-sensitive (data not shown) whereas its growth is not impacted by
+    h. Indeed the Δ<i>acrA</i> indicative strain is DAMPA-sensitive (data not shown) whereas its growth is not impacted by
     glutamate, the other degradation product (Figure 4). We hypothesize this effect may be related to availability of
     DAMPA in solution: it may crystallize out of solution slowly, unavailable for bacteria but still detectable by HPLC.
   </p>
   <mat-card class="eatintotextmargin">
     <img src="http://2018.igem.org/wiki/images/f/f6/T--GO_Paris-Saclay--glutamate_tox.png" class="wideimg">
-    <div class="mat-caption captionafterapicture">Figure 4 : Growth curve (OD<sub>600nm</sub>) of &Delta;<i>acrA1</i>
+    <div class="mat-caption captionafterapicture">Figure 4 : Growth curve (OD<sub>600nm</sub>) of &Delta;<i>acrA</i>
       culture with varying concentration of glutamate
     </div>
   </mat-card>
 
 
-  <h1>HPLC analysis</h1>
+  <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>HPLC analysis</h1>   </div>
 
   <p>
     While our bioassay results prove that there is no bacteriostatic activity left in the filtrate, this does not
@@ -333,7 +333,7 @@
     <img src="http://2018.igem.org/wiki/images/0/0f/T--GO_Paris-Saclay--typ_hplc_res.png" class="wideimg">
     <div class="mat-caption captionafterapicture">Figure 12: Comparison of MTX standard, filtrate from control culture
       (WT pSB1C3-tet)
-      and ‘MTX-Cleaning factory’ culture (WT pSB1C3-folC-cpg2) after 5 h incubation
+      and ‘MTX-Cleaning factory’ culture (WT pSB1C3-<i>folC</i>-cpg2) after 5 h incubation
     </div>
   </mat-card>
 
@@ -355,7 +355,7 @@
            class="hplcframe">
     </div>
     <div class="mat-caption captionafterapicture">Figure 14: Filtrate from ‘MTX-Cleaning factory’ culture (WT
-      pSB1C3-folC-cpg2) after 20 h incubation
+      pSB1C3-<i>folC</i>-<i>cpg2</i>) after 20 h incubation
     </div>
   </mat-card>
 
@@ -387,7 +387,7 @@
            class="hplcframe">
     </div>
     <div class="mat-caption captionafterapicture">Figure 15: Filtrate from ‘MTX-Cleaning factory’ culture (ΔtolC
-      pSB1C3-folC-cpg2) after 5 h incubation
+      pSB1C3-<i>folC</i>-<i>cpg2</i>) after 5 h incubation
     </div>
   </mat-card>
 
@@ -397,14 +397,14 @@
   <app-chromato-explorer></app-chromato-explorer>
   <p class="spacemaker"></p>
 
-  <h1>Discussion</h1>
+  <div class="titrebloc">     <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">     <h1>Discussion</h1>   </div>
   <p>
     Our HPLC analysis protocol proved well suited to our purpose, considering the remarkable lack of interference from
     either LB components, metabolic by-products or DMSO at the chosen wavelength. This validates the method as an easy
     to use assay for MTX in bacterial cell culture.
   </p>
   <p>
-    Bacteria without cpg2 transgene do not biotransform MTX, excluding an intrinsic MTX-degradation ability of E. coli.
+    Bacteria without <i>cpg2</i> transgene do not biotransform MTX, excluding an intrinsic MTX-degradation ability of E. coli.
   </p>
   <p>
     In contrast, the expression of CPG2 has a profound effect: the MTX peak almost completely disappears, giving way to

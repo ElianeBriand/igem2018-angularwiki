@@ -602,10 +602,12 @@ body
 /********************************* BLOC AVEC LE TEXTE PAS MODIFIER**************************/
 
 .container {
+
   position: relative;
   margin: auto;
   background-color: white;
   /*height: 100%;*/
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 .containerfrontpage {
@@ -614,6 +616,7 @@ body
   min-height: 3500px;
   background-color: white;
   height: 100%;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 .innercontainer {
@@ -648,17 +651,25 @@ img {
 #carretitrepincipal
 {
   width: 150px;
-  margin-top: 50px;
-  margin-left: 50px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
+
 
 #titreh1
 {
-  position:absolute;
-  top: 690px;
-  left: 230px;
+  text-transform: capitalize;
+  color:rgb(42,183,202);
+  margin-top: -110px;
+  margin-left: 200px;
   font-family: 'Lato', Helvetica, SansSerif;
 }
+
+
+
+
+
+
 #titreh2
 {
   width: 600px;
