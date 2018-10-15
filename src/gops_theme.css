@@ -97,7 +97,7 @@
 .mat-badge-large .mat-badge-content {
   font-size: 24px; }
 
-.mat-h1, .mat-headline, h1, .mat-typography h1 {
+.mat-h1, .mat-headline, .mat-typography h1 {
   font: 400 24px/32px Roboto, "Helvetica Neue", sans-serif;
   margin: 0 0 16px; }
 
@@ -1884,6 +1884,7 @@ h1 {
   font-size: 28pt;
   margin-bottom: 0.5em;
   font-weight: bolder;
+  line-height: 36px;
   text-transform: capitalize;
   color: #2ab7ca;
   margin-top: 50px;
@@ -1903,7 +1904,12 @@ h1, h2, h3 {
 
 a {
   text-decoration: none;
-  cursor: pointer; }
+  cursor: pointer;
+  color: #fe4a49;
+  font-weight: bolder;
+  font-style: none;
+  font-size: 19px;
+  letter-spacing: 1.5px; }
 
 .bannerimg {
   width: 100%; }
@@ -1932,20 +1938,25 @@ a {
 
 .normalmargin {
   width: 100%;
-  margin: 1.2em 0%; }
+  margin: 1.2em auto; }
 
 .ultralargefig {
   width: 125%;
   margin: 1.2em -12.5%; }
 
 .captionafterapicture {
-  font-size: 11pt;
-  color: grey;
+  font-size: 18pt;
+  line-height: 26px;
+  color: black;
   font-family: 'Lato', Helvetica, SansSerif; }
 
 .captionmaterialmethod {
-  font-size: 10pt;
-  font-style: italic; }
+  font-size: 11pt;
+  margin-top: 15px;
+  line-height: 25px;
+  margin-bottom: 5px;
+  text-align: justify;
+  text-justify: inter-word; }
 
 .intermediateconclusion {
   border-left: 2px solid #0d47a1;
@@ -1970,9 +1981,7 @@ p {
 
 .formoredetailssee {
   font-size: 14pt;
-  font-style: italic;
-  color: darkslategray;
-  border-left: 2px solid goldenrod;
+  color: #a6a6a6;
   padding-left: 4px;
   margin-top: 1em;
   margin-bottom: 1em; }

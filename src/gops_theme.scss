@@ -253,21 +253,20 @@ ng-list-item .mat-divider {
 
 
 h1 {
-  @extend .mat-headline;
   font-size: 28pt;
   margin-bottom: 0.5em;
   font-weight: bolder;
+  line-height: 36px;
   text-transform: capitalize;
-  color:rgb(42,183,202);
+  color: #2ab7ca;
   margin-top: 50px;
   margin-left: 180px;
   font-family: 'Lato', Helvetica, SansSerif;
 }
 
-.carretitrepincipal
-{
+.carretitrepincipal {
   width: 150px;
-  float:left;
+  float: left;
 }
 
 .titrebloc {
@@ -294,6 +293,11 @@ h1, h2, h3 {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: rgb(254,74,73);
+  font-weight: bolder;
+  font-style: none;
+  font-size: 19px;
+  letter-spacing: 1.5px;
 }
 
 .bannerimg {
@@ -329,7 +333,7 @@ a {
 
 .normalmargin {
   width: 100%;
-  margin: 1.2em 0%;
+  margin: 1.2em auto;
 }
 
 .ultralargefig {
@@ -338,14 +342,19 @@ a {
 }
 
 .captionafterapicture {
-  font-size : 11pt;
-  color: grey;
+  font-size: 18pt;
+  line-height: 26px;
+  color: black;
   font-family: 'Lato', Helvetica, SansSerif;
 }
 
 .captionmaterialmethod {
-  font-size: 10pt;
-  font-style: italic;
+  font-size: 11pt;
+  margin-top: 15px;
+  line-height: 25px;
+  margin-bottom: 5px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .intermediateconclusion {
@@ -375,16 +384,14 @@ p {
   padding-left: 3px;
 }
 
+
 .formoredetailssee {
   font-size: 14pt;
-  font-style: italic;
-  color: darkslategray;
-  border-left: 2px solid goldenrod;
+  color: rgb(166,166,166);
   padding-left: 4px;
   margin-top: 1em;
   margin-bottom: 1em;
 }
-
 
 .sidefigure {
   float:right;

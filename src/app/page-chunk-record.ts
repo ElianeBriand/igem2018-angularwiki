@@ -71,6 +71,7 @@ export let IMAGE_PRELOAD_MASTER_RECORD = [
   new ImagePreloadRecord("http://2018.igem.org/wiki/images/0/08/T--GO_Paris-Saclay--software_underbanner.png", "image/png"),
   new ImagePreloadRecord("http://2018.igem.org/wiki/images/c/c6/T--GO_Paris-Saclay--team_underbanner.png", "image/png"),
 
+  new ImagePreloadRecord("http://2018.igem.org/wiki/images/d/db/T--GO_Paris-Saclay--bacteria_anim.mp4", "video/mp4")
 
 ];
 
