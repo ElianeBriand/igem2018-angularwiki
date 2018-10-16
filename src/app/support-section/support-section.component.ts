@@ -110,10 +110,10 @@ export class SupportSectionComponent implements OnInit {
     new Sponsor('Medicine Science',
       'http://2018.igem.org/wiki/images/1/1f/T--GO_Paris-Saclay--MS.png',
       'Medicine Science (Med-Science) is an open-access journal. We are thrilled that they accept to publish our article without charging us.'),
-
+    new Sponsor('Université Paris Sud',
+      'http://2018.igem.org/wiki/images/1/1f/T--GO_Paris-Saclay--upsud.png',
+      'We heartfully thank to our home university for providing access to the facilities, and granting funds for the iGEM supervisors stipends.')
   ];
-
-
 
 
 

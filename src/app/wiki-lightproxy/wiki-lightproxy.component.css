@@ -40,3 +40,150 @@ mat-card-title{
   text-align: center;
 }
 
+#boxes
+{
+width: 700px;
+height: auto;
+margin: auto;
+margin-top: 70px;
+}
+
+.collapsible {
+    background-color: rgb(42,183,202);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    
+}
+
+.active, .collapsible:hover {
+    background-color:rgb(254,215,102);
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+font-size: 20px;
+}
+
+
+.collapse-list {
+  font-family: 'Josefin Sans';
+    width: 800px;
+    background-color: white;
+    color: black;
+    margin: auto;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.collapse-open {
+    display: none;
+}
+
+.collapse-painel {
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height .1s,
+    visibility .3s,
+    opacity .3s;
+}
+
+.collapse-open:checked ~ .collapse-painel {
+    max-height: 100%;
+    opacity: 100;
+    visibility: visible
+}
+
+.collapse-list li {
+    margin-bottom: 0;
+}
+
+.collapse-list .collapse-btn {
+    border: 2px solid #e0e0e0;
+    font-family: 'Lato', Helvetica, SansSerif;
+    cursor: pointer;
+    display: block;
+    padding: 15px 10px;
+    margin-bottom: 0;
+    color: black;
+    font-weight: normal;
+    transition: background-color .2s ease;
+}
+
+.collapse-list .collapse-btn
+{
+  background-color: rgb(42,183,202);
+  color: white;
+}
+
+.collapse-list .collapse-btn:hover {
+    background: rgb(254,215,102);
+    color: white;
+}
+
+
+.collapse-list .collapse-inner {
+    padding: 10px
+}
+
+.collapse-btn
+{
+  font-size: 1.4em;
+  font-weight: 2em;
+   font-family: 'Josefin Sans';
+}
+
+ul
+{
+  font-size: 1.2em;
+  font-family: 'Josefin Sans';
+  line-height: 1.5em;
+  list-style: square url(http://2018.igem.org/wiki/skins/Igem/resources/bullet.gif?2015-09-09T00:46:40Z);
+}
+
+li {
+}
+
+.mat-card {
+  -ms-overflow-style: none;
+overflow: -moz-scrollbars-none;
+}
+.mat-card::-webkit-scrollbar {
+  display: none;
+}
+
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+     margin: 10px 0px 10px 0px;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(254,215,102);
+    color: white;
+}

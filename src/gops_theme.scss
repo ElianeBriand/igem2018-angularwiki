@@ -17,69 +17,69 @@
 
 
 $md-parissaclay-primary: (
-  50 : #ece0e8,
-  100 : #d0b3c5,
-  200 : #b1809e,
-  300 : #914d77,
-  400 : #7a2659,
-  500 : #62003c,
-  600 : #5a0036,
-  700 : #50002e,
-  800 : #460027,
-  900 : #34001a,
-  A100 : #ff6ca4,
-  A200 : #ff3984,
-  A400 : #ff0664,
-  A700 : #eb0059,
-  contrast: (
-    50 : #000000,
-    100 : #000000,
-    200 : #000000,
-    300 : #ffffff,
-    400 : #ffffff,
-    500 : #ffffff,
-    600 : #ffffff,
-    700 : #ffffff,
-    800 : #ffffff,
-    900 : #ffffff,
-    A100 : #000000,
-    A200 : #ffffff,
-    A400 : #ffffff,
-    A700 : #ffffff,
-  )
-);
-
-
-$md-parissaclay-secondary : (
-  50 : #f2e4ec,
-  100 : #e0bcd1,
-  200 : #cb8fb2,
-  300 : #b66293,
-  400 : #a6407b,
-  500 : #961e64,
-  600 : #8e1a5c,
-  700 : #831652,
-  800 : #791248,
-  900 : #680a36,
-  A100 : #ff9ac5,
-  A200 : #ff67a7,
-  A400 : #ff348a,
-  A700 : #ff1a7b,
+  50 : #e5f6f9,
+  100 : #bfe9ef,
+  200 : #95dbe5,
+  300 : #6acdda,
+  400 : #4ac2d2,
+  500 : #2ab7ca,
+  600 : #25b0c5,
+  700 : #1fa7bd,
+  800 : #199fb7,
+  900 : #0f90ab,
+  A100 : #daf8ff,
+  A200 : #a7eeff,
+  A400 : #74e5ff,
+  A700 : #5ae0ff,
   contrast: (
     50 : #000000,
     100 : #000000,
     200 : #000000,
     300 : #000000,
-    400 : #ffffff,
-    500 : #ffffff,
-    600 : #ffffff,
-    700 : #ffffff,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
     800 : #ffffff,
     900 : #ffffff,
     A100 : #000000,
     A200 : #000000,
-    A400 : #ffffff,
-    A700 : #ffffff,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+$md-parissaclay-secondary : (
+  50 : #e5f6f9,
+  100 : #bfe9ef,
+  200 : #95dbe5,
+  300 : #6acdda,
+  400 : #4ac2d2,
+  500 : #2ab7ca,
+  600 : #25b0c5,
+  700 : #1fa7bd,
+  800 : #199fb7,
+  900 : #0f90ab,
+  A100 : #daf8ff,
+  A200 : #a7eeff,
+  A400 : #74e5ff,
+  A700 : #5ae0ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
   )
 );
 
@@ -276,7 +276,13 @@ h1 {
 
 h2 {
   @extend .mat-title;
+    font-size: 24pt;
+    margin-bottom: 0.5em;
+    font-family: 'Lato', Helvetica, SansSerif;
+    color: rgb(35,150,165);
 }
+
+
 
 h3 {
   @extend .mat-subheading-2;
@@ -290,14 +296,12 @@ h1, h2, h3 {
   font-weight: bolder;
 }
 
-a {
+#insideapps a {
   text-decoration: none;
   cursor: pointer;
   color: rgb(254,74,73);
   font-weight: bolder;
-  font-style: none;
   font-size: 19px;
-  letter-spacing: 1.5px;
 }
 
 .bannerimg {
@@ -342,19 +346,19 @@ a {
 }
 
 .captionafterapicture {
-  font-size: 18pt;
-  line-height: 26px;
-  color: black;
+  font-size: 14pt;
+  line-height: 16pt;
+  color: dimgrey;
   font-family: 'Lato', Helvetica, SansSerif;
 }
 
 .captionmaterialmethod {
-  font-size: 11pt;
-  margin-top: 15px;
-  line-height: 25px;
-  margin-bottom: 5px;
+  font-size: 12pt;
+  line-height: unset;
+  margin-top: 1em;
   text-align: justify;
   text-justify: inter-word;
+  margin-bottom: 5px;
 }
 
 .intermediateconclusion {
@@ -372,6 +376,7 @@ p {
   font-family: 'Lato', Helvetica, SansSerif;
   text-align: justify;
   text-justify: inter-word;
+  line-height: 25px !important;
 }
 
 
@@ -397,7 +402,7 @@ p {
   float:right;
   width: 50%;
   margin-left: 1em;
-  margin-right: -20%;
+  margin-right: 0%;
 }
 
 
@@ -468,4 +473,24 @@ p {
 
 
 
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub {
+  top: 0.4em;
+}
+
+
+
+
 @import 'joudou_theming.css';
+
+
+
+#insideapps a.mat-raised-button{
+  @extend .mat-raised-button;
+  color: black;
+  font-weight: normal;
+}

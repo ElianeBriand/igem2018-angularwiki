@@ -35,6 +35,7 @@ import {SafetyComponent} from './safety/safety.component';
 import {AchievementsComponent} from './achievements/achievements.component';
 
 import {NgxPageScrollModule} from 'ngx-page-scroll';
+import {BackgroundComponent} from './background/background.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import {NgxPageScrollModule} from 'ngx-page-scroll';
     DemonstrateComponent,
     SafetyComponent,
     WikiSourceSheet,
-    AchievementsComponent
+    AchievementsComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,

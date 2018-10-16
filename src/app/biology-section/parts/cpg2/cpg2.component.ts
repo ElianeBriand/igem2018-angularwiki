@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 
 
 
@@ -11,13 +11,20 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cpg2.component.html',
   styleUrls: ['./cpg2.component.css']
 })
-export class Cpg2Component implements OnInit {
+export class Cpg2Component implements OnInit, AfterViewInit {
 
 
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+
+    try {
+      document.querySelector('#top').scrollIntoView();
+    } catch (e) { }
   }
 
 }

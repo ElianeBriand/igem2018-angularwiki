@@ -23,7 +23,7 @@
 }
 
 .sponsortext {
-  font-size : 10pt;
+  font-size : 12pt;
 
 }
 
@@ -69,5 +69,21 @@
 }
 
 .sponsortext {
-  font-size: 11pt;
+  font-size: 12pt;
+  font-family: 'Lato', Helvetica, SansSerif;
+}
+
+#spontext
+{
+  font-size: 14pt;
+  font-family: 'Lato', Helvetica, SansSerif;
+  text-align: justify;
+  text-justify: inter-word;
+  margin:0px 100px 0px 100px;
+  line-height: 25px; 
+}
+
+#spe
+{
+   margin:0px 100px 20px 100px; 
 }

@@ -102,7 +102,9 @@ export class WikiLightproxyComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
 
-
+      try {
+        document.querySelector('#topprotocols').scrollIntoView();
+  } catch (e) { }
   }
 
 

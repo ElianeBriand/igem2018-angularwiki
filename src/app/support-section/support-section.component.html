@@ -7,8 +7,6 @@
 
   <mat-card class="dashboard-card">
 
-    <h2>Our sponsors</h2>
-
     <div id="sponsors-container">
       <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center">
         <mat-card *ngFor="let sponsor of sponsorsList" fxFlex="0 1 240px" class="member-card">
@@ -43,8 +41,8 @@
       </div>
     </div>
 
-    <h2>Special thanks</h2>
-
+    <h2 id="spe">Special thanks</h2>
+<div id="spontext">
     We would like to thank Raphaël Labruère who gave us 110 mg of Methotrexate, It allowed us to do all of the planned degradation test for our project !
 <br><br>
     We thank Marie Claude Serre from the I2BC lab. She alone, gave us tons of material we needed for our experimentation. Without her the Summer lab would not have been the same !
@@ -53,5 +51,6 @@
     <br><br>
     A big thank to Herve Leh, Research Engineer at the I2BC who gave us plenty of tips at the beginning of the lab time, and supervised us during the summer !
 <br><br>
+</div>
   </mat-card>
 

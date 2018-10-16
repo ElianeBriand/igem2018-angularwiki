@@ -236,6 +236,24 @@ h1, h2, h3, h4,h5,h6,p, u, li, a{
   font-family: 'Lato', Helvetica, SansSerif;
 }
 
+#yu
+{
+  width: 150px;
+  position: absolute;
+  top: 1360px;
+  right: 100px;
+}
+#yut
+{
+  position: absolute;
+  top: 1535px;
+  right: 120px;
+  color: white;
+  font-size: 30px;
+  font-family: 'Lato', Helvetica, SansSerif;
+}
+
+
 #guig
 {
   width: 150px;
@@ -445,7 +463,8 @@ p
   text-align: justify;
   font-family: 'Lato', Helvetica, SansSerif;
 }
-
+/*
+Old values :
 .textphot
 {
   margin-left: 300px;
@@ -476,6 +495,41 @@ p
   text-align: justify;
   font-family: 'Lato', Helvetica, SansSerif;
 }
+*/
+
+.textphot
+{
+  margin-left: 300px;
+  margin-top: -170px;
+  width: 700px;
+  font-size: 1.5em;
+  line-height: 27px;
+  text-align: justify;
+  font-family: 'Lato', Helvetica, SansSerif;
+}
+
+.textphotadv {
+  margin-left: 300px;
+  margin-top: -170px;
+  width: 700px;
+  font-size: 1.5em;
+  line-height: 27px;
+  text-align: justify;
+  font-family: 'Lato', Helvetica, SansSerif;
+}
+
+
+.textphotousm
+{
+  margin-left: 300px;
+  margin-top: -170px;
+  margin-bottom: 100px;
+  width: 700px;
+  font-size: 1.6em;
+  line-height: 27px;
+  text-align: justify;
+  font-family: 'Lato', Helvetica, SansSerif;
+}
 
 .ousm
 {
@@ -493,4 +547,11 @@ p
 
 #figure5 {
   margin-top: -10px;
+}
+
+#memg
+{
+	color: rgb(254,74,73);
+	font-size: 1.7em;
+	line-height: 40px;
 }

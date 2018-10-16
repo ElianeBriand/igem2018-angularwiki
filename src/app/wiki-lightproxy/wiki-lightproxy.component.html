@@ -6,11 +6,657 @@
   <div class="headlinetext">Lab&nbsp;Notebook</div>
 </div>
 
-  <mat-card class="wikilp-access-card">
-    <mat-card-content class="dashboard-card-content">
+<mat-card class="dashboard-card largemargin" style="">
+  <div class="titrebloc" id="topprotocols">
+    <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">
+    <h1>Protocols</h1>
+  </div>
 
 
+  <ul class="collapse-list">
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-1">
+      <label class="collapse-btn" for="collapse-1">Agar plate</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+          <ul>
+            <li>Dissolve the LB-agar in the microwave</li>
+            <li>Cool the agar down to room temperature until you can hold the bottle by hand.
+            </li>
+            <li>Add the correct amount of the correct antibiotic.</li>
+            <li>Under sterile conditions, pour the LB-agar in empty Petri dishes.</li>
+            <li>Leave the Petri dishes open until the agar has solidified</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-2">
+      <label class="collapse-btn" for="collapse-2">Colony PCR (DreamTaq polymerase)</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+          <ul>
+            <li>Prepare the mix for all the samples in a single 1.5 mL tube. For one sample</li>
+            <table id="customers">
+              <tr>
+                <th>Component</th>
+                <th>Volume (μL) for 25 μL reaction</th>
+                <th>Volume (μL) for 50 μL reaction</th>
+              </tr>
+              <tr>
+                <td>Template DNA</td>
+                <td>Variable</td>
+                <td>Variable</td>
+              </tr>
+              <tr>
+                <td>10X Green Taq Buffer</td>
+                <td>2,5</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>R2,5 mM dNTPs</td>
+                <td>2</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>FW primer</td>
+                <td>1,25</td>
+                <td>2,5</td>
+              </tr>
+              <tr>
+                <td>BW primer</td>
+                <td>1,25</td>
+                <td>2,5</td>
+              </tr>
+              <tr>
+                <td>Taq polymerase</td>
+                <td>0,1</td>
+                <td>0,5</td>
+              </tr>
+              <tr>
+                <td>Nuclease free water</td>
+                <td>18,1</td>
+                <td>Up to 50 μL</td>
+              </tr>
+            </table>
 
+            <li>Add the total volume per sample (without DNA) to each PCR tube.
+            </li>
+            <li>Add the template DNA to each tube.</li>
+            <li>Put the tubes in the PCR machine and apply the following program (it needs to be adjusted for primers
+              annealing temperature and extension time):
+            </li>
+            <table id="customers">
+              <tr>
+                <th>Step</th>
+                <th>Temperature (°C)</th>
+                <th>Time</th>
+                <th>Cycle</th>
+              </tr>
+              <tr>
+                <td>Initial denaturaration</td>
+                <td>95</td>
+                <td>3 min</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Denaturaration</td>
+                <td>95</td>
+                <td>30 s</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td>Annealing</td>
+                <td>Variable</td>
+                <td>30 s</td>
+                <td>/</td>
+              </tr>
+              <tr>
+                <td>Extension</td>
+                <td>2,5</td>
+                <td>5</td>
+                <td>/</td>
+              </tr>
+              <tr>
+                <td>Final extension</td>
+                <td>72</td>
+                <td>5 min</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Hold</td>
+                <td>4</td>
+                <td>∞</td>
+                <td>/</td>
+              </tr>
+            </table>
+            <li>
+              Run a DNA electrophoresis following the DNA electrophoresis protocol.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-3">
+      <label class="collapse-btn" for="collapse-3">Competent cells</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+        </div>
+      </div>
+      <!---------------------------------section----------------------------------------------------------->
+    </li>
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-4">
+      <label class="collapse-btn" for="collapse-4">DNA concentration measurement (NanoDrop)</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+          <ul>
+            <li>Turn on the NanoDrop</li>
+            <li>Press the button for dsDNA to measure the concentration of double-stranded DNA in your samples.
+            </li>
+            <li>Clean the measurement surface with a piece of tissue and ethanol.</li>
+            <li>Use the elution buffer or the media where your DNA is contained as a blank.</li>
+            <li>Clean the measurement surface with a piece of tissue and water.</li>
+            <li>Use 2 µL of sample to measure its concentration.</li>
+            <li>If you have multiple samples, clean the measurement surface in between measurements.</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <!-------------------------------------section---------------------------------------------------------->
+    <!---------------------------------section----------------------------------------------------------->
+
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-5">
+      <label class="collapse-btn" for="collapse-5">DNA electrophoresis</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+          <ul>
+            <li>Pour the solution Agarose (0, 8%)-EtBr into the mould. Add a comb to create wells for the samples. Let
+              it solidify (approx. 20 minutes).
+            </li>
+            <li>Transfer the gel to the electrophoresis Remove the combs and cover it with TAE (0, 5 X). Transfer the
+              gel to the electrophoresis
+            </li>
+            <li>Load the molecular weight marker (ladder) in the first well (check the appropriate volume for each
+              marker, generally 5 µL works fine) and load
+            </li>
+            <li>10 µL of the samples in the other wells.</li>
+            <li> Run at 100 V for 25 min</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <!-------------------------------------section---------------------------------------------------------->
+    <!---------------------------------section----------------------------------------------------------->
+
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-6">
+      <label class="collapse-btn" for="collapse-6">Digestion assay</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+          <ul>
+            <li>
+
+              Decide on which enzyme(s) to cut with. Check online what buffer the enzyme(s) work(s) in. For Bio labs
+              enzyme use the Double Digest Finder.
+            </li>
+            <li>Prepare a sample as follows:</li>
+
+            <table id="customers">
+              <tr>
+                <th>Compound</th>
+                <th>Volume (μL)</th>
+              </tr>
+              <tr>
+                <td>DNA (plasmid or insert)</td>
+                <td>Variable according to the base number and the concentration</td>
+              </tr>
+              <tr>
+                <td>Buffer (NEB, FD, SmartCut)</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Restriction enzyme 1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Restriction enzyme 2</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Water</td>
+                <td>Up to 20 μL</td>
+              </tr>
+            </table>
+            <li>Incubate for one hour at 37 °C.</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <!-------------------------------------section---------------------------------------------------------->
+    <!---------------------------------section----------------------------------------------------------->
+
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-7">
+      <label class="collapse-btn" for="collapse-7">Gel product purification (Nucleospin Gel and PCR Clean-up)</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+          <ul>
+            <li>Excise DNA fragment from the gel</li>
+            <li>Add 200 uL buffer NT1 for each 100mg of agarose</li>
+            <li>Incubate sample for 5–10 min at 50 °C</li>
+            <li>Vortex the sample briefly every 2–3 min until the gel slice is completely dissolved.</li>
+            <li>To bind the DNA place a NucleoSpin® Gel Clean-up Column into a Collection Tube (2 mL) and load up to 700
+              μL sample.
+            </li>
+            <li>Centrifuge for 30 s at 11,000 xg</li>
+            <li>Discard flow-through and place the column back into the collection tube. Load remaining sample if
+              necessary and repeat the centrifugation step.
+            </li>
+            <li>To wash silica membrane, add 700 μL Buffer NT3 to the column.</li>
+            <li>Centrifuge for 30 s at 11,000 x g.</li>
+            <li>Discard flow-through and place the column back into the collection tube.</li>
+            <li>To dry the silica membrane centrifuge for 1 min at 11,000 x g to remove Buffer NT3 completely.</li>
+            <li>To elute DNA place the column into a new 1.5 mL microcentrifuge tube.</li>
+            <li>Add 15–30 μL Buffer NE and incubate at room temperature for 1 min</li>
+            <li>Centrifuge for 1 min at 11,000 x g</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <!-------------------------------------section---------------------------------------------------------->
+
+    <!---------------------------------section----------------------------------------------------------->
+
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-8">
+      <label class="collapse-btn" for="collapse-8">Heat-shock Transformation</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+          <ul>
+            <li>Start the water bath at 42°C</li>
+            <li>Let the competent cell thaw on ice</li>
+            <li>Add 1 µL of plasmid (or 5 µL of ligation mix) to the tube and flick gently</li>
+            <li>Let the tube on ice for 30 min</li>
+            <li>Put the tube in water (42°C) 1 min</li>
+            <li>Put the tube on ice for 5 min</li>
+            <li>Add 500 µL of LB to the tube</li>
+            <li>Leave the tube to shake at 37°C for 1 h 30 min.</li>
+            <li>Plate 50 µL on a LB plate with appropriate antibiotics.</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <!-------------------------------------section---------------------------------------------------------->
+
+    <!---------------------------------section----------------------------------------------------------->
+
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-9">
+      <label class="collapse-btn" for="collapse-9">Liquid culture (5 mL)</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+          <ul>
+            <li>Label as many 15 mL hemolysis tubes as the number of colonies you want to grow.</li>
+            <li>Prepare 5 mL of selective medium (LB) per hemolysis tube.</li>
+            <li>Under sterile conditions, pick a colony with the sterile toothpick.</li>
+            <li>Swirl the toothpick in the hemolysis tube containing the medium. Often you can see the colony falling
+              from the loop.
+            </li>
+            <li>Grow the liquid cultures to shake overnight, at 37 °C.</li>
+            <li>To conserve this liquid culture, glycerol 60% can be added to the bacteria culture and the cryotubes are
+              put at -20°C.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <!---------------------------------section----------------------------------------------------------->
+
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-10">
+      <label class="collapse-btn" for="collapse-10">Ligation assay</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+          <ul>
+            <li>Prepare the mix for all the samples in a single 1.5 mL tube. For one sample:</li>
+
+            <table id="customers">
+              <tr>
+                <th>Compound</th>
+                <th>Volume (μL)</th>
+              </tr>
+              <tr>
+                <td>Insert</td>
+                <td>Variable according to the base number and the concentration</td>
+              </tr>
+              <tr>
+                <td>Plasmid</td>
+                <td>Variable according to the base number and the concentration</td>
+              </tr>
+              <tr>
+                <td>T4 Buffer 10X</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>T4 ligase</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Water</td>
+                <td>Up to 20 μL</td>
+              </tr>
+            </table>
+            <li>Incubate for one hour at 37 °C.</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <!-------------------------------------section---------------------------------------------------------->
+
+
+    <!---------------------------------section----------------------------------------------------------->
+
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-11">
+      <label class="collapse-btn" for="collapse-11">PCR product purification (Nucleospin Gel and PCR Clean-up)</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+          NB: Before starting check if the buffers are prepared like indicated in the kit protocol
+          <ul>
+            <li>Mix 1 volume of sample with 2 volumes of Buffer NTI</li>
+            <li>To bind the DNA place a NucleoSpin® PCR Clean-up Column into a Collection Tube (2 mL) and load up to 700
+              μL sample.
+            </li>
+            <li>Centrifuge for 30 s at 11,000 xg</li>
+            <li>Discard flow-through and place the column back into the collection tube. Load remaining sample if
+              necessary and repeat the centrifugation step.
+            </li>
+            <li>To wash silica membrane, add 700 μL Buffer NT3to the column.</li>
+            <li>Centrifuge for 30 s at 11,000 x g.</li>
+            <li>Discard flow-through and place the column back into the collection tube.</li>
+            <li>To dry the silica membrane centrifuge for 1 min at 11,000 x g to remove Buffer NT3 completely.</li>
+            <li>To elute DNA place the column into a new 1.5 mL microcentrifuge tube.</li>
+            <li>Add 15–30 μL Buffer NE and incubate at room temperature for 1 min</li>
+            <li> Centrifuge for 1 min at 11,000 x g</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <!---------------------------------section----------------------------------------------------------->
+
+    <!---------------------------------section----------------------------------------------------------->
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-12">
+      <label class="collapse-btn" for="collapse-12">PCR phusion</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+          <ul>
+            <li>Prepare the mix for all the samples in a single 1.5 mL tube. For one sample:</li>
+            <table id="customers">
+              <tr>
+                <th>Component</th>
+                <th>Volume (μL) for 50 μL reaction</th>
+              </tr>
+              <tr>
+                <td>Template DNA</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>5X buffer HF</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>2,5 mM dNTPs</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>FW primer</td>
+                <td>2,5</td>
+              </tr>
+              <tr>
+                <td>BW primer</td>
+                <td>2,5</td>
+              </tr>
+              <tr>
+                <td>Phusion polymerase</td>
+                <td>0,5</td>
+              </tr>
+              <tr>
+                <td>Nuclease free water</td>
+                <td>29,5</td>
+              </tr>
+            </table>
+            <li>Add the total volume per sample (without DNA) to each PCR tube.</li>
+            <li>Add the template DNA to each tube.</li>
+            <li>Put the tubes in the PCR machine and apply the following program (it needs to be adjusted for primers
+              annealing temperature and extension time):
+            </li>
+            <table id="customers">
+              <tr>
+                <th>Step</th>
+                <th>Temperature (°C)</th>
+                <th>Time</th>
+                <th>Cycle</th>
+              </tr>
+              <tr>
+                <td>Initial denaturaration</td>
+                <td>98</td>
+                <td>30 s</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Denaturation</td>
+                <td>98</td>
+                <td>10 s</td>
+                <td>/</td>
+              </tr>
+              <tr>
+                <td>Annealing</td>
+                <td>Variable</td>
+                <td>30 s</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td>Extension</td>
+                <td>72</td>
+                <td>30kb/s</td>
+                <td>/</td>
+              </tr>
+              <tr>
+                <td>Final extension</td>
+                <td>72</td>
+                <td>5 min</td>
+                <td>1</td>
+              </tr>
+            </table>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <!-------------------------------------section---------------------------------------------------------->
+    <!---------------------------------section----------------------------------------------------------->
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-13">
+      <label class="collapse-btn" for="collapse-13">PCR with Q5</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+          <ul>
+            <li>Prepare the mix for all the samples in a single 1.5 mL tube. For one sample:</li>
+            <table id="customers">
+              <tr>
+                <th>Component</th>
+                <th>Volume (μL) for 50 μL reaction</th>
+              </tr>
+              <tr>
+                <td>Template DNA</td>
+                <td>0,5</td>
+              </tr>
+              <tr>
+                <td>5X buffer Q5</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>2,5 mM dNTPs</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>FW primer</td>
+                <td>1,25</td>
+              </tr>
+              <tr>
+                <td>BW primer</td>
+                <td>1,25</td>
+              </tr>
+              <tr>
+                <td>Q5 polymerase</td>
+                <td>0,25</td>
+              </tr>
+              <tr>
+                <td>Nuclease free water</td>
+                <td>15,25</td>
+              </tr>
+            </table>
+            <li>Add the total volume per sample (without DNA) to each PCR tube.</li>
+            <li>Add the template DNA to each tube.</li>
+            <li>Put the tubes in the PCR machine and apply the following program (it needs to be adjusted for primers
+              annealing temperature and extension time):
+            </li>
+            <table id="customers">
+              <tr>
+                <th>Step</th>
+                <th>Temperature (°C)</th>
+                <th>Time</th>
+                <th>Cycle</th>
+              </tr>
+              <tr>
+                <td>Initial denaturaration</td>
+                <td>98</td>
+                <td>30 s</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Denaturation</td>
+                <td>98</td>
+                <td>10 s</td>
+                <td>/</td>
+              </tr>
+              <tr>
+                <td>Annealing</td>
+                <td>Variable</td>
+                <td>30 s</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td>Extension</td>
+                <td>72</td>
+                <td>30kb/s</td>
+                <td>/</td>
+              </tr>
+              <tr>
+                <td>Final extension</td>
+                <td>72</td>
+                <td>5 min</td>
+                <td>1</td>
+              </tr>
+            </table>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <!-------------------------------------section---------------------------------------------------------->
+    <!---------------------------------section----------------------------------------------------------->
+
+    <li>
+      <input class="collapse-open" type="checkbox" id="collapse-14">
+      <label class="collapse-btn" for="collapse-14">Plasmid DNA extraction (Mini, midi and maxi Prep)</label>
+      <div class="collapse-painel">
+        <div class="collapse-inner">
+          <h2>MiniPrep(Qiagen)</h2>
+          NB: Before starting check if the buffers are prepared like indicated in the kit protocol
+          <ul>
+            <li>Use 1–5 mL of a saturated E. coli LB culture, pellet cells in a s microcentrifuge for 30 s at 11,000 x
+              g
+            </li>
+            <li>Discard the supernatant and remove as much of the liquid as possible.</li>
+            <li>Add 250 μL Buffer A1. Resuspend the cell pellet completely by vortexing or pipetting up and down.</li>
+            <li>Add 250 μL Buffer A2. Mix gently by inverting the tube 6–8 times. Do not vortex to avoid shearing of
+              genomic DNA
+            </li>
+            <li>Incubate at room temperature for up to 5 min or until lysate appears clear.</li>
+            <li>Add 300 μL Buffer A3. Mix thoroughly by inverting the tube 6–8 times until blue samples turn colorless
+              completely.
+            </li>
+            <li>Centrifuge for 5 min at 11,000 x g at room temperature. Repeat this step, in case the supernatant is not
+              clear.
+            </li>
+            <li>Place a NucleoSpin® Plasmid / Plasmid (NoLid) Column in a Collection Tube (2 mL) and decant the
+              supernatant from step 3 or pipette a maximum of 750 μL of the supernatant onto the column.
+            </li>
+            <li>Centrifuge for 1 min at 11,000 x g. Discard flowthrough and place the column into the collection tube.
+            </li>
+            <li>Repeat this step to load the remaining lysate.</li>
+            <li> Add 500 μL Buffer AW, preheated to 50 °C</li>
+            <li>Centrifuge for 1 min at 11,000 x g</li>
+            <li>Add 600 μL Buffer A4</li>
+            <li>Centrifuge for 1 min at 11,000 x g.</li>
+            <li>Discard flowthrough and place the column back into the emptycollection tube.</li>
+            <li>Centrifuge for 2 min at 11,000 x g and discard the collection tube.</li>
+            <li>Place the column in a 1.5 mL microcentrifuge tube and add 50 μL Buffer AE. Incubate for 1 min at room
+              temperature.
+            </li>
+            <li>Centrifuge for 1 min at 11,000 x g.</li>
+            <h2>Midi and MaxiPrep</h2>
+            <li>
+              Pellet 25 mL or 100 mL (high copy) or 100 mL, or 500 mL (low copy) overnight LB culture at
+
+              4 700 rpm for 30 min at 4°C.
+            </li>
+            <li>Resuspend the bacterial pellet in 4 mL or 10 mL buffer P1.</li>
+            <li>Add 4 mL or 10 mL buffer P2, mix thoroughly by inverting 4-6 times, and incubate at room temperature for
+              5 min.
+            </li>
+            <li>Add 4 mL or 10 mL buffer P3, mix thoroughly by inverting 4-6 times, and incubate at room temperature for
+              15 or 20 min.
+            </li>
+            <li>Centrifuge at 4 700 rpm for 50 min at 4°C. Re-centrifuge the supernatentat 4 700 rpm for 25 min at
+              4°C.
+            </li>
+            <li>Equilibrate a Qiagen -tip 100 or 500 by applying 4 mL or 10 mL buffer QBT and allow column to empty by
+              gravity flow.
+            </li>
+            <li>Apply the supernatant (step 5) to the tip and allow it to enter the resin by gravity flow.</li>
+            <li>Wash the tip with 2 X 10 mL or 2 x 30 mL buffer QC. Allow the buffer QC to move through the tip by
+              gravity flow.
+            </li>
+            <li>Elute DNA with 5 mL or 15 mL buffer QF into clean 15 mL or 50 mL vessel.</li>
+
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <!---------------------------------section----------------------------------------------------------->
+    <!---------------------------------section----------------------------------------------------------->
+
+  </ul>
+
+  <p class="spacemaker" ></p>
+
+
+  <div class="titrebloc">
+    <img class="carretitrepincipal" src="http://2018.igem.org/wiki/images/f/fd/T--GO_Paris-Saclay--carretitreprinci.png">
+    <h1>Lab notebooks</h1>
+  </div>
+  <p>For cloning details, see the full <a  target="_blank" href="http://2018.igem.org/Team:GO_Paris-Saclay/labnotebook">lab notebook record</a>.
+    For parts characterization, see their respective page for material and methods.</p>
+</mat-card>
 
 <!--
       <mat-expansion-panel>
@@ -50,13 +696,13 @@
 
   </mat-card>
   -->
-
+<!---
   <mat-card class="wikilp-card">
     <mat-card-header>
       <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="left">
         <button mat-button (click)="goBackHomeLabNotebook()"><mat-icon>home</mat-icon> Go back to notebook home</button>
-        <!-- <input matInput placeholder="Page path" [(ngModel)]="fieldPagePath"> <button mat-button (click)="goToFilledPage()">Go</button> -->
-      </div>
+        input matInput placeholder="Page path" [(ngModel)]="fieldPagePath"> <button mat-button (click)="goToFilledPage()">Go</button>
+     </div>
     </mat-card-header>
     <mat-card-content class="dashboard-card-content">
       <div fxLayout="column" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="left">
@@ -66,5 +712,4 @@
       </div>
     </mat-card-content>
   </mat-card>
-
-
+-->

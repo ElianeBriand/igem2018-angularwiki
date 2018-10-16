@@ -32,3 +32,23 @@ p {
   font-size: 14pt;
   font-family: 'Lato', Helvetica, SansSerif;
 }
+
+#even_more
+{
+  color: rgb(254,74,73);
+  font-size: 35px;
+  margin-top: 25px;
+}
+
+#petit
+{
+color: rgb(166,166,166);
+  font-size: 25px;
+  line-height: 35px;
+  font-family: 'Lato', Helvetica, SansSerif;
+}
+
+#trespetit
+{
+  font-size: 18px;
+}

@@ -1,10 +1,12 @@
-
+<div id="insideapps">
 <nav id="top">
   <div id='cssmenu'>
     <ul>
       <li><a  href="#" (click)="this.routerLinkChunkProcessing('/')"><mat-icon>home</mat-icon></a></li>
       <li><a ><span>Project</span></a>
         <ul>
+          <li><a (click)="this.routerLinkChunkProcessing('/background')" ><span>Background</span></a>
+          </li>
           <li><a (click)="this.routerLinkChunkProcessing('/project')" ><span>Project Summary</span></a>
           </li>
           <li ><a (click)="this.routerLinkChunkProcessing('/biology/mtx')" ><span>Degrading MTX</span></a>
@@ -83,15 +85,16 @@
 
 <div  [ngClass]="{'container': showBackHomeLogo, 'containerfrontpage': !showBackHomeLogo}">
 
-  <div *ngIf="showBackHomeLogo" class="topleft"><a href="#" (click)="this.routerLinkChunkProcessing('/')"><img src="http://2018.igem.org/wiki/images/0/01/T--GO_Paris-Saclay--logogoparissaclay.png" alt="logoparissaclay"></a></div>
-
   <router-outlet></router-outlet>
 
+  <!--
   <div style="width: 100%;">
     <div style="width:80px;margin: auto auto;"><a href="https://www.facebook.com/iGEMParisSaclay/"><img src="http://2018.igem.org/wiki/images/d/d6/T--GO_Paris-Saclay--facebook.png" class="smalllogofb centerstuff"></a>
       <a href="https://twitter.com/igemparissaclay?lang=en"><img src="http://2018.igem.org/wiki/images/e/e8/T--GO_Paris-Saclay--twitter.png" class="smalllogofb centerstuff"></a>
     </div>
   </div>
+
+  -->
 
   <img *ngIf="showBackHomeLogo" src="http://2018.igem.org/wiki/images/3/37/T--GO_Paris-Saclay--footer_small.png" class="superposedbanner1">
 
@@ -147,3 +150,6 @@
 </div>
 
 -->
+
+
+</div>

@@ -15,3 +15,20 @@
   margin: 20px;
 }
 
+
+
+div.item {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 140px;
+  margin: 0px 10px;
+}
+
+hpicons {
+  width: 100px;
+  background-color: grey;
+}
+.hptext {
+  text-align: center;
+}
