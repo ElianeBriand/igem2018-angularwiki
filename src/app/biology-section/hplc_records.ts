@@ -27,9 +27,9 @@ export class HPLCGroup {
 
 export var HPLC_GROUPS_RECORD = [
   new HPLCGroup("No bacteria (reference)", [
-    new HPLCRecords("MTX 512uM without bacteria after 5h", "http://2018.igem.org/wiki/images/3/3e/T--GO_Paris-Saclay--HPLC_MTX-NoBact_05h.png",0),
-    new HPLCRecords("MTX 512uM without bacteria after 20h", "http://2018.igem.org/wiki/images/1/1c/T--GO_Paris-Saclay--HPLC_MTX-NoBact_20h.png", 0),
-    new HPLCRecords("DMSO 2% without bacteria after 5h", "http://2018.igem.org/wiki/images/f/f5/T--GO_Paris-Saclay--HPLC_DMSO-NoBact_05h.png", 0),
+    new HPLCRecords("MTX 512uM (without bacteria)", "http://2018.igem.org/wiki/images/3/3e/T--GO_Paris-Saclay--HPLC_MTX-NoBact_05h.png",0),
+    new HPLCRecords("DAMPA 512uM (without bacteria)", "http://2018.igem.org/wiki/images/8/86/T--GO_Paris-Saclay--HPLC_DampaStandard.png", 0),
+    new HPLCRecords("DMSO 2% (without bacteria)", "http://2018.igem.org/wiki/images/f/f5/T--GO_Paris-Saclay--HPLC_DMSO-NoBact_05h.png", 0),
   ]),
   new HPLCGroup("Control plasmid", [
     new HPLCRecords("MTX 512uM with pSB1C3-tet (in WT chassis) after 20h", "http://2018.igem.org/wiki/images/3/33/T--GO_Paris-Saclay--HPLC_MTX-WT-tet_20h.png", 2),

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-demonstrate',
@@ -8,9 +8,18 @@ import {Router} from '@angular/router';
 })
 export class DemonstrateComponent implements OnInit {
 
-  constructor(public router: Router) { }
+  private fragment: string;
+
+  constructor(private route: ActivatedRoute, public router: Router) { }
 
   ngOnInit() {
+    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
+  }
+
+  ngAfterViewInit(): void {
+    try {
+      document.querySelector('#' + this.fragment).scrollIntoView();
+    } catch (e) { }
   }
 
 }

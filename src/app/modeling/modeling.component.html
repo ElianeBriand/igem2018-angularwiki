@@ -115,7 +115,7 @@
 
 
   <h2 id="TheSteadyState.">The steady state</h2>
-  <mat-card class="sidefigure" style="width: 80%;">
+  <mat-card class="sidefigure" style="width: 70%;">
     <img src="http://2018.igem.org/wiki/images/0/01/T--GO_Paris-Saclay--model_fig1.png" class="wideimg">
     <div class="mat-caption captionafterapicture">Figure 1: Steady State without Methotrexate, a = 0.7, b = 0.3</div>
   </mat-card>
@@ -236,18 +236,20 @@
     <reference-box shorthand="Patra2013"></reference-box>
     , p.5). <br><br>
 
-    <mat-card class="wideimg" >
+    <mat-card class="wideimg">
       <img src="http://2018.igem.org/wiki/images/8/8a/T--GO_Paris-Saclay--model_fig3.png" class="wideimg">
       <div class="mat-caption captionafterapicture">Figure 4
         <reference-box shorthand="Patra2013"></reference-box>
         <div class="captionmaterialmethod">
-        Numerical integration of Eqs. (D,E) over a growth period of 15 hours (with μgn 2hr−1,μgn 0.2hr−1) followed by
-        a stress period (with μgn −2hr−1,μgn −0.2hr−1) of another 15 hours. The switching rates were chosen to be a
-        0,001hr−1 and b 0,0001hr−1 . The killing curve of total population show two distinct phases, a fast-decaying
-        phase and a slow-decaying phase. (b) Numerical integration of Eqs. (1) over a stress period of 15 hours followed
-        by a regrowth period of another 15 hours. The regrowth curve of the total population shows two distinct phases,
-        a slow-growing phase followed by a fast-growing phase. The parameters are the same as in (a). Here the "stem"
-        cells are the normal cells, and the degradation cells are the persistence cells.
+          Numerical integration of Eqs. (D,E) over a growth period of 15 hours (with μgn 2hr−1,μgn 0.2hr−1) followed by
+          a stress period (with μgn −2hr−1,μgn −0.2hr−1) of another 15 hours. The switching rates were chosen to be a
+          0,001hr−1 and b 0,0001hr−1 . The killing curve of total population show two distinct phases, a fast-decaying
+          phase and a slow-decaying phase. (b) Numerical integration of Eqs. (1) over a stress period of 15 hours
+          followed
+          by a regrowth period of another 15 hours. The regrowth curve of the total population shows two distinct
+          phases,
+          a slow-growing phase followed by a fast-growing phase. The parameters are the same as in (a). Here the "stem"
+          cells are the normal cells, and the degradation cells are the persistence cells.
         </div>
       </div>
     </mat-card>
@@ -285,6 +287,37 @@
     Thus, we have found $a_{{ '{' }}opt}$ and $b_{{ '{' }}opt}$ in order to degrade drugs. If we had to build such a
     biological system, we would aim for these values when assessing possible promoters.</p>
 
+
+  <h2>Conclusion</h2>
+
+
+  <p> First and foremost, does our model justify the bimodal system? The answer is yes. In other case, they would be
+    just one population to degrade MTX that would be poisoned by FolC and CPG2. Therefore the rate of evolution would be
+    negative and the population would collapse. <br>
+    This justifies the use of a bimodal system, because that's the only way to reach a steady state where both
+    populations don't collapse.
+  </p>
+
+
+  <p>In this such system, our model shows that our device is useful when the rate of evolution delay caused by FolC and
+    CPG2 is not so important. Indeed we can see (Fig. 4)
+    that both population reach the steady case in a short case. But if the rate of evolution delay is important, the
+    population of degraders cannot increase.
+    (Fig. 5), which threatens the proper functioning of our system.
+  </p>
+
+  <p> This model could be easily generalized to any situation involving drug degradation, taking into account at least
+  3 parameters: i) drug toxicity (not considered here because MTX is not toxic for WT E. coli), ii) loss of fitness
+  associated to its degradation pathway, and iii) the rate of renewal.
+  </p>
+
+
+  <mat-card class="normalmargin" style="width: 80%;">
+    <img src="http://2018.igem.org/wiki/images/8/85/T--GO_Paris-Saclay--model_fig4.png" class="wideimg">
+    <img src="http://2018.igem.org/wiki/images/1/19/T--GO_Paris-Saclay--model_fig5.png" class="wideimg">
+    <div class="mat-caption captionafterapicture">Figure 4 & 5
+    </div>
+  </mat-card>
 
   <p class="spacemaker"></p>
 
